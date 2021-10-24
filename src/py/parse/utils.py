@@ -1,60 +1,82 @@
 import datetime as dt
 import os
 import csv
+from numpy import e
 import pandas as pd
 import plotly.express as px
 from mini_yahoo_finance import get_stock_df
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# https://stackoverflow.com/questions/2272149/round-to-5-or-other-number-in-python
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+def myround(x, base=5):
+    return base * round(x/base)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def get_ohlc_average(row):
-    open = float(row['Open'])
-    high = float(row['High'])
-    low = float(row['Low'])
-    close = float(row['Close'])
-    return (open + high + low + close)/4
+    try:
+        open = float(row['Open'])
+        high = float(row['High'])
+        low = float(row['Low'])
+        close = float(row['Close'])
+        return int((open + high + low + close)/4)
+    except Exception as e:
+        print("BRO " + e)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_shares_scale(average, amount):   
-    l = amount.split('-')
-    nl = []
 
-    for a in l: 
-        a = a.strip()
-        a = a[1:].replace(",", "")
-        
-        num_shares =  (float(a)/average)
-        nl.append(float(str(round(num_shares, 2))))
 
-    return nl 
+def get_shares_scale(average, amount):
+    try:
+        l = amount.split('-')
+        nl = []
+
+        for a in l:
+            a = a.strip()
+
+            a = a[1:].replace(",", "")
+
+            num_shares = int(float(a)/average)
+            nl.append(myround(num_shares))
+
+        return nl
+    except Exception as e:
+        print("hereeee " + e)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def get_price(ticker, date, amount):
     formatted_date = format_transaction_date_df(date)
 
-    try: 
-        start_date, end_date = format_transaction_date_search(date)
+    start_date, end_date = format_transaction_date_search(date)
 
+    try:
         df = get_stock_df(ticker,
-            start_date,
-            end_date=end_date,
-            interval='1d',
-            max_retries=3)
-
-        for _, row in df.iterrows():            
-            if row['Date'] == formatted_date: 
-                break 
-        
-        ohlc_average = get_ohlc_average(row)
-        return get_shares_scale(ohlc_average, amount)
-
+                          start_date,
+                          end_date=end_date,
+                          interval='1d',
+                          max_retries=3)
     except Exception as e:
-        print(e) 
-        return None 
+        print("kul me " + str(e))
+
+    for _, row in df.iterrows():
+        if row['Date'] == formatted_date:
+            break
+
+    ohlc_average = get_ohlc_average(row)
+    return get_shares_scale(ohlc_average, amount)
+
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -77,12 +99,14 @@ def make_dir(path):
             dir = "{cwd}/{path}".format(cwd=cwd, path=path)
             os.makedirs(dir)
     except FileExistsError:
-        pass  
+        pass
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def isvalid(s):
     return not pd.isnull(s)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -90,41 +114,42 @@ def isvalid(s):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def make_csv_breakdown(path_csv, filename, d,  key_header):
     cwd = os.getcwd()
     make_dir(path_csv)
 
     with open("{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename), 'w') as csvfile:
-        
+
         filewriter = csv.writer(csvfile)
 
         values = []
-        for d2 in  d.values():
+        for d2 in d.values():
             for v in d2:
                 #  gets rid of nan.
-                if isvalid(v) and v not in values: 
+                if isvalid(v) and v not in values:
                     values.append(v)
 
         values.sort()
         values.insert(0, key_header)
-        values.insert(1, -1)
+        # values.insert(1, -1)
         filewriter.writerow(values)
         values.remove(key_header)
 
-        for k,d2 in zip(d.keys(), d.values()):
+        for k, d2 in zip(d.keys(), d.values()):
             row = [""]*(len(values)+1)
-            
+
             # If there is a dictionary, we begin by adding the congressperson's name to the row.
             if d2:
                 row.insert(0, k)
 
-            # Then for each date, we 
+            # Then for each date, we
             for y in d2:
                 if isvalid(y):
                     row[values.index(y) + 1] = d2[y]
-                else:
-                    row[values.index(-1) + 1] = d2[y]
-
+                # else:
+                #     row[values.index(-1) + 1] = d2[y]
 
             filewriter.writerow(row)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -137,22 +162,26 @@ def graph_csv(path_csv, path_html, filename, key_header, value_header, type="nor
     cwd = os.getcwd()
     make_dir(path_html)
 
-    name = "{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename)
-    
+    name = "{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(
+        cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename)
+
     df = pd.read_csv(name)
 
     if type != "normal":
-        fig = px.scatter(df, x = key_header, y = value_header, title='')
-    else: 
-        fig = px.line(df, x = key_header, y = value_header, title='')
-    
-    fig.write_html("{path}{slash}{filename}.html".format(path="{cwd}/{path}".format(cwd=cwd, path=path_html), slash=('/' if path_html else None), filename=filename))
-    
+        fig = px.scatter(df, x=key_header, y=value_header, title='')
+    else:
+        fig = px.line(df, x=key_header, y=value_header, title='')
+
+    fig.write_html("{path}{slash}{filename}.html".format(path="{cwd}/{path}".format(
+        cwd=cwd, path=path_html), slash=('/' if path_html else None), filename=filename))
+
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def make_csv(path_csv, filename, d, key_header, value_header):
     cwd = os.getcwd()
     make_dir(path_csv)
@@ -160,10 +189,10 @@ def make_csv(path_csv, filename, d, key_header, value_header):
     with open("{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename), 'w') as csvfile:
         filewriter = csv.writer(csvfile)
 
-        filewriter.writerow([key_header,value_header])
+        filewriter.writerow([key_header, value_header])
 
-        for k,v in zip(d.keys(), d.values()):
-            filewriter.writerow([k,v])
+        for k, v in zip(d.keys(), d.values()):
+            filewriter.writerow([k, v])
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -181,8 +210,10 @@ def increment_dictionary(d, key):
 # increment_dictionary( d={'Jack': 1, 'Sam':35}, key='Sam') --> d={'Jack': 1, 'Sam':36}
 # increment_dictionary( d={'Jack': 1, 'Sam':35}, key='Percy') --> d={'Jack': 1, 'Sam':35, 'Percy':1}
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def add_key_dictionary(d, key):
-    if key in d: 
+    if key in d:
         raise Exception("This isn't possible.")
     d.update({key: 0})
     return d
@@ -211,6 +242,8 @@ def increment_dictionary_in_dictionary(d, key, inner_key):
 # format_transaction_date_df('01/07/2011') --> '2011-01-07'
 # format_transaction_date_df('1/7/2011') --> '2011-01-07'
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def format_transaction_date_df(s):
     return dt.datetime.strptime(s, "%m/%d/%Y").strftime("%Y-%m-%d")
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -219,6 +252,8 @@ def format_transaction_date_df(s):
 # format_transaction_date_search('01/07/2011') -->  '07-01-2011', '17-01-2011'
 # format_transaction_date_search('1/7/2011') --> '07-01-2011', '17-01-2011'
 # Formatted required by mini_yahoo_finance. We extend the time frame by 10 days because there seems to be a bug of mini_yahoo_finance not accurately capturing dates and times.  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def format_transaction_date_search(s):
     # 1/2/13 --> YYYY-MM-DD
     start_date = dt.datetime.strptime(s, "%m/%d/%Y")
@@ -227,11 +262,10 @@ def format_transaction_date_search(s):
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# @TODO 
+# @TODO
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def get_year(s):
     return s[6:]
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- 
- 
- 
