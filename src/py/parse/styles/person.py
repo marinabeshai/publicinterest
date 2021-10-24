@@ -1,7 +1,5 @@
-from utils import increment_dictionary_in_dictionary, increment_dictionary, add_key_dictionary, make_csv, graph_csv, make_csv_breakdown
+from utils import increment_dictionary_in_dictionary, increment_dictionary, add_key_dictionary, make_csv, graph_csv, make_csv_breakdown, path_csv, path_html
 import datetime as dt
-path_csv = "results/csv"
-path_html = "results/html"
 
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,8 +30,6 @@ def frequency_of_person_controlled(rows, trans_per_person_breakdown={}):
 
     filename = "trans_per_person_breakdown"
     key_header = "senator"
-    value_header = "number_of_transactions"
     
     make_csv_breakdown(path_csv, filename, trans_per_person_breakdown, key_header)
-    # graph_csv(path_csv, path_html, filename, key_header, value_header)
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -8,6 +8,8 @@ import plotly.express as px
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 our_path = '../../../curr/'
+path_csv = "results/csv"
+path_html = "results/html"
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -51,6 +53,7 @@ def make_csv_breakdown(path_csv, filename, d,  key_header):
 
         values.sort()
         values.insert(0, key_header)
+        values.insert(1, -1)
         filewriter.writerow(values)
         values.remove(key_header)
 
@@ -65,6 +68,9 @@ def make_csv_breakdown(path_csv, filename, d,  key_header):
             for y in d2:
                 if isvalid(y):
                     row[values.index(y) + 1] = d2[y]
+                else:
+                    row[values.index(-1) + 1] = d2[y]
+
 
             filewriter.writerow(row)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -73,7 +79,7 @@ def make_csv_breakdown(path_csv, filename, d,  key_header):
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def graph_csv(path_csv, path_html, filename, key_header, value_header):
+def graph_csv(path_csv, path_html, filename, key_header, value_header, type="normal"):
     cwd = os.getcwd()
     make_dir(path_html)
 
@@ -81,7 +87,10 @@ def graph_csv(path_csv, path_html, filename, key_header, value_header):
     
     df = pd.read_csv(name)
 
-    fig = px.line(df, x = key_header, y = value_header, title='')
+    if type != "normal":
+        fig = px.scatter(df, x = key_header, y = value_header, title='')
+    else: 
+        fig = px.line(df, x = key_header, y = value_header, title='')
     
     fig.write_html("{path}{slash}{filename}.html".format(path="{cwd}/{path}".format(cwd=cwd, path=path_html), slash=('/' if path_html else None), filename=filename))
     

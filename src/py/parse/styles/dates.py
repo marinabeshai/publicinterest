@@ -1,7 +1,32 @@
-from utils import increment_dictionary_in_dictionary, increment_dictionary, add_key_dictionary, make_csv, graph_csv, make_csv_breakdown
+from utils import increment_dictionary_in_dictionary, increment_dictionary, add_key_dictionary, make_csv, graph_csv, make_csv_breakdown, path_html, path_csv
 import datetime as dt
-path_csv = "results/csv"
-path_html = "results/html"
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Gets the difference between transaction_date and discolure_date.
+# d = {'difference_in_days': #_of_transactions_with_that_diff}
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def frequency_of_differences(rows, d={}):
+
+    for _, transaction in rows:
+        transaction_date = transaction['transaction_date']
+        disclosure_date = transaction['disclosure_date']
+
+        transaction_date_obj = dt.datetime.strptime(transaction_date, "%m/%d/%Y")
+        disclosure_date_obj = dt.datetime.strptime(disclosure_date, "%m/%d/%Y")
+        
+        if disclosure_date_obj < transaction_date_obj:
+            diff =  (transaction_date_obj - disclosure_date_obj).days
+        else:
+            diff =  (disclosure_date_obj - transaction_date_obj).days
+        d = increment_dictionary(d, diff)
+        
+    filename = "frequency_of_differences"
+    key_header = "difference_in_days"
+    value_header = "#_of_transactions_with_that_diff"
+    make_csv(path_csv, filename, d, key_header, value_header)
+    graph_csv(path_csv, path_html, filename, key_header, value_header, "scatter")
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Gets the number of transactions for each date. We do not include missing dates.
