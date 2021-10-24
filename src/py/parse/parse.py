@@ -1,11 +1,10 @@
-import csv
 from numpy import inner
 import pandas as pd
-import os 
 from os import listdir
 from os.path import isfile, join
 from mini_yahoo_finance import get_stock_df
-from dates import frequency_of_dates, get_missing_dates
+from dates import frequency_of_dates,frequency_of_dates_controlled
+from per_person import frequency_of_person, frequency_of_person_controlled
 from utils import our_path 
 
 if __name__ == '__main__':
@@ -19,17 +18,26 @@ if __name__ == '__main__':
         our_path = onlyfiles[0][:onlyfiles[0].find(".")]
         csvreader = pd.read_csv(f)
 
-            
-        frequency_of_dates(csvreader.iterrows())
-            
-            
-            
-                    
+        # DATES
+        frequency_of_dates(csvreader.iterrows())            
+        frequency_of_dates_controlled(csvreader.iterrows())
+                                                        
+                                                              
+        # PER PERSON 
+        frequency_of_person(csvreader.iterrows())            
+        frequency_of_person_controlled(csvreader.iterrows())
+
+
+
         # {'M Person': #_of_transactions, 'X Person': _of_transactions, ...}
         # trans_per_person_total = {'Senator': '#_of_transactions'}
         
-        # {'M Person': {year : #_of_transactions_in_year, ... } }
-        # trans_per_person_breakdown = {}
+        
+    
+
+
+
+
 
         # {'M Person': {ticker : #_of_transactions_in_year, ... } }
         # ticker_per_person_breakdown = {}

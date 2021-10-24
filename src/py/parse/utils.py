@@ -8,7 +8,6 @@ import plotly.express as px
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 our_path = '../../../curr/'
-
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -20,34 +19,82 @@ def make_dir(path):
     try:
         if path:
             dir = "{cwd}/{path}".format(cwd=cwd, path=path)
-            os.mkdir(dir)
+            os.makedirs(dir)
     except FileExistsError:
         pass  
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def graph_csv(path, filename, key_header, value_header):
-    cwd = os.getcwd()
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# @TODO
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def isvalid(s):
+    return not pd.isnull(s)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    name = "{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path), slash=('/' if path else None), filename=filename)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# @TODO
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def make_csv_breakdown(path_csv, filename, d,  key_header):
+    cwd = os.getcwd()
+    make_dir(path_csv)
+
+    with open("{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename), 'w') as csvfile:
+        
+        filewriter = csv.writer(csvfile)
+
+        values = []
+        for d2 in  d.values():
+            for v in d2:
+                #  gets rid of nan.
+                if isvalid(v) and v not in values: 
+                    values.append(v)
+
+        values.sort()
+        values.insert(0, key_header)
+        filewriter.writerow(values)
+        values.remove(key_header)
+
+        for k,d2 in zip(d.keys(), d.values()):
+            row = [""]*(len(values)+1)
+            
+            # If there is a dictionary, we begin by adding the congressperson's name to the row.
+            if d2:
+                row.insert(0, k)
+
+            # Then for each date, we 
+            for y in d2:
+                if isvalid(y):
+                    row[values.index(y) + 1] = d2[y]
+
+            filewriter.writerow(row)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# @TODO
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def graph_csv(path_csv, path_html, filename, key_header, value_header):
+    cwd = os.getcwd()
+    make_dir(path_html)
+
+    name = "{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename)
     
     df = pd.read_csv(name)
 
     fig = px.line(df, x = key_header, y = value_header, title='')
     
-    fig.write_html("{path}{slash}{filename}.html".format(path="{cwd}/{path}".format(cwd=cwd, path=path), slash=('/' if path else None), filename=filename))
+    fig.write_html("{path}{slash}{filename}.html".format(path="{cwd}/{path}".format(cwd=cwd, path=path_html), slash=('/' if path_html else None), filename=filename))
     
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def make_csv(path, filename, d, key_header, value_header):
+def make_csv(path_csv, filename, d, key_header, value_header):
     cwd = os.getcwd()
-    make_dir(path)
+    make_dir(path_csv)
 
-    with open("{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path), slash=('/' if path else None), filename=filename), 'w') as csvfile:
+    with open("{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename), 'w') as csvfile:
         filewriter = csv.writer(csvfile)
 
         filewriter.writerow([key_header,value_header])
