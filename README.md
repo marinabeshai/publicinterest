@@ -22,6 +22,42 @@
     - https://therevolvingdoorproject.org/
 - https://www.nytimes.com/2021/10/21/us/politics/house-ethics-kelly-malinowski-mooney-hagendorn.html
 
+
+- API Work:
+	• Exploratory work.
+		○ Maybe explore matplotlib or seaborn, along with Pandas How many people are we talking about, how often do they do things, how big are the transactions, where do they take place, etc.  Start counting things.
+	• Talk to someone in the politics department.
+		○ It would sure be nice to have House data as well, since it's more people and they are in and out faster (on average).  Maybe someone in the politics department would have pointers to usable data?
+	
+	• Need all the data. 
+		○ What can you get easily, feasibly, with difficulty, not at all. That's enough to do experiments, create tools, etc., but probably not enough to draw conclusions.
+
+	• Need all the data in a table.
+		○ Multiple tables seems most likely.  For now, maybe just think of clean flat files, with an eye to an SQL or other formal database in the (near?) future.
+	
+	• Need to figure out how to store the table
+		○ Knowing what it is, how big, etc., will help answer this.
+	
+	• Need to add new information (poltiical affilation, current state, etc.
+		○ What kind of information, where does it come from, how automated might it be, how extensible?  How does this relate to the "table" above?  (Adding more attributes to relational databases can be a pain.)
+	
+	• Need to figure out how to make API accessible. 
+		○ I think API design and making it available come later on, though you should keep them in mind as you go along.  But you can's make an API if you don't know what you have and if you haven't thought about what kinds of use you and others might make of it.
+	
+- Answer my question work:
+	• Analyze their buying trends 
+	
+	• Compare their trends with market performance
+	Here's another place where you have to figure out what data you
+	want and how to get it easily.  Stock prices from the NYSE, etc.,
+	are easy; not so clear about pork belly futures, though probably
+	they too are around somewhere.
+	
+	• Write an algorithm that takes their data into consideration and buys with latency and calculates return in investment 
+	• Evaluation algorithm.
+	• Winter Break:
+		○ Start writing the stupid thing. 
+
 ```diff
 @@ Week 1 [Monday, August 30] @@
 - Deadlines: 
