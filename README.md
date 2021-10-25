@@ -56,7 +56,7 @@
         - info.clerkweb@mail.house.gov
     - Tried to read and scrap PDFs using Python to get the gap between the ones that are decent but not on Tim's site. 
 # Notes
-```diff
+```
 
 ```diff
 @@ Week 7 [Monday, October 11] @@
