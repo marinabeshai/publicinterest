@@ -1,4 +1,3 @@
-import csv
 from numpy import inner
 import pandas as pd
 from os import listdir
@@ -40,9 +39,7 @@ if __name__ == '__main__':
         
         # BUG AT BELOW. 
         frequency_of_shares(rows)
-        # get # of shares
-        # print(, transaction['amount'])
-        # make_csv(path, "trans_per_date_total", trans_per_date_total)
+
 
         # transaction['disclosure_date']
         # transaction['asset_description']

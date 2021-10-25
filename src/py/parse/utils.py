@@ -20,14 +20,11 @@ def myround(x, base=5):
 
 
 def get_ohlc_average(row):
-    try:
-        open = float(row['Open'])
-        high = float(row['High'])
-        low = float(row['Low'])
-        close = float(row['Close'])
-        return int((open + high + low + close)/4)
-    except Exception as e:
-        print("BRO " + e)
+    open = float(row['Open'])
+    high = float(row['High'])
+    low = float(row['Low'])
+    close = float(row['Close'])
+    return int((open + high + low + close)/4)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -35,21 +32,18 @@ def get_ohlc_average(row):
 
 
 def get_shares_scale(average, amount):
-    try:
-        l = amount.split('-')
-        nl = []
+    l = amount.split('-')
+    nl = []
 
-        for a in l:
-            a = a.strip()
+    for a in l:
+        a = a.strip()
 
-            a = a[1:].replace(",", "")
+        a = a[1:].replace(",", "")
 
-            num_shares = int(float(a)/average)
-            nl.append(myround(num_shares))
+        num_shares = int(float(a)/average)
+        nl.append(myround(num_shares))
 
-        return nl
-    except Exception as e:
-        print("hereeee " + e)
+    return nl
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -61,22 +55,22 @@ def get_price(ticker, date, amount):
 
     start_date, end_date = format_transaction_date_search(date)
 
-    try:
+    try: 
         df = get_stock_df(ticker,
-                          start_date,
-                          end_date=end_date,
-                          interval='1d',
-                          max_retries=3)
-    except Exception as e:
-        print("kul me " + str(e))
+                            start_date,
+                            end_date=end_date,
+                            interval='1d',
+                            max_retries=3)        
+        for _, row in df.iterrows():
+            if row['Date'] == formatted_date:
+                break
 
-    for _, row in df.iterrows():
-        if row['Date'] == formatted_date:
-            break
+        ohlc_average = get_ohlc_average(row)
+        return get_shares_scale(ohlc_average, amount)
 
-    ohlc_average = get_ohlc_average(row)
-    return get_shares_scale(ohlc_average, amount)
-
+    except IndexError:
+        print(ticker)
+        print("hi")
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
