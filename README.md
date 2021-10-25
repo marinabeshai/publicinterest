@@ -1,5 +1,26 @@
 # publicinterest
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+
+```html
+   <span style="color: red">this is red</span>.
+```
+
+
+```diff
+@@ Week 1 [Monday, August 30] @@
+    - Deadlines: 
+    - Notes:
+    - Done:
+```
+
+
 - Week 1 [Monday, August 30]
     - Deadlines: 
     - Notes:
