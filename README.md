@@ -17,7 +17,9 @@
 + Done:
     - Meeting w/Jack (9/6)
     - Meeting w/AnneMarie (9/8)
-    - Emailed Matt D. and Eric G. 
+    - Emailed:
+        - Matt D.
+        - Eric G. 
 # Notes
 ```
 
@@ -25,7 +27,8 @@
 @@ Week 3 [Monday, September 13] @@
 - Deadlines: 
 + Done:
-    - Emailed Arvind (9/12)
+    - Emailed:
+        - Arvind
 # Notes
 ```
 
@@ -51,7 +54,7 @@
 @@ Week 6 [Monday, October 4] @@
 - Deadlines: 
 + Done:
-    - Emailed 
+    - Emailed: 
         - Tim of House and Senate StockWatcher.com
         - info.clerkweb@
     - Tried to read and scrap PDFs using Python to get the gap between the ones that are decent but not on Tim's site. 
