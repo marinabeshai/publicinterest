@@ -21,14 +21,14 @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 3 [Monday, September 13] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 4 [Monday, September 20] @@
@@ -36,7 +36,7 @@
         - Submit a Written Project Proposal by 11:59pm EDT, in the IW portal
     - Notes:
     - Done:
-```diff
+```
 
 
 ```diff
@@ -44,7 +44,7 @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 6 [Monday, October 4] @@
@@ -59,14 +59,14 @@
         - Submit the Checkpoint Form by 11:59pm EDT, in the IW portal
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 8 [Monday, October 18] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 
 ```diff
@@ -74,37 +74,35 @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 10 [Monday, November 1] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 11 [Monday, November 8] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 12 [Monday, November 15] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
-
-
+```
 
 ```diff
 @@ Week 13 [Monday, November 22] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 14 [Monday, November 29] @@
@@ -112,7 +110,7 @@
         - Attend "How to Write an IW Paper"
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 15 [Monday, December 6] @@
@@ -120,14 +118,14 @@
         - Submit Progress Report for Thesis/Two-Term Projects by 11:59pm EST, in the IW portal
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 16 [Monday, December 13] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 17 [Monday, December 20] @@
@@ -138,7 +136,7 @@
         - Submit Chapter 3 for Review.
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 18 [Monday, December 27] @@
@@ -147,7 +145,7 @@
         - Submit Chapter 1 for Review.
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 19 [Monday, January 3] @@
@@ -156,7 +154,7 @@
         - Submit Chapter 4 for Review.
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 20 [Monday, January 10] @@
@@ -165,42 +163,42 @@
         - Submit Chapter 5 for Review.
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 21 [Monday, January 17] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 22 [Monday, January 24] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 23 [Monday, January 31] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
-    :
+```
+    
 ```diff
 @@ Week 24 [Monday, February 7] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 25 [Monday, February 14] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 26 [Monday, February 21] @@
@@ -209,14 +207,14 @@
         - Submit a Draft Paper by 11:59pm EST, in the IW portal
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 27 [Monday, February 28] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 28 [Monday, March 7] @@
@@ -226,7 +224,7 @@
         - Submit Chapter 6&7 for Review.
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 29 [Monday, March 14] @@
@@ -235,33 +233,32 @@
         - Submit Chapter 8 for Review.
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 30 [Monday, March 21] @@
     - Deadlines: 
         - Chapter 9 (Conclusion) Due.
         - Submit Chapter 9 for Review.
-        ```diff
-@@ WANT FULL DRAFT BY THIS DATE.
+        - WANT FULL DRAFT BY THIS DATE.
         - Select a second reader by 11:59pm EST, in the IW portal (required for thesis, only)
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 31 [Monday, March 28] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 32 [Monday, April 4] @@
     - Deadlines: 
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 33 [Monday, April 11] @@
@@ -269,7 +266,7 @@
         - Submit a Written Final Report by 11:59pm EST, in the IW portal
     - Notes:
     - Done:
-```diff
+```
 
 ```diff
 @@ Week 34 [Monday, April 18] @@
@@ -278,5 +275,5 @@
         - Oral presentation week
     - Notes:
     - Done:
-```diff
+```
 
