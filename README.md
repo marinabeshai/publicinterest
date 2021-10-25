@@ -15,6 +15,9 @@
 @@ Week 2 [Monday, September 6] @@
 - Deadlines: 
 + Done:
+    - Meeting w/Jack (9/6)
+    - Meeting w/AnneMarie (9/8)
+    - Emailed Matt Desmond and Eric Gregory 
 # Notes
 ```
 
@@ -22,14 +25,16 @@
 @@ Week 3 [Monday, September 13] @@
 - Deadlines: 
 + Done:
+    - Emailed Arvind (9/12)
 # Notes
 ```
 
 ```diff
 @@ Week 4 [Monday, September 20] @@
 - Deadlines: 
-        - Submit a Written Project Proposal by 11:59pm EDT, in the IW portal
+    - Submit a Written Project Proposal by 11:59pm EDT, in the IW portal
 + Done:
+    - Got an Idea
 # Notes
 ```
 
@@ -38,6 +43,7 @@
 @@ Week 5 [Monday, September 27] @@
 - Deadlines: 
 + Done:
+    - Automatic download of data.
 # Notes
 ```
 
@@ -45,6 +51,10 @@
 @@ Week 6 [Monday, October 4] @@
 - Deadlines: 
 + Done:
+    - Emailed 
+        - Tim of House and Senate StockWatcher.com
+        - info.clerkweb@mail.house.gov
+    - Tried to read and scrap PDFs using Python to get the gap between the ones that are decent but not on Tim's site. 
 # Notes
 ```diff
 
