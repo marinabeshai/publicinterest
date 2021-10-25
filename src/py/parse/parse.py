@@ -24,21 +24,21 @@ if __name__ == '__main__':
         rows = csvreader.iterrows()
 
         # DATES
-        # frequency_of_dates(rows)            
-        # frequency_of_dates_controlled(rows)
-        # frequency_of_differences(rows)
+        frequency_of_dates(rows)            
+        frequency_of_dates_controlled(rows)
+        frequency_of_differences(rows)
                                                               
         # PER PERSON 
-        # frequency_of_person(rows)            
-        # frequency_of_person_controlled(rows)
+        frequency_of_person(rows)            
+        frequency_of_person_controlled(rows)
 
         # PER TICKER
-        # frequency_of_ticker(rows)            
-        # frequency_of_ticker_breakdown_person(rows)
-        # frequency_of_ticker_breakdown_ticker(csvreader.iterrows())            
+        frequency_of_ticker(rows)            
+        frequency_of_ticker_breakdown_person(rows)
+        frequency_of_ticker_breakdown_ticker(csvreader.iterrows())            
         
         # BUG AT BELOW. 
-        frequency_of_shares(rows)
+        # frequency_of_shares(rows)
 
 
         # transaction['disclosure_date']
