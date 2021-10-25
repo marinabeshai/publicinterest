@@ -1,7 +1,7 @@
 # publicinterest
 
 - Week 1 [Monday, August 30]
-    Deadlines: 
+    - Deadlines: 
 - Week 2 [Monday, September 6]
 - Week 3 [Monday, September 13]
 - Week 4 [Monday, September 20]
