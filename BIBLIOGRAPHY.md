@@ -15,5 +15,5 @@
         - Free Law Project
         - An opinion by the Judicial Conference’s Committee on Codes of Conduct in 2013 confirmed that judges must bow out of cases involving stocks they own in accounts run by money managers.
         - Half of all federal trial and appellate judges in the Journal’s review disclosed minimum financial assets of $775,000 in 2018, while 31 reported a minimum of $10 million of assets.
-
+    - https://www.nytimes.com/2021/10/21/us/politics/house-ethics-kelly-malinowski-mooney-hagendorn.html
 

@@ -1,7 +1,6 @@
 # publicinterest
 
 - Need to look at what other people have done. 
-- Need to keep track of what I've looked at (i.e. start a bibliography).
 - Need to research types of graphs particularly for the csv_breakdowns and what should be in the graphs. 
     - See what people have made (NYT and WSJ).
     - Distribution over time of transactions?
@@ -20,7 +19,6 @@
     - https://www.opensecrets.org/ 
     - https://www.opensecrets.org/personal-finances/
     - https://therevolvingdoorproject.org/
-- https://www.nytimes.com/2021/10/21/us/politics/house-ethics-kelly-malinowski-mooney-hagendorn.html
 
 
 - API Work:
