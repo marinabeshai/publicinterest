@@ -1,5 +1,20 @@
 # publicinterest
 
+- Need to look at what other people have done. 
+- Need to keep track of what I've looked at (i.e. start a bibliography).
+- Need to research types of graphs particularly for the csv_breakdowns and what should be in the graphs. 
+    - See what people have made (NYT and WSJ).
+    - Distribution over time of transactions?
+    - Distribution plot? NCTK.
+    - Pick 5-10 of the most active trades. 
+    - For each ticker, market cap and Volatility. 
+    - Scatter plot matrix. 
+- Looking at people specifically. 
+- Correlation between high runners and those who did not provide data. 
+- Think of more tools.
+- pip install  (later)
+- https://bigcharts.marketwatch.com/
+
 ```diff
 @@ Week 1 [Monday, August 30] @@
 - Deadlines: 
@@ -81,7 +96,7 @@
 @@ Week 9 [Monday, October 25] @@
 - Deadlines: 
 + Done:
-    - Finished basic parsing of senate data (dates.py, costs.py, person.py, ticker.py, parse.py, utils.py)
+    - Finished basic parsing, csving, and graphing of senate data (dates.py, costs.py, person.py, ticker.py, parse.py, utils.py)
     - Began Wikipedia scraping work. 
     - Emailed:
         - SPIA
