@@ -14,6 +14,13 @@
 - Think of more tools.
 - pip install  (later)
 - https://bigcharts.marketwatch.com/
+- https://www.congress.gov/congressional-record/2020/04/14
+- Swati Bhatt's recs
+    - https://link.springer.com/article/10.1007%2Fs12197-017-9384-z
+    - https://www.opensecrets.org/ 
+    - https://www.opensecrets.org/personal-finances/
+    - https://therevolvingdoorproject.org/
+- https://www.nytimes.com/2021/10/21/us/politics/house-ethics-kelly-malinowski-mooney-hagendorn.html
 
 ```diff
 @@ Week 1 [Monday, August 30] @@
