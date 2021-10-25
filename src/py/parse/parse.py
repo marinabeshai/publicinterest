@@ -21,20 +21,19 @@ if __name__ == '__main__':
     with open(our_path+onlyfiles[0]) as f:
         our_path = onlyfiles[0][:onlyfiles[0].find(".")]
         csvreader = pd.read_csv(f)
-        rows = csvreader.iterrows()
 
         # DATES
-        frequency_of_dates(rows)            
-        frequency_of_dates_controlled(rows)
-        frequency_of_differences(rows)
+        frequency_of_dates(csvreader.iterrows())            
+        frequency_of_dates_controlled(csvreader.iterrows())
+        frequency_of_differences(csvreader.iterrows())
                                                               
         # PER PERSON 
-        frequency_of_person(rows)            
-        frequency_of_person_controlled(rows)
+        frequency_of_person(csvreader.iterrows())            
+        frequency_of_person_controlled(csvreader.iterrows())
 
         # PER TICKER
-        frequency_of_ticker(rows)            
-        frequency_of_ticker_breakdown_person(rows)
+        frequency_of_ticker(csvreader.iterrows())            
+        frequency_of_ticker_breakdown_person(csvreader.iterrows())
         frequency_of_ticker_breakdown_ticker(csvreader.iterrows())            
         
         # BUG AT BELOW. 

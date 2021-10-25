@@ -23,7 +23,7 @@ def frequency_of_person(rows, trans_per_person_total={}):
 # {'M Person': {year : #_of_transactions_in_year, ... } }
 # trans_per_person_breakdown = {}
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def frequency_of_person_controlled(rows, trans_per_person_breakdown={}):
+def frequency_of_person_controlled(rows, trans_per_person_breakdown={}):    
     for _, transaction in rows:
         date = transaction['transaction_date']
         trans_per_person_breakdown = increment_dictionary_in_dictionary(trans_per_person_breakdown, transaction['senator'], date)

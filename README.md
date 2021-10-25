@@ -17,7 +17,7 @@
 + Done:
     - Meeting w/Jack (9/6)
     - Meeting w/AnneMarie (9/8)
-    - Emailed Matt Desmond and Eric Gregory 
+    - Emailed Matt D. and Eric G. 
 # Notes
 ```
 
@@ -53,7 +53,7 @@
 + Done:
     - Emailed 
         - Tim of House and Senate StockWatcher.com
-        - info.clerkweb@house
+        - info.clerkweb@
     - Tried to read and scrap PDFs using Python to get the gap between the ones that are decent but not on Tim's site. 
 # Notes
 ```
@@ -80,6 +80,19 @@
 + Done:
     - Finished basic parsing of senate data (dates.py, costs.py, person.py, ticker.py, parse.py, utils.py)
     - Began Wikipedia scraping work. 
+    - Emailed:
+        - SPIA
+            - Bénabou 
+            - Canes-Wrone  
+            - Mian 
+            - Shafir 
+        - Finance
+            - Matray 
+            - Cox 
+            - Blinder 
+
+
+
 # Notes
 ```
 
