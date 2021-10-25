@@ -1,17 +1,12 @@
 # publicinterest
 
 ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
-
-```diff
 @@ Week 1 [Monday, August 30] @@
 - Deadlines: 
 + Done:
++ Meeting w/PEMM Group (9/2)
++ Independent Work Getting Started Meeting (9/2-3)
++ Meeting w/Brian (9/3)
 # Notes
 ```
 
