@@ -56,13 +56,12 @@ def get_price(ticker, date, amount):
 
     try: 
         print("================================================================")
+        print(ticker, start_date, end_date)
         df = get_stock_df(ticker,
                             start_date,
                             end_date=end_date,
                             interval='1d',
                             max_retries=3)        
-        print(df)
-        print(ticker, start_date, end_date)
         for _, row in df.iterrows():
             if row['Date'] == formatted_date:
                 break
