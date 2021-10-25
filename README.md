@@ -148,7 +148,7 @@
             - Mian 
             - Shafir 
         - Finance
-            - Matray 
+            - Matray (N)
             - Cox 
             - Blinder 
 # Notes
