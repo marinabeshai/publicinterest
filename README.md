@@ -90,9 +90,6 @@
             - Matray 
             - Cox 
             - Blinder 
-
-
-
 # Notes
 ```
 
