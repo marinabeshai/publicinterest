@@ -45,7 +45,6 @@ if __name__ == '__main__':
         frequency_of_asset_type(csvreader.iterrows())
 
 
-        # transaction['disclosure_date']
-        # transaction['asset_description']
-        # transaction['comment']
-        # transaction['ptr_link']
+        
+    
+
