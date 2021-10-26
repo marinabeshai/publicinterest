@@ -4,7 +4,7 @@ import csv
 from numpy import e
 import pandas as pd
 import plotly.express as px
-from mini_yahoo_finance import get_stock_df
+import yfinance as yf
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
@@ -22,7 +22,8 @@ def get_ohlc_average(row):
     high = float(row['High'])
     low = float(row['Low'])
     close = float(row['Close'])
-    return int((open + high + low + close)/4)
+
+    return (open + high + low + close)/4
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -34,10 +35,9 @@ def get_shares_scale(average, amount):
 
     for a in l:
         a = a.strip()
-
         a = a[1:].replace(",", "")
 
-        num_shares = int(float(a)/average)
+        num_shares = float(a)/average
         nl.append(myround(num_shares))
 
     return nl
@@ -53,18 +53,18 @@ def get_price(ticker, date, amount):
     formatted_date = format_transaction_date_df(date)
 
     start_date, end_date = format_transaction_date_search(date)
-    print("hi marina " + start_date, end_date)
+
     try: 
-        df = get_stock_df(ticker,
-                            start_date,
-                            end_date=end_date,
-                            interval='1d',
-                            max_retries=4)     
+        # Get the data
+        df = yf.download(ticker, start_date, end_date)
         
-        print(df)
-           
-        for _, row in df.iterrows():
-            if row['Date'] == formatted_date:
+        if df.empty:
+            return None 
+                
+        for index, row in df.iterrows():
+            index = str(index).split(" ")[0]
+
+            if index == formatted_date:
                 break
 
         ohlc_average = get_ohlc_average(row)
@@ -241,11 +241,9 @@ def format_transaction_date_df(s):
 # format_transaction_date_search('1/7/2011') --> '07-01-2011', '17-01-2011'
 # Formatted required by mini_yahoo_finance. We extend the time frame by 10 days because there seems to be a bug of mini_yahoo_finance not accurately capturing dates and times.  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def format_transaction_date_search(s):
-    # 1/2/13 --> YYYY-MM-DD
     start_date = dt.datetime.strptime(s, "%m/%d/%Y")
-    start_date = start_date - dt.timedelta(days=2)
-    end_date = start_date + dt.timedelta(days=10)
-    return start_date.strftime("%d-%m-%Y"), end_date.strftime("%d-%m-%Y")
+    end_date = start_date + dt.timedelta(days=2)
+    return start_date.strftime("%Y-%m-%d"), end_date.strftime("%Y-%m-%d")
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

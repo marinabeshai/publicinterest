@@ -38,6 +38,9 @@ if __name__ == '__main__':
         
         # BUG AT BELOW. 
         frequency_of_shares(csvreader.iterrows())    
+    
+
+
 
 
         # transaction['disclosure_date']

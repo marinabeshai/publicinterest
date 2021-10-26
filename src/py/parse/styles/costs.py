@@ -7,13 +7,24 @@ from utils import increment_dictionary_in_dictionary, increment_dictionary, make
 def frequency_of_shares(rows, ticker_total={}):
     for _, transaction in rows:
         date = transaction['transaction_date']
-        print(transaction)
+        # print(transaction)
+
         l = get_price(transaction['ticker'], date, transaction['amount'])
-        ticker_total = increment_dictionary(ticker_total, str(l))
+        if l:
+            ticker_total = increment_dictionary(ticker_total, str(l))
 
     filename = "frequency_of_shares"
-    key_header = "scale_of_shares_roundedby5"
+    key_header = "scale_of_shares_rounded_by_5"
     value_header = "number_of_transactions"
     make_csv(path_csv, filename, ticker_total, key_header, value_header)
     graph_csv(path_csv, path_html, filename, key_header, value_header)
 # # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 1 Failed download:
+# - ^RGP: No data found for this date range, symbol may be delisted
+# [*********************100%***********************]  1 of 1 completed
+# [*********************100%***********************]  1 of 1 completed
+
+# 1 Failed download:
+# - REVB: No data found, symbol may be delisted
+# [*********************100%***********************]  1 of 1 completed
