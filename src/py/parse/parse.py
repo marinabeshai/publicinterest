@@ -23,21 +23,21 @@ if __name__ == '__main__':
         csvreader = pd.read_csv(f)
 
         # DATES
-        frequency_of_dates(csvreader.iterrows())            
-        frequency_of_dates_controlled(csvreader.iterrows())
-        frequency_of_differences(csvreader.iterrows())
+        # frequency_of_dates(csvreader.iterrows())            
+        # frequency_of_dates_controlled(csvreader.iterrows())
+        # frequency_of_differences(csvreader.iterrows())
                                                               
-        # PER PERSON 
-        frequency_of_person(csvreader.iterrows())            
-        frequency_of_person_controlled(csvreader.iterrows())
+        # # PER PERSON 
+        # frequency_of_person(csvreader.iterrows())            
+        # frequency_of_person_controlled(csvreader.iterrows())
 
-        # PER TICKER
-        frequency_of_ticker(csvreader.iterrows())            
-        frequency_of_ticker_breakdown_person(csvreader.iterrows())
-        frequency_of_ticker_breakdown_ticker(csvreader.iterrows())            
+        # # PER TICKER
+        # frequency_of_ticker(csvreader.iterrows())            
+        # frequency_of_ticker_breakdown_person(csvreader.iterrows())
+        # frequency_of_ticker_breakdown_ticker(csvreader.iterrows())            
         
         # BUG AT BELOW. 
-        # frequency_of_shares(rows)
+        frequency_of_shares(csvreader.iterrows())    
 
 
         # transaction['disclosure_date']

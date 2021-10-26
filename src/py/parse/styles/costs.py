@@ -7,7 +7,7 @@ from utils import increment_dictionary_in_dictionary, increment_dictionary, make
 def frequency_of_shares(rows, ticker_total={}):
     for _, transaction in rows:
         date = transaction['transaction_date']
-        
+        print(transaction)
         l = get_price(transaction['ticker'], date, transaction['amount'])
         ticker_total = increment_dictionary(ticker_total, str(l))
 

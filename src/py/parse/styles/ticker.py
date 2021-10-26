@@ -24,7 +24,7 @@ def frequency_of_ticker_breakdown_person(rows, ticker_per_person_breakdown={}):
         ticker_per_person_breakdown = increment_dictionary_in_dictionary(ticker_per_person_breakdown, transaction['senator'], transaction['ticker'])
 
     filename = "ticker_per_person_breakdown"
-    key_header = "ticker"
+    key_header = "senator"
 
     make_csv_breakdown(path_csv, filename, ticker_per_person_breakdown, key_header)
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

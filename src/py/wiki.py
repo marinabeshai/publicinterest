@@ -32,3 +32,4 @@ if __name__ == '__main__':
         d[w] =  res.replace("=", "").replace("[", "").replace("]", "").strip()
         
     print(d)
+

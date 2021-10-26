@@ -53,15 +53,16 @@ def get_price(ticker, date, amount):
     formatted_date = format_transaction_date_df(date)
 
     start_date, end_date = format_transaction_date_search(date)
-
+    print("hi marina " + start_date, end_date)
     try: 
-        print("================================================================")
-        print(ticker, start_date, end_date)
         df = get_stock_df(ticker,
                             start_date,
                             end_date=end_date,
                             interval='1d',
-                            max_retries=3)        
+                            max_retries=4)     
+        
+        print(df)
+           
         for _, row in df.iterrows():
             if row['Date'] == formatted_date:
                 break
@@ -242,6 +243,7 @@ def format_transaction_date_df(s):
 def format_transaction_date_search(s):
     # 1/2/13 --> YYYY-MM-DD
     start_date = dt.datetime.strptime(s, "%m/%d/%Y")
+    start_date = start_date - dt.timedelta(days=2)
     end_date = start_date + dt.timedelta(days=10)
     return start_date.strftime("%d-%m-%Y"), end_date.strftime("%d-%m-%Y")
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
