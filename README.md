@@ -54,7 +54,7 @@
 ```diff
 @@ Week 4 [Monday, September 20] @@
 - Deadlines: 
-    - Submit a Written Project Proposal by 11:59pm EDT, in the IW portal
+    - ~~Submit a Written Project Proposal by 11:59pm EDT, in the IW portal.~~
 + Done:
     - Got an Idea
 # Notes
