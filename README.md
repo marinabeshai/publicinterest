@@ -13,7 +13,6 @@
 - Think of more tools.
 - pip install  (later)
 - https://bigcharts.marketwatch.com/
-- https://www.congress.gov/congressional-record/2020/04/14
 - Swati Bhatt's recs
     - https://link.springer.com/article/10.1007%2Fs12197-017-9384-z
     - https://www.opensecrets.org/ 
@@ -21,40 +20,38 @@
     - https://therevolvingdoorproject.org/
 
 
-- API Work:
-	• Exploratory work.
-		○ Maybe explore matplotlib or seaborn, along with Pandas How many people are we talking about, how often do they do things, how big are the transactions, where do they take place, etc.  Start counting things.
-	• Talk to someone in the politics department.
-		○ It would sure be nice to have House data as well, since it's more people and they are in and out faster (on average).  Maybe someone in the politics department would have pointers to usable data?
-	
+
+
+week 10-11 [2 weeks worth of work? ==> week 20/21]
 	• Need all the data. 
 		○ What can you get easily, feasibly, with difficulty, not at all. That's enough to do experiments, create tools, etc., but probably not enough to draw conclusions.
+	
 
+WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
 	• Need all the data in a table.
 		○ Multiple tables seems most likely.  For now, maybe just think of clean flat files, with an eye to an SQL or other formal database in the (near?) future.
-	
 	• Need to figure out how to store the table
 		○ Knowing what it is, how big, etc., will help answer this.
-	
-	• Need to add new information (poltiical affilation, current state, etc.
-		○ What kind of information, where does it come from, how automated might it be, how extensible?  How does this relate to the "table" above?  (Adding more attributes to relational databases can be a pain.)
-	
 	• Need to figure out how to make API accessible. 
 		○ I think API design and making it available come later on, though you should keep them in mind as you go along.  But you can's make an API if you don't know what you have and if you haven't thought about what kinds of use you and others might make of it.
 	
-- Answer my question work:
+	
+    [1 week --> week 24]
 	• Analyze their buying trends 
 	
+    [2 weeks --> week 25/26]
 	• Compare their trends with market performance
 	Here's another place where you have to figure out what data you
 	want and how to get it easily.  Stock prices from the NYSE, etc.,
 	are easy; not so clear about pork belly futures, though probably
 	they too are around somewhere.
 	
+    [2 weeks --> week 27/28]
 	• Write an algorithm that takes their data into consideration and buys with latency and calculates return in investment 
+
+    [2 weeks --> week 29/30]
 	• Evaluation algorithm.
-	• Winter Break:
-		○ Start writing the stupid thing. 
+
 
 ```diff
 @@ Week 1 [Monday, August 30] @@
@@ -132,10 +129,14 @@
 # Notes
 ```
 
-
 ```diff
 @@ Week 9 [Monday, October 25] @@
 - Deadlines: 
+    - Maybe explore matplotlib or seaborn, along with Pandas.
+    - How many people are we talking about, how often do they do things, how big are the transactions, where do they take place, etc.  
+    - Start counting things.
+    - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting)
+    - Need to be able to search https://www.congress.gov/congressional-record/2020/04/14
 + Done:
     - Finished basic parsing, csving, and graphing of senate data (dates.py, costs.py, person.py, ticker.py, parse.py, utils.py)
     - Began Wikipedia scraping work. 
@@ -150,7 +151,16 @@
             - Cox 
             - Blinder 
 # Notes
+    - Need to walk through wiki.txt. Am I skipping anything important?
 ```
+
+	• Talk to someone in the politics department.
+		○ It would sure be nice to have House data as well, since it's more people and they are in and out faster (on average). 
+
+	• Need to add new information (poltiical affilation, current state, etc.)
+		○ What kind of information, where does it come from, how automated might it be, how extensible?  How does this relate to the "table" above?  (Adding more attributes to relational databases can be a pain.)
+
+
 
 ```diff
 @@ Week 10 [Monday, November 1] @@
