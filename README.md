@@ -10,7 +10,6 @@
     - Scatter plot matrix. 
 - Looking at people specifically. 
 - Correlation between high runners and those who did not provide data. 
-- Think of more tools.
 - pip install  (later)
 - https://bigcharts.marketwatch.com/
 - Swati Bhatt's recs
@@ -18,39 +17,6 @@
     - https://www.opensecrets.org/ 
     - https://www.opensecrets.org/personal-finances/
     - https://therevolvingdoorproject.org/
-
-
-
-
-week 10-11 [2 weeks worth of work? ==> week 20/21]
-	• Need all the data. 
-		○ What can you get easily, feasibly, with difficulty, not at all. That's enough to do experiments, create tools, etc., but probably not enough to draw conclusions.
-	
-
-WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
-	• Need all the data in a table.
-		○ Multiple tables seems most likely.  For now, maybe just think of clean flat files, with an eye to an SQL or other formal database in the (near?) future.
-	• Need to figure out how to store the table
-		○ Knowing what it is, how big, etc., will help answer this.
-	• Need to figure out how to make API accessible. 
-		○ I think API design and making it available come later on, though you should keep them in mind as you go along.  But you can's make an API if you don't know what you have and if you haven't thought about what kinds of use you and others might make of it.
-	
-	
-    [1 week --> week 24]
-	• Analyze their buying trends 
-	
-    [2 weeks --> week 25/26]
-	• Compare their trends with market performance
-	Here's another place where you have to figure out what data you
-	want and how to get it easily.  Stock prices from the NYSE, etc.,
-	are easy; not so clear about pork belly futures, though probably
-	they too are around somewhere.
-	
-    [2 weeks --> week 27/28]
-	• Write an algorithm that takes their data into consideration and buys with latency and calculates return in investment 
-
-    [2 weeks --> week 29/30]
-	• Evaluation algorithm.
 
 
 ```diff
@@ -137,6 +103,7 @@ WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
     - Start counting things.
     - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting)
     - Need to be able to search https://www.congress.gov/congressional-record/2020/04/14
+    - Need to add new information (poltiical affilation, current state, etc.)
 + Done:
     - Finished basic parsing, csving, and graphing of senate data (dates.py, costs.py, person.py, ticker.py, parse.py, utils.py)
     - Began Wikipedia scraping work. 
@@ -153,14 +120,6 @@ WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
 # Notes
     - Need to walk through wiki.txt. Am I skipping anything important?
 ```
-
-	• Talk to someone in the politics department.
-		○ It would sure be nice to have House data as well, since it's more people and they are in and out faster (on average). 
-
-	• Need to add new information (poltiical affilation, current state, etc.)
-		○ What kind of information, where does it come from, how automated might it be, how extensible?  How does this relate to the "table" above?  (Adding more attributes to relational databases can be a pain.)
-
-
 
 ```diff
 @@ Week 10 [Monday, November 1] @@
@@ -179,6 +138,7 @@ WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
 ```diff
 @@ Week 12 [Monday, November 15] @@
 - Deadlines: 
+    - Can we get more data? 
 + Done:
 # Notes
 ```
@@ -259,6 +219,13 @@ WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
 ```diff
 @@ Week 21 [Monday, January 17] @@
 - Deadlines: 
+    - Need all the data in a table.
+        - Multiple tables seems most likely.  For now, maybe just think of clean flat files, with an eye to an SQL or other formal database in the (near?) future.
+	- Need to figure out how to store the table
+        - Knowing what it is, how big, etc., will help answer this.
+    - Need to figure out how to make API accessible. 
+	    - I think API design and making it available come later on, though you should keep them in mind as you go along.  But you can's make an API if you don't know what you have and if you haven't thought about what kinds of use you and others might make of it.
+
 + Done:
 # Notes
 ```
@@ -268,11 +235,12 @@ WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
 - Deadlines: 
 + Done:
 # Notes
-```
-
+```	
+	
 ```diff
 @@ Week 23 [Monday, January 31] @@
 - Deadlines: 
+    -  Analyze their buying trends 
 + Done:
 # Notes
 ```
@@ -283,10 +251,11 @@ WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
 + Done:
 # Notes
 ```
-
+	
 ```diff
 @@ Week 25 [Monday, February 14] @@
 - Deadlines: 
+	- Compare their trends with market performance Here's another place where you have to figure out what data you want and how to get it easily.  Stock prices from the NYSE, etc., are easy; not so clear about pork belly futures, though probably they too are around somewhere.
 + Done:
 # Notes
 ```
@@ -305,6 +274,7 @@ WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
 - Deadlines: 
     - Make an outline for Chapter 6
     - Make an outline for Chapter 7.
+    - Write an algorithm that takes their data into consideration and buys with latency and calculates return in investment.
 + Done:
 # Notes
 ```
@@ -326,6 +296,7 @@ WEEK 12-13 [2 weeks worth of work? ==> week 22/23]
     - Make an outline for Chapter 9.
     - Chapter 8 (Discussion) Due
     - Submit Chapter 8 for Review.
+    - Evaluation algorithm.
 + Done:
 # Notes
 ```
