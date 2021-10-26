@@ -20,11 +20,3 @@ def frequency_of_shares(rows, ticker_total={}):
     graph_csv(path_csv, path_html, filename, key_header, value_header)
 # # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 1 Failed download:
-# - ^RGP: No data found for this date range, symbol may be delisted
-# [*********************100%***********************]  1 of 1 completed
-# [*********************100%***********************]  1 of 1 completed
-
-# 1 Failed download:
-# - REVB: No data found, symbol may be delisted
-# [*********************100%***********************]  1 of 1 completed

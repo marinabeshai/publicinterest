@@ -4,10 +4,10 @@ import json
 # https://stackoverflow.com/questions/7638402/how-can-i-get-the-infobox-from-a-wikipedia-article-by-the-mediawiki-api
 
 
-if __name__ == '__main__':
-# def wiki_search():
+# if __name__ == '__main__':
+def wiki_search(name):
 
-    probable_result_title = wikipedia.search("Thomas H Tuberville")[0]
+    probable_result_title = wikipedia.search(name)[0]
     htmled_tltle = probable_result_title.replace(" ", "%20")
 
 

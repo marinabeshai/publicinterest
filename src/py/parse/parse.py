@@ -2,6 +2,7 @@ from numpy import inner
 import pandas as pd
 from os import listdir
 from os.path import isfile, join
+from wiki import wiki_search
 from styles.costs import frequency_of_shares
 from styles.dates import frequency_of_dates, frequency_of_dates_controlled, frequency_of_differences
 from styles.person import frequency_of_person, frequency_of_person_controlled
@@ -23,6 +24,8 @@ if __name__ == '__main__':
         our_path = onlyfiles[0][:onlyfiles[0].find(".")]
         csvreader = pd.read_csv(f)
 
+        for _, row in csvreader.iterrows():
+            wiki_search(row['Senator'])
         # DATES
         # frequency_of_dates(csvreader.iterrows())            
         # frequency_of_dates_controlled(csvreader.iterrows())
@@ -37,12 +40,12 @@ if __name__ == '__main__':
         # frequency_of_ticker_breakdown_person(csvreader.iterrows())
         # frequency_of_ticker_breakdown_ticker(csvreader.iterrows())            
         
-        # BUG AT BELOW. 
+        # # OF SHARES.
         # frequency_of_shares(csvreader.iterrows())    
     
-
-        frequency_of_act(csvreader.iterrows())    
-        frequency_of_asset_type(csvreader.iterrows())
+        # ETC.
+        # frequency_of_act(csvreader.iterrows())    
+        # frequency_of_asset_type(csvreader.iterrows())
 
 
         
