@@ -120,7 +120,7 @@
 # Notes
     - Need to walk through wiki.txt. Am I skipping anything important? (publicinterest/src/py/wiki.txt)
     - Bug with 'RDSA' ticker. 
-        -https://efdsearch.senate.gov/search/view/ptr/045f76aa-7ae2-4040-a603-67b5ebc3b271/	08/11/2021
+        -https://efdsearch.senate.gov/search/view/ptr/045f76aa-7ae2-4040-a603-67b5ebc3b271/
     - Need to talk about frequency_of_shares.csv. 
     - Skipping: transaction['disclosure_date'], transaction['ptr_link'], transaction['asset_description'], transaction['comment']
 ```
