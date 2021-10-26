@@ -5,6 +5,55 @@ from numpy import e
 import pandas as pd
 import plotly.express as px
 import yfinance as yf
+import wikipedia 
+import requests
+import json
+from Rep import Representative
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# @TODO
+# https://stackoverflow.com/questions/7638402/how-can-i-get-the-infobox-from-a-wikipedia-article-by-the-mediawiki-api
+
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def wiki_search(name):
+    probable_result_title = wikipedia.search(name)[0]
+    htmled_tltle = probable_result_title.replace(" ", "%20")
+
+    resp = requests.get('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json&titles={person}&rvsection=0'.format(person=htmled_tltle)).json()
+        
+    page_one = next(iter(resp['query']['pages'].values()))
+    revisions = page_one.get('revisions', [])
+
+    l = ["name", "jr/sr", "state", "term_start", "birth_place", "party", "alma_mater", "education"]
+    d = {}
+
+    s = list(revisions[0].values())[2]
+
+    for w in l:
+        i = s.find(w)
+        if i == -1:
+            continue
+        where_to_stop = len(w) + i 
+        while s[where_to_stop] != "|":
+            where_to_stop += 1 
+            
+        res = s[i+len(w): where_to_stop]
+        d[w] =  res.replace("=", "").replace("[", "").replace("]", "").strip()
+    
+    name = d.get("name", None)
+    jr = d.get("jr/sr", None)
+    state = d.get("state", None)
+    term_start = d.get("term_start", None)
+    birth_place = d.get("birth_place", None)
+    party = d.get("party", None)
+    alma_mater = d.get("alma_meter", None)
+    education = d.get("education", None)
+    
+    return Representative(name, jr, state, term_start, birth_place, party, alma_mater, education)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO

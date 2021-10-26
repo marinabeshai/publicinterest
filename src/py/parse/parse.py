@@ -2,7 +2,7 @@ from numpy import inner
 import pandas as pd
 from os import listdir
 from os.path import isfile, join
-from wiki import wiki_search
+from styles.outside import frequency_of_amount_by_aff
 from styles.costs import frequency_of_shares
 from styles.dates import frequency_of_dates, frequency_of_dates_controlled, frequency_of_differences
 from styles.person import frequency_of_person, frequency_of_person_controlled
@@ -24,8 +24,12 @@ if __name__ == '__main__':
         our_path = onlyfiles[0][:onlyfiles[0].find(".")]
         csvreader = pd.read_csv(f)
 
-        for _, row in csvreader.iterrows():
-            wiki_search(row['Senator'])
+
+# for each amount, #oftransactionsperaffiliation
+
+# name", "jr/sr", "state", "term_start", "birth_place", "party", "alma_mater", "education"]
+        frequency_of_amount_by_aff(csvreader.iterrows())         
+            
         # DATES
         # frequency_of_dates(csvreader.iterrows())            
         # frequency_of_dates_controlled(csvreader.iterrows())

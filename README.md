@@ -1,5 +1,7 @@
 # publicinterest
 
+- One could imagine looking at the timing of buy and sell (of the same
+asset) for him, or several.
 - Need to look at what other people have done. 
 - Need to research types of graphs particularly for the csv_breakdowns and what should be in the graphs. 
     - See what people have made (NYT and WSJ).
