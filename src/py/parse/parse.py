@@ -7,6 +7,7 @@ from styles.dates import frequency_of_dates, frequency_of_dates_controlled, freq
 from styles.person import frequency_of_person, frequency_of_person_controlled
 from styles.ticker import frequency_of_ticker_breakdown_person, frequency_of_ticker_breakdown_ticker, frequency_of_ticker
 from utils import our_path 
+from styles.etc import frequency_of_act, frequency_of_asset_type
 
 if __name__ == '__main__':
     
@@ -37,15 +38,14 @@ if __name__ == '__main__':
         # frequency_of_ticker_breakdown_ticker(csvreader.iterrows())            
         
         # BUG AT BELOW. 
-        frequency_of_shares(csvreader.iterrows())    
+        # frequency_of_shares(csvreader.iterrows())    
     
 
-
+        frequency_of_act(csvreader.iterrows())    
+        frequency_of_asset_type(csvreader.iterrows())
 
 
         # transaction['disclosure_date']
         # transaction['asset_description']
-        # transaction['asset_type']
-        # transaction['type']
         # transaction['comment']
         # transaction['ptr_link']
