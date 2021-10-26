@@ -102,13 +102,11 @@ asset) for him, or several.
 - Deadlines: 
     - Maybe explore matplotlib or seaborn, along with Pandas.
     - How many people are we talking about, how often do they do things, how big are the transactions, where do they take place, etc.  
-    - Start counting things.
     - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting)
     - Need to be able to search https://www.congress.gov/congressional-record/2020/04/14
-    - Need to add new information (poltiical affilation, current state, etc.)
 + Done:
     - Finished basic parsing, csving, and graphing of senate data (dates.py, costs.py, person.py, ticker.py, parse.py, utils.py)
-    - Began Wikipedia scraping work. 
+    - Wikipedia scraping work. 
     - Emailed:
         - SPIA
             - Bénabou 
