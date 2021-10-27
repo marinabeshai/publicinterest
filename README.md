@@ -1,4 +1,7 @@
 # publicinterest
+- "Taste, however, is a field of cultural inquuiry that is much more amenable to quantiative analysis and has veen recently traversed by cultural sociologists." -- K.Leview et al. 2008 
+- OLS regression coefficients 
+- Lewis, Kevin, et al. “Tastes, Ties, and Time: A New Social Network Dataset Using Facebook.Com.” Social Networks, vol. 30, no. 4, Oct. 2008, pp. 330–42. ScienceDirect ONLINE https://doi.org/10.1016/j.socnet.2008.07.002
 
 - One could imagine looking at the timing of buy and sell (of the same
 asset) for him, or several.
