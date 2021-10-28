@@ -17,7 +17,7 @@ asset) for him, or several.
 - Correlation between high runners and those who did not provide data. 
 - pip install  (later)
 - https://bigcharts.marketwatch.com/
-- Swati Bhatt's recs
+- Bhatt's recs
     - https://link.springer.com/article/10.1007%2Fs12197-017-9384-z
     - https://www.opensecrets.org/ 
     - https://www.opensecrets.org/personal-finances/
