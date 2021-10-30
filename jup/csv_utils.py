@@ -1,12 +1,14 @@
+import os
+from utils import make_dir, isvalid
+import csv
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def make_csv_breakdown(path_csv, filename, d,  key_header):
-    cwd = os.getcwd()
-    make_dir(path_csv)
+    wd = __get_filename__(path_csv, filename)
 
-    with open("{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename), 'w') as csvfile:
+    with open(wd, 'w') as csvfile:
 
         filewriter = csv.writer(csvfile)
 
@@ -44,15 +46,26 @@ def make_csv_breakdown(path_csv, filename, d,  key_header):
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def make_csv(path_csv, filename, d, key_header, value_header):
-    cwd = os.getcwd()
-    make_dir(path_csv)
 
-    with open("{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename), 'w') as csvfile:
+    wd = __get_filename__(path_csv, filename)
+    
+    with open(wd, 'w') as csvfile:
         filewriter = csv.writer(csvfile)
 
         filewriter.writerow([key_header, value_header])
 
         for k, v in zip(d.keys(), d.values()):
             filewriter.writerow([k, v])
+            
+    return wd
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# @TODO
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def __get_filename__(path_csv, filename):
+    cwd = os.getcwd()
+    make_dir(path_csv)
+
+    return "{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename)
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
