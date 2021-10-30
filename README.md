@@ -24,6 +24,8 @@ asset) for him, or several.
     - https://therevolvingdoorproject.org/
 
 
+- 
+
 ```diff
 @@ Week 1 [Monday, August 30] @@
 - Deadlines: 
