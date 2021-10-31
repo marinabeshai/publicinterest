@@ -2,17 +2,9 @@
 - "Taste, however, is a field of cultural inquuiry that is much more amenable to quantiative analysis and has veen recently traversed by cultural sociologists." -- K.Leview et al. 2008 
 - OLS regression coefficients 
 - Lewis, Kevin, et al. “Tastes, Ties, and Time: A New Social Network Dataset Using Facebook.Com.” Social Networks, vol. 30, no. 4, Oct. 2008, pp. 330–42. ScienceDirect ONLINE https://doi.org/10.1016/j.socnet.2008.07.002
-
 - One could imagine looking at the timing of buy and sell (of the same
 asset) for him, or several.
 - Need to look at what other people have done. 
-- Need to research types of graphs particularly for the csv_breakdowns and what should be in the graphs. 
-    - See what people have made (NYT and WSJ).
-    - Distribution over time of transactions?
-    - Distribution plot? NCTK.
-    - Pick 5-10 of the most active trades. 
-    - For each ticker, market cap and Volatility. 
-    - Scatter plot matrix. 
 - Looking at people specifically. 
 - Correlation between high runners and those who did not provide data. 
 - pip install  (later)
@@ -131,7 +123,13 @@ asset) for him, or several.
 ```diff
 @@ Week 10 [Monday, November 1] @@
 - Deadlines: 
-    - Redo graphs. 
+    - Need to research types of graphs particularly for the csv_breakdowns and what should be in the graphs. 
+        - See what people have made (NYT and WSJ).
+        - Distribution over time of transactions?
+        - Distribution plot? NCTK.
+        - Pick 5-10 of the most active trades. 
+        - For each ticker, market cap and Volatility. 
+        - Scatter plot matrix. 
     - Frequency of shares (sort of it, exponential scale, sort by high runners?, non-linear graphing)
     - Need to deal with stock options better. 
     - Need to research regarding notice dates. How early?
