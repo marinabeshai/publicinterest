@@ -141,7 +141,7 @@ asset) for him, or several.
     - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting) (are there official records?)
     - Group tickers by type (tech, oil, medicine, etc.).
     - Need to be able to search https://www.congress.gov/congressional-record/2020/04/14
-    - Need to add birthday to Rep.py 
+    - Need to add birthday to Rep.py (now Official in wiki.py)
     - Need to control for number of years in congress. 
     - Need to deal with Nans better. 
     - Maybe explore matplotlib or seaborn, along with Pandas.
