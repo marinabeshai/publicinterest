@@ -131,9 +131,12 @@ asset) for him, or several.
 ```diff
 @@ Week 10 [Monday, November 1] @@
 - Deadlines: 
+    - Need to deal with stock options better. 
     - Email people back.
         - Update list from last week. 
-    - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting)
+        - Meet with Blinder (around Thanksgiving b/c of OH) with results. 
+    - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting) (are there official records?)
+    - Group tickers by type (tech, oil, medicine, etc.).
     - Need to be able to search https://www.congress.gov/congressional-record/2020/04/14
     - Need to add birthday to Rep.py 
     - Need to control for number of years in congress. 
