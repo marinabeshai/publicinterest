@@ -16,8 +16,6 @@ asset) for him, or several.
     - https://therevolvingdoorproject.org/
 
 
-- 
-
 ```diff
 @@ Week 1 [Monday, August 30] @@
 - Deadlines: 
@@ -123,6 +121,7 @@ asset) for him, or several.
 ```diff
 @@ Week 10 [Monday, November 1] @@
 - Deadlines: 
+    - Need to clean all code. 
     - Need to research types of graphs particularly for the csv_breakdowns and what should be in the graphs. 
         - See what people have made (NYT and WSJ).
         - Distribution over time of transactions?
