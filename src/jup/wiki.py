@@ -43,11 +43,12 @@ def go_shopping(l, s, d):
 # trans_per_person_total={'Max': 5, 'Sam': 20, ...}
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 class Official: 
-    def __init__(self, name, jr, state, term_start, birth_place, party, alma_mater, education):
+    def __init__(self, name, jr, state, term_start, birth_date, birth_place, party, alma_mater, education):
         self.name = name
         self.jr = jr 
         self.state = state
         self.term_start = term_start
+        self.birthdate = birth_date
         self.birth_place = birth_place
         self.party = party
         if alma_mater:
@@ -66,6 +67,9 @@ class Official:
         print(" get_num_of_years " , self.get_num_of_years() )
         
         
+    def get_birthdate(self):
+        return self.birthdate
+    
     def get_name(self):
         return self.name
     
@@ -129,7 +133,7 @@ def wiki_search(name):
         at += 1 
 
         
-    l = ["name ", "jr/sr ", "birth_place ", "party ", "alma_mater ", "education "]
+    l = ["name ", "jr/sr ", "birth_place ", "party ", "alma_mater ", "education ", "birth_date "]
 
     
     d, count = go_shopping(l, s, {})
@@ -139,7 +143,8 @@ def wiki_search(name):
     party = d.get("party", None)
     alma_mater = d.get("alma_meter", None)
     education = d.get("education", None)
-    
+    birth_date = d.get("birth_date", None)
+
     if count == "0": 
         f1 = "state "
         f2 = "term_start "
@@ -154,7 +159,7 @@ def wiki_search(name):
     state = d.get(f1.strip(), None)
     term_start = d.get(f2.strip(), None)
 
-    x = Official(search_name, jr, state, term_start, birth_place, party, alma_mater, education)
+    x = Official(search_name, jr, state, term_start, birth_date, birth_place, party, alma_mater, education)
     
 
     return x

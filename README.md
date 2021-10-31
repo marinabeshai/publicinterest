@@ -105,13 +105,6 @@ asset) for him, or several.
 ```diff
 @@ Week 9 [Monday, October 25] @@
 - Deadlines: 
-    - Maybe explore matplotlib or seaborn, along with Pandas.
-    - How many people are we talking about, how often do they do things, how big are the transactions, where do they take place, etc.  
-    - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting)
-    - Need to be able to search https://www.congress.gov/congressional-record/2020/04/14
-    - Need to add birthday to Rep.py 
-    - Need to control for number of years in congress. 
-    - Need to deal with Nans better. 
 + Done:
     - Finished basic parsing, csving, and graphing of senate data (dates.py, costs.py, person.py, ticker.py, parse.py, utils.py)
     - Wikipedia scraping work. 
@@ -126,6 +119,7 @@ asset) for him, or several.
             - Cox 
             - Blinder 
 # Notes
+    - How many people are we talking about, how often do they do things, how big are the transactions, where do they take place, etc.  
     - Need to walk through wiki.txt. Am I skipping anything important? (publicinterest/src/py/wiki.txt)
     - Bug with 'RDSA' ticker. 
         -https://efdsearch.senate.gov/search/view/ptr/045f76aa-7ae2-4040-a603-67b5ebc3b271/
@@ -133,10 +127,21 @@ asset) for him, or several.
     - Skipping: transaction['disclosure_date'], transaction['ptr_link'], transaction['asset_description'], transaction['comment']
 ```
 
+@HERE
 ```diff
 @@ Week 10 [Monday, November 1] @@
 - Deadlines: 
+    - Email people back.
+        - Update list from last week. 
+    - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting)
+    - Need to be able to search https://www.congress.gov/congressional-record/2020/04/14
+    - Need to add birthday to Rep.py 
+    - Need to control for number of years in congress. 
+    - Need to deal with Nans better. 
+    - Maybe explore matplotlib or seaborn, along with Pandas.
 + Done:
+    - Moved over to Jupyter notebook.
+    - Compared transaction date to tax deadlines. 
 # Notes
 ```
 
