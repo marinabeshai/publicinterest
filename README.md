@@ -131,7 +131,10 @@ asset) for him, or several.
 ```diff
 @@ Week 10 [Monday, November 1] @@
 - Deadlines: 
+    - Frequency of shares (sort of it, exponential scale, sort by high runners?, non-linear graphing)
     - Need to deal with stock options better. 
+    - Need to research regarding notice dates. How early?
+    - Dividend reinvestment @ at end of the quarter. 
     - Email people back.
         - Update list from last week. 
         - Meet with Blinder (around Thanksgiving b/c of OH) with results. 
