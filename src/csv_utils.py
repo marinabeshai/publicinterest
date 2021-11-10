@@ -2,6 +2,34 @@ import os
 from utils import make_dir, isvalid, get_filename
 import csv
 
+# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# # @TODO
+# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# def make_csv_breakdown_not_intense(path_csv, filename, d,  key_header):
+#     wd = get_filename(path_csv, filename)
+
+#     with open(wd, 'w') as csvfile:
+
+#         filewriter = csv.writer(csvfile)
+
+#         # header row 
+#         l = [] 
+#         l.append(list(d.keys()))
+#         l.append(list(d[  l[0][0] ].keys()))
+#         flat_list = [item for sublist in l  for item in sublist]
+#         filewriter.writerow(flat_list)
+
+
+#         for k, inner_dict in d.items():
+#             l = [k]
+#             for item in inner_dict:
+#                 l.append(item)
+#             print(l)
+#             filewriter.writerow(l)
+#     return wd 
+# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -11,71 +39,82 @@ def make_csv_breakdown(path_csv, filename, d,  key_header):
     with open(wd, 'w') as csvfile:
 
         filewriter = csv.writer(csvfile)
-
-        values = []
+        
+        flat_list = set()
         for d2 in d.values():
             for v in d2:
-                #  gets rid of nan.
-                if isvalid(v) and v not in values:
-                    values.append(v)
+                if isvalid(v):
+                    flat_list.add(v)
 
-        values.sort()
-        values.insert(0, key_header)
-        # values.insert(1, -1)
-        filewriter.writerow(values)
-        values.remove(key_header)
+        flat_list = list(flat_list)
+        flat_list.sort()
+        flat_list.insert(0, key_header)
+        filewriter.writerow(flat_list)
+        flat_list.remove(key_header)
 
         for k, d2 in zip(d.keys(), d.values()):
-            row = [""]*(len(values)+1)
+            row = [""]*len(flat_list)
 
-            # If there is a dictionary, we begin by adding the congressperson's name to the row.
-            if d2:
-                row.insert(0, k)
+            row.insert(0, k)
 
-            # Then for each date, we
             for y in d2:
-                if isvalid(y):
-                    row[values.index(y) + 1] = d2[y]
-                # else:
-                #     row[values.index(-1) + 1] = d2[y]
+                if isvalid(v):
+                    row[flat_list.index(y)+1] = d2[y]
 
             filewriter.writerow(row)
     return wd 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# @TODO
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def make_csv(path_csv, filename, d, key_header, value_header):
-
+def make_csv_base(path_csv, filename, headers, rows):
     wd = get_filename(path_csv, filename)
-    
     with open(wd, 'w') as csvfile:
         filewriter = csv.writer(csvfile)
 
-        filewriter.writerow([key_header, value_header])
-
-        for k, v in zip(d.keys(), d.values()):
-            filewriter.writerow([k, v])
+        filewriter.writerow(headers)
+    
+        for row in rows:
+            filewriter.writerow(row)
             
     return wd
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# @TODO
+# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# def make_csv(path_csv, filename, d, key_header, value_header):
+    
+#     headers = [key_header, value_header]
+#     rows = []
+    
+#     for k, v in d.items():
+#         rows.append([k,v])
+    
+#     return make_csv_base(path_csv, filename, headers, rows)
+    
+
+
+# # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def make_csv_tuples(path_csv, filename, d, key_header, value_header, value_header2):
+def make_csv(path_csv, filename, d, headers):
 
-    wd = get_filename(path_csv, filename)
-    
-    with open(wd, 'w') as csvfile:
-        filewriter = csv.writer(csvfile)
+    rows = []    
 
-        filewriter.writerow([key_header, value_header, "aff"])
+    if type(d) == dict: 
+        for k, v in d.items():
 
-        for k, v in zip(d.keys(), d.values()):
-            v1, v2 = v
-            filewriter.writerow([k, v1, v2])
+            if type(v) is int: 
+                l = [v]
+            else:
+                l = list(v)
             
-    return wd
+            l.insert(0, k)            
+            rows.append(l)
+    else: 
+        for item in d:
+            rows.append([item])
+            
+    return make_csv_base(path_csv, filename, headers, rows)
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

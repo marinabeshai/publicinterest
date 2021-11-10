@@ -95,8 +95,6 @@ class Official:
         return self.education
     
     def get_num_of_years(self):
-        # if not self.term_start:
-        #     print(self.debug())
         today = date.today()
         term_start = datetime.strptime(self.term_start, '%B %d, %Y').date()    
         diff = today.year - term_start.year
@@ -164,66 +162,3 @@ def wiki_search(name):
 
     return x
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# {{short description|Former United States Senator from New Mexico}}
-# {{About|the senator from New Mexico|the senator from Colorado, his cousin|Mark Udall}}
-# {{Use mdy dates|date=September 2015}}
-# {{Infobox officeholder
-# | name                = Tom Udall
-# | image               = Tom Udall official photo.jpg
-# | office = [[List of ambassadors of the United States to New Zealand|United States Ambassador to New Zealand]]
-# | status = Designate
-# | president = [[Joe Biden]]
-# | term_start = TBD
-# | term_end = 
-# | succeeding = [[Scott Brown (politician)|Scott Brown]]
-# | predecessor = [[Scott Brown (politician)|Scott Brown]]
-# | successor = 
-# | office1 = [[List of ambassadors of the United States to New Zealand|United States Ambassador to Samoa]]
-# | status1 = Designate
-# | president1 = Joe Biden
-# | term_start1 = TBD
-# | term_end1 = 
-# | succeeding1 = Scott Brown
-# | predecessor1 = Scott Brown
-# | successor1 = 
-# | jr/sr2               = United States Senator
-# | state2               = [[New Mexico]]
-# | term_start2          = January 3, 2009
-
-
-
-# show more (open the raw output data in a text editor) ...
-
-# | education           = [[Prescott College]] ([[Bachelor of Arts|BA]])<br>[[Downing College, Cambridge]] ([[Bachelor of Laws|LLB]])<br>[[University of New Mexico]] ([[Juris Doctor|JD]])
-# | signature           = Tom Udall signature.png
-# }}
-# '''Thomas Stewart Udall''' ({{IPAc-en|ˈ|j|u|d|ɔː|l}} {{Respell|YOO|doll}}; born May 18, 1948) is an American diplomat, lawyer, and politician who served as a [[United States Senate|United States Senator]] for [[New Mexico]] from 2009 to 2021. A member of the [[Democratic Party (United States)|Democratic Party]], he served as the [[United States House of Representatives|U.S. Representative]] for {{ushr|New Mexico|3|}} from 1999 to 2009 and was the [[New Mexico Attorney General's Office|Attorney General of New Mexico]] from 1991 to 1999. A member of the [[Udall family]], he is the son of [[Stewart Udall]], the nephew of [[Mo Udall]], and the cousin of [[Mark Udall]]. He was the [[Dean of the House|dean]] of [[United States congressional delegations from New Mexico|New Mexico's congressional delegation]]. Udall was first elected in the [[2008 United States Senate election in New Mexico|2008 Senate race]]. He did not seek a third term in [[2020 United States Senate election in New Mexico|2020]], making him the only Democratic senator to retire that cycle. On July 16, 2021, President [[Joe Biden]] nominated Udall to serve as [[United States Ambassador to New Zealand]] and [[United States Ambassador to New Zealand|Samoa]].<ref name="WHBio"/>
-# Thomas Udall
-
-
-# {{redirect|Senator Perdue}}
-# {{short description|American politician, businessman, and former U.S. senator from Georgia}}
-# {{Use American English|date = September 2018}}
-# {{Use mdy dates|date=December 2020}}
-# {{Infobox officeholder
-# | name                = David Perdue
-# | image               = David Perdue, Official Portrait, 114th Congress.jpg
-# | jr/sr               = United States Senator
-# | state               = [[Georgia (U.S. state)|Georgia]]
-# | term_start          = January 3, 2015
-# | term_end            = January 3, 2021
-# | predecessor         = [[Saxby Chambliss]]
-# | successor           = [[Jon Ossoff]]
-# | birth_name          = David Alfred Perdue Jr.
-# | birth_date          = {{birth date and age|1949|12|10}}
-# | birth_place         = [[Macon, Georgia]], U.S.
-# | death_date          = 
-# | death_place         = 
-# | party               = [[Republican Party (United States)|Republican]]
-# | spouse              = {{marriage|Bonnie Dunn|August 1972}}
-# | children            = 3
-# | relatives           = [[Sonny Perdue]] (cousin)
-# | education           = [[Georgia Institute of Technology]] ([[Bachelor of Science|BS]], [[Master of Science|MS]])
-# | net_worth           = [[US$]] 15.9 million (2021)<ref name="networth">{{cite web |url=https://www.rollcall.com/wealth-of-congress |title=Ranking the Net Worth of the 115th |work=rollcall.com|access-date=August 5, 2019}}</ref>
-# | occupation          = {{hlist|Politician|businessman}}

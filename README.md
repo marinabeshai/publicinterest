@@ -14,7 +14,13 @@ asset) for him, or several.
     - https://www.opensecrets.org/ 
     - https://www.opensecrets.org/personal-finances/
     - https://therevolvingdoorproject.org/
-
+- keep up with what i've tried and make a list of it. 
+- research the tax thing. 
+- box and whisker (?) plot 
+- elements of graphing data. 
+- looking into the outliers 
+- futures on the commodities market (?)
+- mutual funds -- benign (????)
 
 ```diff
 @@ Week 1 [Monday, August 30] @@
@@ -121,7 +127,6 @@ asset) for him, or several.
 ```diff
 @@ Week 10 [Monday, November 1] @@
 - Deadlines: 
-    - Need to clean all code. 
     - Need to research types of graphs particularly for the csv_breakdowns and what should be in the graphs. 
         - See what people have made (NYT and WSJ).
         - Distribution over time of transactions?
@@ -137,29 +142,34 @@ asset) for him, or several.
         - Update list from last week. 
         - Meet with Blinder (around Thanksgiving b/c of OH) with results. 
     - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting) (are there official records?)
-    - Group tickers by type (tech, oil, medicine, etc.).
     - Need to be able to search https://www.congress.gov/congressional-record/2020/04/14
-    - Need to add birthday to Rep.py (now Official in wiki.py)
-    - Need to control for number of years in congress. 
     - Need to deal with Nans better. 
     - Maybe explore matplotlib or seaborn, along with Pandas.
 + Done:
+    - Need to control for number of years in congress. 
     - Moved over to Jupyter notebook.
     - Compared transaction date to tax deadlines. 
+    - Need to add birthday to Rep.py (now Official in wiki.py)
 # Notes
 ```
 
 ```diff
 @@ Week 11 [Monday, November 8] @@
 - Deadlines: 
+    - Frequency of industry by year. 
 + Done:
+    - Group tickers by type (tech, oil, medicine, etc.).
+    - Need to clean all code. 
+    - Breakdown of tax date code. 
 # Notes
+    - Lukas recommended that I reach out to de Swaan in the Econ department (emailed). 
 ```
 
 ```diff
 @@ Week 12 [Monday, November 15] @@
 - Deadlines: 
     - Can we get more data? 
+        - There is a pdf to text parser in my email from Brian. 
 + Done:
 # Notes
 ```
@@ -261,7 +271,8 @@ asset) for him, or several.
 ```diff
 @@ Week 23 [Monday, January 31] @@
 - Deadlines: 
-    -  Analyze their buying trends 
+    - Analyze their buying trends 
+    - Reach out to Professor who returned from sabbatical (Canes-Wrone). 
 + Done:
 # Notes
 ```
