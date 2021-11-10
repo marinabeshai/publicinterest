@@ -169,7 +169,7 @@ asset) for him, or several.
 @@ Week 12 [Monday, November 15] @@
 - Deadlines: 
     - Can we get more data? 
-        - There is a pdf to text parser in my email from Brian. 
+        - There is a pdf to text parser in my email from Brian (subject line is "pdftotext").
 + Done:
 # Notes
 ```
