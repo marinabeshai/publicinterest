@@ -56,17 +56,22 @@ class Official:
         else:
             self.education = education
     
-    def debug(self):
-        print("name ",  self.name)
-        print("jr ",  self.jr)
-        print("state " , self.state)
-        print("term_start " , self.term_start)
-        print("birthplace " , self.birth_place)
-        print("party " , self.party)
-        print("education " , self.education)
-        print(" get_num_of_years " , self.get_num_of_years() )
+    # def debug(self):
+    #     print("name ",  self.name)
+    #     print("jr ",  self.jr)
+    #     print("state " , self.state)
+    #     print("term_start " , self.term_start)
+    #     print("birthplace " , self.birth_place)
+    #     print("party " , self.party)
+    #     print("education " , self.education)
+    #     print(" get_num_of_years " , self.get_num_of_years() )
+        
+    def get_congress(self):
+        return 93 + (datetime.strptime(self.term_start, '%B %d, %Y').date().year - 1973) / 2 
         
         
+
+        # 3000 - term_start
     def get_birthdate(self):
         return self.birthdate
     

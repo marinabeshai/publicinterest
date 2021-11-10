@@ -21,6 +21,8 @@ asset) for him, or several.
 - looking into the outliers 
 - futures on the commodities market (?)
 - mutual funds -- benign (????)
+- Congressional data is on the GitHub Bulk data repository https://github.com/usgpo which is made available by GPO.
+
 
 ```diff
 @@ Week 1 [Monday, August 30] @@
@@ -123,7 +125,6 @@ asset) for him, or several.
     - Skipping: transaction['disclosure_date'], transaction['ptr_link'], transaction['asset_description'], transaction['comment']
 ```
 
-@HERE
 ```diff
 @@ Week 10 [Monday, November 1] @@
 - Deadlines: 
@@ -161,8 +162,12 @@ asset) for him, or several.
     - Group tickers by type (tech, oil, medicine, etc.).
     - Need to clean all code. 
     - Breakdown of tax date code. 
+    - Can get congress. 
 # Notes
     - Lukas recommended that I reach out to de Swaan in the Econ department (emailed). 
+    - If I can get congress ---> that means i can figure out who is and who is not there. https://en.wikipedia.org/wiki/List_of_United_States_senators_in_the_105th_Congress
+
+    - Congress has a bug because it should be a list! Some people have a term end. Need to include term end!!! 
 ```
 
 ```diff
