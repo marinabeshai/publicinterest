@@ -3,6 +3,9 @@ import wikipedia
 import requests
 from datetime import date, datetime
 
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def go_shopping(l, s, d):
     count = "0" 
     
@@ -10,11 +13,13 @@ def go_shopping(l, s, d):
         
         w = l.pop()
         i = s.find(w)
-        
-        if i == -1 and "jr/sr" in w and int(count) < 9:
+      
+        # and "jr/sr" in w 
+        if i == -1 and int(count) < 9:
             count = str(int(count) + 1)
             l.append("jr/sr"+count) 
-            pass 
+            continue
+        # pass 
         
         elif count == "10":
             return None 
@@ -35,7 +40,7 @@ def go_shopping(l, s, d):
 
     
     return d, count 
-    # 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -43,11 +48,12 @@ def go_shopping(l, s, d):
 # trans_per_person_total={'Max': 5, 'Sam': 20, ...}
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 class Official: 
-    def __init__(self, name, jr, state, term_start, birth_date, birth_place, party, alma_mater, education):
+    def __init__(self, name, jr, state, term_start, term_end, birth_date, birth_place, party, alma_mater, education):
         self.name = name
         self.jr = jr 
         self.state = state
         self.term_start = term_start
+        self.term_end = term_end
         self.birthdate = birth_date
         self.birth_place = birth_place
         self.party = party
@@ -56,20 +62,20 @@ class Official:
         else:
             self.education = education
     
-    # def debug(self):
-    #     print("name ",  self.name)
-    #     print("jr ",  self.jr)
-    #     print("state " , self.state)
-    #     print("term_start " , self.term_start)
-    #     print("birthplace " , self.birth_place)
-    #     print("party " , self.party)
-    #     print("education " , self.education)
-    #     print(" get_num_of_years " , self.get_num_of_years() )
+    def debug(self):
+        print("term_end ", self.term_end)
+        
+        print("name ",  self.name)
+        print("jr ",  self.jr)
+        print("state " , self.state)
+        print("term_start " , self.term_start)
+        print("birthplace " , self.birth_place)
+        print("party " , self.party)
+        print("education " , self.education)
+        print(" get_num_of_years " , self.get_num_of_years() )
         
     def get_congress(self):
         return 93 + (datetime.strptime(self.term_start, '%B %d, %Y').date().year - 1973) / 2 
-        
-        
 
         # 3000 - term_start
     def get_birthdate(self):
@@ -104,11 +110,11 @@ class Official:
         term_start = datetime.strptime(self.term_start, '%B %d, %Y').date()    
         diff = today.year - term_start.year
         return diff if diff != 0 else 1 
-        
-        
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def page(probable_result_title):        
     htmled_tltle = probable_result_title.replace(" ", "%20")
 
@@ -117,10 +123,9 @@ def page(probable_result_title):
     page_one = next(iter(resp['query']['pages'].values()))
     revisions = page_one.get('revisions', [])
 
-
-
     s = list(revisions[0].values())[2]
     return s 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
@@ -138,7 +143,7 @@ def wiki_search(name):
         
     l = ["name ", "jr/sr ", "birth_place ", "party ", "alma_mater ", "education ", "birth_date "]
 
-    
+        
     d, count = go_shopping(l, s, {})
     search_name = d.get("name", None)
     jr = d.get("jr/sr", None)
@@ -148,21 +153,30 @@ def wiki_search(name):
     education = d.get("education", None)
     birth_date = d.get("birth_date", None)
 
+    # todo
+    print("COUNT ", count)
+    
     if count == "0": 
         f1 = "state "
         f2 = "term_start "
+        f3 = "term_end "
     else: 
         f1 = "state"+count
         f2 = "term_start"+count
+        f3 = "term_end"+count
     
     
-    l = [f1.strip(), f2.strip()]
+    l = [f1.strip(), f2.strip(), f3.strip()]
     d, _ = go_shopping(l, s, d)
 
     state = d.get(f1.strip(), None)
     term_start = d.get(f2.strip(), None)
+    term_end = d.get(f3.strip(), None)
 
-    x = Official(search_name, jr, state, term_start, birth_date, birth_place, party, alma_mater, education)
+    print(search_name, jr, state, term_start, term_end, birth_date, birth_place, party, alma_mater, education)
+    
+    
+    x = Official(search_name, jr, state, term_start, term_end, birth_date, birth_place, party, alma_mater, education)
     
 
     return x
