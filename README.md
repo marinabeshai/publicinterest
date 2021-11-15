@@ -23,6 +23,10 @@ asset) for him, or several.
 - mutual funds -- benign (????)
 - Congressional data is on the GitHub Bulk data repository https://github.com/usgpo which is made available by GPO.
 - use of wikipedia? is it factual? 
+- buy and hold vs. buy and sell ?
+- group by age, and find an investment strategy (buy-and-hold vs. buy-and-sell)
+- find the day-traders (perdue...)
+- focus on david perdue (insider trading, ceo of dollar general) 
 
 
 ```diff
@@ -169,7 +173,6 @@ asset) for him, or several.
     - If I can get congress ---> that means i can figure out who is and who is not there. https://en.wikipedia.org/wiki/List_of_United_States_senators_in_the_105th_Congress
 
     - Congress has a bug because it should be a list! Some people have a term end. Need to include term end!!! 
-
     - Possible bug with go_shopping() in wiki :(
 ```
 

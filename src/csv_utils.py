@@ -60,7 +60,7 @@ def make_csv_breakdown(path_csv, filename, d,  key_header):
             for y in d2:
                 if isvalid(v):
                     row[flat_list.index(y)+1] = d2[y]
-
+                    
             filewriter.writerow(row)
     return wd 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
