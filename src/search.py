@@ -1,6 +1,8 @@
 import requests
 
-# ------------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# @TODO
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_industry(ticker):
     try:
         if ticker == "BTC":
@@ -13,13 +15,14 @@ def get_industry(ticker):
 
         response = requests.get(url, headers=headers)
 
+        if "Fund Family</span>" in response.text:
+            return "Fund"
+
         if response.text.find("Industry") > 0: 
             key_line = response.text[response.text.find("Industry"):response.text.find("Industry")+150].split(">")
             return key_line[4].split("<")[0].replace("&amp;", "&")
 
-        if "Fund Family</span>" in response.text:
-            return "Fund"
 
     except Exception as e:
-        print (ticker)
+        return None 
 # ------------------------------------------------------------------------------------------------------------------------

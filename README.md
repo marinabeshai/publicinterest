@@ -1,4 +1,5 @@
 # publicinterest
+- section of thesis regarding implications from cs side--> extra information, keeping things public. 
 - "Taste, however, is a field of cultural inquuiry that is much more amenable to quantiative analysis and has veen recently traversed by cultural sociologists." -- K.Leview et al. 2008 
 - OLS regression coefficients 
 - Lewis, Kevin, et al. “Tastes, Ties, and Time: A New Social Network Dataset Using Facebook.Com.” Social Networks, vol. 30, no. 4, Oct. 2008, pp. 330–42. ScienceDirect ONLINE https://doi.org/10.1016/j.socnet.2008.07.002
@@ -21,13 +22,19 @@ asset) for him, or several.
 - looking into the outliers 
 - futures on the commodities market (?)
 - mutual funds -- benign (????)
-- Congressional data is on the GitHub Bulk data repository https://github.com/usgpo which is made available by GPO.
-- use of wikipedia? is it factual? 
 - buy and hold vs. buy and sell ?
 - group by age, and find an investment strategy (buy-and-hold vs. buy-and-sell)
 - find the day-traders (perdue...)
 - focus on david perdue (insider trading, ceo of dollar general) 
-
+- industry_per_year_breakdown 
+- look for consistency of sotcks per year (like appl, msft t)
+- number of transactiosn per year controlled 
+- number of transactions per data is not sorted properly 
+- need to figure out "pdf disclosed filling" in frequency_of_asset_type 
+- who is trading in cryptocurrency?
+- https://www.senate.gov/CRSpubs/3f85020c-5fe6-40d7-955d-dfec9defb72a.pdf
+--- Each Senator shall serve on two committees, and no more than two, in Class A. Each Senator may serve on one committee, but no more than one, in Class B. Each Senator may serve on one or more committees in Class C.
+- average return 
 
 ```diff
 @@ Week 1 [Monday, August 30] @@
@@ -88,6 +95,7 @@ asset) for him, or several.
         - info.clerkweb@
     - Tried to read and scrap PDFs using Python to get the gap between the ones that are decent but not on Tim's site. 
 # Notes
+    - Congressional data is on the GitHub Bulk data repository https://github.com/usgpo which is made available by GPO.
 ```
 
 ```diff
@@ -114,13 +122,15 @@ asset) for him, or several.
     - Emailed:
         - SPIA
             - Bénabou 
-            - Canes-Wrone  
+            - Canes-Wrone (Next Semester)
             - Mian 
             - Shafir 
         - Finance
             - Matray (N)
             - Cox 
-            - Blinder 
+            - Blinder (Meeting)
+        - Econ
+            - de Swaan
 # Notes
     - How many people are we talking about, how often do they do things, how big are the transactions, where do they take place, etc.  
     - Need to walk through wiki.txt. Am I skipping anything important? (publicinterest/src/py/wiki.txt)
@@ -140,18 +150,17 @@ asset) for him, or several.
         - Pick 5-10 of the most active trades. 
         - For each ticker, market cap and Volatility. 
         - Scatter plot matrix. 
-    - Frequency of shares (sort of it, exponential scale, sort by high runners?, non-linear graphing)
     - Need to deal with stock options better. 
     - Need to research regarding notice dates. How early?
     - Dividend reinvestment @ at end of the quarter. 
     - Email people back.
         - Update list from last week. 
-        - Meet with Blinder (around Thanksgiving b/c of OH) with results. 
     - Need to find out who is in congress and who is not (basically difference between those reporting and those not reporting) (are there official records?)
     - Need to be able to search https://www.congress.gov/congressional-record/2020/04/14
-    - Need to deal with Nans better. 
     - Maybe explore matplotlib or seaborn, along with Pandas.
 + Done:
+    - Sort data (made sort_keys, methods in utils.py, etc.). 
+    - Need to deal with Nans better. 
     - Need to control for number of years in congress. 
     - Moved over to Jupyter notebook.
     - Compared transaction date to tax deadlines. 
@@ -163,6 +172,7 @@ asset) for him, or several.
 @@ Week 11 [Monday, November 8] @@
 - Deadlines: 
     - Frequency of industry by year. 
+    - Add a mapping between ticker and industry.
 + Done:
     - Group tickers by type (tech, oil, medicine, etc.).
     - Need to clean all code. 
@@ -171,9 +181,6 @@ asset) for him, or several.
 # Notes
     - Lukas recommended that I reach out to de Swaan in the Econ department (emailed). 
     - If I can get congress ---> that means i can figure out who is and who is not there. https://en.wikipedia.org/wiki/List_of_United_States_senators_in_the_105th_Congress
-
-    - Congress has a bug because it should be a list! Some people have a term end. Need to include term end!!! 
-    - Possible bug with go_shopping() in wiki :(
 ```
 
 ```diff
@@ -181,13 +188,22 @@ asset) for him, or several.
 - Deadlines: 
     - Can we get more data? 
         - There is a pdf to text parser in my email from Brian (subject line is "pdftotext").
+    - Can we clean up education?
+    - Have to write method that translate date to a congress number so we can see who is trading and who is not.
+    - Who has JDs?
+    - Need to figure out what I should do with "ticker_to_industry_mapping_ERRORS"
 + Done:
+    - Fixed bug with go_shopping() (in wiki.py).
+    - Fixed/finished get_congress() (in wiki.py).
+    - Fixed education in Official so as to collect all of them. 
 # Notes
 ```
 
 ```diff
 @@ Week 13 [Monday, November 22] @@
 - Deadlines: 
+    - Need to figure out what I'm doing with errors. 
+    - Number of degrees and type per official. 
 + Done:
 # Notes
 ```
@@ -195,6 +211,7 @@ asset) for him, or several.
 ```diff
 @@ Week 14 [Monday, November 29] @@
 - Deadlines: 
+    - Meet with Blinder (around Thanksgiving b/c of OH) with results. 
     - Attend "How to Write an IW Paper"
 + Done:
 # Notes

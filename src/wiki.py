@@ -6,8 +6,6 @@ from datetime import date, datetime
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 def clean_up_res(res):
     return res[res.find("=")+1:].replace("[", "").replace("]", "").replace('"', "").strip()
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -17,6 +15,10 @@ def clean_up_res(res):
 #
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def parse(d, word, count, s, break_point):
+    # Corner Case
+    if count == "":
+        word = word + " "
+    
     index = s.find(word+count)
 
     where_to_stop = len(word+count) + index
@@ -70,8 +72,9 @@ def go_shopping(l, s, d):
 
         while l:
 
-            w = l.pop()
+            w = l.pop()                
             i = s.find(w)
+            
 
             # Corner Case
             if "state " == w:
@@ -95,24 +98,42 @@ def go_shopping(l, s, d):
                     while s[where_to_stop] != "}":
                         where_to_stop += 1
 
-                elif w == "alma_mater ":
+                elif w == "alma_mater " or w == "education " or w == "birth_place ":
                     while s[where_to_stop] != "\n":
                         where_to_stop += 1
+                                            
 
                 else:
                     while s[where_to_stop] != "|":
                         where_to_stop += 1
 
-                res = s[i+len(w): where_to_stop]
-
-                # print(res)
+                res = s[i+len(w): where_to_stop]                   
+    
 
                 while w[len(w) - 1].isdigit():
                     w = w[:-1]
 
                 # Corner Case
                 if w == "birth_date ":
-                    d[w.strip()] = res[res.find("|") + 1:]
+                    res = res[res.find("|") + 1:].replace("|", "/")
+                    
+                    if "-" in res: 
+                        d[w.strip()] = datetime.strptime(res,  '%Y-%m-%d').strftime("%Y/%m/%d")
+                        
+                    elif "age" in res: 
+                        # mf=y/1952/12/01
+                        d[w.strip()] = datetime.strptime(res[res.find("age")+4:],  '%Y/%m/%d').strftime("%Y/%m/%d")
+                    
+                    elif not res[0].isdigit():
+                        while not res[0].isdigit():
+                            res = res[1:]
+                        d[w.strip()] = datetime.strptime(res,  '%Y/%m/%d').strftime("%Y/%m/%d")
+                        
+                    else: 
+                        d[w.strip()] = datetime.strptime(res,  '%Y/%m/%d').strftime("%Y/%m/%d")
+                        # res 
+
+
 
                 else:
                     d[w.strip()] = clean_up_res(res)
@@ -131,7 +152,8 @@ def go_shopping(l, s, d):
 # trans_per_person_total={'Max': 5, 'Sam': 20, ...}
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 class Official:
-    def __init__(self, name, jr, state, term_start, term_end, birth_date, birth_place, party, alma_mater, education):
+    def __init__(self, paperwork_name, name, jr, state, term_start, term_end, birth_date, birth_place, party, alma_mater, education):
+        self.paperwork_name = paperwork_name
         self.name = name
         self.jr = jr
         self.state = state
@@ -146,6 +168,9 @@ class Official:
             self.education = education
 
     def all(self):
+        print("self.papeworkname")
+        print(self.paperwork_name)
+
         print("self.name")
         print(self.name)
         print("self.jr")
@@ -159,6 +184,8 @@ class Official:
         print("self.term_start")
         print(self.term_start)
 
+        # 1949|12|10
+        # yyyy/mm/dd
         print("self.birth_date")
         print(self.birth_date)
 
@@ -171,14 +198,14 @@ class Official:
         print("self.education")
         print(self.education)
 
-        raise Exception("I'm heartbroken </3.")
+        # raise Exception("I'm heartbroken </3.")
 
     def debug(self):
         if not self.name:
             self.all()
 
-        # if not self.jr:
-        #     self.all()
+        if not self.paperwork_name:
+            self.all()
 
         if not self.state:
 
@@ -203,8 +230,18 @@ class Official:
         if not self.get_num_of_years():
             self.all()
 
+    def get_paperworkname(self):
+        self.paperwork_name
+        
     def get_congress(self):
-        return 93 + (datetime.strptime(self.term_start, '%B %d, %Y').date().year - 1973) / 2
+        begin_congress = 93 + ((datetime.strptime(self.term_start, '%B %d, %Y').date().year - 1973) // 2)
+        if self.term_end:
+            end_congress = 93 + ((datetime.strptime(self.term_end, '%B %d, %Y').date().year - 1973) // 2)
+        else:
+            end_congress = 93 + ((date.today().year - 1973) // 2)
+
+        return list(range(begin_congress, end_congress+1)) 
+
 
         # 3000 - term_start
     def get_birthdate(self):
@@ -276,7 +313,9 @@ def wiki_search(name):
     while "politician" not in s:
         s = page(results[at])
         at += 1
-
+    
+    # print(s)
+    
     d = terms(s)
 
     d = go_shopping(["name ", "birth_place ", "party ",
@@ -293,7 +332,7 @@ def wiki_search(name):
     term_end = d.get("term_end", None)
     state = d.get("state", None)
 
-    x = Official(search_name, jr, state, term_start, term_end,
+    x = Official(name, search_name, jr, state, term_start, term_end,
                  birth_date, birth_place, party, alma_mater, education)
 
     x.debug()
