@@ -1,40 +1,43 @@
 # publicinterest
-- section of thesis regarding implications from cs side--> extra information, keeping things public. 
-- "Taste, however, is a field of cultural inquuiry that is much more amenable to quantiative analysis and has veen recently traversed by cultural sociologists." -- K.Leview et al. 2008 
-- OLS regression coefficients 
-- Lewis, Kevin, et al. “Tastes, Ties, and Time: A New Social Network Dataset Using Facebook.Com.” Social Networks, vol. 30, no. 4, Oct. 2008, pp. 330–42. ScienceDirect ONLINE https://doi.org/10.1016/j.socnet.2008.07.002
+
+- looking into the outliers 
+- research the tax thing. 
+- who is trading in cryptocurrency?
+- fund error :) w/ticker to industry mappying 
+- frequency of difference --> list top 3 people. 
+
+
+
+- traded on industries where they sit on committee!!!!
+- dates and size of amount!!!!
+    - geomtric mean; sort it; find which days are the most monetarily popular 
+
 - One could imagine looking at the timing of buy and sell (of the same
 asset) for him, or several.
 - Need to look at what other people have done. 
 - Looking at people specifically. 
 - Correlation between high runners and those who did not provide data. 
 - pip install  (later)
-- https://bigcharts.marketwatch.com/
-- Bhatt's recs
-    - https://link.springer.com/article/10.1007%2Fs12197-017-9384-z
-    - https://www.opensecrets.org/ 
-    - https://www.opensecrets.org/personal-finances/
-    - https://therevolvingdoorproject.org/
-- keep up with what i've tried and make a list of it. 
-- research the tax thing. 
-- box and whisker (?) plot 
-- elements of graphing data. 
-- looking into the outliers 
+
+
 - futures on the commodities market (?)
 - mutual funds -- benign (????)
 - buy and hold vs. buy and sell ?
 - group by age, and find an investment strategy (buy-and-hold vs. buy-and-sell)
-- find the day-traders (perdue...)
-- focus on david perdue (insider trading, ceo of dollar general) 
-- industry_per_year_breakdown 
-- look for consistency of sotcks per year (like appl, msft t)
-- number of transactiosn per year controlled 
-- number of transactions per data is not sorted properly 
+- look for consistency of sotcks per year (like appl, msft)
+
 - need to figure out "pdf disclosed filling" in frequency_of_asset_type 
-- who is trading in cryptocurrency?
-- https://www.senate.gov/CRSpubs/3f85020c-5fe6-40d7-955d-dfec9defb72a.pdf
---- Each Senator shall serve on two committees, and no more than two, in Class A. Each Senator may serve on one committee, but no more than one, in Class B. Each Senator may serve on one or more committees in Class C.
 - average return 
+- track buys and sells per person using geometric mean of "amount"
+- systematic similarities and differences between house and senate
+- who was trading the no longer existing stocks? 
+
+
+
+- box and whisker (?) plot 
+- elements of graphing data. 
+- https://bigcharts.marketwatch.com/
+- https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/the-impact-of-covid-19-on-capital-markets-one-year-in
 
 ```diff
 @@ Week 1 [Monday, August 30] @@
@@ -187,24 +190,27 @@ asset) for him, or several.
 @@ Week 12 [Monday, November 15] @@
 - Deadlines: 
     - Can we get more data? 
-        - There is a pdf to text parser in my email from Brian (subject line is "pdftotext").
-    - Can we clean up education?
+        - There is a pdf to text parser in my email from Brian (subject line is "pdftotext"
     - Have to write method that translate date to a congress number so we can see who is trading and who is not.
-    - Who has JDs?
-    - Need to figure out what I should do with "ticker_to_industry_mapping_ERRORS"
 + Done:
+    - Types of transactions per person. 
     - Fixed bug with go_shopping() (in wiki.py).
     - Fixed/finished get_congress() (in wiki.py).
     - Fixed education in Official so as to collect all of them. 
 # Notes
+    - Need to figure out what I should do with "ticker_to_industry_mapping_ERRORS"
+    - Need more clean up of education. Some corner cases exist. It is possible to do a degree_count like BS, MBA, JD,...
 ```
 
 ```diff
 @@ Week 13 [Monday, November 22] @@
 - Deadlines: 
     - Need to figure out what I'm doing with errors. 
-    - Number of degrees and type per official. 
+    -  type of degree per official. 
 + Done:
+    - Number of degrees.
+    - Get sector data.
+    - Canonical names. 
 # Notes
 ```
 
@@ -212,8 +218,8 @@ asset) for him, or several.
 @@ Week 14 [Monday, November 29] @@
 - Deadlines: 
     - Meet with Blinder (around Thanksgiving b/c of OH) with results. 
-    - Attend "How to Write an IW Paper"
 + Done:
+    - Average size of amount per person. 
 # Notes
 ```
 
@@ -332,6 +338,7 @@ asset) for him, or several.
 ```diff
 @@ Week 27 [Monday, February 28] @@
 - Deadlines: 
+    - Last grab of data (cut off at EOY'22).
     - Make an outline for Chapter 6
     - Make an outline for Chapter 7.
     - Write an algorithm that takes their data into consideration and buys with latency and calculates return in investment.

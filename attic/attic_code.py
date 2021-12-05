@@ -117,12 +117,14 @@
 # # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-from utils import path_csv, get_data, isvalid
+
+from utils import path_csv, get_data, isvalid, sort_dictionary_by_keys
 from csv_utils import make_csv
 from search import get_industry
 import pandas as pd 
 
 def get_industry_mapping():
+    
     _, rows = get_data()
     tickers = set()
     
@@ -131,26 +133,29 @@ def get_industry_mapping():
         if isvalid(ticker):
             tickers.add(ticker)
     
-    # print("Finished Tickers")
-    print(len(tickers))
+    print("Finished Tickers: {}".format(len(tickers)))
         
+
     results = {}
     errors = {}
     i = 0 
     for ticker in tickers:     
-        print(i)
         i += 1        
         p = get_industry(ticker)     
         if not p:
+            print(i, ticker, p)
             errors[ticker] = ""    
         else: 
+            print(i)
             results[ticker] = p  
-            
+
     print("Finished Errors and Results")
 
     filename = "ticker_to_industry_mapping"
     key_header = "ticker"
     value_header = "industry"
+
+    results = sort_dictionary_by_keys(results)
 
     wd = make_csv(path_csv, filename, results, [key_header, value_header])
     df = pd.read_csv(wd)
@@ -159,9 +164,8 @@ def get_industry_mapping():
     
     filename = "ticker_to_industry_mapping_ERRORS"
     key_header = "ticker"
-    value_header = ""
 
-    wd = make_csv(path_csv, filename, errors, [key_header, value_header])
+    wd = make_csv(path_csv, filename, errors, [key_header])
     df = pd.read_csv(wd)
     print(df.head(5))
     
@@ -169,3 +173,59 @@ def get_industry_mapping():
     
     
 get_industry_mapping()
+
+# from utils import path_csv, get_data, isvalid, sort_dictionary_by_keys
+# from csv_utils import make_csv
+# from search import get_sector
+# import pandas as pd 
+
+# def get_industry_mapping():
+    
+#     _, rows = get_data()
+#     tickers = set()
+    
+#     for _, transaction in rows:
+#         ticker = transaction['ticker']
+#         if isvalid(ticker):
+#             tickers.add(ticker)
+    
+#     print("Finished Tickers: {}".format(len(tickers)))
+        
+
+#     results = {}
+#     errors = {}
+#     i = 0 
+#     for ticker in tickers:     
+#         i += 1        
+#         p = get_sector(ticker)     
+#         if not p:
+#             print(i, ticker, p)
+#             errors[ticker] = ""    
+#         # else: 
+#         #     print(i)
+#         #     results[ticker] = p  
+
+#     # print("Finished Errors and Results")
+
+#     # filename = "ticker_to_sector_mapping"
+#     # key_header = "ticker"
+#     # value_header = "sector"
+
+#     # results = sort_dictionary_by_keys(results)
+
+#     # wd = make_csv(path_csv, filename, results, [key_header, value_header])
+#     # df = pd.read_csv(wd)
+#     # print(df.head(5))
+    
+    
+#     # filename = "ticker_to_sector_mapping_ERRORS"
+#     # key_header = "ticker"
+
+#     # wd = make_csv(path_csv, filename, errors, [key_header])
+#     # df = pd.read_csv(wd)
+#     # print(df.head(5))
+    
+#     return 
+    
+    
+# get_industry_mapping()
