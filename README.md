@@ -6,6 +6,19 @@
 - fund error :) w/ticker to industry mappying 
 - frequency of difference --> list top 3 people. 
 
+- i have to test all the code. especially utils!!!
+    2. add assertions
+    3. run then
+    4.comments
+    
+
+
+- i have to test all the code. especially utils!!!
+    1. try and except
+    2. add assertions
+    3. run then
+    4.comments
+    
 
 
 - traded on industries where they sit on committee!!!!
