@@ -1,20 +1,23 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import pandas as pd
 from datetime import date
-from utils.constants import SENATE_URL, HOUSE_URL
+from utils.constants import SENATE_URL, HOUSE_URL,EXCEPTION_STRING
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# @TODO
+# Downloads the live CSVs from the web.
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def download():
-# if __name__ == '__main__':
-    
-    base_file_name = date.today().strftime("%m%d%Y") + '.csv'
+    try:
+        base_file_name = date.today().strftime("%m%d%Y") + '.csv'
 
-    df = pd.read_csv(SENATE_URL)
-    df.to_csv("../../curr/senate-" + base_file_name, index=False)
+        df = pd.read_csv(SENATE_URL)
+        df.to_csv("../../curr/senate-" + base_file_name, index=False)
 
-    df = pd.read_csv(HOUSE_URL)
-    df.to_csv("../../curr/house-" + base_file_name, index=False)
+        df = pd.read_csv(HOUSE_URL)
+        df.to_csv("../../curr/house-" + base_file_name, index=False)
+        
+    except Exception:
+        print(EXCEPTION_STRING)
+        raise() 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

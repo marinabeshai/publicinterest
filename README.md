@@ -12,14 +12,7 @@
     4.comments
     
 
-
-- i have to test all the code. especially utils!!!
-    1. try and except
-    2. add assertions
-    3. run then
-    4.comments
-    
-
+= DEBUG SECTOR AND INDUSTRY@!!!!!!
 
 - traded on industries where they sit on committee!!!!
 - dates and size of amount!!!!
