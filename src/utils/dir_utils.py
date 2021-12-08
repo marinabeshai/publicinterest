@@ -167,19 +167,19 @@ if __name__ == '__main__':
     _, df = get_data(senate=True)
     aa = get_mapping(industry=True)
 
-    # sector = search_mapping(aa, "ETHE", ind=True)
-    # print(sector)
+    sector = search_mapping(aa, "AAPL", industry=True)
+    print(sector)
     # print(get_sector("ETHE"))
     
-    for _, k in df.iterrows():
-        # print(k['ticker'])
-        sector = search_mapping(aa, k["ticker"], industry=True)
+#     for _, k in df.iterrows():
+#         # print(k['ticker'])
+#         sector = search_mapping(aa, k["ticker"], industry=True)
        
-        if not sector and k['ticker'] != "--" and k['ticker'] != "FL4.SG" and k['ticker'] != "DGNR" and k['ticker'] != 'CTAA': 
-            print(k['ticker'], sector)
-            # print(g(k['ticker']))
-            break 
+#         if not sector and k['ticker'] != "--" and k['ticker'] != "FL4.SG" and k['ticker'] != "DGNR" and k['ticker'] != 'CTAA': 
+#             print(k['ticker'], sector)
+#             # print(g(k['ticker']))
+#             break 
 
-# FL4.SG no idea what that is 
+# # FL4.SG no idea what that is 
 # dgnr
  
