@@ -1,8 +1,9 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import pandas as pd 
 import os 
-import utils.constants as constants 
-from utils.constants import EXCEPTION_STRING
+import constants as constants 
+from constants import EXCEPTION_STRING
+from search_u import get_type
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -43,15 +44,15 @@ from utils.constants import EXCEPTION_STRING
 def get_data(senate=False, house=False):
     assert senate or house
     try: 
-        url = '../curr/?-10182021.csv'
+        url = '../../curr/?-10182021.csv'
         if senate:
             path = url.replace("?", constants.SENATE)
         else:
             path = url.replace("?", constants.HOUSE)
         csvreader = pd.read_csv(path)
         title = csvreader.columns[8]
-        rows = csvreader.iterrows()
-        return title, rows
+        # rows = csvreader.iterrows()
+        return title, csvreader
     except Exception:
         print(EXCEPTION_STRING)
         raise() 
@@ -78,7 +79,7 @@ def search_mapping(df, ticker, sector=False, industry=False):
 
         base = df.loc[df['ticker'] == ticker]
         if len(base) == 0:
-            return None 
+            return get_type(ticker, industry=industry)
 
         if sector: 
             return list(base[constants.SECTOR])[0]
@@ -105,7 +106,7 @@ def get_mapping(errors=False, sector=False, industry=False):
     assert errors or sector or industry
     
     try:
-        path = '../curr/ticker_to_?_mapping_ERRORS.csv'
+        path = '../../curr/ticker_to_?_mapping_ERRORS.csv'
     
         if sector:
             path = path.replace("?", constants.SECTOR)
@@ -162,3 +163,23 @@ def makesubdir(path, last_dir):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   
+if __name__ == '__main__':
+    _, df = get_data(senate=True)
+    aa = get_mapping(industry=True)
+
+    # sector = search_mapping(aa, "ETHE", ind=True)
+    # print(sector)
+    # print(get_sector("ETHE"))
+    
+    for _, k in df.iterrows():
+        # print(k['ticker'])
+        sector = search_mapping(aa, k["ticker"], industry=True)
+       
+        if not sector and k['ticker'] != "--" and k['ticker'] != "FL4.SG" and k['ticker'] != "DGNR" and k['ticker'] != 'CTAA': 
+            print(k['ticker'], sector)
+            # print(g(k['ticker']))
+            break 
+
+# FL4.SG no idea what that is 
+# dgnr
+ 

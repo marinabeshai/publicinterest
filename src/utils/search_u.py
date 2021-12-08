@@ -3,7 +3,10 @@ import requests
 import wikipedia
 import requests
 from datetime import datetime
-from helpers.official_u import Official
+import time
+from constants import EXCEPTION_STRING
+
+# from helpers.official_u import Official
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -18,6 +21,9 @@ def get_sector(ticker):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_type(ticker, industry=True):
     try:
+        if ticker == '--':
+            return None 
+        
         if industry:
             key = "Industry"
         else:
@@ -26,7 +32,11 @@ def get_type(ticker, industry=True):
         if ticker == "BTC":
             return "cryptocurrency"
         
-        url = "https://finance.yahoo.com/quote/TICKER/profile?p=TICKER".replace("TICKER", ticker)
+        # Corner cases.
+        if ticker == "ETHE" or ticker == "GBTC":
+            return "Trust"
+        
+        url = "https://finance.yahoo.com/quote/TICKER/profile?p=TICKER".replace("TICKER", str(ticker))
         agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
 
         headers = {'User-Agent': agent}
@@ -36,14 +46,55 @@ def get_type(ticker, industry=True):
         if "Fund Family</span>" in response.text:
             return "Fund"
 
-        if response.text.find(key) > 0: 
-            key_line = response.text[response.text.find(key):response.text.find(key)+150].split(">")
-            return key_line[4].split("<")[0].replace("&amp;", "&")
+        i = 0 
+        while response.text.find(key, i) > 0: 
+            i = response.text.find(key, i) + 1
+            if i == -1: 
+                break 
+            
+            key_line = response.text[response.text.find(key):response.text.find(key)+300]
+            if "reactid" in key_line:
+                if ">" not in key_line:
+                    continue
+                key_line = key_line.split(">")
+                return key_line[4].split("<")[0].replace("&amp;", "&")
+            
+            elif "Fw(600)" in key_line:
+                key_line = key_line[key_line.find('Fw(600)') : ].split(">")
+                return key_line[1].split("<")[0]                
+                        
+        if key == "Sector(s)":
+            key = '<a href="https://finance.yahoo.com/sector/'
+
+            if response.text.find(key) > 0:
+                key_line = response.text[response.text.find(key):response.text.find(key)+300]
+                key_line = key_line.split(">")   
+                result = key_line[1].replace("</a", "")
+                # print("OH CRAOH")
+                # print(result)
+                
+                key_line = key_line[0]
+                key_line = key_line[ key_line.find("data-symbol=") : ]                
+                key_line = key_line[: key_line.find(" ")]
+                key_line = key_line[key_line.find('"') : ].replace('"', "")
+                
+                key_line = list(key_line)
+                for letter in ticker:
+                    if letter in key_line:
+                        key_line.remove(letter)
+                    else:
+                        # print("here?")
+                        return None 
+                return result
 
 
-    except Exception as e:
-        print(e)
+        
+        # print("conf")
         return None 
+    
+    except Exception as e:
+        print(EXCEPTION_STRING)
+        raise() 
  # ------------------------------------------------------------------------------------------------------------------------
    
     
