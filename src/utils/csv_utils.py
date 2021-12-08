@@ -3,6 +3,7 @@ from utils.ptr_utils import  isvalid
 from utils.dir_utils import get_filename
 from utils.constants import EXCEPTION_STRING
 import csv
+import os 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -60,7 +61,7 @@ def make_csv_breakdown(path_csv, filename, d,  key_header):
 #          last_name
 # Marshall   Mathers
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def make_csv_base(path_csv, filename, headers, rows):
+def make_csv_base(path_csv, filename, headers, rows, tries=0):
     try:
         
         wd = get_filename(path_csv, filename)
@@ -73,6 +74,15 @@ def make_csv_base(path_csv, filename, headers, rows):
                 filewriter.writerow(row)
                 
         return wd
+        
+    except TypeError:
+        if tries == 1:
+            print(EXCEPTION_STRING)
+            raise() 
+
+        wd = get_filename(path_csv, filename)
+        os.remove(wd)
+        make_csv_base(path_csv, filename, headers, rows, tries=1)
         
     except Exception:
         print(EXCEPTION_STRING)

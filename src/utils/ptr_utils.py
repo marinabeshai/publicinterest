@@ -33,30 +33,29 @@ def isvalid(s):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# x = within_tax_date('01/15/2021')
-# x = False
+# x = within_tax_date('2021/01/15')
+# x = True
 # 
-# x = within_tax_date('01/01/2021')
+# x = within_tax_date('2021/01/01')
 # x = True 
 # 
-# x = within_tax_date('07/15/2021')
+# x = within_tax_date('2021/07/15')
 # x = False
 # 
-# x = within_tax_date('12/15/2021')
+# x = within_tax_date('2021/12/15')
 # x = False
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 def within_tax_date(s):
     try:
         l = ['01/15/', '04/15/', '06/15/', '09/15/']
-        given_date = datetime.strptime(s, '%m/%d/%Y').date()
+        given_date = datetime.strptime(s, '%Y/%m/%d').date()
 
         for quarter in l:
-            tax = quarter + str(given_date.year)[2:]
-
+            tax = quarter + str(given_date.year)[2:4]
             check_date = datetime.strptime(tax, '%m/%d/%y').date()
-
             diff = (check_date - given_date).days
-            if diff > 0 and diff <= 14:
+                        
+            if diff >= 0 and diff <= 14:
                 return True
 
         return False

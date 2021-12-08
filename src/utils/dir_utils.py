@@ -76,10 +76,14 @@ def search_mapping(df, ticker, sector=False, industry=False):
         elif industry:
             assert df.columns[1] == constants.INDUSTRY
 
+        base = df.loc[df['ticker'] == ticker]
+        if len(base) == 0:
+            return None 
+
         if sector: 
-            return list(df.loc[df['ticker'] == ticker][constants.SECTOR])[0]
+            return list(base[constants.SECTOR])[0]
         
-        return list(df.loc[df['ticker'] == ticker][constants.INDUSTRY])[0]
+        return list(base[constants.INDUSTRY])[0]
     except Exception:
         print(EXCEPTION_STRING)
         raise() 
@@ -130,12 +134,13 @@ def get_filename(path_csv, filename):
 
         if path_csv:
             dir = "{cwd}/{path}".format(cwd=cwd, path=path_csv)
-            os.makedirs(dir)
+            try: 
+                os.makedirs(dir)
+            except FileExistsError:
+                pass
 
         return "{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename)
 
-    except FileExistsError:
-        pass
     except Exception:
         print(EXCEPTION_STRING)
         raise() 
