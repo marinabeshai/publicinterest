@@ -1,2 +1,0 @@
-    fig = go.Figure(data=[go.Pie(labels=list(party.keys()), values=list(party.values()) ) ])
-    fig.show()
