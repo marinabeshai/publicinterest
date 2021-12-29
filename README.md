@@ -11,6 +11,22 @@
     3. run then
     4.comments
     
+- most popular td fe official 
+    - break down into purchase and sell
+        - are they selling to pay for taxes?
+            - are they buying a house?
+                - integrated value 
+
+- tax returns public? 
+
+- sales and purchases next up. 
+- most_popular_td_fe_sector --> purchase only. 
+
+- timing of purchases.  
+
+ml - prediction or classification [?] --> labeled data? 
+
+- estimate size [confidence interval]
 
 = DEBUG SECTOR AND INDUSTRY@!!!!!!
 
