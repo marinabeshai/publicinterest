@@ -3,7 +3,6 @@ import pandas as pd
 import os 
 import utils.constants as constants 
 from utils.constants import EXCEPTION_STRING, Unknown
-from helpers.search_u import get_type
 from polygon import RESTClient
 import time
 from requests.exceptions import HTTPError

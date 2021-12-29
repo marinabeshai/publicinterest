@@ -1,70 +1,62 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-import requests
-import wikipedia
-import requests
-from datetime import datetime
-from utils.constants import EXCEPTION_STRING
-
-from helpers.official_u import Official
+import utils.constants as constants 
+from utils.constants import EXCEPTION_STRING, Unknown
+from polygon import RESTClient
+import time
+from requests.exceptions import HTTPError
+import pandas as pd 
+import os 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# @TODO
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_sector(ticker):
-       return get_type(ticker, industry=False)
-# ------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# TODO
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+def get_industry(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
+    try:
+        with RESTClient(api_key) as client:
+            resp = client.reference_ticker_details_vx(ticker).results
+            # industry
+            return resp['sic_description'] 
 
+    except HTTPError as e:
+        if "404" in str(e):
+            print(ticker)
+            raise Unknown 
+
+        elif "429" in str(e):
+            time.sleep(60)
+            return get_industry(ticker)
+        
+    except Exception:
+        print(ticker)
+        raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# @TODO
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_type(ticker, industry=True):
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# TODO
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+def get_sector(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
     try:
 
+        with RESTClient(api_key) as client:
+            resp = client.reference_ticker_details_vx(ticker).results
+            # sector 
+            return resp['sic_code'] 
 
-        if ticker == '--':
-            return None 
-        
-        if industry:
-            key = "Industry</small>"
-        else:
-            key = "Sector</small>"
-            
-        if ticker == "BTC":
-            return "cryptocurrency"
-        
-        # # Corner cases.
-        # if ticker == "ETHE" or ticker == "GBTC":
-        #     return "Trust"
-        
-        url = "https://www.marketwatch.com/investing/stock/TICKER/company-profile?mod=mw_qu".replace("TICKER", str(ticker))
-        agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
 
-        headers = {'User-Agent': agent}
+    except HTTPError as e:
+        if "404" in str(e):
+            print(ticker)
+            raise Unknown 
 
-        response = requests.get(url, headers=headers)
+        elif "429" in str(e):
+            time.sleep(60)
+            return get_sector(ticker)
         
-        if '<span itemprop="name">ETFs</span>' in response.text or "The Fund" in response.text:
-            return "Fund"
-        
-        if response.text.find(key) > 0:
-            work = response.text[response.text.find(key) : ]
-            return work[ : work.find("</span>")].split(">")[2]
-            print(work)
-
-    except Exception as e:
-        print(EXCEPTION_STRING)
-        raise() 
- # ------------------------------------------------------------------------------------------------------------------------
-   
-    
+    except Exception:
+        print(ticker)
+        raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# @TODO
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_industry(ticker):
-   return get_type(ticker, industry=True)
-# ------------------------------------------------------------------------------------------------------------------------
-
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
