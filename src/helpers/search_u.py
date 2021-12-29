@@ -11,9 +11,9 @@ import os
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # TODO
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
-def get_industry(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
+def get_industry(ticker):
     try:
-        with RESTClient(api_key) as client:
+        with RESTClient(constants.api_key) as client:
             resp = client.reference_ticker_details_vx(ticker).results
             # industry
             return resp['sic_description'] 
@@ -35,10 +35,10 @@ def get_industry(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # TODO
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
-def get_sector(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
+def get_sector(ticker):
     try:
 
-        with RESTClient(api_key) as client:
+        with RESTClient(constants.api_key) as client:
             resp = client.reference_ticker_details_vx(ticker).results
             # sector 
             return resp['sic_code'] 

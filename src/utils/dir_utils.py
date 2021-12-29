@@ -70,6 +70,46 @@ def get_sic_mapping():
     except Exception:
         raise Unknown
 
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# TODO
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+def get_industry(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
+    try:
+        
+        with RESTClient(api_key) as client:
+            resp = client.reference_ticker_details(ticker)
+            return resp.industry
+
+    except HTTPError as e:
+        # if "404" in str(e):
+        #     return get_industry_vx(ticker)
+
+        if "429" in str(e):
+            time.sleep(60)
+            return get_industry(ticker)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# TODO
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+def get_sector(ticker, sic_mapping, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
+    try:
+        
+        with RESTClient(api_key) as client:
+            resp = client.reference_ticker_details(ticker)
+            return resp.sector
+        
+    except HTTPError as e:
+        # if "404" in str(e):
+        #     return get_sector_vx(ticker, sic_mapping)
+
+        if "429" in str(e):
+            time.sleep(60)
+            return get_sector(ticker, sic_mapping)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # TODO
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
@@ -77,9 +117,8 @@ def get_industry_vx(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
     try:
         
         with RESTClient(api_key) as client:
-            resp = client.reference_ticker_details(ticker).results
+            resp = client.reference_ticker_details_vx(ticker).results
             # industry
-            print(resp)
             return resp['sic_description'] 
 
     except HTTPError as e:
