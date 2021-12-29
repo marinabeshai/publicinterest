@@ -60,6 +60,16 @@ def get_data(senate=False, house=False):
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+def get_sic_mapping():
+    try:
+        url = '../static/sec_combined.csv'
+        df = pd.read_csv(url)
+        df.reset_index(drop=True, inplace=True)         
+        return df
+    
+    except Exception:
+        raise Unknown
+
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # TODO
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
@@ -67,8 +77,9 @@ def get_industry_vx(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
     try:
         
         with RESTClient(api_key) as client:
-            resp = client.reference_ticker_details_vx(ticker).results
+            resp = client.reference_ticker_details(ticker).results
             # industry
+            print(resp)
             return resp['sic_description'] 
 
     except HTTPError as e:
@@ -84,14 +95,15 @@ def get_industry_vx(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # TODO
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
-def get_sector_vx(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
+def get_sector_vx(ticker, sic_mapping, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
     try:
         
         with RESTClient(api_key) as client:
-            resp = client.reference_ticker_details_vx(ticker)
+            resp = client.reference_ticker_details_vx(ticker).results
             # sector 
-            return resp.sic_code 
-    
+            office =  list(sic_mapping.loc[sic_mapping['SIC_Code'] == int(resp['sic_code']) ].Office)[0]
+            return office[office.find('of')+2:].strip()
+        
     except HTTPError as e:
         if "404" in str(e):
             print(ticker)
@@ -99,58 +111,7 @@ def get_sector_vx(ticker, api_key='bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm'):
 
         elif "429" in str(e):
             time.sleep(60)
-            return get_sector_vx(ticker)
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# TODO
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
-def get_industry(ticker, api_key="bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm"):
-    try:         
-        if ticker == "BTC":
-            return "Cryptocurrency"
-        
-        with RESTClient(api_key) as client:
-            resp = client.reference_ticker_details(ticker)
-            return resp.industry 
-
-    except HTTPError as e:
-        if "404" in str(e):
-            return get_industry_vx(ticker)
-
-        elif "429" in str(e):
-            time.sleep(60)
-            return get_industry(ticker)
-        
-    except Exception:
-        print(ticker)
-        raise Unknown
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# TODO 
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
-def get_sector(ticker):
-    try:         
-        if ticker == "BTC":
-            return "Cryptocurrency"
-        
-        with RESTClient("bY4T_AzQ86wiQ6djMEnLEihMmenm4_Jm") as client:
-            resp = client.reference_ticker_details(ticker)
-            return resp.sector
-
-    except HTTPError as e:
-        if "404" in str(e):
-            return get_sector_vx(ticker)
-
-        elif "429" in str(e):
-            time.sleep(60)
-            return get_sector(ticker)
-
-
-    except Exception:
-        print(ticker)
-        raise Unknown
+            return get_sector_vx(ticker, sic_mapping)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

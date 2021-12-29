@@ -1,5 +1,5 @@
 # publicinterest
-
+https://www.sec.gov/corpfin/division-of-corporation-finance-standard-industrial-classification-sic-code-list
 - looking into the outliers 
 - research the tax thing. 
 - who is trading in cryptocurrency?
