@@ -6,8 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+.vscode 
+
 # Distribution / packaging
 .Python
+attic/
 build/
 develop-eggs/
 dist/
