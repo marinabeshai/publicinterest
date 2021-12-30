@@ -1,35 +1,110 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import utils.constants as constants 
-from utils.constants import EXCEPTION_STRING, Unknown
+from utils.constants import Unknown
 from polygon import RESTClient
 import time
 from requests.exceptions import HTTPError
-import pandas as pd 
-import os 
+import requests
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# @TODO
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_yfinance(ticker, industry=True):
+    assert ticker != '--'
+    
+    try:
+        
+        if industry:
+            key = "Industry"
+        else:
+            key = "Sector(s)"
+            
+        if ticker == "BTC":
+            return "cryptocurrency"
+        
+        # Corner cases.
+        if ticker == "ETHE" or ticker == "GBTC" or ticker == "QQQ":
+            return "Trust"
+        
+        if ticker == "RDSA":
+            ticker = "RDS-A"
+            
+        url = "https://finance.yahoo.com/quote/TICKER/profile?p=TICKER".replace("TICKER", str(ticker))
+        agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
+
+        headers = {'User-Agent': agent}
+
+        response = requests.get(url, headers=headers)
+        
+        if "Fund Family</span>" in response.text:
+            return "Fund"
+        
+        i = 0         
+        while response.text.find(key, i) > 0: 
+            i = response.text.find(key, i) + 1
+            if i == -1: 
+                break 
+            
+            key_line = response.text[response.text.find(key):response.text.find(key)+300]
+            if "reactid" in key_line:
+                if ">" not in key_line:
+                    continue
+                key_line = key_line.split(">")
+                return key_line[4].split("<")[0].replace("&amp;", "&")
+            
+            elif "Fw(600)" in key_line:
+                key_line = key_line[key_line.find('Fw(600)') : ].split(">")
+                return key_line[1].split("<")[0].replace("&amp;", "&")                
+                        
+        if key == "Sector(s)":
+            key = '<a href="https://finance.yahoo.com/sector/'
+
+            if response.text.find(key) > 0:
+                key_line = response.text[response.text.find(key):response.text.find(key)+300]
+                key_line = key_line.split(">")   
+                result = key_line[1].replace("</a", "")                
+                key_line = key_line[0]
+                key_line = key_line[ key_line.find("data-symbol=") : ]                
+                key_line = key_line[: key_line.find(" ")]
+                key_line = key_line[key_line.find('"') : ].replace('"', "")
+                
+                key_line = list(key_line)
+                for letter in ticker:
+                    if letter in key_line:
+                        key_line.remove(letter)
+                    else:
+                        return None 
+                return result
+
+        return None 
+    
+    except Exception:
+        print(ticker)
+        raise Unknown
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # TODO
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 def get_industry(ticker):
     try:
+        
         with RESTClient(constants.api_key) as client:
-            resp = client.reference_ticker_details_vx(ticker).results
-            # industry
-            return resp['sic_description'] 
+            resp = client.reference_ticker_details(ticker)
+            return resp.industry if resp.industry != "" else get_yfinance(ticker, industry=True)
 
     except HTTPError as e:
         if "404" in str(e):
-            print(ticker)
-            raise Unknown 
+            res = get_yfinance(ticker, industry=True)
+            if res:
+                return res
+            raise Unknown
 
-        elif "429" in str(e):
+        if "429" in str(e):
             time.sleep(60)
             return get_industry(ticker)
-        
-    except Exception:
-        print(ticker)
-        raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -37,26 +112,25 @@ def get_industry(ticker):
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 def get_sector(ticker):
     try:
-
+        
         with RESTClient(constants.api_key) as client:
-            resp = client.reference_ticker_details_vx(ticker).results
-            # sector 
-            return resp['sic_code'] 
-
-
+            resp = client.reference_ticker_details(ticker)
+            return resp.sector if resp.sector != "" else get_yfinance(ticker, industry=False)
+        
     except HTTPError as e:
         if "404" in str(e):
-            print(ticker)
-            raise Unknown 
+            res = get_yfinance(ticker, industry=False)
+            if res:
+                return res
+            raise Unknown
 
-        elif "429" in str(e):
+        if "429" in str(e):
             time.sleep(60)
             return get_sector(ticker)
-        
-    except Exception:
-        print(ticker)
-        raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
