@@ -30,6 +30,11 @@ def get_yfinance(ticker, industry=True):
         if ticker == "RDSA":
             ticker = "RDS-A"
             
+        # Copied Axon.
+        if ticker == "FL4.SG":
+            return "Aerospace & Defense" if industry else "Industrials"
+            
+            
         url = "https://finance.yahoo.com/quote/TICKER/profile?p=TICKER".replace("TICKER", str(ticker))
         agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
 

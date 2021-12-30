@@ -40,15 +40,24 @@ from utils.constants import Unknown
 #       cap_gains_over_200_usd                                                False
 #       Name: 0, dtype: object)
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
-def get_data(senate=False, house=False):
-    assert senate or house
+def get_data(senate=False, house=False, combined=False):
+    assert senate or house or combined 
     try: 
         url = '../curr/?-10182021.csv'
         if senate:
             path = url.replace("?", constants.SENATE)
-        else:
+        elif house:
             path = url.replace("?", constants.HOUSE)
+        else: 
+            path_senate = url.replace("?", constants.SENATE)
+            csvreader_senate = pd.read_csv(path_senate)
+
+            path_house = url.replace("?", constants.HOUSE)
+            csvreader_house = pd.read_csv(path_house)
             
+            combined_df = pd.concat([csvreader_senate, csvreader_house])
+            return None, combined_df
+
         csvreader = pd.read_csv(path)
         title = csvreader.columns[8]
         # rows = csvreader.iterrows()
