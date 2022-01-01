@@ -1,13 +1,14 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import utils.constants as constants 
 from utils.constants import Unknown
-from helpers.official_u import Official
+from helpers.official import Official
 from polygon import RESTClient
 from requests.exceptions import HTTPError
 import time
 import requests
 import wikipedia
 from datetime import datetime
+from googlesearch import search
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -389,66 +390,100 @@ def congress_gov_get(name, d):
     # Remove middle initial
     if name[len(name)-1] == ".":
         name = name[:len(name)-3].strip()
-
-                
-    problematic = {"Allen, Richard" : "Allen, Rick", 
-                "Krishnamoorthi, S." : "Krishnamoorthi, Raja",
-                "Mcconnell Jr., A." : "McConnell, Mitch",
-                "Taylor, Nicholas Van" : "Taylor, Van",
-                "Fallon, Patrick" : "Fallon, Pat",
-                "Gallagher, Michael" : "Gallagher, Mike",
-                "Sullivan, Daniel" : "Sullivan, Dan",
-                "Crapo, Michael" : "Crapo, Mike",
-                "Hagerty IV, William" : "Hagerty, Bill",
-                "Duckworth, Ladda" : "Duckworth, Tammy",
-                "Khanna, Rohit" : "Khanna, Ro",
-                "Cruz, Rafael" : " Cruz, Ted",
-                "Wyden, Ronald" : "Wyden, Ron",
-                "Moore, Felix" : "Moore, Barry",
-                "Banks, James" : "Banks, Jim",
-                "Udall, Thomas" : "Udall, Tom",
-                "Conaway, K." : "Conaway, K. Michael",
-                "Perdue Jr., David" : "Perdue, david ",
-                "Crenshaw, Daniel" : "Crenshaw, Dan",
-                "Arenholz, Ashley" : "Hinson, Ashley",
-                "Steube, William" : "Steube, W. Gregory",
-                "Cassidy, William" : "Cassidy, Bill",
-                "Clay Jr., William" : "Clay, Wm. Lacy",
-                "Tuberville, Thomas" : "Tuberville, Tommy",
-                "Kaine, Timothy" : "Kaine, Tim",
-                "Hagedorn, James" : "Hagedorn, Jim",
-                "Portman, Robert" : "Portman, Rob" }
-    
-    if name in problematic: 
-        name = problematic[name]
-
-    htmled_name = name.replace(" ", "%20").replace(",", "%2C")
-    html = 'https://www.congress.gov/search?q=%7B"source"%3A"members"%2C"search"%3A"{name}"%7D'.format(name=htmled_name)
-    result = requests.get(html).text
-    
-    result = result[result.find('<div><span class="visualIndicator">MEMBER</span></div>') : result.find('<li class="compact" style="display:none">    1.')]
-    
-    state = result[result.find('<strong>State:</strong>') : ] 
-    state = state[ : state.find('</span>')]
-    state = state[state.find('<span>') : ].replace("<span>", "")
-
-    party = result[result.find('<strong>Party:</strong>') : ] 
-    party = party[ : party.find('</span>')]
-    party = party[party.find('<span>') : ].replace("<span>", "")
-
-
-    served = result[result.find('<strong >Served:</strong>') : ] 
-    served = served[ : served.find('</span>')]
-    served = served[served.find('<span>') : ].replace("<span>", "").replace('<ul class="member-served">\n', "").replace("<li>", "")
-    
-    senate = house = None 
-    if served.find("Senate: ")  > 0: 
-        served_temp = served[served.find("Senate: ") + 8 : ] 
-        senate = served_temp [ : served_temp.find("</li>")]
         
-    if served.find("House: ")  > 0: 
-        served_temp = served[served.find("House: ") + 7 : ] 
-        house = served_temp [ : served_temp.find("</li>")]
+    # problematic = {"Allen, Richard" : "Allen, Rick", 
+    #             "Krishnamoorthi, S." : "Krishnamoorthi, Raja",
+    #             "Mcconnell Jr., A." : "McConnell, Mitch",
+    #             "Taylor, Nicholas Van" : "Taylor, Van",
+    #             "Fallon, Patrick" : "Fallon, Pat",
+    #             "Gallagher, Michael" : "Gallagher, Mike",
+    #             "Sullivan, Daniel" : "Sullivan, Dan",
+    #             "Crapo, Michael" : "Crapo, Mike",
+    #             "Hagerty IV, William" : "Hagerty, Bill",
+    #             "Duckworth, Ladda" : "Duckworth, Tammy",
+    #             "Khanna, Rohit" : "Khanna, Ro",
+    #             "Cruz, Rafael" : " Cruz, Ted",
+    #             "Wyden, Ronald" : "Wyden, Ron",
+    #             "Moore, Felix" : "Moore, Barry",
+    #             "Banks, James" : "Banks, Jim",
+    #             "Udall, Thomas" : "Udall, Tom",
+    #             "Conaway, K." : "Conaway, K. Michael",
+    #             "Perdue Jr., David" : "Perdue, david ",
+    #             "Crenshaw, Daniel" : "Crenshaw, Dan",
+    #             "Arenholz, Ashley" : "Hinson, Ashley",
+    #             "Steube, William" : "Steube, W. Gregory",
+    #             "Cassidy, William" : "Cassidy, Bill",
+    #             "Clay Jr., William" : "Clay, Wm. Lacy",
+    #             "Tuberville, Thomas" : "Tuberville, Tommy",
+    #             "Kaine, Timothy" : "Kaine, Tim",
+    #             "Hagedorn, James" : "Hagedorn, Jim",
+    #             "Portman, Robert" : "Portman, Rob" }
+    
+    # if name in problematic: 
+    #     name = problematic[name]
+
+    # htmled_name = name.replace(" ", "%20").replace(",", "%2C")
+    # html = 'https://www.congress.gov/search?q=%7B"source"%3A"members"%2C"search"%3A"{name}"%7D'.format(name=htmled_name)
+        
+    # result = requests.get(html).text
+    
+    # result = result[result.find('<div><span class="visualIndicator">MEMBER</span></div>') : result.find('<li class="compact" style="display:none">    1.')]
+        
+    # state = result[result.find('<strong>State:</strong>') : ] 
+    # state = state[ : state.find('</span>')]
+    # state = state[state.find('<span>') : ].replace("<span>", "")
+    
+    # senate = house = None 
+
+    # if state: 
+    #     party = result[result.find('<strong>Party:</strong>') : ] 
+    #     party = party[ : party.find('</span>')]
+    #     party = party[party.find('<span>') : ].replace("<span>", "")
+
+
+    #     served = result[result.find('<strong >Served:</strong>') : ] 
+    #     served = served[ : served.find('</span>')]
+    #     served = served[served.find('<span>') : ].replace("<span>", "").replace('<ul class="member-served">\n', "").replace("<li>", "")
+        
+    #     if served.find("Senate: ")  > 0: 
+    #         served_temp = served[served.find("Senate: ") + 8 : ] 
+    #         senate = served_temp [ : served_temp.find("</li>")]
+            
+    #     if served.find("House: ")  > 0: 
+    #         served_temp = served[served.find("House: ") + 7 : ] 
+    #         house = served_temp [ : served_temp.find("</li>")]
+
+        
+    # else:
+    query = "{} site:congress.gov".format(name)
+
+    result = requests.get(search(query)[0]).text
+
+    party = result[result.find('<th scope="row" class="member_party">Party</th>') : ] 
+    party = party[ party.find('<td>') + 4: party.find('</td>')]
+    
+    # print(result)
+    
+    senate = house = None
+    
+    if result.find('<th class="member_chamber">Senate</th>') > 0:
+        senate = result[result.find('<th class="member_chamber">Senate</th>') : ] 
+        senate = senate[ : senate.find("</td>") ]
+        senate = senate[senate.find("<td>") : ]
+        state = senate[ : senate.find(",")].replace("<td>", "")
+        senate = senate[senate.find("(") : ].replace("(", "").replace(")", "").strip()
+    
+    if result.find('<th class="member_chamber">House</th>') > 0:
+        house = result[result.find('<th class="member_chamber">House</th>') : ] 
+        
+        while house.find("</td>") > 0: 
+            house_temp = house[ : house.find("</td>") ]
+            house_temp = house_temp[house_temp.find("<td>") : ]
+            state = house_temp[ : house_temp.find(",")].replace("<td>", "")
+            house_temp = house_temp[house_temp.find("(") : ].replace("(", "").replace(")", "").strip()
+            print("hi")
+            print(house)
+            
 
     d['state'] = state
     d['party'] = party
@@ -456,4 +491,3 @@ def congress_gov_get(name, d):
     d['house'] = house
 
     return d 
-        

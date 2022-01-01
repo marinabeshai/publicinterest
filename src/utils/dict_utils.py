@@ -3,12 +3,25 @@ import copy
 from utils.constants import Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+def flatten_len(d, inner_set=False):
+    for key in d:
+        if inner_set:
+            d[key] = len(d[key])
+            continue 
+                
+        for inner_d in d[key]:             
+            d[key][inner_d] = len(d[key][inner_d])
+    
+    return d
+            
+
+    
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # d = {'Frog A. Cat' : {'2012/01/20' : '3',  '2020/01/12' : '443'} ,  'Sam I. Am' : {'2013/04/12' : '5',  '2001/05/10' : '232'}}
 # d = flatten(d)
 # d = {'Frog A. Cat': {'2020/01/12': 443}, 'Sam I. Am': {'2001/05/10': 232}}
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def flatten(d_prime):
+def flatten_best(d_prime):
     try: 
         d = {}
         
@@ -70,9 +83,19 @@ def increment_dictionary(d, key, addition=1):
     except Exception:
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+def increment_set_in_dictionary(d, key, value):
+    # if set exists
+    if key in d:
+        d[key].add(value)
+    else:
+        s = set()
+        s.add(value)
+        d[key] = s 
+    return d 
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# d = {'Frog A. Cat' : {'P' : {'131414'}}, 'Sam I. Am' : {'A' : {'242'} }, 'Kat Q. Po' : {'W' : {'1'} }}
+# d = {'Frog A. Cat' : {'P' : set{'131414'}}, 'Sam I. Am' : {'A' : set{'242'} }, 'Kat Q. Po' : {'W' : set{'1'} }}
 # d = increment_set_in_dictionary(d, 'Frog A. Cat', 'P', '131414')
 # d = {'Frog A. Cat': {'P': {'131414'}}, 'Sam I. Am': {'A': {'242'}}, 'Kat Q. Po': {'W': {'1'}}}
 #
@@ -88,16 +111,13 @@ def increment_dictionary(d, key, addition=1):
 # d = increment_set_in_dictionary(d, 'Brian L. Kaer', 'Z', '4242')
 # d = {'Frog A. Cat': {'P': {'131414'}}, 'Sam I. Am': {'A': {'242'}}, 'Kat Q. Po': {'W': {'1'}}, 'Brian L. Kaer': {'Z': {'4242'}}}
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
-def increment_set_in_dictionary(d, key, inner_key, inner_value):
+def increment_set_in_inner_dictionary(d, key, inner_key, inner_value):
     try: 
-        if key in d:
-            if inner_key in d[key]:
-                d[key][inner_key].add(inner_value)
 
-            else:
-                s = set()
-                s.add(inner_value)
-                d[key][inner_key] = s 
+# check this 
+        if key in d:
+            d = increment_set_in_dictionary(d[key], inner_key, inner_value)
+               
         else:
             s = set()
             s.add(inner_value)
