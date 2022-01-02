@@ -67,8 +67,11 @@ def within_tax_date(s):
 # x = 2021/09/20# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 def format_date(d1):
     try:
-        # Corner Case
+        # Corner Cases
         d1 = '2021-08-02' if d1 == '0021-08-02' else d1 
+        d1 = '2021-06-09' if d1 == '0009-06-09' else d1
+        d1 = '2021-06-22' if d1 == '0021-06-22' else d1
+        d1 = '2021-06-22' if d1 == '0201-06-22' else d1
         
         return datetime.strptime(d1, "%Y-%m-%d").strftime(DATE_FORMAT) if "-" in d1 else datetime.strptime(d1, "%m/%d/%Y").strftime(DATE_FORMAT)
             

@@ -1,11 +1,13 @@
 # publicinterest
-https://www.sec.gov/corpfin/division-of-corporation-finance-standard-industrial-classification-sic-code-list
 - looking into the outliers 
 - research the tax thing. 
 - who is trading in cryptocurrency?
 - fund error :) w/ticker to industry mappying 
 - frequency of difference --> list top 3 people. 
 
+    # <!-- state and industry? -->
+
+    
 - i have to test all the code. especially utils!!!
     2. add assertions
     3. run then
