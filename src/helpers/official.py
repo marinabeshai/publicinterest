@@ -24,11 +24,22 @@ class Official:
         self._house = house
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+    def check(self):
+        return {"self.get_paperworkname()" : self.name,
+                "self.get_congress()" : self.get_congress(), 
+                "self.get_birthdate()" : self.get_birthdate(), 
+                "self.get_state()" : self.state,
+                "self.get_birth_place()" : self.get_birthplace(), 
+                "self.get_party()" : self.party, 
+                "self.get_education()" : self.get_education(), 
+                "self.get_num_of_years()" : self.get_seniority(),
+                "self.get_num_of_degrees()": self.get_num_of_degrees(),
+                "self.has_jd": self.has_JD()}
+    
+
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # Returns probablistic gender of Official. 
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
-    "sam, jack "
     def get_gender(self):
         try: 
             d = gender.Detector()

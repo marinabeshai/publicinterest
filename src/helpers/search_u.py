@@ -133,7 +133,6 @@ def get_yfinance(ticker, industry=True):
         # raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # TODO
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -180,16 +179,12 @@ def get_sector(ticker):
             return get_sector(ticker)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def clean_up_res(res):
     return res[res.find("=")+1:].replace("[", "").replace("]", "").replace("}", "").replace('"', "").replace("{{ubl", "").replace("{{plainlist", "").replace("*", "").replace("{{nowrap|", "").strip()
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
@@ -315,7 +310,6 @@ def go_shopping(name, l, s):
         # return {}
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -333,35 +327,44 @@ def page(probable_result_title):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_wiki_page(name):
+        
+    if name == 'Taylor, Nicholas V.':
+        name = 'Taylor, Nicholas Van'
+    if name == 'Jacobs, Christopher L.':
+        name = 'Chris Jacobs'
+    if name == 'Pfluger, August L.':
+        name = 'Pfluger, August'
+    if name == 'Hill, James F.':
+        name = 'French Hill'
+    if name == 'Kennedy, Joseph P.':
+        name = 'Joe Kennedy III'
+        
+    results = wikipedia.search(name)
+    at = 0
+    
+    s = page(results[at]) 
+    if "may refer to" in s: 
+        at += 1
+        s = page(results[at])  
+
+    while "United States Senator" not in s and "United States representative" not in s and "U.S. representative" not in s and  "United States senator" not in s and "U.S. Representative" not in s and "U.S. House of Representatives" not in s and "United States House of Representatives" not in s:
+        at += 1
+        s = page(results[at])  
+    
+    return s 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # @TODO
 # https://stackoverflow.com/questions/7638402/how-can-i-get-the-infobox-from-a-wikipedia-article-by-the-mediawiki-api
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def wiki_search(name):
 
-    try:
+    # try:
         official_name = name 
-        
-        if name == 'Taylor, Nicholas V.':
-            name = 'Taylor, Nicholas Van'
-        if name == 'Jacobs, Christopher L.':
-            name = 'Chris Jacobs'
-        if name == 'Pfluger, August L.':
-            name = 'Pfluger, August'
-        if name == 'Hill, James F.':
-            name = 'French Hill'
-            
-        results = wikipedia.search(name)
-        at = 0
-        
-        s = page(results[at]) 
-        if "may refer to" in s: 
-            at += 1
-            s = page(results[at])  
 
-
-        while "United States Senator" not in s and "United States representative" not in s and "U.S. representative" not in s and  "United States senator" not in s and "U.S. Representative" not in s and "U.S. House of Representatives" not in s and "United States House of Representatives" not in s:
-            at += 1
-            s = page(results[at])  
+        s = get_wiki_page(name)
         
         d = go_shopping(name, ["birth_place ", "alma_mater ", "birth_date ", "education "], s)
         d = congress_gov_get(name, d)
@@ -381,15 +384,13 @@ def wiki_search(name):
     
         return Official(official_name, state, birth_date, birth_place, party, education, senate, house)
         
-    except Exception as e:
-        print(str(e))
-        print(name)
-        # print(s)
+    # except Exception as e:
+    #     print(str(e))
+    #     print(name)
+    #     # print(s)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def congress_gov_get(name, d):
     # Remove middle initial
     if name[len(name)-1] == ".":
@@ -466,23 +467,28 @@ def congress_gov_get(name, d):
 
         party = result[result.find('<th scope="row" class="member_party">Party</th>') : ] 
         party = party[ party.find('<td>') + 4: party.find('</td>')]
-        
-            
+                    
         query = ["Senate", "House"]
         
         for q in query: 
             if result.find('<th class="member_chamber">'+q+'</th>') > 0:
                 house = result[result.find('<th class="member_chamber">'+q+'</th>') : ] 
-                res = None
+                res = ""
                 while house.find("</td>") > 0: 
                     house_temp = house[ : house.find("</td>") ]
                     house = house[ house.find("</td>") + 4: ]
                     
                     house_temp = house_temp[house_temp.find("<td>") : ]
-                    state = house_temp[ : house_temp.find(",")].replace("<td>", "")
+                    if not state: 
+                        state = house_temp[ : house_temp.find(",")].replace("<td>", "")
                     house_temp = house_temp[house_temp.find("(") : ].replace("(", "").replace(")", "").strip()
                     res += house_temp + ", "
-                res = res[ : len(res) - 2]
+
+                res = res.strip()
+                res = res[ : len(res) - 3]
+                
+                if not res: 
+                    res = None 
                 d[q.lower()] = res
 
 
@@ -491,61 +497,75 @@ def congress_gov_get(name, d):
     
 
     return d 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def parse(temp_result):
     party={}
     members=[]
-
+    column = 0 
     
     while temp_result.find("<dd>")  > -1: 
         jump = temp_result.find("<dd>")
         
         if temp_result.find("</td>") < jump:
-            temp_result = temp_result[temp_result.find("<dd>") : ]
-            break 
+            column += 1 
+            if column == 2:
+                temp_result = temp_result[temp_result.find("<dd>") : ]
+                break 
         
         temp_result = temp_result[ jump + 4 : ]
-
-
         temp_result_local = temp_result [ : temp_result.find("</dd>") ]
         temp_result_local = temp_result_local[ temp_result_local.find("<a") : ]
-        temp_result_local = temp_result_local[ temp_result_local.find('>') + 1: ].replace("</a>", "").replace("(", "").replace(")", "")
+        temp_result_local = temp_result_local[ temp_result_local.find('>') + 1: ].replace("</a>", "").replace("(", "").replace(")", "").replace("Resident Commissioner", "")
         temp_result_local = temp_result_local.split(",")[0]
-
-        print(temp_result_local)
 
         if "<sup" in temp_result_local:
             find = "<sup"
-        else: 
+            temp_result_local = temp_result_local[ :temp_result_local.find(find) ]
+
+        if "<a" in temp_result_local: 
             find = "<a"
-        # if "<a" in temp_result_local: 
+            temp_result_local = temp_result_local[temp_result_local.find(find)+len(find) : ]
+        
+        
+        if '<a href="/wiki/New_Progressive_Party_of_Puerto_Rico" class="mw-redirect" title="New Progressive Party of Puerto Rico">' in temp_result_local:
+            temp_result_local = temp_result_local.replace('<a href="/wiki/New_Progressive_Party_of_Puerto_Rico" class="mw-redirect" title="New Progressive Party of Puerto Rico">', "")
 
-        temp_result_local = temp_result_local[temp_result_local.find(find)+len(find) : ]
-        temp_result_local = temp_result_local[temp_result_local.find(find)+len(find) : ]
             
+        if ">" in temp_result_local:
+            temp_result_local = temp_result_local[ temp_result_local.find(">") + 1 : ]
+        if "<span" in temp_result_local:
+            temp_result_local = temp_result_local[ : temp_result_local.find("<span") ] 
+        if "from" in temp_result_local:
+            temp_result_local = temp_result_local[ : temp_result_local.find("from") ] 
+        if "until" in temp_result_local:
+            temp_result_local = temp_result_local[ : temp_result_local.find("until") ] 
+        if "<a href" in temp_result_local:
+            temp_result_local = temp_result_local[ : temp_result_local.find("<a href") ].replace("/", "")
 
-        
-        p = temp_result_local[len(temp_result_local) - 1 ].strip()
-        if p != 'R' and p != 'D':
-            p = temp_result_local.strip().split(" ")
-            p = p[len(p)-1]
-        
-        
-        name = temp_result_local[ : len(temp_result_local) - len(p)].strip() 
+        if len(temp_result_local) > 0: 
 
-        # print(name)
-        # if " " in name: 
-        party = dict_utils.increment_dictionary(party, p)
-        members.append(name)
-
-
-        # if p !=  'R' and p != 'D' and p != "I":
-        #     print(p, name)  
+            p = temp_result_local[len(temp_result_local.strip()) - 1 ].strip()
+            if temp_result_local[len(temp_result_local.strip()) - 2 ] != " ":
+                p = temp_result_local.strip().split(" ")
+                p = p[len(p)-1]
+            
+            name = temp_result_local[ : len(temp_result_local.strip()) - len(p)].strip() 
+            if len(name) > 0:
+                if p == "D-NPL" or p == "D/NPP" or p == "DFL" or p == "ID"  or p == "D/PNP":
+                    p = 'D'
+                if p == 'R-PNP' or p == "PNPR":
+                    p = 'R'
+                
+                party = dict_utils.increment_dictionary(party, p)
+                members.append(name)
+            
+            
     return temp_result, party, members 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_congress(year):
     # https://stackoverflow.com/questions/9647202/ordinal-numbers-replacement
     ordinal = lambda n: "%d%s" % (n,"tsnrhtdd"[(n//10%10!=1)*(n%10<4)*n%10::4])
@@ -554,53 +574,16 @@ def get_congress(year):
 
     result = requests.get(url).text
 
-    og = 'Members</th><td class="infobox-data" style="white-space: nowrap;">'
-    temp_result = result[ result.find(og) + len(og) : ]
-    temp_result = temp_result[ : temp_result.find('representatives')].split(" ")
-    num_of_senators = temp_result[0]
-    num_of_representatives = temp_result[2].replace("/>", "")
-
-    og = '<td style="width: 50%;text-align: left; vertical-align: top;">'
+    og = '<td style="width: 50%;text-align: left; vertical-align: top;"><h4><span class='
     jump = result.find(og) 
     if jump == -1: 
         og = '<td style="text-align: left; vertical-align: top;">'
         jump = result.find(og) 
 
 
-    temp_result = result[jump + len(og) : ]
-    
-    # print("hi " , temp_result)
-    
+    temp_result = result[jump + len(og) : ]    
     temp_result, senate_party, senate_members = parse(temp_result)
     _, house_party, house_members = parse(temp_result) 
     
-    return Congress(year, num_of_senators, senate_party, senate_members, num_of_representatives, house_party, house_members)
-
-
-# import requests
-
-# # https://stackoverflow.com/questions/9647202/ordinal-numbers-replacement
-# ordinal = lambda n: "%d%s" % (n,"tsnrhtdd"[(n//10%10!=1)*(n%10<4)*n%10::4])
-
-# url = "https://en.wikipedia.org/wiki/NUMBER_United_States_Congress#Members".replace("NUMBER", ordinal(110))
-
-# result = requests.get(url).text
-
-# og = 'Members</th><td class="infobox-data" style="white-space: nowrap;">'
-# temp_result = result[ result.find(og) + len(og) : ]
-# temp_result = temp_result[ : temp_result.find('representatives')].split(" ")
-# num_of_senators = temp_result[0]
-# num_of_representatives = temp_result[2].replace("/>", "")
-
-# og = '<td style="width: 50%;text-align: left; vertical-align: top;">'
-# temp_result = result[ result.find(og) + len(og) : ]
-
-# # query = [(senate_party, senate_members), (house_party, house_members)]
-
-
-# temp_result, senate_party, senate_members = parse(temp_result)
-# _, house_party, house_members = parse(temp_result) 
-
-
-# import requests
-
+    return Congress(year, senate_party, senate_members, house_party, house_members)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
