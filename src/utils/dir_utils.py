@@ -55,6 +55,8 @@ def get_data(senate=False, house=False, combined=False):
             path_house = url.replace("?", constants.HOUSE)
             csvreader_house = pd.read_csv(path_house)
             
+            csvreader_house.at[8508, constants.TDATE] = '2020-12-29'
+
             combined_df = pd.concat([csvreader_senate, csvreader_house])
             return None, combined_df
 

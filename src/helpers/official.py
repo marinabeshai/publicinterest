@@ -1,5 +1,5 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-from utils.constants import DATE_FORMAT, Unknown, DEGREES
+from utils.constants import DATE_FORMAT, FEMALE_NAMES, MALE_NAMES, Unknown, DEGREES, MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS
 import gender_guesser.detector as gender
 from datetime import date, datetime
 import re
@@ -24,33 +24,19 @@ class Official:
         self._house = house
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    def check(self):
-        return {"self.get_paperworkname()" : self.name,
-                "self.get_congress()" : self.get_congress(), 
-                "self.get_birthdate()" : self.get_birthdate(), 
-                "self.get_state()" : self.state,
-                "self.get_birth_place()" : self.get_birthplace(), 
-                "self.get_party()" : self.party, 
-                "self.get_education()" : self.get_education(), 
-                "self.get_num_of_years()" : self.get_seniority(),
-                "self.get_num_of_degrees()": self.get_num_of_degrees(),
-                "self.has_jd": self.has_JD()}
+    # def check(self):
+    #     return {"self.get_paperworkname()" : self.name,
+    #             "self.get_congress()" : self.get_congress(), 
+    #             "self.get_birthdate()" : self.get_birthdate(), 
+    #             "self.get_state()" : self.state,
+    #             "self.get_birth_place()" : self.get_birthplace(), 
+    #             "self.get_party()" : self.party, 
+    #             "self.get_education()" : self.get_education(), 
+    #             "self.get_num_of_years()" : self.get_seniority(),
+    #             "self.get_num_of_degrees()": self.get_num_of_degrees(),
+    #             "self.has_jd": self.has_JD()}
     
 
-    # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    # Returns probablistic gender of Official. 
-    # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    def get_gender(self):
-        try: 
-            d = gender.Detector()
-            first_name = self.name.split(", ")[1].split(" ")[0]
-            x =  d.get_gender(first_name)
-            if "mostly" in x:
-                return x.split("_")[1]
-            return x 
-        except Exception:
-            print(self.name)
-            raise Unknown
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -240,29 +226,9 @@ def is_roman_number(num):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_canonical_name(name):
     try:
-        problematic = {
-            'Ron L Wyden' :'Ronald L Wyden',
-            'Ron Wyden':'Ronald L Wyden',            
-            'Angus S King': 'Angus S King, Jr.',            
-            'Roy Blunt' : 'Roy D Blunt',            
-            'Hon. Charles J. "Chuck" Fleischmann' : 'Hon. Charles J. Fleischmann',
-            'Hon. Neal Patrick Dunn MD, FACS' :  'Hon. Charles J. Fleischmann' ,
-            'Hon. Neal Patrick MD, Facs Dunn' :  'Hon. Charles J. Fleischmann' , 
-            'Hon. Neal Patrick MD, FACS Dunn' : 'Hon. Charles J. Fleischmann',
-            'Hon. James E Hon Banks' : 'Hon. James E. Banks'    ,
-            'Maria Cantwell' : 'Maria E Cantwell',
-            'Hon. Wm. Lacy Clay' : 'Hon. William Lacy Clay Jr.',
-            'Tammy Duckworth' : 'Ladda Tammy Duckworth',
-            'Angus S King' : 'Angus S King, Jr.',
-            'Tom S Udall' : 'Thomas S Udall',
-            'Thomas Udall': 'Thomas S Udall',
-            'Hon. Greg Steube'  : 'Hon. William Greg Steube' ,
-            'Hon. W. Greg Steube'  : 'Hon. William Greg Steube' ,
-            'Hon. Michael Garcia' : 'Hon. Mike Garcia',           
-            'Hon. Cindy Axne' : 'Hon. Cynthia Axne'}
             
-        if name in problematic:
-            name = problematic[name]
+        if name in MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS:
+            name = MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS[name]
         name = name.replace('Hon. ', '').replace('Mr. ', '').replace('Honorable', '').replace('Mrs. ', '').replace('None ', '').replace('Hon ', '').replace('Dr ', '')
         
         nl = (name.replace(",", "").split(" "))
@@ -285,7 +251,6 @@ def get_canonical_name(name):
             nl[len(nl) - 2] = nl[len(nl) - 2]  + s
             nl.pop(len(nl) - 1)
 
-
         if nl[len(nl) - 1] == "Jr."  or nl[len(nl) - 1] == "Jr" or nl[len(nl) - 1] == "jr":
             nl[len(nl) - 2] = nl[len(nl) - 2]  + " Jr."
             nl.pop(len(nl) - 1)
@@ -298,4 +263,26 @@ def get_canonical_name(name):
     
     except Exception: 
         raise Unknown 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Returns probablistic gender of Official. 
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_gender(name):
+    try: 
+        first_name = name.split(", ")[1].split(" ")[0]
+        if name == 'Emerson, Jo A.' or first_name in FEMALE_NAMES:
+            return 'female'
+        
+        if first_name in MALE_NAMES:
+            return 'male'
+        
+        d = gender.Detector()
+        x =  d.get_gender(first_name)
+        if "mostly" in x:
+            return x.split("_")[1]
+        return x 
+    except Exception:
+        print(name)
+        raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

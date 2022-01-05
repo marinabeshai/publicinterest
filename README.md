@@ -294,6 +294,8 @@ asset) for him, or several.
     - Submit Chapter 4 for Review.
 + Done:
 # Notes
+    Meeting Notes [1/3]:
+        - Fraction of the whole of the ticker symbols. [How could we make this better?]
 ```
 
 ```diff
