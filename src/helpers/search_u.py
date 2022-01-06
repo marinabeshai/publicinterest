@@ -476,6 +476,8 @@ def parse(temp_result):
         members = []
         column = 0 
         
+        # <dd><span style="color:#E81B23">▌</span><span data-sort-value="North Carolina09&#160;!"><a href="/wiki/North_Carolina%27s_9th_congressional_district" title="North Carolina&#39;s 9th congressional district">9</a></span>. <a href="/wiki/Dan_Bishop" title="Dan Bishop">Dan Bishop</a> (R) <span style="font-size:85%;">(from September 10, 2019)</span><sup id="cite_ref-NC9_11-2" class="reference"><a href="#cite_note-NC9-11">&#91;d&#93;</a></sup></dd>
+
         while temp_result.find(constants.DD_HTML) > -1: 
             jump = temp_result.find(constants.DD_HTML)
             
@@ -604,11 +606,12 @@ def get_congress(year):
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_redirection_link(link):
-    res = requests.get("https://wikipedia.com/wiki/?".replace("?", link)).text
+    res = requests.get("https://wikipedia.com/?".replace("?", link)).text
+    
     find = '<link rel="canonical" href="https://en.wikipedia.org/wiki'
     res = res[ res.find(find) + len(find) : ] 
     # a possible redirection link 
     res = res [ : res.find('"')]
     
-    return res.lower().strip()
+    return res.strip()
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

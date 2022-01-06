@@ -63,54 +63,166 @@ asset) for him, or several.
 - https://bigcharts.marketwatch.com/
 - https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/the-impact-of-covid-19-on-capital-markets-one-year-in
 
+
 ```diff
-@@ Week 1 [Monday, August 30] @@
+@@ Week 19 [Monday, December 20-Monday, January 3] @@
 - Deadlines: 
 + Done:
-    - Meeting w/PEMM Group (9/2)
-    - Independent Work Getting Started Meeting (9/2-3)
-    - Meeting w/Brian (9/3)
-# Notes
+# Notes:
+    - Meeting Notes: [1/3]:
+        - Fraction of the whole of the ticker symbols. [How could we make this better?]
+```
+
+```diff
+@@ Week 20 [Monday, January 10] @@
+- Deadlines: 
++ Done:
+# Notes:
+```
+
+```diff
+@@ Week 21 [Monday, January 17] @@
+- Deadlines: 
++ Done:
+# Notes:
+```
+
+```diff
+@@ Week 22 [Monday, January 24] @@
+- Deadlines: 
++ Done:
+# Notes:
+```	
+	
+```diff
+@@ Week 23 [Monday, January 31] @@
+- Deadlines: 
+    - Analyze their buying trends 
+    - Reach out to Professor who returned from sabbatical (Canes-Wrone). 
++ Done:
+# Notes:
+```
+    
+```diff
+@@ Week 24 [Monday, February 7] @@
+- Deadlines: 
++ Done:
+# Notes:
+```
+	
+```diff
+@@ Week 25 [Monday, February 14] @@
+- Deadlines: 
+	- Compare their trends with market performance Here's another place where you have to figure out what data you want and how to get it easily.  Stock prices from the NYSE, etc., are easy; not so clear about pork belly futures, though probably they too are around somewhere.
++ Done:
+# Notes:
+```
+
+```diff
+@@ Week 26 [Monday, February 21] @@
+- Deadlines: 
+    - Need a thesis second reader. 
+    - Submit a Draft Paper by 11:59pm EST, in the IW portal
++ Done:
+# Notes:
+```
+
+```diff
+@@ Week 27 [Monday, February 28] @@
+- Deadlines: 
+    - Last grab of data (cut off at EOY'22).
+    - Write an algorithm that takes their data into consideration and buys with latency and calculates return in investment.
++ Done:
+# Notes:
+```
+
+MARCH, I START WRITING. 
+
+```diff
+@@ Week 28-31 [Monday, March 7-Monday, March 28] @@
+- Deadlines: 
+    - Make an outline for Chapter 1.
+    - Chapter 2 (Background) Due.
+    - Submit Chapter 2 for Review.
+    - Chapter 3 (Related Work) Due
+    - Submit Chapter 3 for Review.
+        - Make an outline for Chapter 2.
+    - Make an outline for Chapter 3.
+
+    - Make an outline for Chapter 4.
+    - Chapter 1 (Introduction) Due.
+    - Submit Chapter 1 for Review.
+
+    - Make an outline for Chapter 6
+    - Make an outline for Chapter 7.
+
+    - Make an outline for Chapter 8.
+    - Chapter 6 (Results) Due
+    - Chapter 7 (Evaluation) Due.
+    - Submit Chapter 6&7 for Review.
+
+    - Make an outline for Chapter 9.
+    - Chapter 8 (Discussion) Due
+    - Submit Chapter 8 for Review.
+    - Evaluation algorithm.
+    - Make an outline for Chapter 5. 
+    - Chapter 4 (Approach) Due.
+    - Submit Chapter 4 for Review.
+    - Chapter 5 (Methodology) Due.
+    - Submit Chapter 5 for Review.
+
+    - Chapter 9 (Conclusion) Due.
+    - Submit Chapter 9 for Review.
+    - WANT FULL DRAFT BY THIS DATE.
+    - Select a second reader by 11:59pm EST, in the IW portal (required for thesis, only)
+
++ Done:
+# Notes:
+```
+
+```diff
+@@ Week 32 [Monday, April 4] @@
+- Deadlines: 
+    - 1st Draft due April 1st.
++ Done:
+# Notes:
+```
+
+```diff
+@@ Week 33 [Monday, April 11] @@
+- Deadlines: 
+    - Submit a Written Final Report by 11:59pm EST, in the IW portal due April 11th.
++ Done:
+# Notes:
+```
+
+```diff
+@@ Week 34 [Monday, April 18] @@
+- Deadlines: 
+    - Submit Slides for Oral Presentation by 11:59pm in IW portal due April 18th.
+    - Oral presentation week (April 18-22nd).
++ Done:
+# Notes:
 ```
 
 
 ```diff
-@@ Week 2 [Monday, September 6] @@
+@@ Week 1-5 [Monday, August 30-Monday, September 27] @@
 - Deadlines: 
+    - Submit a Written Project Proposal by 11:59pm EDT, in the IW portal.
 + Done:
+    - Meeting w/PEMM Group (9/2)
+    - Independent Work Getting Started Meeting (9/2-3)
+    - Meeting w/Brian (9/3)
     - Meeting w/Jack (9/6)
     - Meeting w/AnneMarie (9/8)
     - Emailed:
         - Matt D.
         - Eric G. 
-# Notes
-```
-
-```diff
-@@ Week 3 [Monday, September 13] @@
-- Deadlines: 
-+ Done:
-    - Emailed:
         - Arvind
-# Notes
-```
-
-```diff
-@@ Week 4 [Monday, September 20] @@
-- Deadlines: 
-    - Submit a Written Project Proposal by 11:59pm EDT, in the IW portal.
-+ Done:
     - Got an Idea
-# Notes
-```
-
-
-```diff
-@@ Week 5 [Monday, September 27] @@
-- Deadlines: 
-+ Done:
     - Automatic download of data.
-# Notes
+# Notes:
 ```
 
 ```diff
@@ -121,29 +233,15 @@ asset) for him, or several.
         - Tim of House and Senate StockWatcher.com
         - info.clerkweb@
     - Tried to read and scrap PDFs using Python to get the gap between the ones that are decent but not on Tim's site. 
-# Notes
+# Notes:
     - Congressional data is on the GitHub Bulk data repository https://github.com/usgpo which is made available by GPO.
 ```
 
 ```diff
-@@ Week 7 [Monday, October 11] @@
+@@ Week 7-9 [Monday, October 11-Monday, October 25] @@
 - Deadlines: 
++ Done:
     - Submit the Checkpoint Form by 11:59pm EDT, in the IW portal
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 8 [Monday, October 18] @@
-- Deadlines: 
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 9 [Monday, October 25] @@
-- Deadlines: 
-+ Done:
     - Finished basic parsing, csving, and graphing of senate data (dates.py, costs.py, person.py, ticker.py, parse.py, utils.py)
     - Wikipedia scraping work. 
     - Emailed:
@@ -158,13 +256,13 @@ asset) for him, or several.
             - Blinder (Meeting)
         - Econ
             - de Swaan
-# Notes
+# Notes:
     - How many people are we talking about, how often do they do things, how big are the transactions, where do they take place, etc.  
     - Need to walk through wiki.txt. Am I skipping anything important? (publicinterest/src/py/wiki.txt)
     - Bug with 'RDSA' ticker. 
         -https://efdsearch.senate.gov/search/view/ptr/045f76aa-7ae2-4040-a603-67b5ebc3b271/
     - Need to talk about frequency_of_shares.csv. 
-    - Skipping: transaction['disclosure_date'], transaction['ptr_link'], transaction['asset_description'], transaction['comment']
+    - Skipping: transaction['disclosure_date'], transaction['ptr_link'], transaction['asset_description'], transaction['comment'
 ```
 
 ```diff
@@ -192,7 +290,7 @@ asset) for him, or several.
     - Moved over to Jupyter notebook.
     - Compared transaction date to tax deadlines. 
     - Need to add birthday to Rep.py (now Official in wiki.py)
-# Notes
+# Notes:
 ```
 
 ```diff
@@ -205,7 +303,7 @@ asset) for him, or several.
     - Need to clean all code. 
     - Breakdown of tax date code. 
     - Can get congress. 
-# Notes
+# Notes:
     - Lukas recommended that I reach out to de Swaan in the Econ department (emailed). 
     - If I can get congress ---> that means i can figure out who is and who is not there. https://en.wikipedia.org/wiki/List_of_United_States_senators_in_the_105th_Congress
 ```
@@ -221,7 +319,7 @@ asset) for him, or several.
     - Fixed bug with go_shopping() (in wiki.py).
     - Fixed/finished get_congress() (in wiki.py).
     - Fixed education in Official so as to collect all of them. 
-# Notes
+# Notes:
     - Need to figure out what I should do with "ticker_to_industry_mapping_ERRORS"
     - Need more clean up of education. Some corner cases exist. It is possible to do a degree_count like BS, MBA, JD,...
 ```
@@ -235,204 +333,16 @@ asset) for him, or several.
     - Number of degrees.
     - Get sector data.
     - Canonical names. 
-# Notes
+# Notes:
 ```
 
 ```diff
-@@ Week 14 [Monday, November 29] @@
+@@ Week 14-16 [Monday, November 29-Monday, December 13] @@
 - Deadlines: 
     - Meet with Blinder (around Thanksgiving b/c of OH) with results. 
-+ Done:
-    - Average size of amount per person. 
-# Notes
-```
-
-```diff
-@@ Week 15 [Monday, December 6] @@
-- Deadlines: 
     - Submit Progress Report for Thesis/Two-Term Projects by 11:59pm EST, in the IW portal
 + Done:
-# Notes
-```
-
-```diff
-@@ Week 16 [Monday, December 13] @@
-- Deadlines: 
-    - Make an outline for Chapter 2.
-    - Make an outline for Chapter 3.
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 17 [Monday, December 20] @@
-- Deadlines: 
-    - Make an outline for Chapter 1.
-    - Chapter 2 (Background) Due.
-    - Submit Chapter 2 for Review.
-    - Chapter 3 (Related Work) Due
-    - Submit Chapter 3 for Review.
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 18 [Monday, December 27] @@
-- Deadlines: 
-    - Make an outline for Chapter 4.
-    - Chapter 1 (Introduction) Due.
-    - Submit Chapter 1 for Review.
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 19 [Monday, January 3] @@
-- Deadlines: 
-    - Make an outline for Chapter 5. 
-    - Chapter 4 (Approach) Due.
-    - Submit Chapter 4 for Review.
-+ Done:
-# Notes
-    Meeting Notes [1/3]:
-        - Fraction of the whole of the ticker symbols. [How could we make this better?]
-```
-
-```diff
-@@ Week 20 [Monday, January 10] @@
-- Deadlines: 
-    - Chapter 5 (Methodology) Due.
-    - Submit Chapter 5 for Review.
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 21 [Monday, January 17] @@
-- Deadlines: 
-    - Need all the data in a table.
-        - Multiple tables seems most likely.  For now, maybe just think of clean flat files, with an eye to an SQL or other formal database in the (near?) future.
-	- Need to figure out how to store the table
-        - Knowing what it is, how big, etc., will help answer this.
-    - Need to figure out how to make API accessible. 
-	    - I think API design and making it available come later on, though you should keep them in mind as you go along.  But you can's make an API if you don't know what you have and if you haven't thought about what kinds of use you and others might make of it.
-
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 22 [Monday, January 24] @@
-- Deadlines: 
-+ Done:
-# Notes
-```	
-	
-```diff
-@@ Week 23 [Monday, January 31] @@
-- Deadlines: 
-    - Analyze their buying trends 
-    - Reach out to Professor who returned from sabbatical (Canes-Wrone). 
-+ Done:
-# Notes
-```
-    
-```diff
-@@ Week 24 [Monday, February 7] @@
-- Deadlines: 
-+ Done:
-# Notes
-```
-	
-```diff
-@@ Week 25 [Monday, February 14] @@
-- Deadlines: 
-	- Compare their trends with market performance Here's another place where you have to figure out what data you want and how to get it easily.  Stock prices from the NYSE, etc., are easy; not so clear about pork belly futures, though probably they too are around somewhere.
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 26 [Monday, February 21] @@
-- Deadlines: 
-    - Need a thesis second reader. 
-    - Submit a Draft Paper by 11:59pm EST, in the IW portal
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 27 [Monday, February 28] @@
-- Deadlines: 
-    - Last grab of data (cut off at EOY'22).
-    - Make an outline for Chapter 6
-    - Make an outline for Chapter 7.
-    - Write an algorithm that takes their data into consideration and buys with latency and calculates return in investment.
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 28 [Monday, March 7] @@
-- Deadlines: 
-    - Make an outline for Chapter 8.
-    - Chapter 6 (Results) Due
-    - Chapter 7 (Evaluation) Due.
-    - Submit Chapter 6&7 for Review.
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 29 [Monday, March 14] @@
-- Deadlines: 
-    - Make an outline for Chapter 9.
-    - Chapter 8 (Discussion) Due
-    - Submit Chapter 8 for Review.
-    - Evaluation algorithm.
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 30 [Monday, March 21] @@
-- Deadlines: 
-    - Chapter 9 (Conclusion) Due.
-    - Submit Chapter 9 for Review.
-    - WANT FULL DRAFT BY THIS DATE.
-    - Select a second reader by 11:59pm EST, in the IW portal (required for thesis, only)
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 31 [Monday, March 28] @@
-- Deadlines: 
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 32 [Monday, April 4] @@
-- Deadlines: 
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 33 [Monday, April 11] @@
-- Deadlines: 
-    - Submit a Written Final Report by 11:59pm EST, in the IW portal
-+ Done:
-# Notes
-```
-
-```diff
-@@ Week 34 [Monday, April 18] @@
-- Deadlines: 
-    - Submit Slides for Oral Presentation by 11:59pm in IW portal
-    - Oral presentation week
-+ Done:
-# Notes
+    - Average size of amount per person. 
+# Notes:
 ```
 
