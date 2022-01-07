@@ -67,6 +67,8 @@ asset) for him, or several.
 ```diff
 @@ Week 19 [Monday, December 20-Monday, January 3] @@
 - Deadlines: 
+    - Finish profiling. 
+    - Finish sector and industry mapping. 
 + Done:
 # Notes:
     - Meeting Notes: [1/3]:
@@ -136,44 +138,22 @@ asset) for him, or several.
 # Notes:
 ```
 
-MARCH, I START WRITING. 
+.***********MARCH, I START WRITING.*********** 
 
 ```diff
 @@ Week 28-31 [Monday, March 7-Monday, March 28] @@
 - Deadlines: 
-    - Make an outline for Chapter 1.
-    - Chapter 2 (Background) Due.
-    - Submit Chapter 2 for Review.
-    - Chapter 3 (Related Work) Due
-    - Submit Chapter 3 for Review.
-        - Make an outline for Chapter 2.
-    - Make an outline for Chapter 3.
+    - Make an outline for Chapter 1,2,3,4,5,6,7,8,9.
 
-    - Make an outline for Chapter 4.
     - Chapter 1 (Introduction) Due.
-    - Submit Chapter 1 for Review.
-
-    - Make an outline for Chapter 6
-    - Make an outline for Chapter 7.
-
-    - Make an outline for Chapter 8.
+    - Chapter 2 (Background) Due.
+    - Chapter 3 (Related Work) Due
+    - Chapter 4 (Approach) Due.
     - Chapter 6 (Results) Due
     - Chapter 7 (Evaluation) Due.
-    - Submit Chapter 6&7 for Review.
-
-    - Make an outline for Chapter 9.
     - Chapter 8 (Discussion) Due
-    - Submit Chapter 8 for Review.
-    - Evaluation algorithm.
-    - Make an outline for Chapter 5. 
-    - Chapter 4 (Approach) Due.
-    - Submit Chapter 4 for Review.
-    - Chapter 5 (Methodology) Due.
-    - Submit Chapter 5 for Review.
-
     - Chapter 9 (Conclusion) Due.
-    - Submit Chapter 9 for Review.
-    - WANT FULL DRAFT BY THIS DATE.
+
     - Select a second reader by 11:59pm EST, in the IW portal (required for thesis, only)
 
 + Done:
@@ -181,16 +161,9 @@ MARCH, I START WRITING.
 ```
 
 ```diff
-@@ Week 32 [Monday, April 4] @@
+@@ Week 32-33 [Monday, April 4-Monday, April 11] @@
 - Deadlines: 
     - 1st Draft due April 1st.
-+ Done:
-# Notes:
-```
-
-```diff
-@@ Week 33 [Monday, April 11] @@
-- Deadlines: 
     - Submit a Written Final Report by 11:59pm EST, in the IW portal due April 11th.
 + Done:
 # Notes:
@@ -204,6 +177,10 @@ MARCH, I START WRITING.
 + Done:
 # Notes:
 ```
+
+
+
+
 
 
 ```diff

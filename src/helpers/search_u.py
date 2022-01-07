@@ -476,8 +476,6 @@ def parse(temp_result):
         members = []
         column = 0 
         
-        # <dd><span style="color:#E81B23">▌</span><span data-sort-value="North Carolina09&#160;!"><a href="/wiki/North_Carolina%27s_9th_congressional_district" title="North Carolina&#39;s 9th congressional district">9</a></span>. <a href="/wiki/Dan_Bishop" title="Dan Bishop">Dan Bishop</a> (R) <span style="font-size:85%;">(from September 10, 2019)</span><sup id="cite_ref-NC9_11-2" class="reference"><a href="#cite_note-NC9-11">&#91;d&#93;</a></sup></dd>
-
         while temp_result.find(constants.DD_HTML) > -1: 
             jump = temp_result.find(constants.DD_HTML)
             
@@ -502,24 +500,22 @@ def parse(temp_result):
             link = None 
             if find in temp_result_local:
                 link = temp_result_local[ temp_result_local.find(find) + len(find) : ] 
-                link = link[ : link.find('"')]
-                
+                link = link[ : link.find('"')]                
 
             find = '>' 
             if find in temp_result_local:
                 temp_result_local = temp_result_local[ temp_result_local.find('>') + 1: ]
                 
-                
+
             temp_result_local = temp_result_local.replace("</a>", "").replace("Resident Commissioner", "")
             
             temp_result_local = temp_result_local.split(",")
-            
+
             for i in itertools.islice(temp_result_local, 1, len(temp_result_local)-1):
                 if 'title' in i:
                     temp_result += " " +  constants.DD_HTML + " " + i  + "</dd>"
 
             temp_result_local = temp_result_local[0]
-
 
             find = "<sup"
             if find in temp_result_local:
@@ -538,15 +534,16 @@ def parse(temp_result):
             find = 'href="'
             if find in temp_result_local:
                 link = temp_result_local[ temp_result_local.find(find) + len(find) : ] 
-                link = link[ : link.find('"')]
+                link = link[ : link.find('"')]            
             
             temp_result_local = temp_result_local.replace("(", "").replace(")", "")
                 
-
             find = ">"
             if find in temp_result_local:
                 if 'from' not in temp_result_local[ temp_result_local.find(find) + len(find) : ]:
                     temp_result_local = temp_result_local[ temp_result_local.find(find) + len(find) : ]
+                    
+
                 
             finds = ["<span", "from", "until", "<a href"]
             for find in finds: 
@@ -554,6 +551,11 @@ def parse(temp_result):
                     temp_result_local = temp_result_local[ : temp_result_local.find(find) ] 
                     
             
+            find = '>' 
+            if find in temp_result_local:
+                temp_result_local = temp_result_local[ temp_result_local.find(find) + len(find) : ]
+            
+                                    
             temp_result_local = temp_result_local.replace("/", "")
 
             if len(temp_result_local) > 0: 

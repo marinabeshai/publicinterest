@@ -3,6 +3,7 @@ import pandas as pd
 import os 
 import utils.constants as constants 
 from utils.constants import Unknown
+import utils.ptr_utils as ptr_utils
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -43,7 +44,7 @@ from utils.constants import Unknown
 def get_data(senate=False, house=False, combined=False):
     assert senate or house or combined 
     try: 
-        url = '../curr/?-10182021.csv'
+        url = '../curr/?-01062022.csv'
         if senate:
             path = url.replace("?", constants.SENATE)
         elif house:
@@ -55,9 +56,18 @@ def get_data(senate=False, house=False, combined=False):
             path_house = url.replace("?", constants.HOUSE)
             csvreader_house = pd.read_csv(path_house)
             
-            csvreader_house.at[8508, constants.TDATE] = '2020-12-29'
+            # csvreader_house.at[8508, constants.TDATE] = '2020-12-29'
 
             combined_df = pd.concat([csvreader_senate, csvreader_house])
+            indexes_to_drop = []
+
+            for i, t in combined_df.iterrows():
+                if ptr_utils.get_year(ptr_utils.format_date(t[constants.TDATE])) == '2022':
+                    print(t[constants.TDATE])
+                    indexes_to_drop.append(i)
+                    
+            combined_df.drop(combined_df.index[indexes_to_drop], inplace=True)
+
             return None, combined_df
 
         csvreader = pd.read_csv(path)

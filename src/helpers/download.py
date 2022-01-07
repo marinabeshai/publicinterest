@@ -1,5 +1,5 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-from utils.constants import SENATE_URL, HOUSE_URL, Unknown
+import constants as constants
 import pandas as pd
 from datetime import date
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -11,12 +11,12 @@ def download():
     try:
         base_file_name = date.today().strftime("%m%d%Y") + '.csv'
 
-        df = pd.read_csv(SENATE_URL)
+        df = pd.read_csv(constants.SENATE_URL)
         df.to_csv("../../curr/senate-" + base_file_name, index=False)
 
-        df = pd.read_csv(HOUSE_URL)
+        df = pd.read_csv(constants.HOUSE_URL)
         df.to_csv("../../curr/house-" + base_file_name, index=False)
         
     except Exception:
-        raise Unknown
+        raise constants.Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

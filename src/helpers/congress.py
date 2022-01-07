@@ -10,107 +10,114 @@ class Congress:
    # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
     def __init__(self, number, senate_members, house_members):
         self.number = number 
-        self.senate_members = senate_members
-        self.house_members = house_members
+        self._senate_members = senate_members
+        self._house_members = house_members
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    def debug(self):
-        return(
-            "self.number :{}\n num_of_senators: {}\n senate_party: {}\nsenate_members: {}\nnum_of_representatives: {}\nhouse_party: {}\nhouse_members: {}".
-            format(self.number, self.get_count_senate(), self.senate_party, self.senate_members, self.get_count_house(), self.house_party, self.house_members)
-        )
+    # def debug(self):
+    #     return(
+    #         "self.number :{}\n num_of_senators: {}\n senate_party: {}\nsenate_members: {}\nnum_of_representatives: {}\nhouse_party: {}\nhouse_members: {}".
+    #         format(self.number, self.get_count_senate(), self.senate_party, self.senate_members, self.get_count_house(), self.house_party, self.house_members)
+    #     )
    # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
    # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    def get_count_total(self):    
-        return (len(self.house_members) + len(self.senate_members))
+    # def get_count_total(self):    
+    #     return (len(self.house_members) + len(self.senate_members))
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    def get_count_senate(self): 
-        return len(self.senate_members)
+    # def get_count_senate(self): 
+    #     return len(self.senate_members)
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    def get_count_house(self):        
-        return len(self.house_members) 
+    # def get_count_house(self):        
+    #     return len(self.house_members) 
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     def get_everyone(self):
         l = []
         
-        for name, link in self.house_members:
+        for name, link in self._house_members:
             l.append((name, link.strip()))
-        for name, link in self.senate_members:
+        for name, link in self._senate_members:
             l.append((name, link.strip()))
         
         return l
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    def get_house_party(self):
-        d = {}
-        l = []
+    # def get_house_party(self):
+    #     d = {}
+    #     l = []
         
-        for name, _ in self._house_members:
-            l.append(name)
+    #     for name, _ in self._house_members:
+    #         l.append(name)
 
-        for name in l:
-            d = dict_utils.increment_dictionary(d, search.congress_gov_get(name, party_only=True))
+    #     for name in l:
+    #         d = dict_utils.increment_dictionary(d, search.congress_gov_get(name, party_only=True))
             
-        return d 
-    # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    #     return d 
+    # # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    def get_senate_party(self):
-        d = {}
-        l = []
+    # # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    # def get_senate_party(self):
+    #     d = {}
+    #     l = []
         
-        for name, _ in self._senate_members:
-            l.append(name)
+    #     for name, _ in self.senate_members:
+    #         l.append(name)
             
-        for name in l:
-            d = dict_utils.increment_dictionary(d, search.congress_gov_get(name, party_only=True))
+    #     for name in l:
+    #         d = dict_utils.increment_dictionary(d, search.congress_gov_get(name, party_only=True))
             
         return d 
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+# THERE COULD BE DUPLICATES IN _SENATE _HOUSE
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_officials(everyone=False, senate=False, house=False):
-    # l = list(range(112, 118))
-    l = list(range(116, 117))
-
-    all_officials_list = []
-    all_officials_set = set()
+    l = list(range(112, 118))
     
+    all_officials_list = []
+    # all_officials_set = set()
+    all_officials_dict = {}
+
     for i in l:
         if everyone: 
             all_officials_list.append(search.get_congress(i).get_everyone())
         if senate: 
-            all_officials_list.append(search.get_congress(i).senate_members)
+            all_officials_list.append(search.get_congress(i)._senate_members)
         if house: 
-            all_officials_list.append(search.get_congress(i).house_members)
+            all_officials_list.append(search.get_congress(i)._house_members)
 
     all_officials_list = [item for sublist in all_officials_list for item in sublist ]
     
     for name, link in all_officials_list:
         name = official.get_canonical_name(name)
-        if 'Bishop' in name:
+        possible_redirection_link = search.get_redirection_link(link)
+        
+        if possible_redirection_link not in all_officials_dict:
             
-            possible_redirection_link = search.get_redirection_link(link)
-            
-            if (name, possible_redirection_link) not in all_officials_set:
-                all_officials_set.add((name, possible_redirection_link))
+            if possible_redirection_link not in all_officials_dict:
+                all_officials_dict[possible_redirection_link] = name 
                 
-            print(name, link, possible_redirection_link)
+            # all_officials_set.add( possible_redirection_link)
+
+        # if (name, possible_redirection_link) not in all_officials_set:
+        #     all_officials_set.add((name, possible_redirection_link))
 
     res = []
-    for name, link in all_officials_set:
+    for name in all_officials_set:
         res.append(name)
+
+    # res = []
+    # for name, link in all_officials_set:
+    #     res.append(name)
         
     return res
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
