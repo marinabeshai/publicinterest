@@ -62,8 +62,7 @@ def get_data(senate=False, house=False, combined=False):
             indexes_to_drop = []
 
             for i, t in combined_df.iterrows():
-                if ptr_utils.get_year(ptr_utils.format_date(t[constants.TDATE])) == '2022':
-                    print(t[constants.TDATE])
+                if int(ptr_utils.get_year(ptr_utils.format_date(t[constants.TDATE]))) > 2021:
                     indexes_to_drop.append(i)
                     
             combined_df.drop(combined_df.index[indexes_to_drop], inplace=True)

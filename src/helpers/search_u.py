@@ -1,4 +1,5 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from re import X
 import utils.constants as constants 
 import utils.dict_utils as dict_utils 
 from helpers.official import Official
@@ -11,6 +12,7 @@ import wikipedia
 from datetime import datetime
 from googlesearch import search
 import itertools
+from random import randint
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -308,10 +310,13 @@ def go_shopping(l, s):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def page(probable_result_title):
+def page(probable_result_title, text=False):
     try: 
         htmled_tltle = probable_result_title.replace(" ", "%20")
 
+        if text:
+            return requests.get(constants.WIKIPEDIA_SEARCH_URL.format(person=htmled_tltle)).text
+        
         resp = requests.get(constants.WIKIPEDIA_SEARCH_URL.format(person=htmled_tltle)).json()
 
         page_one = next(iter(resp['query']['pages'].values()))
@@ -325,19 +330,20 @@ def page(probable_result_title):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_wiki_page(name):
+def get_wiki_page(name, text=False):
     try: 
         results = wikipedia.search(name)
         at = 0
         
-        s = page(results[at]) 
+        s = page(results[at], text) 
+        
         if "may refer to" in s: 
             at += 1
-            s = page(results[at])  
+            s = page(results[at], text)  
 
         while "United States Senator" not in s and "United States representative" not in s and "U.S. representative" not in s and  "United States senator" not in s and "U.S. Representative" not in s and "U.S. House of Representatives" not in s and "United States House of Representatives" not in s:
             at += 1
-            s = page(results[at])  
+            s = page(results[at], text)  
         
         return s 
     
@@ -384,6 +390,9 @@ def wiki_search(name):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def congress_gov_get(name, d={}, party_only=False):
     try: 
+        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5)\
+            AppleWebKit/537.36 (KHTML, like Gecko) Cafari/537.36'}
+
         # Remove middle initial
         if name[len(name)-1] == ".":
             name = name[:len(name)-3].strip()
@@ -394,7 +403,12 @@ def congress_gov_get(name, d={}, party_only=False):
         htmled_name = name.replace(" ", "%20").replace(",", "%2C")
         html = constants.CONGRESS_GOV_URL.format(name=htmled_name)
             
-        result = requests.get(html).text
+        response = requests.get(html, headers)
+        if response.status_code == 429:
+            print("ugh: " + response.headers["Retry-After"])
+            time.sleep(int(response.headers["Retry-After"]))
+    
+        result = response.text 
         
         result = result[result.find('<div><span class="visualIndicator">MEMBER</span></div>') : result.find('<li class="compact" style="display:none">    1.')]
             
@@ -427,10 +441,16 @@ def congress_gov_get(name, d={}, party_only=False):
                 d['house'] = house 
                 
         else:
-            query = "{} site:www.congress.gov".format(name)
+            # query = "{} site:www.congress.gov".format(name)
 
-            result = requests.get(search(query)[0]).text
 
+            # response = requests.get(search(query)[0], headers)
+            # if response.status_code == 429:
+            #     print("ugh: " + response.headers["Retry-After"])
+            #     time.sleep(int(response.headers["Retry-After"]))
+
+            result = response.text 
+            
             party = result[result.find('<th scope="row" class="member_party">Party</th>') : ] 
             party = party[ party.find('<td>') + 4: party.find('</td>')]
         
@@ -466,7 +486,16 @@ def congress_gov_get(name, d={}, party_only=False):
 
         return d 
     
+    except HTTPError as e: 
+        if '429' in str(e):
+            print(e)
+            time.sleep(randint(30,40))
+            
+            return congress_gov_get(name, d, party_only=party_only)
+        
+        
     except Exception:
+        print(name)
         raise constants.Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -606,14 +635,30 @@ def get_congress(year):
         raise constants.Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_redirection_link(link):
-    res = requests.get("https://wikipedia.com/?".replace("?", link)).text
-    
-    find = '<link rel="canonical" href="https://en.wikipedia.org/wiki'
+def get_link_from_text(res, find='<link rel="canonical" href="https://en.wikipedia.org/wiki'):
     res = res[ res.find(find) + len(find) : ] 
     # a possible redirection link 
     res = res [ : res.find('"')]
-    
     return res.strip()
+
+
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_redirection_link(link, get_wiki_link=False):    
+    if get_wiki_link:
+        res = requests.get(link).text
+    else: 
+        res = requests.get("https://wikipedia.com/?".replace("?", link)).text
+    
+    return get_link_from_text(res)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+def get_wiki_link(name):    
+    if name in constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS:
+        name = constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS[name]
+
+    res = get_wiki_page(name, text=True)
+    curlid=  get_link_from_text(res, find='pageid"').replace(":", "").replace(",", "")
+    html = "https://en.wikipedia.org/?curid=" + curlid
+
+    return get_redirection_link(html, get_wiki_link=True)

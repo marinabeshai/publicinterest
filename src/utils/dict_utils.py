@@ -74,10 +74,14 @@ def commify(d):
 # d = increment_dictionary(d, 'Dog Q. Epp', addition=500)
 # d = {'Frog A. Cat': '131414', 'Sam I. Am': '242', 'Kat Q. Po': '1', 'Dog Q. Epp': 500}
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def increment_dictionary(d, key, addition=1):
+def increment_dictionary(d, key, addition=1, not_math=False):
     try: 
-        old = int(d.get(key, 0))
-        d.update({key: (old + addition)})
+        if not_math:
+            d.update({key: addition})
+
+        else:
+            old = int(d.get(key, 0))
+            d.update({key: (old + addition)})
         return d
     
     except Exception:
