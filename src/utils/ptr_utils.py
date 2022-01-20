@@ -1,6 +1,6 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 from utils.constants import DATE_FORMAT, Unknown
-from datetime import datetime
+from datetime import datetime, timedelta
 import pandas as pd 
 from scipy.stats.mstats import gmean
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -62,6 +62,28 @@ def within_tax_date(s):
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+def validate_date(official_object, date, ddate=False):
+    try: 
+        
+        y1 = int(get_year(date))
+        
+        for y2 in official_object.get_years_served():
+            if y1 == int(y2):
+                return True 
+            
+            
+        if ddate: 
+            date = datetime.strptime(date, DATE_FORMAT) - timedelta(days=45)
+            date = format_date(str(date.date()))
+            return validate_date(official_object, date, ddate=False)
+        
+        return False
+        
+        
+    except Exception:
+        raise Unknown
+    
+    
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # x = format_date('09/20/2021')
 # x = 2021/09/20# 
@@ -69,12 +91,12 @@ def within_tax_date(s):
 def format_date(d1):
     try:
         # Corner Cases
-        # TODO, need to check these. 
         d1 = '2021-08-02' if d1 == '0021-08-02' else d1 
         d1 = '2021-06-09' if d1 == '0009-06-09' else d1
         d1 = '2021-06-22' if d1 == '0021-06-22' else d1
         d1 = '2021-06-22' if d1 == '0201-06-22' else d1
         d1 = '2021-11-18' if d1 == '20221-11-18' else d1
+        d1 = '2019-06-19' if d1 == '2012-06-19' else d1 
         
         return datetime.strptime(d1, "%Y-%m-%d").strftime(DATE_FORMAT) if "-" in d1 else datetime.strptime(d1, "%m/%d/%Y").strftime(DATE_FORMAT)
             

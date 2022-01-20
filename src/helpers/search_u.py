@@ -16,171 +16,136 @@ from random import randint
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# # @TODO
-# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# def get_yfinance(ticker, industry=True):
-#     assert ticker != '--'
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# @TODO
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_yfinance(ticker, industry=True):
+    assert ticker != '--'
     
-#     try:
-#         if '.' in ticker: 
-#             ticker = ticker[:ticker.find('.')]
-#         if industry:
-#             key = "Industry"
-#         else:
-#             key = "Sector(s)"
+    try:
+        if '.' in ticker: 
+            ticker = ticker[:ticker.find('.')]
+        if industry:
+            key = "Industry"
+        else:
+            key = "Sector(s)"
             
-#         if ticker == "BTC" or ticker == 'DOGE-USD':
-#             return "cryptocurrency"
+        if ticker in constants.CRYPTOCURRENCIES:
+            return 'Cryptocurrency'
+        if ticker in constants.FUNDS:
+           return 'Fund'
+        if ticker in constants.TRUSTS:
+            return 'Trust'       
         
-#         if ticker == 'URGO' or ticker == 'WXA.F':
-#             return None 
-        
-#         if ticker == 'SPDR':
-#             ticker = 'SPY'
-            
-#         if ticker == 'BLFSD':
-#             ticker = 'BLFS'
-            
-#         if ticker == 'XER.BE':
-#             ticker = 'XER2.BE'
-            
-#         if ticker == 'BP PLC':
-#             ticker = 'BP'
-            
-#         if ticker == 'EBJ':
-#             ticker = 'ERJ'
-        
-#         # Corner cases.
-#         if ticker == "ETHE" or ticker == "GBTC" or ticker == "QQQ" or ticker == 'BSTZ' or ticker == 'BMEZ':
-#             return "Trust"
-        
-#         if ticker == 'VMCXX' or ticker == 'FDRXX' or ticker == 'SNOXX':
-#             return 'Fund'
-        
-#         if ticker == 'RF$A':
-#             ticker = 'RF'
-            
-#         if ticker == "RDSA":
-#             ticker = "RDS-A"
-            
-#         if ticker == 'DGNR':
-#             ticker = 'CCCS'
-            
-#         # Copied Axon.
-#         if ticker == "FL4.SG":
-#             return "Aerospace & Defense" if industry else "Industrials"
-#         if ticker == "SYY.SG":
-#             return "Food Distribution" if industry else "Consumer Defensive"
-#         if ticker == 'NTXFY':
-#             return 'Financial Services' if industry else 'Banks - Regional'
-#         if ticker == 'PRSP':
-#             return 'IT Services' if industry else 'Information Technology'
-#         if ticker == 'PS':
-#             return 'Software' if industry else 'Information Technology'
-
-
-# # quite surprising to see international markets 
-#         url = "https://finance.yahoo.com/quote/TICKER/profile?p=TICKER".replace("TICKER", str(ticker))
-#         agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
-
-#         headers = {'User-Agent': agent}
-
-#         response = requests.get(url, headers=headers)
-        
-#         if "Fund Family</span>" in response.text:
-#             return "Fund"
-        
-#         i = 0         
-#         while response.text.find(key, i) > 0: 
-#             i = response.text.find(key, i) + 1
-#             if i == -1: 
-#                 break 
-            
-#             key_line = response.text[response.text.find(key):response.text.find(key)+300]
-#             if "reactid" in key_line:
-#                 if ">" not in key_line:
-#                     continue
-#                 key_line = key_line.split(">")
-#                 return key_line[4].split("<")[0].replace("&amp;", "&")
-            
-#             elif "Fw(600)" in key_line:
-#                 key_line = key_line[key_line.find('Fw(600)') : ].split(">")
-#                 return key_line[1].split("<")[0].replace("&amp;", "&")                
-                        
-#         if key == "Sector(s)":
-#             key = '<a href="https://finance.yahoo.com/sector/'
-
-#             if response.text.find(key) > 0:
-#                 key_line = response.text[response.text.find(key):response.text.find(key)+300]
-#                 key_line = key_line.split(">")   
-#                 result = key_line[1].replace("</a", "")                
-#                 key_line = key_line[0]
-#                 key_line = key_line[ key_line.find("data-symbol=") : ]                
-#                 key_line = key_line[: key_line.find(" ")]
-#                 key_line = key_line[key_line.find('"') : ].replace('"', "")
+        if ticker in constants.SOME_WRONG_TICKERS:
+            ticker = constants.SOME_WRONG_TICKERS[ticker]    
+               
+        if ticker in constants.MANUAL_FIXES:
+            if industry: 
+                return constants.MANUAL_FIXES[ticker]['industry']
+            return constants.MANUAL_FIXES[ticker]['sector']
                 
-#                 key_line = list(key_line)
-#                 for letter in ticker:
-#                     if letter in key_line:
-#                         key_line.remove(letter)
-#                     else:
-#                         return None 
-#                 return result
+        
+        url = "https://finance.yahoo.com/quote/TICKER/profile?p=TICKER".replace("TICKER", str(ticker))
+        agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
 
-#         return None 
+        headers = {'User-Agent': agent}
+
+        response = requests.get(url, headers=headers)
+        
+        if "Fund Family</span>" in response.text:
+            return "Fund"
+        
+        i = 0         
+        while response.text.find(key, i) > 0: 
+            i = response.text.find(key, i) + 1
+            if i == -1: 
+                break 
+            
+            key_line = response.text[response.text.find(key):response.text.find(key)+300]
+            if "reactid" in key_line:
+                if ">" not in key_line:
+                    continue
+                key_line = key_line.split(">")
+                return key_line[4].split("<")[0].replace("&amp;", "&")
+            
+            elif "Fw(600)" in key_line:
+                key_line = key_line[key_line.find('Fw(600)') : ].split(">")
+                return key_line[1].split("<")[0].replace("&amp;", "&")                
+                        
+        if key == "Sector(s)":
+            key = '<a href="https://finance.yahoo.com/sector/'
+
+            if response.text.find(key) > 0:
+                key_line = response.text[response.text.find(key):response.text.find(key)+300]
+                key_line = key_line.split(">")   
+                result = key_line[1].replace("</a", "")                
+                key_line = key_line[0]
+                key_line = key_line[ key_line.find("data-symbol=") : ]                
+                key_line = key_line[: key_line.find(" ")]
+                key_line = key_line[key_line.find('"') : ].replace('"', "")
+                
+                key_line = list(key_line)
+                for letter in ticker:
+                    if letter in key_line:
+                        key_line.remove(letter)
+                    else:
+                        return None 
+                return result
+
+        return None 
     
-#     except Exception:
-#         # print(ticker)
-#         return None 
-#         # raise Unknown
-# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    except Exception:
+        # print(ticker)
+        return None 
+        # raise Unknown
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# # TODO
-# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# def get_industry(ticker):
-#     try:
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# TODO
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_industry(ticker):
+    try:
         
-#         with RESTClient(constants.api_key) as client:
-#             resp = client.reference_ticker_details(ticker)
-#             return resp.industry if resp.industry != "" else get_yfinance(ticker, industry=True)
+        with RESTClient(constants.api_key) as client:
+            resp = client.reference_ticker_details(ticker)
+            return resp.industry if resp.industry != "" else get_yfinance(ticker, industry=True)
 
-#     except HTTPError as e:
-#         if "404" in str(e):
-#             res = get_yfinance(ticker, industry=True)
-#             if res:
-#                 return res
-#             return None 
-#             # raise Unknown
+    except HTTPError as e:
+        if "404" in str(e):
+            res = get_yfinance(ticker, industry=True)
+            if res:
+                return res
+            return None 
+            # raise Unknown
 
-#         if "429" in str(e):
-#             time.sleep(60)
-#             return get_industry(ticker)
-# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        if "429" in str(e):
+            time.sleep(60)
+            return get_industry(ticker)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# # TODO
-# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# def get_sector(ticker):
-#     try:
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# TODO
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_sector(ticker):
+    try:
         
-#         with RESTClient(constants.api_key) as client:
-#             resp = client.reference_ticker_details(ticker)
-#             return resp.sector if resp.sector != "" else get_yfinance(ticker, industry=False)
+        with RESTClient(constants.api_key) as client:
+            resp = client.reference_ticker_details(ticker)
+            return resp.sector if resp.sector != "" else get_yfinance(ticker, industry=False)
         
-#     except HTTPError as e:
-#         if "404" in str(e):
-#             res = get_yfinance(ticker, industry=False)
-#             if res:
-#                 return res
-#             # raise Unknown
-#             return None 
+    except HTTPError as e:
+        if "404" in str(e):
+            res = get_yfinance(ticker, industry=False)
+            if res:
+                return res
+            # raise Unknown
+            return None 
 
-#         if "429" in str(e):
-#             time.sleep(60)
-#             return get_sector(ticker)
-# # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        if "429" in str(e):
+            time.sleep(60)
+            return get_sector(ticker)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
@@ -366,7 +331,7 @@ def wiki_search(name):
         s = get_wiki_page(name)
         
         d = go_shopping(["birth_place ", "alma_mater ", "birth_date ", "education "], s)
-        d = congress_gov_get(name, d)
+        d = congress_gov_get(official_name, d)
 
         birth_place = d.get("birth_place", None)
         
@@ -379,8 +344,10 @@ def wiki_search(name):
         party = d.get("party", None)
         senate = d.get("senate", None)
         house = d.get("house", None)
+        
+        asgts = get_committee_assignments(official_name)
     
-        return Official(official_name, state, birth_date, birth_place, party, education, senate, house)
+        return Official(official_name, state, birth_date, birth_place, party, education, senate, house, asgts)
         
     except Exception:
         print(name)
@@ -388,8 +355,14 @@ def wiki_search(name):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def congress_gov_get(name, d={}, party_only=False):
+def congress_gov_get(name, d={}, party_only=False, tries=0):
     try: 
+        if tries == 2: 
+            return d 
+
+        if name == 'Cherfilus-McCormick, Sheila':
+            return 'Democratic'
+
         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5)\
             AppleWebKit/537.36 (KHTML, like Gecko) Cafari/537.36'}
 
@@ -402,14 +375,8 @@ def congress_gov_get(name, d={}, party_only=False):
 
         htmled_name = name.replace(" ", "%20").replace(",", "%2C")
         html = constants.CONGRESS_GOV_URL.format(name=htmled_name)
-            
-        response = requests.get(html, headers)
-        if response.status_code == 429:
-            print("ugh: " + response.headers["Retry-After"])
-            time.sleep(int(response.headers["Retry-After"]))
-    
-        result = response.text 
-        
+
+        result = requests.get(html, headers).text
         result = result[result.find('<div><span class="visualIndicator">MEMBER</span></div>') : result.find('<li class="compact" style="display:none">    1.')]
             
         state = result[result.find('<strong>State:</strong>') : ] 
@@ -441,44 +408,12 @@ def congress_gov_get(name, d={}, party_only=False):
                 d['house'] = house 
                 
         else:
-            # query = "{} site:www.congress.gov".format(name)
-
-
-            # response = requests.get(search(query)[0], headers)
-            # if response.status_code == 429:
-            #     print("ugh: " + response.headers["Retry-After"])
-            #     time.sleep(int(response.headers["Retry-After"]))
-
-            result = response.text 
-            
-            party = result[result.find('<th scope="row" class="member_party">Party</th>') : ] 
-            party = party[ party.find('<td>') + 4: party.find('</td>')]
-        
-            if party_only:
-                return party 
-                            
-            query = ["Senate", "House"]
-            
-            for q in query: 
-                if result.find('<th class="member_chamber">'+q+'</th>') > 0:
-                    house = result[result.find('<th class="member_chamber">'+q+'</th>') : ] 
-                    res = ""
-                    while house.find("</td>") > 0: 
-                        house_temp = house[ : house.find("</td>") ]
-                        house = house[ house.find("</td>") + 4: ]
-                        
-                        house_temp = house_temp[house_temp.find("<td>") : ]
-                        if not state: 
-                            state = house_temp[ : house_temp.find(",")].replace("<td>", "")
-                        house_temp = house_temp[house_temp.find("(") : ].replace("(", "").replace(")", "").strip()
-                        res += house_temp + ", "
-
-                    res = res.strip()
-                    res = res[ : len(res) - 3]
-                    
-                    if not res: 
-                        res = None 
-                    d[q.lower()] = res
+            if ',' in name:                
+                name = name.split(" ")[0]
+            else:                 
+                name = name.split(" ")
+                name = name[len(name)-1]
+            return congress_gov_get(name, d=d, party_only=party_only, tries=tries+1)
 
 
         d['state'] = state
@@ -652,7 +587,7 @@ def get_redirection_link(link, get_wiki_link=False):
     return get_link_from_text(res)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_wiki_link(name):    
     if name in constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS:
         name = constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS[name]
@@ -662,3 +597,287 @@ def get_wiki_link(name):
     html = "https://en.wikipedia.org/?curid=" + curlid
 
     return get_redirection_link(html, get_wiki_link=True)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_committee_assignments(name):
+    if name == 'Greene, Marjorie T.':
+        return ['House Committee on Budget (2021-2022)', 'Committee on Education and the Workforce (2021-2022)']
+    
+    if name == 'Loeffler, Kelly':
+        return ['Committee on Health Education Labor & Pensions (2020-2021)', 'Subcommittee on Children and Families (2020-2021)',
+        'Subcommittee on Employment and Workplace Safety (2020-2021)', 'Primary Health and Retirement Security (2020-2021)', 'Joint Economic Committee (2020-2021)', 'Committee on Veterans Affairs (2020-2021)',
+        'Committee on Agriculture, Nutrition, & Forestry (2020-2021)', 'Conservation, Forestry, and Natural Resources (2020-2021)', 'Livestock, Marketing, and Agriculture Security (2020-2021)']
+
+    if name not in constants.CANONICAL_TO_BALLOTPEDIA_PROBLEMATIC_CONVERSIONS:
+        name = name.replace(",", "").split(" ")
+        name = name[1] + "_" + name[0]
+    else:
+        name = constants.CANONICAL_TO_BALLOTPEDIA_PROBLEMATIC_CONVERSIONS[name]
+
+    headers = { 
+        "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582"
+    }
+
+    link = f"https://ballotpedia.org/{name}"
+    res = requests.get(link, headers).text
+    
+    find = 'id="Committee_assignments">Committee assignments</span>'
+    res = res[res.find(find) + len(find) : ]
+    
+    finds = ['Key votes</a></span></h2>', 'id="Elections">Elections</span>', 'id="Elections">Elections</span></h2>', 'New York State Assembly</span></h3>', '"Key_votes">Key votes</span></h2>', '>Pennsylvania House</span></h3>', 'State Senate</span></h3>', 'session</span></h4>', 'legislation</span>', 'New York Assembly</span></h3>', 'North Carolina Senate</span></h3>', 'State House</span></h3>', 'State senate</span></h3>', 'Iowa House of Representatives</span></h3>', 'Maryland Senate</span></h3>', 'Issues</span></a>', 'Georgia Senate</span></a>']
+    for find in finds: 
+        if find in res: 
+            res = res[ : res.find(find) + len(find) ]
+
+    
+    year = None 
+    l = []
+    
+    H3 = '<h3>'
+    H4 = '<h4>'
+    LI = '<li>'
+    
+    LI_SPECIAL = '<li class="subcommittee">'
+    while LI_SPECIAL in res or LI in res or H4 in res: 
+
+        while res.find(H3) < res.find(H4) and res.find(H4) < res.find(LI) and res.find(H4) > 0 and res.find(H3) > 0:        
+            res = res[ res.find(H3) + len(H3) : ]    
+            type = res [ : res.find("</h3")] 
+            if '>' in type:
+                type = type[ type.find(">") + 1 : ]
+            if '<' in type:
+                type = type[ : type.find("<")  ]
+            
+            if type == 'U.S. House' or type == 'U.S. Senate':
+                break 
+            
+        if  res.find(H3) < res.find(LI) and res.find(H3) > 0:
+            res = res[ res.find(H3) + len(H3) : ]    
+            year = res [ : res.find("</h3")] 
+            if '>' in year:
+                year = year[ year.find(">") + 1 : ]
+            if '<' in year:
+                year = year[ : year.find("<")  ]
+            if len(year) == 7:
+                year = year.split("-")
+                year = year[0] + "-20" + year[1]
+            continue
+        
+
+        if  res.find(H4) < res.find(LI) and res.find(H4) > 0:
+            res = res[ res.find(H4) + len(H4) : ]    
+            year = res [ : res.find("</h4")] 
+            if '>' in year:
+                year = year[ year.find(">") + 1 : ]
+            if '<' in year:
+                year = year[ : year.find("<")  ]
+            if len(year) == 7:
+                year = year.split("-")
+                year = year[0] + "-20" + year[1]
+            continue
+        
+
+        one = (res.find(LI_SPECIAL) < res.find(LI)) and (res.find(LI_SPECIAL) > 0)
+        another = res.find(LI_SPECIAL) > 0 and res.find(LI) < 0
+        if one or another: 
+            res = res[ res.find(LI_SPECIAL) + len(LI_SPECIAL) : ]
+            local_res = res [ : res.find("</li>")] 
+            if ", <i>" in local_res:
+                local_res = local_res.split(", <i>")[0]
+            if ">" in local_res:
+                local_res = local_res [ local_res.find(">") + 1 : ]
+            if "</a" in local_res:
+                local_res = local_res [ : local_res.find("</a")]
+
+            ans = local_res.replace("&#39;", "'").replace("&amp;", "&").replace("<li>", "").replace("The Subcommittee", "Subcommittee").replace("(Chairman)", "").replace("(Chairwoman)", "").replace("United States", "").replace("House of Representatives", "House").replace(", Chairman", "").replace(", Chairwoman", "").replace("House of Representatives", "").replace("- Chair", "")
+            if '</i>' not in ans:
+                if ">" in ans:
+                    ans = ans[ans.find(">") + 1 : ]
+                l.append(ans.strip() + " (" + year + ")" )
+            
+        else: 
+# Rules Subcommittee on Legislative and Budget Process <i>Chairman</i></li></ul></li></ul>
+# <h2><span class="mw-headline" id="Elections">Elections</span>
+
+
+            h4 = res.find(H4)
+            li = res.find(LI)
+            lispecial = res.find(LI_SPECIAL)
+            
+            if h4 < li and h4 < lispecial and h4 > 0:
+                res = res[ h4 + len(H4) : ]
+            elif lispecial < li and lispecial > 0: 
+                res = res[ lispecial : ]
+            elif lispecial > 0 and li < 0:
+                res  = res[ lispecial : ]
+            elif li > 0: 
+                res = res[ li + len(LI) : ]
+            #     print(res)
+            #     print('\n\n\n')
+            else:
+                break 
+
+            local_res = res [ : res.find("</li>")] 
+            if "<sup" in local_res:
+                local_res = local_res [ : local_res.find("<sup")]
+            if ", <i>" in local_res:
+                local_res = local_res.split(", <i>")[0]
+            if ">" in local_res:
+                local_res = local_res [ local_res.find(">") + 1 : ]
+            if "</a" in local_res:
+                local_res = local_res [ : local_res.find("</a")]
+            
+            if year: 
+                ans = local_res.replace("&#39;", "'").replace("&amp;", "&").replace("<li>", "").replace("The Subcommittee", "Subcommittee").replace("(Chairman)", "").replace("(Chairwoman)", "").replace("United States", "").replace("House of Representatives", "House").replace(", Chairman", "").replace(", Chairwoman", "").replace("House of Representatives", "").replace("- Chair", "")
+                if '</i>' not in ans:
+                    if ">" in ans:
+                        ans = ans[ans.find(">") + 1 : ]
+                    l.append(ans.strip() + " (" + year + ")" )
+                    
+    return l 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# these are links!!
+    
+    # def get_committee_assignments(name):
+    #     if name == 'Greene, Marjorie T.':
+    #     return ['House Committee on Budget (2021-2022)', 'Committee on Education and the Workforce (2021-2022)']
+    
+    # if name == 'Loeffler, Kelly':
+    #     return ['Committee on Health Education Labor & Pensions (2020-2021)', 'Subcommittee on Children and Families (2020-2021)',
+    #     'Subcommittee on Employment and Workplace Safety (2020-2021)', 'Primary Health and Retirement Security (2020-2021)', 'Joint Economic Committee (2020-2021)', 'Committee on Veterans Affairs (2020-2021)',
+    #     'Committee on Agriculture, Nutrition, & Forestry (2020-2021)', 'Conservation, Forestry, and Natural Resources (2020-2021)', 'Livestock, Marketing, and Agriculture Security (2020-2021)']
+
+    # if name not in constants.CANONICAL_TO_BALLOTPEDIA_PROBLEMATIC_CONVERSIONS:
+    #     name = name.replace(",", "").split(" ")
+    #     name = name[1] + "_" + name[0]
+    # else:
+    #     name = constants.CANONICAL_TO_BALLOTPEDIA_PROBLEMATIC_CONVERSIONS[name]
+
+    # headers = { 
+    #     "User-Agent":
+    #     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582"
+    # }
+
+    # link = f"https://ballotpedia.org/{name}"
+    # res = requests.get(link, headers).text
+    
+    # find = 'id="Committee_assignments">Committee assignments</span>'
+    # res = res[res.find(find) + len(find) : ]
+    
+    # finds = ['Key votes</a></span></h2>', 'id="Elections">Elections</span>', 'id="Elections">Elections</span></h2>', 'New York State Assembly</span></h3>', '"Key_votes">Key votes</span></h2>', '>Pennsylvania House</span></h3>', 'State Senate</span></h3>', 'session</span></h4>', 'legislation</span></h2>', 'New York Assembly</span></h3>', 'North Carolina Senate</span></h3>', 'State House</span></h3>'] 
+    # for find in finds: 
+    #     if find in res: 
+    #         res = res[ : res.find(find) + len(find) ]
+
+    # year = None 
+    # l = []
+
+
+    # H3 = '<h3>'
+    # H4 = '<h4>'
+    # LI = '<li>'
+    
+    # LI_SPECIAL = '<li class="subcommittee">'
+    # while LI in res or H4 in res: 
+    #     while res.find(H3) < res.find(H4) and res.find(H4) < res.find(LI) and res.find(H4) > 0 and res.find(H3) > 0:
+    #         res = res[ res.find(H3) + len(H3) : ]    
+    #         type = res [ : res.find("</h3")] 
+    #         if '>' in type:
+    #             type = type[ type.find(">") + 1 : ]
+    #         if '<' in type:
+    #             type = type[ : type.find("<")  ]
+            
+    #         if type == 'U.S. House' or type == 'U.S. Senate':
+    #             break 
+            
+    #     if  res.find(H4) < res.find(LI) and res.find(H4) > 0:
+    #         res = res[ res.find(H4) + len(H4) : ]    
+    #         year = res [ : res.find("</h4")] 
+    #         if '>' in year:
+    #             year = year[ year.find(">") + 1 : ]
+    #         if '<' in year:
+    #             year = year[ : year.find("<")  ]
+    #         if len(year) == 7:
+    #             year = year.split("-")
+    #             year = year[0] + "-20" + year[1]
+    #         continue
+
+    #     one = (res.find(LI_SPECIAL) < res.find(LI)) and (res.find(LI_SPECIAL) > 0)
+    #     another = res.find(LI_SPECIAL) > 0 and res.find(LI) < 0
+    #     if one or another: 
+    #         res = res[ res.find(LI_SPECIAL) + len(LI_SPECIAL) : ]
+    #         local_res_og = res [ : res.find("</li>")] 
+            
+
+    #         local_res = local_res_og[local_res_og.find('"') + 1 : ]
+    #         ans = local_res[ : local_res.find('"')].replace('https://ballotpedia.org/', "")
+
+
+    #         if "#Subcommittees" in ans:
+    #             if ", <i>" in local_res_og:
+    #                 local_res = local_res_og.split(", <i>")[0]
+    #             if ">" in local_res:
+    #                 local_res = local_res [ local_res.find(">") + 1 : ]
+    #             if "</a" in local_res:
+    #                 local_res = local_res [ : local_res.find("</a")]
+
+    #             ans = local_res.replace("&#39;", "'").replace("&amp;", "&").replace("<li>", "").replace("The Subcommittee", "Subcommittee").replace("(Chairman)", "").replace("(Chairwoman)", "").replace("United States House", "House").replace("United States House of Representatives", "House").replace("United States Senate", "Senate")
+    #             if '</i>' not in ans:
+    #                 if ">" in ans:
+    #                     ans = ans[ans.find(">") + 1 : ]
+                        
+    #         # l.append(ans + " (" + year + ")" )
+            
+    #     else: 
+            
+    #         h4 = res.find(H4)
+    #         li = res.find(LI)
+    #         lispecial = res.find(LI_SPECIAL)
+            
+    #         if h4 < li and h4 < lispecial and h4 > 0:
+    #             res = res[ h4 + len(H4) : ]
+    #         elif lispecial < li and lispecial > 0: 
+    #             res = res[ lispecial : ]
+    #         elif lispecial > 0 and li < 0:
+    #             res  = res[ lispecial : ]
+    #         elif li > 0: 
+    #             res = res[ li + len(LI) : ]
+    #         else:
+    #             break 
+
+
+    #         local_res_og = res [ : res.find("</li>")] 
+    #         # print(local_res_og)
+    #         # print("\n\n\n")
+            
+    #         if '"' in local_res_og:
+    #             ans = local_res_og[local_res_og.find('"') + 1 : ]
+    #             ans = ans[ : ans.find('"')].replace('https://ballotpedia.org/', "")
+
+    #             if "#Subcommittees" in ans:
+    #                 if "<sup" in local_res_og:
+    #                     ans = ans [ : ans.find("<sup")]
+    #                 else:
+    #                     ans = local_res_og
+    #                 if ", <i>" in ans:
+    #                     ans = ans.split(", <i>")[0]
+    #                 if ">" in ans:
+    #                     ans = ans [ ans.find(">") + 1 : ]
+    #                 if "</a" in ans:
+    #                     ans = ans [ : ans.find("</a")]
+                                            
+    #         else:
+    #             ans = local_res_og
+                
+    #         ans = ans.replace("&#39;", "'").replace("&amp;", "&").replace("<li>", "").replace("The Subcommittee", "Subcommittee").replace("(Chairman)", "").replace("(Chairwoman)", "").replace("United States House", "House").replace("United States House of Representatives", "House").replace("United States Senate", "Senate")
+    #         if '</i>' not in ans:
+    #             if ">" in ans:
+    #                 ans = ans[ans.find(">") + 1 : ]
+                 
+    #         # if year:            
+    #     l.append(ans + " (" + year + ")" )
+                    
+    # return l 

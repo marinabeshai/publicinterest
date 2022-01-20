@@ -27,8 +27,11 @@ class Congress:
         l = []
         
         for name, link in self._house_members:
+            name = name if name not in constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS else constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS[name]
             l.append((name, link.strip()))
+            
         for name, link in self._senate_members:
+            name = name if name not in constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS else constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS[name]
             l.append((name, link.strip()))
         
         return l
@@ -39,9 +42,8 @@ class Congress:
         d = {}
 
         for name, _ in self._house_members:
+            name = name if name not in constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS else constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS[name]
             p = search.congress_gov_get(name, party_only=True)
-            if not p:
-                    print(name)
             d = dict_utils.increment_dictionary(d, p)
             
         return d 
@@ -52,9 +54,8 @@ class Congress:
         d = {}
         
         for name, _ in self._senate_members:
+            name = name if name not in constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS else constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS[name]
             p = search.congress_gov_get(name, party_only=True)
-            if not p:
-                print(name)
             d = dict_utils.increment_dictionary(d, p)
             
         return d 
@@ -80,7 +81,8 @@ def get_officials(everyone=False, senate=False, house=False):
     all_officials_list = [item for sublist in all_officials_list for item in sublist ]
     
     for name, link in all_officials_list:
-        name = official.get_canonical_name(name)
+        name = official.get_canonical_name(name) if name not in constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS else constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS[name]
+        
         possible_redirection_link = search.get_redirection_link(link)
         
         if possible_redirection_link not in all_officials_dict:

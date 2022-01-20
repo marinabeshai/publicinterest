@@ -13,7 +13,7 @@ class Official:
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # Constructor. 
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    def __init__(self, name, state, birth_date, birth_place, party, education, senate, house):
+    def __init__(self, name, state, birth_date, birth_place, party, education, senate, house, asgts):
         self.name = name
         self.state = state
         self._birth_date = birth_date
@@ -22,19 +22,23 @@ class Official:
         self._education = education
         self._senate = senate
         self._house = house
+        self.asgts = asgts 
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    # def check(self):
-    #     return {"self.get_paperworkname()" : self.name,
-    #             "self.get_congress()" : self.get_congress(), 
-    #             "self.get_birthdate()" : self.get_birthdate(), 
-    #             "self.get_state()" : self.state,
-    #             "self.get_birth_place()" : self.get_birthplace(), 
-    #             "self.get_party()" : self.party, 
-    #             "self.get_education()" : self.get_education(), 
-    #             "self.get_num_of_years()" : self.get_seniority(),
-    #             "self.get_num_of_degrees()": self.get_num_of_degrees(),
-    #             "self.has_jd": self.has_JD()}
+    def check(self):
+        return {"self.get_paperworkname()" : self.name,
+                "self.get_congress()" : self.get_congress(), 
+                "self.get_years_served()" : self.get_years_served(), 
+                # "self.get_birthdate()" : self.get_birthdate(), 
+                # "self.get_state()" : self.state,
+                # "self.get_birth_place()" : self.get_birthplace(), 
+                # "self.get_party()" : self.party, 
+                # "self.get_education()" : self.get_education(), 
+                # "self.get_num_of_years()" : self.get_seniority(),
+                # "self.get_num_of_degrees()": self.get_num_of_degrees(),
+                # "self.has_jd": self.has_JD(), 
+                # "self.asgts" :  self.asgts
+                }
     
 
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -80,6 +84,35 @@ class Official:
             raise Unknown
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
+    def get_years_served(self):
+        try: 
+            l = [self._senate, self._house]
+            ranges = []
+            
+            for phrase in l:
+                if not phrase: 
+                    continue
+                if "," in phrase:
+                    lprime = phrase.split(",")
+                    for i in lprime: ranges.append(i) 
+                else:
+                    ranges.append(phrase) 
+
+            res = []
+            for r in ranges:
+                l = r.split("-")
+                x = l[0]
+                y = l[1]
+                
+                if y == 'Present': y = date.today().year
+                
+                res.append(list(range(int(x), int(y) + 1)))
+            
+            return sorted(list(set(item for sublist in res for item in sublist)))
+                                       
+        except Exception:
+            raise Unknown
+    
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # Returns list of Congresses that Official participated in as a repesentative or senator.
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -105,13 +138,18 @@ class Official:
                 x = l[0]
                 y = l[1]
                 
-                if y == 'Present': y = date.today().year
+                if y == 'Present': y = date.today().year + 1 
 
                 begin_congress = 93 + ((int(x) - 1973) // 2)
                 end_congress = 93 + ((int(y) - 1973) // 2)
-                res.append(list(range(begin_congress, end_congress+1)))
+                
+                # Biggest corner case known to man. 
+                if self.name == 'Loeffler, Kelly' or self.name == 'Cochran, Thad':
+                    end_congress += 1 
+                    
+                res.append(list(range(begin_congress, end_congress)))
 
-            return list(set(item for sublist in res for item in sublist))
+            return sorted(list(set(item for sublist in res for item in sublist)))
         
         except Exception:
             raise Unknown
