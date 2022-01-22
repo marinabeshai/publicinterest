@@ -23,8 +23,6 @@ def get_yfinance(ticker, industry=True):
     assert ticker != '--'
     
     try:
-        if '.' in ticker: 
-            ticker = ticker[:ticker.find('.')]
         if industry:
             key = "Industry"
         else:
@@ -33,18 +31,22 @@ def get_yfinance(ticker, industry=True):
         if ticker in constants.CRYPTOCURRENCIES:
             return 'Cryptocurrency'
         if ticker in constants.FUNDS:
-           return 'Fund'
+            return 'Fund'
         if ticker in constants.TRUSTS:
             return 'Trust'       
         
+        changed = False
         if ticker in constants.SOME_WRONG_TICKERS:
-            ticker = constants.SOME_WRONG_TICKERS[ticker]    
-               
+            ticker = constants.SOME_WRONG_TICKERS[ticker]
+            changed = True     
+        
         if ticker in constants.MANUAL_FIXES:
             if industry: 
                 return constants.MANUAL_FIXES[ticker]['industry']
             return constants.MANUAL_FIXES[ticker]['sector']
-                
+        
+        if '.' in ticker and not changed: 
+            ticker = ticker[:ticker.find('.')]        
         
         url = "https://finance.yahoo.com/quote/TICKER/profile?p=TICKER".replace("TICKER", str(ticker))
         agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15'
@@ -95,8 +97,8 @@ def get_yfinance(ticker, industry=True):
 
         return None 
     
-    except Exception:
-        # print(ticker)
+    except Exception as e:
+        print(e)
         return None 
         # raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -109,15 +111,11 @@ def get_industry(ticker):
         
         with RESTClient(constants.api_key) as client:
             resp = client.reference_ticker_details(ticker)
-            return resp.industry if resp.industry != "" else get_yfinance(ticker, industry=True)
+            return resp.industry if resp.industry else get_yfinance(ticker, industry=True)
 
     except HTTPError as e:
         if "404" in str(e):
-            res = get_yfinance(ticker, industry=True)
-            if res:
-                return res
-            return None 
-            # raise Unknown
+            return get_yfinance(ticker, industry=True) 
 
         if "429" in str(e):
             time.sleep(60)
@@ -132,15 +130,11 @@ def get_sector(ticker):
         
         with RESTClient(constants.api_key) as client:
             resp = client.reference_ticker_details(ticker)
-            return resp.sector if resp.sector != "" else get_yfinance(ticker, industry=False)
+            return resp.sector if resp.sector else get_yfinance(ticker, industry=False)
         
     except HTTPError as e:
         if "404" in str(e):
-            res = get_yfinance(ticker, industry=False)
-            if res:
-                return res
-            # raise Unknown
-            return None 
+            return get_yfinance(ticker, industry=False) 
 
         if "429" in str(e):
             time.sleep(60)
@@ -355,12 +349,12 @@ def wiki_search(name):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def congress_gov_get(name, d={}, party_only=False, tries=0):
+def congress_gov_get(name, d={}, party_only=False, state_only=False, tries=0):
     try: 
         if tries == 2: 
             return d 
 
-        if name == 'Cherfilus-McCormick, Sheila':
+        if name == 'Cherfilus-McCormick, Sheila' and party_only:
             return 'Democratic'
 
         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5)\
@@ -413,12 +407,15 @@ def congress_gov_get(name, d={}, party_only=False, tries=0):
             else:                 
                 name = name.split(" ")
                 name = name[len(name)-1]
-            return congress_gov_get(name, d=d, party_only=party_only, tries=tries+1)
+            return congress_gov_get(name, d=d, party_only=party_only, state_only=state_only, tries=tries+1)
 
 
         d['state'] = state
         d['party'] = party
 
+        if state_only:
+            return state 
+        
         return d 
     
     except HTTPError as e: 
@@ -698,9 +695,6 @@ def get_committee_assignments(name):
                 l.append(ans.strip() + " (" + year + ")" )
             
         else: 
-# Rules Subcommittee on Legislative and Budget Process <i>Chairman</i></li></ul></li></ul>
-# <h2><span class="mw-headline" id="Elections">Elections</span>
-
 
             h4 = res.find(H4)
             li = res.find(LI)

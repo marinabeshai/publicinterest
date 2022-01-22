@@ -65,50 +65,68 @@ class Congress:
 # THERE COULD BE DUPLICATES IN _SENATE _HOUSE
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_officials(everyone=False, senate=False, house=False):
-    l = list(range(112, 118))
-    
-    all_officials_list = []
-    all_officials_dict = {}
+    try: 
+        l = list(range(112, 118))
+        
+        all_officials_list = []
+        all_officials_dict = {}
 
-    for i in l:
-        if everyone: 
-            all_officials_list.append(search.get_congress(i).get_everyone())
-        if senate: 
-            all_officials_list.append(search.get_congress(i)._senate_members)
-        if house: 
-            all_officials_list.append(search.get_congress(i)._house_members)
+        for i in l:
+            if everyone: 
+                all_officials_list.append(search.get_congress(i).get_everyone())
+            if senate: 
+                all_officials_list.append(search.get_congress(i)._senate_members)
+            if house: 
+                all_officials_list.append(search.get_congress(i)._house_members)
 
-    all_officials_list = [item for sublist in all_officials_list for item in sublist ]
+        all_officials_list = [item for sublist in all_officials_list for item in sublist ]
+        
+        for name, link in all_officials_list:
+            name = official.get_canonical_name(name) if name not in constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS else constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS[name]
+            
+            possible_redirection_link = search.get_redirection_link(link)
+            
+            if possible_redirection_link not in all_officials_dict:
+                all_officials_dict[possible_redirection_link] = name 
+                    
+        return all_officials_dict
     
-    for name, link in all_officials_list:
-        name = official.get_canonical_name(name) if name not in constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS else constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS[name]
-        
-        possible_redirection_link = search.get_redirection_link(link)
-        
-        if possible_redirection_link not in all_officials_dict:
-            all_officials_dict[possible_redirection_link] = name 
-                
-        
-    return all_officials_dict
+    except: 
+        raise constants.Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ???
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_all_officials():
     return get_officials(everyone=True)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ???
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_house_officials():
     return get_officials(house=True)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ???
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_senate_officials():
     return get_officials(senate=True)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_officials_party(everyone=[], house=[], senate=[]):
+    try:
+        l = []
+        l.append(everyone)
+        l.append(house)
+        l.append(senate)      
+        l = [x for sublist in l for x in sublist]
+        
+        
+        d = {}
+        for name in l:
+            p = search.congress_gov_get(name, state_only=True)
+            d = dict_utils.increment_dictionary(d, p)
+            
+        return d 
+        
+    except:
+        raise constants.Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

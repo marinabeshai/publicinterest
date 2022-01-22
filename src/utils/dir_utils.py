@@ -44,7 +44,7 @@ import utils.ptr_utils as ptr_utils
 def get_data(senate=False, house=False, combined=False):
     assert senate or house or combined 
     try: 
-        url = '../curr/?-01062022.csv'
+        url = '../curr/?-01222022.csv'
         if senate:
             path = url.replace("?", constants.SENATE)
         elif house:
@@ -123,4 +123,61 @@ def makesubdir(path, last_dir):
         return "{}/{}".format(path, last_dir)
     except Exception:
         raise Unknown
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# df = get_mapping(errors=False, sector=True, industry=False)
+# ticker = "AAPL"
+# x = search_mapping(df, ticker, sector=True, industry=False)
+# Technology
+#
+# df = get_mapping(errors=False, sector=False, industry=True)
+# ticker = "AAPL"
+# x = search_mapping(df, ticker, sector=False, industry=True)
+# x = Consumer Electronics
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+def search_mapping(df, ticker, sector=False, industry=False):
+    try: 
+        assert sector or industry
+        if sector:
+            assert df.columns[1] == constants.SECTOR
+        elif industry:
+            assert df.columns[1] == constants.INDUSTRY
+
+        base = df.loc[df['ticker'] == ticker]
+
+        if sector: 
+            return list(base[constants.SECTOR])[0]
+        
+        return list(base[constants.INDUSTRY])[0]
+    except Exception:
+        raise Unknown 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# x = get_mapping(errors=True, sector=False, industry=False).head(1) 
+#         ticker
+# DE     NaN
+#    
+# x = get_mapping(errors=False, sector=True, industry=False).head(1)
+#  ticker      sector
+# 0      A  Healthcare
+
+# x = get_mapping(errors=False, sector=False, industry=True).head(1)
+#     ticker                        industry
+# 0  0QZI.IL  Internet Content & Information# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def get_mapping(sector=False, industry=False):
+    assert sector or industry
+    
+    try:
+        path = '../../curr/ticker_to_?_mapping.csv'
+    
+        if sector:
+            path = path.replace("?", constants.SECTOR)
+        else:
+            path = path.replace("?", constants.INDUSTRY)
+            
+        return pd.read_csv(path)
+    except Exception:
+        raise Unknown 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

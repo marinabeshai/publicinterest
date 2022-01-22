@@ -2,7 +2,6 @@
 - looking into the outliers 
 - research the tax thing. 
 - who is trading in cryptocurrency?
-- fund error :) w/ticker to industry mappying 
 - frequency of difference --> list top 3 people. 
 
     # <!-- state and industry? -->
@@ -30,8 +29,6 @@ ml - prediction or classification [?] --> labeled data?
 
 - estimate size [confidence interval]
 
-= DEBUG SECTOR AND INDUSTRY@!!!!!!
-
 - traded on industries where they sit on committee!!!!
 - dates and size of amount!!!!
     - geomtric mean; sort it; find which days are the most monetarily popular 
@@ -41,7 +38,6 @@ asset) for him, or several.
 - Need to look at what other people have done. 
 - Looking at people specifically. 
 - Correlation between high runners and those who did not provide data. 
-- pip install  (later)
 
 
 - futures on the commodities market (?)
@@ -54,7 +50,6 @@ asset) for him, or several.
 - average return 
 - track buys and sells per person using geometric mean of "amount"
 - systematic similarities and differences between house and senate
-- who was trading the no longer existing stocks? 
 
 
 
@@ -123,9 +118,9 @@ asset) for him, or several.
 ```diff
 @@ Week 26 [Monday, February 21] @@
 - Deadlines: 
-    - Need a thesis second reader. 
     - Submit a Draft Paper by 11:59pm EST, in the IW portal
 + Done:
+    - Need a thesis second reader. [Finished 1/20]
 # Notes:
 ```
 
