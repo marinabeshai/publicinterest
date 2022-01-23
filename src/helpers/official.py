@@ -315,19 +315,26 @@ def get_canonical_name(name):
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Returns probablistic gender of Official. 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_gender(name):
+def get_gender(name, link=""):
     try: 
-        first_name = name.split(", ")[1].split(" ")[0]
-        if name == 'Emerson, Jo A.' or first_name in FEMALE_NAMES:
+
+        if "," in name: 
+            name = name.split(", ")[1].split(" ")[0]
+        if name == 'Emerson, Jo A.' or name in FEMALE_NAMES:
             return 'female'
         
-        if first_name in MALE_NAMES:
+        if name == 'Krishnamoorthi, S. R.' or name == 'McConnell Jr., A. M.' or name == 'Conaway, K. M.' or name in MALE_NAMES:
             return 'male'
         
         d = gender.Detector()
-        x =  d.get_gender(first_name)
+        x =  d.get_gender(name)
         if "mostly" in x:
             return x.split("_")[1]
+        
+        if "unknown" in x and link:
+            link = link[ 1: ]
+            return get_gender(link.split("_")[0])
+        
         return x 
     except Exception:
         print(name)

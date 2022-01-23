@@ -47,8 +47,12 @@ def get_data(senate=False, house=False, combined=False):
         url = '../curr/?-01222022.csv'
         if senate:
             path = url.replace("?", constants.SENATE)
+            csvreader = pd.read_csv(path)
+       
         elif house:
             path = url.replace("?", constants.HOUSE)
+            csvreader = pd.read_csv(path)
+      
         else: 
             path_senate = url.replace("?", constants.SENATE)
             csvreader_senate = pd.read_csv(path_senate)
@@ -56,20 +60,19 @@ def get_data(senate=False, house=False, combined=False):
             path_house = url.replace("?", constants.HOUSE)
             csvreader_house = pd.read_csv(path_house)
             
-            combined_df = pd.concat([csvreader_senate, csvreader_house])
-            indexes_to_drop = []
+            csvreader = pd.concat([csvreader_senate, csvreader_house], ignore_index=True)
 
-            for i, t in combined_df.iterrows():
-                if int(ptr_utils.get_year(ptr_utils.format_date(t[constants.TDATE]))) > 2021:
-                    indexes_to_drop.append(i)
-                    
-            combined_df.drop(combined_df.index[indexes_to_drop], inplace=True)
 
-            return None, combined_df
+        indexes_to_drop = []
 
-        csvreader = pd.read_csv(path)
-        title = csvreader.columns[8]
-        return title, csvreader
+        for i, t in csvreader.iterrows():
+            if int(ptr_utils.get_year(ptr_utils.format_date(t[constants.TDATE]))) > 2021:
+                indexes_to_drop.append(i)
+                
+        csvreader.drop(csvreader.index[indexes_to_drop], inplace=True)
+
+        return csvreader.columns[8], csvreader
+
     except Exception:
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
