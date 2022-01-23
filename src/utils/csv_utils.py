@@ -76,7 +76,6 @@ def make_csv_base(path_csv, filename, headers, rows, tries=0):
         
     except TypeError:
         if tries == 1:
-            print(EXCEPTION_STRING)
             raise() 
 
         wd = get_filename(path_csv, filename)
@@ -86,6 +85,22 @@ def make_csv_base(path_csv, filename, headers, rows, tries=0):
     except Exception:
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# dicts = dict1, dict2, dict3, dict4
+def make_csv_multiple_dicts(path_csv, filename, dicts, headers):
+    wd = get_filename(path_csv, filename)
+    with open(wd, 'w') as csvfile:
+        writer = csv.writer(csvfile, delimiter='\t')
+        writer.writerow(headers)
+        
+        keys = set(k for d in dicts for k in d.keys() )
+        print(keys)
+        for key in keys:
+            writer.writerow([key] + [d.get(key, None) for d in dicts])
+
+        # for key in sorted(dicts[0].iterkeys(), key=lambda x: int(x)):
+        #     writer.writerow([key] + [d[key] for d in dicts])
+
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # dir = makesubdir(path_csv, TDATE)

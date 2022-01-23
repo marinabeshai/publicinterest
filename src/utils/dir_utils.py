@@ -1,4 +1,5 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from importlib_metadata import csv
 import pandas as pd 
 import os 
 import utils.constants as constants 
@@ -70,6 +71,10 @@ def get_data(senate=False, house=False, combined=False):
                 indexes_to_drop.append(i)
                 
         csvreader.drop(csvreader.index[indexes_to_drop], inplace=True)
+        
+        for i,t in csvreader.iterrows():
+            csvreader.at[i, constants.TDATE] = ptr_utils.format_date(t[constants.TDATE])
+            csvreader.at[i, constants.DDATE] = ptr_utils.format_date(t[constants.DDATE])
 
         return csvreader.columns[8], csvreader
 
@@ -173,7 +178,7 @@ def get_mapping(sector=False, industry=False):
     assert sector or industry
     
     try:
-        path = '../../curr/ticker_to_?_mapping.csv'
+        path = '../curr/ticker_to_?_mapping.csv'
     
         if sector:
             path = path.replace("?", constants.SECTOR)

@@ -1,7 +1,8 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-from utils.constants import DATE_FORMAT, FEMALE_NAMES, MALE_NAMES, Unknown, DEGREES, MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS
+from utils.constants import DATE_FORMAT, FEMALE_NAMES, MALE_NAMES, Unknown, DEGREES, MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS, REPRESENTATIVE, SENATOR
 import gender_guesser.detector as gender
 from datetime import date, datetime
+from utils.ptr_utils import isvalid
 import re
 
 from utils.ptr_utils import get_year
@@ -340,3 +341,7 @@ def get_gender(name, link=""):
         print(name)
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+def get_name(t):
+    return get_canonical_name(t[REPRESENTATIVE]) if isvalid(t[REPRESENTATIVE]) else get_canonical_name(t[SENATOR])
