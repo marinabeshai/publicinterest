@@ -1,5 +1,5 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-from utils.constants import DATE_FORMAT, Unknown, MORE_THAN_MILLION
+from utils.constants import DATE_FORMAT, Unknown, MORE_THAN_MILLION, TDATE, DDATE 
 from datetime import datetime, timedelta
 import pandas as pd 
 from scipy.stats.mstats import gmean
@@ -143,11 +143,14 @@ def format_type(s):
 # x = difference_between_dates('09/21/2021', '09/01/2021')
 # x = 20
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def difference_between_dates(d1, d2):
+def difference_between_dates(t):
     try:
-        d1_obj = datetime.strptime(d1, "%m/%d/%Y")
-        d2_obj = datetime.strptime(d2, "%m/%d/%Y")
-        return (d1_obj - d2_obj).days
+        transaction_date = t[TDATE]
+        disclosure_date = t[DDATE]
+        
+        ddate = datetime.strptime(disclosure_date, "%Y/%m/%d")
+        tdate = datetime.strptime(transaction_date, "%Y/%m/%d")
+        return (ddate - tdate).days
     except Exception:
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

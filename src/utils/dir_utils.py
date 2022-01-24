@@ -75,6 +75,13 @@ def get_data(senate=False, house=False, combined=False):
         for i,t in csvreader.iterrows():
             csvreader.at[i, constants.TDATE] = ptr_utils.format_date(t[constants.TDATE])
             csvreader.at[i, constants.DDATE] = ptr_utils.format_date(t[constants.DDATE])
+            
+            if t[constants.TYPE] == 'purchase' or t[constants.TYPE] == 'exchange':
+                csvreader.at[i, constants.TDATE] = t[constants.TYPE].capitalize()
+            elif t[constants.TYPE] == 'sale_full':
+                csvreader.at[i, constants.TDATE] = 'Sale (Full)'
+            elif t[constants.TYPE] == 'sale_partial':
+                csvreader.at[i, constants.TDATE] = 'Sale (Partial)'
 
         return csvreader.columns[8], csvreader
 
@@ -152,7 +159,7 @@ def search_mapping(df, ticker, sector=False, industry=False):
         elif industry:
             assert df.columns[1] == constants.INDUSTRY
 
-        base = df.loc[df['ticker'] == ticker]
+        base = df.loc[df[constants.TICKER] == ticker]
 
         if sector: 
             return list(base[constants.SECTOR])[0]
