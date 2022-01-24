@@ -353,11 +353,13 @@ def get_gender(name, link=""):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_name(t):
     try:
-        if isvalid(t[REPRESENTATIVE]): 
+        if REPRESENTATIVE in t and isvalid(t[REPRESENTATIVE]): 
             return get_canonical_name(t[REPRESENTATIVE])
         
-        return get_canonical_name(t[SENATOR])
+        if SENATOR in t and isvalid(t[SENATOR]): 
+            return get_canonical_name(t[SENATOR])
+
     except Exception:
+        print(t)
         raise Unknown
-        
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
