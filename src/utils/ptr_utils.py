@@ -1,8 +1,15 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-from utils.constants import DATE_FORMAT, Unknown
+from utils.constants import DATE_FORMAT, Unknown, MORE_THAN_MILLION
 from datetime import datetime, timedelta
 import pandas as pd 
 from scipy.stats.mstats import gmean
+import random 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def within_age_group(age_group, age):
+    age_group_local = age_group.split("-")
+    return int(age_group_local[0]) <= age and age <= int(age_group_local[1])
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -152,16 +159,25 @@ def difference_between_dates(d1, d2):
 # x = average_amount("$50,001 - $100,000")
 # x = 70711
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def average_amount(s):
+def get_gmean(x):
     try:
-        if "Over" in s:
-            return int(gmean([50000001., 150000000.]))
+        if x != 'Unknown':
 
-        l = s.replace("$", "").replace(",", "").split(" ")
-        l.pop(1)
-        l = [float(x) for x in l]
+            if x == '$1,001 -':
+                return int(gmean(range(1, 1001)))
 
-        return int(gmean(l))
+            # made up the end case hereeeee!!!!!
+            if x == 'Over $50,000,000' or x == '$50,000,000 +':
+                return int(gmean(range(50000000, 100000001)))
+
+            elif '+' in x: 
+                x = random.choice(MORE_THAN_MILLION)
+                return int(get_gmean(x))
+
+            lower_amount = int(x.split("-")[0].replace(",", "").strip()[1 :])
+            upper_amount = int(x.split("-")[1].replace(",", "").strip()[1 :])
+            return int(gmean(range(lower_amount, upper_amount+1)))
+
     except Exception:
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,4 +1,5 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from zmq import REP
 from utils.constants import DATE_FORMAT, FEMALE_NAMES, MALE_NAMES, Unknown, DEGREES, MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS, REPRESENTATIVE, SENATOR
 import gender_guesser.detector as gender
 from datetime import date, datetime
@@ -319,12 +320,19 @@ def get_canonical_name(name):
 def get_gender(name, link=""):
     try: 
 
-        if "," in name: 
-            name = name.split(", ")[1].split(" ")[0]
-        if name == 'Emerson, Jo A.' or name in FEMALE_NAMES:
-            return 'female'
+        if name == 'Butterfield, G. K.' or name == 'Krishnamoorthi, S. R.' or name == 'McConnell Jr., A. M.' or name == 'Conaway, K. M.':
+            return 'male'
         
-        if name == 'Krishnamoorthi, S. R.' or name == 'McConnell Jr., A. M.' or name == 'Conaway, K. M.' or name in MALE_NAMES:
+        if name == 'Emerson, Jo A.':
+            return 'female'
+
+        if ", " in name:
+            name = name.split(", ")[1]
+        
+        name = name.split(" ")[0]
+        if name in FEMALE_NAMES:
+            return 'female'
+        if  name in MALE_NAMES:
             return 'male'
         
         d = gender.Detector()
@@ -342,6 +350,14 @@ def get_gender(name, link=""):
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_name(t):
-    return get_canonical_name(t[REPRESENTATIVE]) if isvalid(t[REPRESENTATIVE]) else get_canonical_name(t[SENATOR])
+    try:
+        if isvalid(t[REPRESENTATIVE]): 
+            return get_canonical_name(t[REPRESENTATIVE])
+        
+        return get_canonical_name(t[SENATOR])
+    except Exception:
+        raise Unknown
+        
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
