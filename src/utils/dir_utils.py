@@ -45,7 +45,7 @@ import utils.ptr_utils as ptr_utils
 def get_data(senate=False, house=False, combined=False):
     assert senate or house or combined 
     try: 
-        url = '../curr/?-01242022.csv'
+        url = '../curr/?-01282022.csv'
         if senate:
             path = url.replace("?", constants.SENATE)
             csvreader = pd.read_csv(path)
@@ -77,11 +77,11 @@ def get_data(senate=False, house=False, combined=False):
             csvreader.at[i, constants.DDATE] = ptr_utils.format_date(t[constants.DDATE])
             
             if t[constants.TYPE] == 'purchase' or t[constants.TYPE] == 'exchange':
-                csvreader.at[i, constants.TDATE] = t[constants.TYPE].capitalize()
+                csvreader.at[i, constants.TYPE] = t[constants.TYPE].capitalize()
             elif t[constants.TYPE] == 'sale_full':
-                csvreader.at[i, constants.TDATE] = 'Sale (Full)'
+                csvreader.at[i, constants.TYPE] = 'Sale (Full)'
             elif t[constants.TYPE] == 'sale_partial':
-                csvreader.at[i, constants.TDATE] = 'Sale (Partial)'
+                csvreader.at[i, constants.TYPE] = 'Sale (Partial)'
 
         return csvreader.columns[8], csvreader
 
@@ -109,7 +109,7 @@ def combined_dfs():
 # x = get_filename(dir, filename)
 # x = /Users/marinabeshai/OneDrive/Senior/Thesis/publicinterest/src/utils/../results/csv/amount/most_popular_td_fe_sector.csv
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_filename(path_csv, filename):
+def get_filename(path_csv, filename, ending='csv'):
     try: 
         cwd = os.getcwd()
 
@@ -120,7 +120,7 @@ def get_filename(path_csv, filename):
             except FileExistsError:
                 pass
 
-        return "{path}{slash}{filename}.csv".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), slash=('/' if path_csv else None), filename=filename)
+        return "{path}{slash}{filename}.{ending}".format(path="{cwd}/{path}".format(cwd=cwd, path=path_csv), ending=ending, slash=('/' if path_csv else None), filename=filename)
 
     except Exception:
         raise Unknown
@@ -195,4 +195,35 @@ def get_mapping(sector=False, industry=False):
         return pd.read_csv(path)
     except Exception:
         raise Unknown 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def func(d):
+    rows = []
+    
+    for name in d:
+        temp = name + "\n"
+        for committee in d[name]:
+            temp += "\t\t\t" + committee + "\t\t\t" + str(d[name][committee])
+        temp += "\n\n"
+        rows.append(temp)
+        rows.append("\n\n\n\n")
+    return rows 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def write_to_file(path_csv, filename, d,  headers, func=func):
+    wd = get_filename(path_csv, filename, ending='txt')
+    with open(wd, 'w') as f:
+        
+        rows = []
+        for little_d in d: 
+            rows.append(func(little_d))
+
+        for r in rows:
+            for x in r: 
+                f.write(x)
+        f.close()
+        
+    return wd 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -39,14 +39,17 @@ class Congress:
 
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     def get_house_party(self):
-        d = {}
+        try: 
+            d = {}
 
-        for name, _ in self._house_members:
-            name = name if name not in constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS else constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS[name]
-            p = search.congress_gov_get(name, party_only=True)
-            d = dict_utils.increment_dictionary(d, p)
-            
-        return d 
+            for name, _ in self._house_members:
+                name = name if name not in constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS else constants.NAMES_TO_CONGRESS_GOV_PROBLEMATIC_CONVERSIONS[name]
+                p = search.congress_gov_get(name, party_only=True)
+                d = dict_utils.increment_dictionary(d, p)
+                
+            return d 
+        except:
+            print(name, d, p)
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -111,7 +114,7 @@ def get_senate_officials():
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_officials_party(everyone=[], house=[], senate=[]):
+def get_officials_state(everyone=[], house=[], senate=[]):
     try:
         l = []
         l.append(everyone)

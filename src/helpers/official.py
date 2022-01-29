@@ -163,6 +163,7 @@ class Official:
             return sorted(list(set(item for sublist in res for item in sublist)))
         
         except Exception:
+            print(self.name)
             raise Unknown
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

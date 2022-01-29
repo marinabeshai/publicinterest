@@ -322,7 +322,7 @@ def wiki_search(name):
             name = constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS[name]
 
         s = get_wiki_page(name)
-        
+                
         d = go_shopping(["birth_place ", "alma_mater ", "birth_date ", "education "], s)
         d = congress_gov_get(official_name, d)
 
@@ -402,7 +402,7 @@ def congress_gov_get(name, d={}, party_only=False, state_only=False, tries=0):
                 
         else:
             if ',' in name:                
-                name = name.split(" ")[0]
+                name = name.split(", ")[0]
             else:                 
                 name = name.split(" ")
                 name = name[len(name)-1]

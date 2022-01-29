@@ -1,5 +1,5 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-from utils.constants import DATE_FORMAT, Unknown, MORE_THAN_MILLION, TDATE, DDATE 
+from utils.constants import DATE_FORMAT, Unknown, MORE_THAN_MILLION, TDATE, DDATE, age_groups
 from datetime import datetime, timedelta
 import pandas as pd 
 from scipy.stats.mstats import gmean
@@ -7,9 +7,13 @@ import random
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def within_age_group(age_group, age):
-    age_group_local = age_group.split("-")
-    return int(age_group_local[0]) <= age and age <= int(age_group_local[1])
+def which_age_group(age):
+    for age_group in age_groups.keys():        
+        age_group_local = age_group.split("-")
+        if int(age_group_local[0]) <= age and age <= int(age_group_local[1]):
+            return age_group 
+        
+    return None 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -169,7 +173,6 @@ def get_gmean(x):
             if x == '$1,001 -':
                 return int(gmean(range(1, 1001)))
 
-            # made up the end case hereeeee!!!!!
             if x == 'Over $50,000,000' or x == '$50,000,000 +':
                 return int(gmean(range(50000000, 100000001)))
 

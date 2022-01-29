@@ -3320,6 +3320,11 @@ disclosure_year,disclosure_date,transaction_date,owner,ticker,asset_description,
 2020,12/15/2020,2020-11-30,,LUV,Southwest Airlines Company,purchase,"$15,001 - $50,000",Hon. K. Michael Conaway,TX11,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20017831.pdf,False
 2020,12/15/2020,2020-11-10,self,--,UIT First Trust Diversified W115,sale_full,"$1,001 - $15,000",Hon. K. Michael Conaway,TX11,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20017831.pdf,True
 2020,12/15/2020,2020-11-20,,DIS,Walt Disney Company,sale_full,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20017842.pdf,True
+2022,01/25/2022,2021-12-21,self,BRK.B,"Berkshire Hathaway Inc, New",sale_full,"$1,001 - $15,000",Hon. Ed Perlmutter,CO07,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020300.pdf,False
+2022,01/25/2022,2021-12-21,self,COIN,Coinbase Global Inc - Class A,sale_full,"$1,001 - $15,000",Hon. Ed Perlmutter,CO07,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020300.pdf,False
+2022,01/25/2022,2022-01-20,dependent,PTEN,Patterson-UTI Energy Inc,purchase,"$1,001 - $15,000",Hon. Debbie Wasserman Schultz,FL23,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020290.pdf,False
+2022,01/25/2022,2022-01-20,dependent,PTEN,Patterson-UTI Energy Inc,purchase,"$1,001 - $15,000",Hon. Debbie Wasserman Schultz,FL23,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020290.pdf,False
+2022,01/25/2022,2022-01-20,dependent,PTEN,Patterson-UTI Energy Inc,purchase,"$1,001 - $15,000",Hon. Debbie Wasserman Schultz,FL23,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020290.pdf,False
 2020,11/16/2020,2020-10-16,self,AAPL,Apple Inc.,sale_full,"$1,001 - $15,000",Hon. Joe Courtney,CT02,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20017685.pdf,False
 2020,11/16/2020,2020-10-16,self,--,Federated MDT Small Cap Growth,sale_full,"$1,001 - $15,000",Hon. Joe Courtney,CT02,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20017685.pdf,False
 2020,11/16/2020,2020-10-16,self,FCGAX,Franklin Growth Fund Advantage,purchase,"$1,001 - $15,000",Hon. Joe Courtney,CT02,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20017685.pdf,False
@@ -7797,6 +7802,17 @@ disclosure_year,disclosure_date,transaction_date,owner,ticker,asset_description,
 2021,08/20/2021,2021-07-13,self,--,REOF XXII LLC,purchase,"$250,001 - $500,000",Hon. Nancy Pelosi,CA12,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2021/20019331.pdf,False
 2021,08/20/2021,2021-07-22,self,WORK,"Slack Technologies Inc - Class A - 10,000 shares exchanged for 776 shares of CRM as result of merged with payout of $267,900",sale_full,"$250,001 - $500,000",Hon. Nancy Pelosi,CA12,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2021/20019331.pdf,False
 2021,08/20/2021,2021-08-13,self,NWN,Northwest Natural Holding Company,purchase,"$1,001 - $15,000",Hon. Earl Blumenauer,OR03,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2021/20019364.pdf,False
+2022,01/21/2022,2022-01-14,self,SQ,"Block Inc, Class A Common Stock",sale_full,"$1,001 - $15,000",Hon. John Garamendi,CA03,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020278.pdf,False
+2022,01/21/2022,2022-01-14,self,GVA,Granite Construction Incorporated,sale_full,"$1,001 - $15,000",Hon. John Garamendi,CA03,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020278.pdf,False
+2022,01/21/2022,2022-01-14,self,FB,Meta Platforms Inc - Class A,sale_full,"$15,001 - $50,000",Hon. John Garamendi,CA03,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020278.pdf,False
+2022,01/21/2022,2022-01-14,self,TWTR,Twitter Inc,sale_full,"$1,001 - $15,000",Hon. John Garamendi,CA03,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020278.pdf,False
+2022,01/21/2022,2021-12-27,,TMUS,T-Mobile US Inc,purchase,"$1,001 - $15,000",Hon. Alan S. Lowenthal,CA47,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020270.pdf,False
+2022,01/21/2022,2022-01-07,self,JBI,Janus International Group Inc,purchase,"$1,001 - $15,000",Hon. Alan S. Lowenthal,CA47,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020271.pdf,False
+2022,01/21/2022,2021-12-30,self,SCI,Service Corp International Note - 4.625% interest maturity 12/15/2027,purchase,"$15,001 - $50,000",Hon. Alan S. Lowenthal,CA47,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020271.pdf,False
+2022,01/21/2022,2021-12-27,self,UBER,Uber Technologies Inc,purchase,"$1,001 - $15,000",Hon. Alan S. Lowenthal,CA47,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020271.pdf,False
+2022,01/21/2022,2021-03-02,self,DIS,Walt Disney Company,sale_partial,"$50,001 - $100,000",Hon. Alan S. Lowenthal,CA47,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020274.pdf,False
+2022,01/21/2022,2021-11-29,,--,Transfer Edward Jones to Credit Union Checking,exchange,"$1,001 - $15,000",Hon. Harold Dallas Rogers,KY05,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/8218543.pdf,False
+2022,01/21/2022,2021-12-07,,T,AT&T buy @ 23.223 special commission rate,purchase,"$1,001 - $15,000",Hon. Harold Dallas Rogers,KY05,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/8218543.pdf,False
 2020,04/27/2020,2020-04-06,--,AMZN,"Amazon.com, Inc.",purchase,"$1,001 - $15,000",Hon. Susan W. Brooks,IN05,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016445.pdf,False
 2020,04/27/2020,2020-04-06,--,AAPL,Apple Inc.,purchase,"$1,001 - $15,000",Hon. Susan W. Brooks,IN05,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016445.pdf,False
 2020,04/27/2020,2020-04-06,--,CVX,Chevron Corporation,purchase,"$1,001 - $15,000",Hon. Susan W. Brooks,IN05,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016445.pdf,False
