@@ -94,7 +94,7 @@ def make_csv_multiple_dicts(path_csv, filename, dicts, headers):
         writer.writerow(headers)
         
         keys = set(k for d in dicts for k in d.keys() )
-        # print(keys)
+
         for key in keys:
             writer.writerow([key] + [d.get(key, None) for d in dicts])
 

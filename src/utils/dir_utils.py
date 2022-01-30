@@ -166,6 +166,7 @@ def search_mapping(df, ticker, sector=False, industry=False):
         
         return list(base[constants.INDUSTRY])[0]
     except Exception:
+        print(ticker)
         raise Unknown 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

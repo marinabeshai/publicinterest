@@ -12,7 +12,7 @@ def normalize(d, normalized):
         
         if normalized[k] != 0: 
             percent = round(v/normalized[k]*100, 2)
-        d[k] = (d[k], percent)
+        d[k] = (percent, d[k])
         
         
     return d 
@@ -21,7 +21,7 @@ def normalize(d, normalized):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def flatten_gmean(d):
     for k,v in d.items():
-        if v != 0:
+        if v != 0 and v != []:
             d[k] = round(gmean(v), 2)
     return d
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -248,7 +248,11 @@ def add_sort_key_for_amount(d, normal_header="", normal=False):
                 d_copy[amount]["sort_key"] = -1
                 continue
 
-            if "Over" in amount:
+            if amount == '1001 -':
+                d_copy[amount]["sort_key"] = 1001
+                continue
+
+            if "Over" in amount or '+' in amount:
                 d_copy[amount]["sort_key"] = int(
                         amount.split("$")[1].replace(",", "")) + 1
                 continue
