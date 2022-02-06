@@ -1,0 +1,51 @@
+state	house	senate	input
+Oregon (Normalized)	0.29	0.5	0.33
+Arkansas (Normalized)	0.14	0.33	0.22
+Idaho (Normalized)	0.33	0.5	0.4
+North Dakota (Normalized)		0.25	0.17
+Rhode Island (Normalized)	0.33	1.0	0.6
+Florida (Normalized)	0.26	0.33	0.27
+Louisiana (Normalized)	0.07	0.5	0.18
+Kansas (Normalized)		1.0	0.25
+New Mexico (Normalized)		0.25	0.09
+Minnesota (Normalized)	0.12	0.33	0.15
+Georgia (Normalized)	0.15	0.33	0.18
+Utah (Normalized)	0.22		0.15
+Wisconsin (Normalized)	0.07	0.33	0.12
+Vermont (Normalized)	1.0		0.33
+Alaska (Normalized)		0.33	0.25
+Missouri (Normalized)	0.25	0.33	0.27
+Hawaii (Normalized)	0.17		0.11
+Delaware (Normalized)		1.0	0.5
+Kentucky (Normalized)	0.44	1.0	0.55
+Pennsylvania (Normalized)	0.11	1.0	0.16
+Oklahoma (Normalized)	0.18	0.33	0.23
+Ohio (Normalized)	0.19	0.5	0.21
+Indiana (Normalized)	0.33		0.29
+South Dakota (Normalized)		0.67	0.33
+California (Normalized)	0.16	0.25	0.17
+Virginia (Normalized)	0.3	0.67	0.35
+New Jersey (Normalized)	0.23	0.25	0.23
+Montana (Normalized)	0.2	0.25	0.25
+Alabama (Normalized)	0.17	0.4	0.24
+Tennessee (Normalized)	0.43	0.5	0.47
+Connecticut (Normalized)	0.29	0.33	0.33
+Texas (Normalized)	0.17	0.67	0.2
+Mississippi (Normalized)	0.17	0.67	0.33
+South Carolina (Normalized)	0.17		0.14
+North Carolina (Normalized)	0.31	0.67	0.34
+Iowa (Normalized)	0.17		0.13
+Massachusetts (Normalized)	0.31	0.2	0.3
+Michigan (Normalized)	0.16	0.33	0.18
+Nevada (Normalized)	0.1	0.2	0.15
+Wyoming (Normalized)		1.0	0.75
+New York (Normalized)	0.17		0.16
+Maine (Normalized)	0.25	0.67	0.43
+District of Columbia (Normalized)	1.0		1.0
+West Virginia (Normalized)	0.33	0.67	0.5
+Colorado (Normalized)	0.27	0.5	0.36
+Maryland (Normalized)	0.15	0.67	0.27
+New Hampshire (Normalized)		0.33	0.12
+Illinois (Normalized)	0.15	0.33	0.17
+Arizona (Normalized)	0.11		0.1
+Washington (Normalized)	0.19	1.0	0.28

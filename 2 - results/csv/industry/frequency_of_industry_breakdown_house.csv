@@ -1,0 +1,181 @@
+industry,2018,2019,2020,2021
+Advertising & Marketing Services,,3,6,1
+Advertising Agencies,,5,5,
+Aerospace & Defense,,13,105,64
+Agricultural Inputs,,1,1,2
+Agriculture,,3,14,1
+Airlines,,4,60,34
+Apparel Manufacturing,,,6,2
+Apparel Retail,,,,1
+Application Software,,58,466,319
+Asset Management,,21,103,73
+Auto & Truck Dealerships,,,,7
+Auto Manufacturers,,,8,10
+Auto Parts,,,2,3
+Autos,,6,88,89
+Banks,,75,256,119
+Banks--Diversified,,,,1
+Banks—Diversified,,,18,1
+Banks—Regional,,8,35,14
+Beverages,,,1,
+Beverages - Alcoholic,,9,29,14
+Beverages - Non-Alcoholic,,6,35,30
+Beverages—Non-Alcoholic,,1,6,4
+Biotechnology,,31,117,67
+Brokers & Exchanges,,6,116,106
+Building Materials,,2,13,7
+Building Products & Equipment,,,10,11
+Business Services,,14,104,64
+Capital Markets,,,,2
+Chemicals,,23,99,68
+Communication Equipment,,6,51,19
+Communication Services,,19,130,111
+Computer Hardware,,30,226,173
+Confectioners,,,,1
+Conglomerates,,,8,4
+Congolmerates,,,2,
+Consulting & Outsourcing,,7,29,25
+Consulting Services,,3,2,3
+Consumer Electronics,,,1,7
+Consumer Packaged Goods,,35,122,73
+Credit Services,,7,97,109
+Cryptocurrency,,,,22
+Diagnostics & Research,,1,14,6
+Discount Stores,,,,1
+Diversified Financial Services,,,,1
+Diversified Services,,1,10,1
+Drug Manufacturers,,27,155,93
+Drug Manufacturers - Specialty & Generic,,,1,1
+Drug Manufacturers—General,,10,18,13
+Drug Manufacturers—Speciality and Generic,,,,1
+Drug Manufacturers—Specialty & Generic,,1,26,20
+Education,,2,4,5
+Electrical Equipment & Parts,,,10,9
+Electronic Gaming & Multimedia,,,4,20
+Employment Services,,2,6,3
+Energy,,,3,1
+Engineering & Construction,,7,30,17
+Entertainment,,18,88,93
+Farm & Construction Machinery,,1,9,39
+Farm & Heavy Construction Machinery,,9,8,5
+Farm Products,,,1,
+Financial Conglomerates,,1,1,1
+Financial Data & Stock Exchanges,,,7,1
+Financial Services,,,1,
+Food stores,,,2,
+Footwear & Accessories,,2,2,3
+Forest Products,,1,2,5
+Fund,,46,441,254
+"Furnishings, Fixtures & Appliances",,1,1,2
+Gambling,,,24,6
+Gold,,,,1
+Grocery Stores,,,10,3
+Hardware,,,,3
+Health Care Plans,,9,55,45
+Health Care Providers,,6,29,19
+Health Information Services,,3,26,5
+Healthcare Plans,,1,1,3
+Home Improvement Retail,,,2,4
+Homebuilding & Construction,,12,13,9
+Household & Personal Products,,7,2,5
+IT Services,,,2,
+Industrial Distribution,,3,26,4
+Industrial Products,,27,177,136
+Information Technology Services,,,6,4
+Infrastructure Operations,,2,3,
+Insurance,,12,66,65
+Insurance - Life,,2,22,19
+Insurance - Property & Casualty,,12,44,42
+Insurance - Specialty,,5,8,9
+Insurance Brokers,,,,4
+Insurance—Diversified,,,4,4
+Insurance—Life,,7,6,10
+Insurance—Property & Casualty,,,2,8
+Insurance—Reinsurance,,,2,
+Insurance—Specialty,,,,1
+Integrated Freight & Logistics,,,3,
+Internet Content & Information,,4,11,32
+Internet Retail,,1,,17
+Leisure,,2,13,18
+Lodging,,5,6,3
+Luxury Goods,,3,12,1
+Major Pharmaceutical Preparations,,,2,3
+Manufacturing - Apparel & Furniture,,17,35,24
+Marine Shipping,,,2,1
+Medical Devices,1,11,105,72
+Medical Diagnostics & Research,,18,114,62
+Medical Distribution,,,4,8
+Medical Instruments & Equipment,,13,71,29
+Medical Instruments & Supplies,,2,8,5
+Metals & Mining,,13,21,33
+Mortgage Finance,,,,2
+Oil & Gas - Drilling,,2,,2
+Oil & Gas - E&P,,13,39,37
+Oil & Gas - Integrated,,12,77,42
+Oil & Gas - Midstream,,4,230,223
+Oil & Gas - Refining & Marketing,,2,63,36
+Oil & Gas - Services,,13,39,28
+Oil & Gas E&P,,,3,2
+Oil & Gas Equipment & Services,,,4,8
+Oil & Gas Integrated,,4,10,5
+Oil & Gas Midstream,,,23,23
+Oil & Gas Refining & Marketing,,,2,
+Online Media,,20,130,138
+Other Industrial Metals & Mining,,,,2
+Packaged Foods,,13,25,10
+Packaging & Containers,,5,50,23
+Paper & Paper Products,,,,5
+Personal Services,,,18,10
+Publishing,,1,3,6
+REITs,,55,140,82
+REIT—Diversified,,,1,1
+REIT—Healthcare Facilities,,,6,
+REIT—Hotel & Motel,,,1,1
+REIT—Retail,,2,,
+Railroads,,,2,2
+Real Estate,,,1,
+Real Estate Services,,1,30,39
+Real Estate—Development,,,2,
+Real Estate—Diversified,,,2,
+Residential Construction,,,3,
+Resorts & Casinos,,,,2
+Restaurants,,15,70,41
+Retail - Apparel & Specialty,,29,206,189
+Retail - Defensive,,11,137,76
+Scientific & Technical Instruments,,,3,5
+Security & Protection Services,,,,4
+Semiconductor Equipment & Materials,,,2,3
+Semiconductors,,27,278,169
+Shell Companies,,,22,15
+Software,,2,6,6
+Software - Application,,,2,2
+Software—Application,,11,33,45
+Software—Infrastructure,,3,30,35
+Solar,,,2,
+Specialty Business Services,,,1,2
+Specialty Chemicals,,7,23,17
+Specialty Industrial Machinery,,7,49,22
+Specialty Retail,,,4,10
+Staffing & Employment Services,,,1,
+Steel,,2,3,1
+Telecom Services,,,18,17
+Telecommunication Services,,,2,
+Telecommunications,,,2,
+Textile Manufacturing,,,1,
+Tobacco,,,6,
+Tobacco Products,,4,29,16
+Tools & Accessories,,3,1,
+Transportation & Logistics,,7,65,67
+Travel & Leisure,,13,61,60
+Travel Services,,2,22,20
+Truck Manufacturing,,,3,3
+Trust,,2,3,3
+Utilities - Independent Power Producers,,1,7,10
+Utilities - Regulated,,15,173,78
+Utilities - Regulated Water,,,1,
+Utilities—Diversified,,,5,
+Utilities—Regulated Electric,,,2,1
+Utilities—Regulated Gas,,,5,3
+Utilities—Regulated Water,,,2,
+Utilities—Renewable,,3,6,2
+Waste Management,,2,22,3

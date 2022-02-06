@@ -1,0 +1,7 @@
+party, gender	house	senate	input
+Republican, male (Normalized)	11.45	71.37	136.63
+Republican, female (Normalized)	4.98	75.5	98.29
+Independent, male (Normalized)		77.0	77.0
+Democratic, male (Normalized)	21.36	41.34	131.85
+Libertarian, male (Normalized)	3.0		3.0
+Democratic, female (Normalized)	22.76	10.52	155.76
