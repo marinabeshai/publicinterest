@@ -1,259 +1,668 @@
-2019/10/11 2015/02/20 Perdue Jr., David A. CBS
-2015/03/10 2014/04/29 Whitehouse, Sheldon KORS
-2017/06/15 2017/03/16 Murray, Patty RTN
-2020/03/18 2020/02/07 Cisneros, Gilbert LB
-2018/04/26 2015/08/05 Perdue Jr., David A. WPX
-2015/08/21 2015/03/02 Perdue Jr., David A. CIT
-2016/06/23 2016/01/26 Perdue Jr., David A. HYH
-2020/04/14 2019/02/25 Perdue Jr., David A. UN
-2021/07/21 2020/10/22 Beyer, Donald S. TDDXX
-2017/01/20 2015/03/27 Perdue Jr., David A. WPX
-2017/04/24 2017/03/10 Perdue Jr., David A. WFM
-2020/11/10 2020/08/26 Beyer, Donald S. TDDXX
-2019/06/24 2019/04/16 Shalala, Donna WYND
-2021/01/15 2021/01/04 Newman, Marie ZOOM
-2020/07/08 2020/03/16 Lowenthal, Alan S. VSLR
-2019/06/24 2019/02/15 Shalala, Donna APC
-2020/11/13 2020/03/18 Gianforte, Greg RDS.A
-2021/08/23 2021/02/05 Schrader, Kurt APCD
-2017/06/15 2017/03/16 Murray, Patty DLPH
-2019/10/01 2015/02/05 Roberts, Pat CELG
-2021/04/13 2021/04/01 Beyer, Donald S. TFDXX
-2021/03/11 2021/02/22 Dunn, Neal P. BXS$A
-2019/06/24 2019/03/18 Shalala, Donna CHL
-2021/03/09 2021/03/08 Langevin, James R. APPL
-2021/09/14 2021/08/10 Scott, Austin KPLTW
-2018/12/27 2018/03/05 Hoeven, John DWDP
-2019/11/21 2015/01/07 Perdue Jr., David A. AM
-2020/07/14 2020/02/18 Beyer, Donald S. LDNXF
-2015/07/09 2015/06/22 Inhofe, James M. NGIPX
-2016/08/08 2015/04/13 Whitehouse, Sheldon UA
-2016/07/25 2016/02/29 Perdue Jr., David A. HYH
-2020/04/13 2018/09/10 Perdue Jr., David A. EQM
-2017/05/15 2017/01/09 Perdue Jr., David A. WFM
-2020/03/24 2020/02/14 Beyer, Donald S. FLIR
-2019/02/25 2015/04/02 Perdue Jr., David A. AVP
-2019/06/24 2019/06/19 Shalala, Donna PS
-2017/12/07 2016/09/06 Perdue Jr., David A. USG
-2021/11/02 2020/11/05 Beyer, Donald S. DAIUF
-2019/03/18 2019/02/15 Shalala, Donna RDS.B
-2018/01/03 2016/02/05 Perdue Jr., David A. FOXA
-2018/01/29 2016/08/04 Perdue Jr., David A. FOXA
-2020/08/06 2020/07/07 Carper, Thomas R. LUBFX
-2018/06/21 2017/05/08 Perdue Jr., David A. FOX
-2021/09/15 2021/06/16 Perlmutter, Ed BRK.B
-2021/08/06 2020/02/19 Beyer, Donald S. DAIUF
-2021/12/02 2021/10/01 Beyer, Donald S. TDDXX
-2021/07/15 2020/10/08 Beyer, Donald S. TDDXX
-2015/02/24 2014/12/18 Toomey, Patrick J. ESV
-2019/05/23 2018/07/10 Perdue Jr., David A. AVP
-2017/10/10 2017/03/23 Perdue Jr., David A. VSM
-2020/11/05 2020/10/22 Clark, Katherine M. FLIR
-2015/06/30 2014/07/28 Reed, John F. ALTR
-2021/11/02 2021/09/21 Beyer, Donald S. TDDXX
-2019/07/15 2016/05/06 Perdue Jr., David A. MYL
-2016/11/15 2016/06/10 Roberts, Pat HDS
-2017/02/10 2016/11/07 Perdue Jr., David A. VIAB
-2020/04/14 2018/03/15 Perdue Jr., David A. EQM
-2016/07/11 2016/02/03 Perdue Jr., David A. HYH
-2020/11/05 2020/10/22 Clark, Katherine M. SNE
-2017/05/12 2016/05/20 Perdue Jr., David A. WFM
-2016/01/08 2015/08/24 Inhofe, James M. CHK
-2018/11/16 2018/07/12 Inhofe, James M. CELG
-2020/11/19 2020/08/13 Beyer, Donald S. TDDXX
-2014/08/07 2014/06/11 Toomey, Patrick J. LGP
-2021/07/22 2020/02/20 Pelosi, Nancy WORK
-2020/03/06 2020/01/06 Lee, Susie RP
-2016/12/16 2016/01/06 Hoeven, John UA
-2017/01/26 2015/03/03 Perdue Jr., David A. WPX
-2020/11/05 2020/08/14 Beyer, Donald S. TDDXX
-2014/05/07 2014/03/11 Collins, Susan M. VRX
-2016/06/13 2015/05/15 Perdue Jr., David A. AXLL
-2016/02/19 2016/02/02 Perdue Jr., David A. ADT
-2021/12/25 2021/10/26 Foxx, Virginia SCU
-2021/09/01 2021/02/23 Gottheimer, Josh CREE
-2019/06/24 2019/03/06 Shalala, Donna FII
-2015/06/15 2014/06/18 Whitehouse, Sheldon CHL
-2021/02/09 2020/10/01 Schrader, Kurt OWLSX
-2017/09/07 2017/08/01 Roberts, Pat CELG
-2020/11/09 2020/10/05 Green, Mark NBLX
-2021/09/02 2021/08/18 Beyer, Donald S. TDDXX
-2021/05/13 2020/07/07 Green, Mark ENBL
-2020/12/21 2020/01/13 Gianforte, Greg CHL
-2020/07/14 2019/12/24 Beyer, Donald S. FANUF
-2015/01/14 2014/06/18 Whitehouse, Sheldon KLXI
-2020/03/10 2020/03/02 Beyer, Donald S. TDDXX
-2020/08/10 2020/07/08 Green, Mark NBLX
-2020/03/05 2020/03/03 Blumenauer, Earl SNOXX
-2017/10/05 2016/11/15 Perdue Jr., David A. VSM
-2019/03/11 2017/09/08 Capito, Shelley M. PDRDY
-2020/12/15 2020/10/01 Dunn, Neal P. BXS
-2020/11/12 2020/06/24 Gianforte, Greg CATM
-2020/03/18 2020/02/07 Cisneros, Gilbert CTL
-2015/05/27 2014/07/07 Whitehouse, Sheldon KORS
-2019/06/24 2019/05/15 Shalala, Donna QTS
-2020/01/15 2019/12/31 Joyce, David P. FIKMX
-2019/06/24 2019/02/15 Shalala, Donna AZSEY
-2020/05/11 2020/01/29 Beyer, Donald S. DAIUF
-2015/02/10 2014/12/11 Roberts, Pat MIK
-2017/05/11 2016/09/07 Perdue Jr., David A. WFM
-2016/12/12 2016/07/06 Perdue Jr., David A. ETP
-2018/07/02 2017/09/27 Perdue Jr., David A. MYL
-2020/04/20 2020/04/17 Kinzinger, Adam PS
-2020/09/03 2020/08/27 Beyer, Donald S. TDDXX
-2020/06/19 2020/03/17 Lowenthal, Alan S. VSLR
-2017/06/15 2017/03/16 Murray, Patty UN
-2016/01/08 2015/07/09 Inhofe, James M. ITC
-2019/01/09 2016/04/11 Perdue Jr., David A. AM
-2017/11/10 2017/02/16 Inhofe, James M. XON
-2018/04/26 2016/09/01 Perdue Jr., David A. USG
-2020/12/11 2020/01/10 Gottheimer, Josh CHL
-2020/10/16 2020/08/04 Green, Mark ENBL
-2021/07/26 2021/02/12 Carper, Thomas R. GEMIX
-2020/12/21 2020/03/18 Cisneros, Gilbert ALXN
-2020/02/10 2020/01/07 Phillips, Dean BRK.B
-2019/09/17 2017/12/04 Perdue Jr., David A. BPL
-2016/09/01 2015/07/30 Perdue Jr., David A. WPX
-2018/02/22 2016/09/13 Inhofe, James M. AGN
-2018/12/19 2018/12/06 Moran, Jerry LM09.SG
-2021/06/18 2020/11/18 Beyer, Donald S. DAIUF
-2020/09/29 2020/06/01 Beyer, Donald S. TDDXX
-2018/11/01 2018/01/22 Perdue Jr., David A. CBS
-2021/02/10 2020/01/24 Schrader, Kurt SEA
-2017/09/11 2016/11/08 Perdue Jr., David A. VSM
-2021/09/10 2021/08/13 Scott, Austin KPLTW
-2020/11/13 2020/05/08 Beyer, Donald S. TDDXX
-2017/11/13 2015/07/09 Inhofe, James M. PCLN
-2018/10/31 2018/08/01 Toomey, Patrick J. BBT
-2020/04/28 2020/01/13 Beyer, Donald S. BRK.B
-2021/10/04 2021/08/02 Beyer, Donald S. TDDXX
-2021/07/26 2021/02/12 Carper, Thomas R. FIMKX
-2020/11/27 2020/09/11 Beyer, Donald S. TDDXX
-2020/11/24 2020/05/20 Beyer, Donald S. TDDXX
-2019/02/25 2015/05/11 Perdue Jr., David A. FOX
-2020/05/18 2020/05/07 Beyer, Donald S. TDDXX
-2016/07/14 2016/02/05 Perdue Jr., David A. HYH
-2020/11/26 2020/02/07 Welch, Peter CTRCF
-2017/01/19 2015/08/03 Perdue Jr., David A. WPX
-2015/05/18 2014/05/29 Whitehouse, Sheldon RTN
-2021/12/06 2021/09/17 Beyer, Donald S. TDDXX
-2020/11/17 2020/08/20 Dunn, Neal P. BXS$A
-2016/11/09 2016/04/21 Perdue Jr., David A. DPM
-2021/08/02 2021/02/04 Schrader, Kurt BIAWX
-2014/12/18 2014/08/07 Whitehouse, Sheldon KORS
-2017/10/19 2017/01/12 Perdue Jr., David A. VSM
-2020/06/15 2020/04/13 Gottheimer, Josh RDS.B
-2016/07/29 2016/02/04 Perdue Jr., David A. HYH
-2015/01/23 2014/02/19 Whitehouse, Sheldon ACE
-2020/09/15 2020/08/31 Marshall, Roger W. SNE
-2017/12/13 2017/11/22 Perdue Jr., David A. AVP
-2020/12/22 2020/07/13 Cisneros, Gilbert ALXN
-2021/01/28 2021/01/13 Meijer, Peter BRK.B
-2016/02/09 2014/07/23 Collins, Susan M. EMC
-2018/02/05 2017/09/27 Roberts, Pat RTN
-2021/09/30 2020/10/28 Beyer, Donald S. TDDXX
-2018/05/22 2015/03/11 Perdue Jr., David A. WPX
-2021/06/24 2020/12/22 Gottheimer, Josh BRK.B
-2021/12/21 2020/09/01 Perlmutter, Ed BRK.B
-2019/05/15 2019/02/20 Shalala, Donna FII
-2021/09/22 2021/09/14 Schrader, Kurt BAFWX
-2019/06/24 2019/02/15 Shalala, Donna AGN
-2014/04/03 2014/03/04 Collins, Susan M. RHT
-2021/04/08 2021/03/16 Foxx, Virginia CWEN.A
-2020/04/10 2019/05/23 Langevin, James R. DIA
-2020/12/26 2020/10/01 Beyer, Donald S. TDDXX
-2020/12/01 2020/08/04 Green, Mark GMLP
-2020/08/31 2020/08/10 Green, Mark ENBL
-2017/11/16 2016/12/22 Perdue Jr., David A. VSM
-2015/08/28 2014/07/10 Whitehouse, Sheldon QLIK
-2020/06/22 2020/01/20 Langevin, James R. HUYA
-2021/03/15 2021/03/02 Beyer, Donald S. RDS.A
-2019/02/28 2016/07/25 Reed, John F. CELG
-2020/05/18 2020/04/29 Cisneros, Gilbert AGN
-2018/05/23 2015/03/16 Perdue Jr., David A. WPX
-2018/01/31 2016/03/09 Collins, Susan M. RHT
-2020/08/28 2020/08/11 Green, Mark ENBL
-2015/06/15 2014/09/18 Whitehouse, Sheldon CY
-2017/10/06 2017/04/27 Perdue Jr., David A. VSM
-2020/11/09 2020/04/29 Beyer, Donald S. TDDXX
-2018/11/28 2017/03/06 Reed, John F. AGN
-2018/01/17 2016/03/02 Perdue Jr., David A. USG
-2021/01/05 2020/04/27 Frankel, Lois FLIR
-2020/04/28 2020/04/07 Lee, Susie GLIBA
-2018/05/07 2015/03/12 Perdue Jr., David A. WPX
-2016/08/22 2016/01/21 Perdue Jr., David A. HYH
-2021/10/21 2020/07/13 Axne, Cynthia BRK.B
-2020/12/07 2020/11/20 Dunn, Neal P. BXS$A
-2017/03/14 2015/07/10 Whitehouse, Sheldon LLTC
-2020/05/12 2019/03/26 Malinowski, Tom FLXN
-2020/08/12 2020/03/18 Gianforte, Greg SKVKY
-2016/08/23 2016/01/25 Perdue Jr., David A. HYH
-2017/02/14 2016/07/21 Inhofe, James M. AGN
-2017/06/15 2017/03/16 Murray, Patty MXIM
-2020/07/02 2020/04/28 Beyer, Donald S. TDDXX
-2017/11/13 2016/12/02 Perdue Jr., David A. VSM
-2020/05/01 2019/12/31 Courtney, Joe TOT
-2021/07/21 2021/01/05 Phillips, Dean ALXN
-2016/09/15 2016/02/22 Perdue Jr., David A. ETP
-2020/08/04 2020/04/27 Beyer, Donald S. TDDXX
-2019/05/17 2016/08/01 Collins, Susan M. RHT
-2017/06/15 2017/03/16 Murray, Patty DOW
-2014/07/07 2014/01/29 Whitehouse, Sheldon LNKD
-2020/08/28 2020/06/24 Beyer, Donald S. TDDXX
-2020/01/23 2017/07/18 Perdue Jr., David A. CDLX
-2016/04/12 2016/01/06 Whitehouse, Sheldon UA
-2021/11/01 2020/08/06 Green, Mark ENBL
-2016/10/31 2016/03/31 Cassidy, William EV
-2020/02/10 2019/04/20 Langevin, James R. HUYA
-2021/09/09 2021/08/06 Beyer, Donald S. TDDXX
-2020/04/14 2020/04/07 Kinzinger, Adam PS
-2017/09/26 2017/02/02 Perdue Jr., David A. VSM
-2017/10/02 2017/05/05 Perdue Jr., David A. VSM
-2016/08/03 2016/01/20 Perdue Jr., David A. HYH
-2020/01/13 2019/10/16 Beyer, Donald S. TDDXX
-2018/08/24 2015/07/27 Perdue Jr., David A. WPX
-2020/03/24 2020/03/23 Beyer, Donald S. TDDXX
-2020/04/14 2020/01/24 Perdue Jr., David A. WPX
-2021/05/17 2021/02/05 Schrader, Kurt CFJIX
-2016/07/22 2016/02/09 Perdue Jr., David A. HYH
-2015/03/03 2014/07/09 Reed, John F. ACT
-2015/05/18 2014/10/14 Whitehouse, Sheldon CY
-2021/05/20 2021/04/16 Newman, Marie BOWX
-2016/06/21 2015/06/03 Perdue Jr., David A. AXLL
-2020/11/13 2020/03/18 Gianforte, Greg MRWSY
-2018/01/11 2015/02/20 Reed, John F. CELG
-2020/06/02 2020/05/04 Beyer, Donald S. TDDXX
-2020/04/15 2019/11/12 Perdue Jr., David A. TCP
-2020/04/22 2020/04/20 Beyer, Donald S. TDDXX
-2021/07/02 2020/05/11 Beyer, Donald S. TDDXX
-2020/08/03 2020/07/27 Beyer, Donald S. TDDXX
-2020/05/07 2020/01/24 Beyer, Donald S. FLIR
-2015/03/03 2015/02/20 Reed, John F. MYL
-2016/10/31 2016/03/31 Cassidy, William PX
-2014/12/18 2014/06/18 Whitehouse, Sheldon BEAV
-2020/07/10 2020/02/03 Beyer, Donald S. TDDXX
-2018/05/10 2015/07/17 Perdue Jr., David A. WPX
-2016/12/13 2015/01/15 Perdue Jr., David A. BPL
-2020/11/17 2020/07/02 Green, Mark ENBL
-2020/05/07 2019/12/24 Beyer, Donald S. DAIUF
-2017/05/18 2016/08/01 Perdue Jr., David A. WFM
-2019/06/24 2019/02/20 Shalala, Donna BXS
-2020/06/24 2019/12/23 Beyer, Donald S. FLIR
-2020/12/07 2020/03/17 Foxx, Virginia CWEN.A
-2017/06/16 2016/02/11 Perdue Jr., David A. WFM
-2021/12/09 2021/09/17 Gottheimer, Josh CSPCY
-2021/05/27 2021/02/18 Foxx, Virginia TPCO
-2017/06/15 2017/03/16 Murray, Patty DNKN
-2017/06/15 2017/03/16 Murray, Patty STI
-2015/06/24 2014/04/02 Carper, Thomas R. ATML
-2021/09/03 2021/08/05 Beyer, Donald S. TDDXX
-2020/05/21 2020/05/01 Beyer, Donald S. TDDXX
-2020/11/13 2020/03/19 Gianforte, Greg TOT
-2017/11/02 2016/11/07 Perdue Jr., David A. VSM
-2020/04/06 2020/01/09 Gianforte, Greg MTSC
-2021/04/20 2020/12/03 Malinowski, Tom GFN
-2017/01/27 2015/01/14 Perdue Jr., David A. WPX
-2018/12/31 2018/02/22 Inhofe, James M. CELG
-2020/09/15 2020/04/01 Beyer, Donald S. TDDXX
-2019/02/07 2015/08/05 Perdue Jr., David A. AM
-2021/02/22 2020/07/08 Green, Mark ENBL
+UNKNOWN TICKERS!!!!
+
+LB --> BBWI
+
+UN --> UL
+
+
+
+https://finance.yahoo.com/quote/WPX/history?period1=1524715199&period2=1524801599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/WPX/history?period1=1438747199&period2=1438833599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2018/04/26 2015/08/05 Perdue Jr., David A. WPX
+
+
+https://finance.yahoo.com/quote/TDDXX/history?period1=1626839999&period2=1626926399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/TDDXX/history?period1=1603339199&period2=1603425599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/07/21 2020/10/22 Beyer, Donald S. TDDXX
+
+
+https://finance.yahoo.com/quote/WYND/history?period1=1561348799&period2=1561435199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/WYND/history?period1=1555387199&period2=1555473599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/06/24 2019/04/16 Shalala, Donna WYND
+
+
+https://finance.yahoo.com/quote/ZOOM/history?period1=1610686799&period2=1610945999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ZOOM/history?period1=1609736399&period2=1609822799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/01/15 2021/01/04 Newman, Marie ZOOM
+
+https://finance.yahoo.com/quote/VSLR/history?period1=1594180799&period2=1594267199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/VSLR/history?period1=1584331199&period2=1584417599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/07/08 2020/03/16 Lowenthal, Alan S. VSLR
+
+https://finance.yahoo.com/quote/APC/history?period1=1561348799&period2=1561435199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/APC/history?period1=1550206799&period2=1550465999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/06/24 2019/02/15 Shalala, Donna APC
+
+https://finance.yahoo.com/quote/RDS.A/history?period1=1605243599&period2=1605502799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/RDS.A/history?period1=1584503999&period2=1584590399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/11/13 2020/03/18 Gianforte, Greg RDS.A
+
+https://finance.yahoo.com/quote/APCD/history?period1=1629691199&period2=1629777599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/APCD/history?period1=1612501199&period2=1612760399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/08/23 2021/02/05 Schrader, Kurt APCD
+
+https://finance.yahoo.com/quote/DLPH/history?period1=1497499199&period2=1497585599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/DLPH/history?period1=1489636799&period2=1489723199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/06/15 2017/03/16 Murray, Patty DLPH
+
+
+https://finance.yahoo.com/quote/TFDXX/history?period1=1618286399&period2=1618372799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/TFDXX/history?period1=1617249599&period2=1617335999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/04/13 2021/04/01 Beyer, Donald S. TFDXX
+
+https://finance.yahoo.com/quote/BXS$A/history?period1=1615438799&period2=1615525199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BXS$A/history?period1=1613969999&period2=1614056399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/03/11 2021/02/22 Dunn, Neal P. BXS$A
+
+https://finance.yahoo.com/quote/CHL/history?period1=1561348799&period2=1561435199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CHL/history?period1=1552881599&period2=1552967999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/06/24 2019/03/18 Shalala, Donna CHL
+
+https://finance.yahoo.com/quote/APPL/history?period1=1615265999&period2=1615352399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/APPL/history?period1=1615179599&period2=1615265999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/03/09 2021/03/08 Langevin, James R. APPL
+
+https://finance.yahoo.com/quote/KPLTW/history?period1=1631591999&period2=1631678399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/KPLTW/history?period1=1628567999&period2=1628654399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/09/14 2021/08/10 Scott, Austin KPLTW
+
+https://finance.yahoo.com/quote/DWDP/history?period1=1545886799&period2=1545973199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/DWDP/history?period1=1520225999&period2=1520312399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2018/12/27 2018/03/05 Hoeven, John DWDP
+
+
+https://finance.yahoo.com/quote/LDNXF/history?period1=1594699199&period2=1594785599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/LDNXF/history?period1=1582001999&period2=1582088399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/07/14 2020/02/18 Beyer, Donald S. LDNXF
+
+https://finance.yahoo.com/quote/NGIPX/history?period1=1436414399&period2=1436500799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/NGIPX/history?period1=1434945599&period2=1435031999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/07/09 2015/06/22 Inhofe, James M. NGIPX
+
+
+
+https://finance.yahoo.com/quote/EQM/history?period1=1586750399&period2=1586836799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/EQM/history?period1=1536551999&period2=1536638399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/04/13 2018/09/10 Perdue Jr., David A. EQM
+
+
+
+https://finance.yahoo.com/quote/AVP/history?period1=1551070799&period2=1551157199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/AVP/history?period1=1427947199&period2=1428033599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/02/25 2015/04/02 Perdue Jr., David A. AVP
+
+
+https://finance.yahoo.com/quote/RDS.B/history?period1=1552881599&period2=1552967999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/RDS.B/history?period1=1550206799&period2=1550465999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/03/18 2019/02/15 Shalala, Donna RDS.B
+
+https://finance.yahoo.com/quote/FOXA/history?period1=1514955599&period2=1515041999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FOXA/history?period1=1454648399&period2=1454907599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2018/01/03 2016/02/05 Perdue Jr., David A. FOXA
+
+https://finance.yahoo.com/quote/FOXA/history?period1=1517201999&period2=1517288399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FOXA/history?period1=1470283199&period2=1470369599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2018/01/29 2016/08/04 Perdue Jr., David A. FOXA
+
+https://finance.yahoo.com/quote/LUBFX/history?period1=1596686399&period2=1596772799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/LUBFX/history?period1=1594094399&period2=1594180799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/08/06 2020/07/07 Carper, Thomas R. LUBFX
+
+https://finance.yahoo.com/quote/FOX/history?period1=1529553599&period2=1529639999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FOX/history?period1=1494215999&period2=1494302399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2018/06/21 2017/05/08 Perdue Jr., David A. FOX
+
+
+
+
+
+
+
+https://finance.yahoo.com/quote/ESV/history?period1=1424753999&period2=1424840399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ESV/history?period1=1418878799&period2=1418965199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/02/24 2014/12/18 Toomey, Patrick J. ESV
+
+https://finance.yahoo.com/quote/AVP/history?period1=1558583999&period2=1558670399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/AVP/history?period1=1531195199&period2=1531281599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/05/23 2018/07/10 Perdue Jr., David A. AVP
+
+
+
+https://finance.yahoo.com/quote/ALTR/history?period1=1435636799&period2=1435723199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ALTR/history?period1=1406519999&period2=1406606399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/06/30 2014/07/28 Reed, John F. ALTR
+
+
+
+https://finance.yahoo.com/quote/HDS/history?period1=1479185999&period2=1479272399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/HDS/history?period1=1465531199&period2=1465790399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/11/15 2016/06/10 Roberts, Pat HDS
+
+https://finance.yahoo.com/quote/VIAB/history?period1=1486702799&period2=1486961999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/VIAB/history?period1=1478494799&period2=1478581199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/02/10 2016/11/07 Perdue Jr., David A. VIAB
+
+https://finance.yahoo.com/quote/EQM/history?period1=1586836799&period2=1586923199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/EQM/history?period1=1521086399&period2=1521172799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/04/14 2018/03/15 Perdue Jr., David A. EQM
+
+
+
+
+https://finance.yahoo.com/quote/SNE/history?period1=1604552399&period2=1604638799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/SNE/history?period1=1603339199&period2=1603425599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/11/05 2020/10/22 Clark, Katherine M. SNE
+
+
+
+https://finance.yahoo.com/quote/CHK/history?period1=1452229199&period2=1452488399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CHK/history?period1=1440388799&period2=1440475199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/01/08 2015/08/24 Inhofe, James M. CHK
+
+
+
+
+https://finance.yahoo.com/quote/LGP/history?period1=1407383999&period2=1407470399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/LGP/history?period1=1402459199&period2=1402545599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2014/08/07 2014/06/11 Toomey, Patrick J. LGP
+
+
+https://finance.yahoo.com/quote/WORK/history?period1=1626926399&period2=1627012799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/WORK/history?period1=1582174799&period2=1582261199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/07/22 2020/02/20 Pelosi, Nancy WORK
+
+https://finance.yahoo.com/quote/RP/history?period1=1583470799&period2=1583726399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/RP/history?period1=1578286799&period2=1578373199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/03/06 2020/01/06 Lee, Susie RP
+
+
+
+
+
+https://finance.yahoo.com/quote/VRX/history?period1=1399435199&period2=1399521599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/VRX/history?period1=1394510399&period2=1394596799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2014/05/07 2014/03/11 Collins, Susan M. VRX
+
+
+
+
+https://finance.yahoo.com/quote/ADT/history?period1=1455857999&period2=1456117199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ADT/history?period1=1454389199&period2=1454475599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/02/19 2016/02/02 Perdue Jr., David A. ADT
+
+
+https://finance.yahoo.com/quote/SCU/history?period1=1640321999&period2=1640494799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/SCU/history?period1=1635220799&period2=1635307199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/12/25 2021/10/26 Foxx, Virginia SCU
+
+
+https://finance.yahoo.com/quote/CREE/history?period1=1630468799&period2=1630555199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CREE/history?period1=1614056399&period2=1614142799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/09/01 2021/02/23 Gottheimer, Josh CREE
+
+
+
+https://finance.yahoo.com/quote/OWLSX/history?period1=1612846799&period2=1612933199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/OWLSX/history?period1=1601524799&period2=1601611199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/02/09 2020/10/01 Schrader, Kurt OWLSX
+
+https://finance.yahoo.com/quote/NBLX/history?period1=1604897999&period2=1604984399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/NBLX/history?period1=1601870399&period2=1601956799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/11/09 2020/10/05 Green, Mark NBLX
+
+
+
+
+
+https://finance.yahoo.com/quote/FANUF/history?period1=1594699199&period2=1594785599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FANUF/history?period1=1577163599&period2=1577249999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/07/14 2019/12/24 Beyer, Donald S. FANUF
+https://finance.yahoo.com/quote/KLXI/history?period1=1421211599&period2=1421297999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/KLXI/history?period1=1403063999&period2=1403150399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/01/14 2014/06/18 Whitehouse, Sheldon KLXI
+
+
+https://finance.yahoo.com/quote/NBLX/history?period1=1597031999&period2=1597118399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/NBLX/history?period1=1594180799&period2=1594267199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/08/10 2020/07/08 Green, Mark NBLX
+
+https://finance.yahoo.com/quote/SNOXX/history?period1=1583384399&period2=1583470799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/SNOXX/history?period1=1583211599&period2=1583297999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/03/05 2020/03/03 Blumenauer, Earl SNOXX
+
+
+
+
+https://finance.yahoo.com/quote/PDRDY/history?period1=1552276799&period2=1552363199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/PDRDY/history?period1=1504843199&period2=1505102399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/03/11 2017/09/08 Capito, Shelley M. PDRDY
+
+
+
+https://finance.yahoo.com/quote/CATM/history?period1=1605157199&period2=1605243599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CATM/history?period1=1592971199&period2=1593057599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/11/12 2020/06/24 Gianforte, Greg CATM
+
+https://finance.yahoo.com/quote/CTL/history?period1=1584503999&period2=1584590399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CTL/history?period1=1581051599&period2=1581310799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/03/18 2020/02/07 Cisneros, Gilbert CTL
+
+
+https://finance.yahoo.com/quote/QTS/history?period1=1561348799&period2=1561435199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/QTS/history?period1=1557892799&period2=1557979199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/06/24 2019/05/15 Shalala, Donna QTS
+
+https://finance.yahoo.com/quote/FIKMX/history?period1=1579064399&period2=1579150799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FIKMX/history?period1=1577768399&period2=1577854799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/01/15 2019/12/31 Joyce, David P. FIKMX
+
+https://finance.yahoo.com/quote/AZSEY/history?period1=1561348799&period2=1561435199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/AZSEY/history?period1=1550206799&period2=1550465999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/06/24 2019/02/15 Shalala, Donna AZSEY
+
+
+
+https://finance.yahoo.com/quote/MIK/history?period1=1423544399&period2=1423630799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/MIK/history?period1=1418273999&period2=1418360399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/02/10 2014/12/11 Roberts, Pat MIK
+
+
+
+
+
+
+
+https://finance.yahoo.com/quote/ITC/history?period1=1452229199&period2=1452488399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ITC/history?period1=1436414399&period2=1436500799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/01/08 2015/07/09 Inhofe, James M. ITC
+
+
+
+https://finance.yahoo.com/quote/XON/history?period1=1510289999&period2=1510549199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/XON/history?period1=1487221199&period2=1487307599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/11/10 2017/02/16 Inhofe, James M. XON
+
+
+
+https://finance.yahoo.com/quote/CHL/history?period1=1607662799&period2=1607921999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CHL/history?period1=1578632399&period2=1578891599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/12/11 2020/01/10 Gottheimer, Josh CHL
+
+
+https://finance.yahoo.com/quote/GEMIX/history?period1=1627271999&period2=1627358399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/GEMIX/history?period1=1613105999&period2=1613365199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/07/26 2021/02/12 Carper, Thomas R. GEMIX
+
+
+
+
+https://finance.yahoo.com/quote/LM09.SG/history?period1=1545195599&period2=1545281999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/LM09.SG/history?period1=1544072399&period2=1544158799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2018/12/19 2018/12/06 Moran, Jerry LM09.SG
+
+
+
+
+
+
+https://finance.yahoo.com/quote/SEA/history?period1=1612933199&period2=1613019599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/SEA/history?period1=1579841999&period2=1580101199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/02/10 2020/01/24 Schrader, Kurt SEA
+
+
+https://finance.yahoo.com/quote/KPLTW/history?period1=1631246399&period2=1631505599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/KPLTW/history?period1=1628827199&period2=1629086399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/09/10 2021/08/13 Scott, Austin KPLTW
+
+
+
+https://finance.yahoo.com/quote/PCLN/history?period1=1510549199&period2=1510635599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/PCLN/history?period1=1436414399&period2=1436500799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/11/13 2015/07/09 Inhofe, James M. PCLN
+
+https://finance.yahoo.com/quote/BBT/history?period1=1540958399&period2=1541044799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BBT/history?period1=1533095999&period2=1533182399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2018/10/31 2018/08/01 Toomey, Patrick J. BBT
+
+
+
+https://finance.yahoo.com/quote/FIMKX/history?period1=1627271999&period2=1627358399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FIMKX/history?period1=1613105999&period2=1613365199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/07/26 2021/02/12 Carper, Thomas R. FIMKX
+
+
+https://finance.yahoo.com/quote/FOX/history?period1=1551070799&period2=1551157199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FOX/history?period1=1431316799&period2=1431403199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/02/25 2015/05/11 Perdue Jr., David A. FOX
+
+
+
+
+
+https://finance.yahoo.com/quote/CTRCF/history?period1=1606366799&period2=1606453199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CTRCF/history?period1=1581051599&period2=1581310799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/11/26 2020/02/07 Welch, Peter CTRCF
+
+
+
+
+
+https://finance.yahoo.com/quote/BXS$A/history?period1=1605589199&period2=1605675599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BXS$A/history?period1=1597895999&period2=1597982399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/11/17 2020/08/20 Dunn, Neal P. BXS$A
+https://finance.yahoo.com/quote/DPM/history?period1=1478667599&period2=1478753999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/DPM/history?period1=1461211199&period2=1461297599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/11/09 2016/04/21 Perdue Jr., David A. DPM
+
+https://finance.yahoo.com/quote/BIAWX/history?period1=1627876799&period2=1627963199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BIAWX/history?period1=1612414799&period2=1612501199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/08/02 2021/02/04 Schrader, Kurt BIAWX
+
+
+
+https://finance.yahoo.com/quote/RDS.B/history?period1=1592193599&period2=1592279999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/RDS.B/history?period1=1586750399&period2=1586836799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/06/15 2020/04/13 Gottheimer, Josh RDS.B
+
+
+https://finance.yahoo.com/quote/ACE/history?period1=1421989199&period2=1422248399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ACE/history?period1=1392785999&period2=1392872399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/01/23 2014/02/19 Whitehouse, Sheldon ACE
+
+https://finance.yahoo.com/quote/SNE/history?period1=1600142399&period2=1600228799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/SNE/history?period1=1598846399&period2=1598932799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/09/15 2020/08/31 Marshall, Roger W. SNE
+
+https://finance.yahoo.com/quote/AVP/history?period1=1513141199&period2=1513227599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/AVP/history?period1=1511326799&period2=1511413199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/12/13 2017/11/22 Perdue Jr., David A. AVP
+
+
+https://finance.yahoo.com/quote/EMC/history?period1=1454993999&period2=1455080399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/EMC/history?period1=1406087999&period2=1406174399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/02/09 2014/07/23 Collins, Susan M. EMC
+
+
+
+
+https://finance.yahoo.com/quote/FII/history?period1=1557892799&period2=1557979199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FII/history?period1=1550638799&period2=1550725199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/05/15 2019/02/20 Shalala, Donna FII
+
+https://finance.yahoo.com/quote/BAFWX/history?period1=1632283199&period2=1632369599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BAFWX/history?period1=1631591999&period2=1631678399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/09/22 2021/09/14 Schrader, Kurt BAFWX
+
+
+
+
+
+
+https://finance.yahoo.com/quote/DIA/history?period1=1586491199&period2=1586750399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/DIA/history?period1=1558583999&period2=1558670399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/04/10 2019/05/23 Langevin, James R. DIA
+
+https://finance.yahoo.com/quote/GMLP/history?period1=1606798799&period2=1606885199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/GMLP/history?period1=1596513599&period2=1596599999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/12/01 2020/08/04 Green, Mark GMLP
+
+
+https://finance.yahoo.com/quote/VSM/history?period1=1510808399&period2=1510894799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/VSM/history?period1=1482382799&period2=1482469199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/11/16 2016/12/22 Perdue Jr., David A. VSM
+
+https://finance.yahoo.com/quote/QLIK/history?period1=1440734399&period2=1440993599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/QLIK/history?period1=1404964799&period2=1405051199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/08/28 2014/07/10 Whitehouse, Sheldon QLIK
+
+https://finance.yahoo.com/quote/HUYA/history?period1=1592798399&period2=1592884799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/HUYA/history?period1=1579496399&period2=1579582799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/06/22 2020/01/20 Langevin, James R. HUYA
+
+https://finance.yahoo.com/quote/RDS.A/history?period1=1615780799&period2=1615867199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/RDS.A/history?period1=1614661199&period2=1614747599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/03/15 2021/03/02 Beyer, Donald S. RDS.A
+
+https://finance.yahoo.com/quote/CELG/history?period1=1551329999&period2=1551416399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CELG/history?period1=1469419199&period2=1469505599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/02/28 2016/07/25 Reed, John F. CELG
+
+https://finance.yahoo.com/quote/AGN/history?period1=1589774399&period2=1589860799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/AGN/history?period1=1588132799&period2=1588219199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/05/18 2020/04/29 Cisneros, Gilbert AGN
+
+
+
+https://finance.yahoo.com/quote/RHT/history?period1=1517374799&period2=1517461199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/RHT/history?period1=1457499599&period2=1457585999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2018/01/31 2016/03/09 Collins, Susan M. RHT
+
+
+
+https://finance.yahoo.com/quote/CY/history?period1=1434340799&period2=1434427199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CY/history?period1=1411012799&period2=1411099199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/06/15 2014/09/18 Whitehouse, Sheldon CY
+
+
+
+
+https://finance.yahoo.com/quote/USG/history?period1=1516165199&period2=1516251599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/USG/history?period1=1456894799&period2=1456981199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2018/01/17 2016/03/02 Perdue Jr., David A. USG
+
+
+https://finance.yahoo.com/quote/GLIBA/history?period1=1588046399&period2=1588132799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/GLIBA/history?period1=1586231999&period2=1586318399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/04/28 2020/04/07 Lee, Susie GLIBA
+
+
+
+
+
+
+https://finance.yahoo.com/quote/BRK.B/history?period1=1634788799&period2=1634875199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BRK.B/history?period1=1594612799&period2=1594699199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/10/21 2020/07/13 Axne, Cynthia BRK.B
+
+https://finance.yahoo.com/quote/BXS$A/history?period1=1607317199&period2=1607403599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BXS$A/history?period1=1605848399&period2=1606107599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/12/07 2020/11/20 Dunn, Neal P. BXS$A
+
+
+https://finance.yahoo.com/quote/LLTC/history?period1=1489463999&period2=1489550399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/LLTC/history?period1=1436500799&period2=1436759999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/03/14 2015/07/10 Whitehouse, Sheldon LLTC
+
+https://finance.yahoo.com/quote/FLXN/history?period1=1589255999&period2=1589342399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FLXN/history?period1=1553572799&period2=1553659199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/05/12 2019/03/26 Malinowski, Tom FLXN
+
+https://finance.yahoo.com/quote/SKVKY/history?period1=1597204799&period2=1597291199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/SKVKY/history?period1=1584503999&period2=1584590399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/08/12 2020/03/18 Gianforte, Greg SKVKY
+
+
+
+
+
+https://finance.yahoo.com/quote/MXIM/history?period1=1497499199&period2=1497585599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/MXIM/history?period1=1489636799&period2=1489723199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/06/15 2017/03/16 Murray, Patty MXIM
+
+
+
+
+
+https://finance.yahoo.com/quote/TOT/history?period1=1588305599&period2=1588564799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/TOT/history?period1=1577768399&period2=1577854799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/05/01 2019/12/31 Courtney, Joe TOT
+
+https://finance.yahoo.com/quote/ALXN/history?period1=1626839999&period2=1626926399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ALXN/history?period1=1609822799&period2=1609909199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/07/21 2021/01/05 Phillips, Dean ALXN
+
+https://finance.yahoo.com/quote/ETP/history?period1=1473911999&period2=1473998399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ETP/history?period1=1456117199&period2=1456203599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/09/15 2016/02/22 Perdue Jr., David A. ETP
+
+
+
+
+https://finance.yahoo.com/quote/DOW/history?period1=1497499199&period2=1497585599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/DOW/history?period1=1489636799&period2=1489723199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/06/15 2017/03/16 Murray, Patty DOW
+
+
+https://finance.yahoo.com/quote/LNKD/history?period1=1404705599&period2=1404791999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/LNKD/history?period1=1390971599&period2=1391057999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2014/07/07 2014/01/29 Whitehouse, Sheldon LNKD
+
+
+https://finance.yahoo.com/quote/CDLX/history?period1=1579755599&period2=1579841999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CDLX/history?period1=1500350399&period2=1500436799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/01/23 2017/07/18 Perdue Jr., David A. CDLX
+
+https://finance.yahoo.com/quote/UA/history?period1=1460433599&period2=1460519999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/UA/history?period1=1452056399&period2=1452142799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/04/12 2016/01/06 Whitehouse, Sheldon UA
+
+
+
+
+https://finance.yahoo.com/quote/EV/history?period1=1477886399&period2=1477972799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/EV/history?period1=1459396799&period2=1459483199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/10/31 2016/03/31 Cassidy, William EV
+
+
+
+https://finance.yahoo.com/quote/PS/history?period1=1586836799&period2=1586923199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/PS/history?period1=1586231999&period2=1586318399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/04/14 2020/04/07 Kinzinger, Adam PS
+
+
+
+
+
+
+https://finance.yahoo.com/quote/CFJIX/history?period1=1621223999&period2=1621310399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CFJIX/history?period1=1612501199&period2=1612760399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/05/17 2021/02/05 Schrader, Kurt CFJIX
+
+https://finance.yahoo.com/quote/HYH/history?period1=1469159999&period2=1469419199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/HYH/history?period1=1454993999&period2=1455080399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/07/22 2016/02/09 Perdue Jr., David A. HYH
+
+https://finance.yahoo.com/quote/ACT/history?period1=1425358799&period2=1425445199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ACT/history?period1=1404878399&period2=1404964799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/03/03 2014/07/09 Reed, John F. ACT
+
+https://finance.yahoo.com/quote/BOWX/history?period1=1621483199&period2=1621569599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BOWX/history?period1=1618545599&period2=1618804799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/05/20 2021/04/16 Newman, Marie BOWX
+
+https://finance.yahoo.com/quote/AXLL/history?period1=1466481599&period2=1466567999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/AXLL/history?period1=1433303999&period2=1433390399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/06/21 2015/06/03 Perdue Jr., David A. AXLL
+
+https://finance.yahoo.com/quote/MRWSY/history?period1=1605243599&period2=1605502799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/MRWSY/history?period1=1584503999&period2=1584590399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/11/13 2020/03/18 Gianforte, Greg MRWSY
+
+
+
+
+
+https://finance.yahoo.com/quote/TCP/history?period1=1586923199&period2=1587009599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/TCP/history?period1=1573534799&period2=1573621199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/04/15 2019/11/12 Perdue Jr., David A. TCP
+
+
+
+https://finance.yahoo.com/quote/MYL/history?period1=1425358799&period2=1425445199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/MYL/history?period1=1424408399&period2=1424667599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+; HERE 2015/03/03 2015/02/20 Reed, John F. MYL
+
+https://finance.yahoo.com/quote/PX/history?period1=1477886399&period2=1477972799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/PX/history?period1=1459396799&period2=1459483199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/10/31 2016/03/31 Cassidy, William PX
+
+https://finance.yahoo.com/quote/BEAV/history?period1=1418878799&period2=1418965199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BEAV/history?period1=1403063999&period2=1403150399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2014/12/18 2014/06/18 Whitehouse, Sheldon BEAV
+
+
+
+
+https://finance.yahoo.com/quote/BPL/history?period1=1481605199&period2=1481691599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BPL/history?period1=1421297999&period2=1421384399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2016/12/13 2015/01/15 Perdue Jr., David A. BPL
+
+
+
+https://finance.yahoo.com/quote/DAIUF/history?period1=1588823999&period2=1588910399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/DAIUF/history?period1=1577163599&period2=1577249999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/05/07 2019/12/24 Beyer, Donald S. DAIUF
+
+
+https://finance.yahoo.com/quote/BXS/history?period1=1561348799&period2=1561435199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/BXS/history?period1=1550638799&period2=1550725199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/06/24 2019/02/20 Shalala, Donna BXS
+
+
+https://finance.yahoo.com/quote/FLIR/history?period1=1592971199&period2=1593057599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/FLIR/history?period1=1577077199&period2=1577163599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/06/24 2019/12/23 Beyer, Donald S. FLIR
+
+
+https://finance.yahoo.com/quote/CWEN.A/history?period1=1607317199&period2=1607403599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CWEN.A/history?period1=1584417599&period2=1584503999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/12/07 2020/03/17 Foxx, Virginia CWEN.A
+
+https://finance.yahoo.com/quote/WFM/history?period1=1497585599&period2=1497844799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/WFM/history?period1=1455166799&period2=1455253199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/06/16 2016/02/11 Perdue Jr., David A. WFM
+
+https://finance.yahoo.com/quote/CSPCY/history?period1=1639025999&period2=1639112399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/CSPCY/history?period1=1631851199&period2=1632110399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/12/09 2021/09/17 Gottheimer, Josh CSPCY
+
+https://finance.yahoo.com/quote/TPCO/history?period1=1622087999&period2=1622174399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/TPCO/history?period1=1613624399&period2=1613710799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/05/27 2021/02/18 Foxx, Virginia TPCO
+
+https://finance.yahoo.com/quote/DNKN/history?period1=1497499199&period2=1497585599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/DNKN/history?period1=1489636799&period2=1489723199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/06/15 2017/03/16 Murray, Patty DNKN
+
+https://finance.yahoo.com/quote/STI/history?period1=1497499199&period2=1497585599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/STI/history?period1=1489636799&period2=1489723199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2017/06/15 2017/03/16 Murray, Patty STI
+
+
+https://finance.yahoo.com/quote/ATML/history?period1=1435118399&period2=1435204799&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ATML/history?period1=1396411199&period2=1396497599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2015/06/24 2014/04/02 Carper, Thomas R. ATML
+
+
+
+
+
+https://finance.yahoo.com/quote/MTSC/history?period1=1586145599&period2=1586231999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/MTSC/history?period1=1578545999&period2=1578632399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2020/04/06 2020/01/09 Gianforte, Greg MTSC
+
+
+https://finance.yahoo.com/quote/GFN/history?period1=1618891199&period2=1618977599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/GFN/history?period1=1606971599&period2=1607057999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/04/20 2020/12/03 Malinowski, Tom GFN
+
+
+
+
+https://finance.yahoo.com/quote/AM/history?period1=1549515599&period2=1549601999&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/AM/history?period1=1438747199&period2=1438833599&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2019/02/07 2015/08/05 Perdue Jr., David A. AM
+
+https://finance.yahoo.com/quote/ENBL/history?period1=1613969999&period2=1614056399&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+https://finance.yahoo.com/quote/ENBL/history?period1=1594180799&period2=1594267199&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+HERE 2021/02/22 2020/07/08 Green, Mark ENBL
