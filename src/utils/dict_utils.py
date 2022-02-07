@@ -6,6 +6,16 @@ from scipy.stats.mstats import gmean
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def flatten_len_inner_set(d):
+    for k,v in d.items():
+        for date, s in v.items():
+            v[date] = len(s)
+        d[k] = v
+    
+    return d 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def normalize(d, normalized):
     for k,v in d.items():
         percent = 0 
@@ -248,18 +258,24 @@ def add_sort_key_for_amount(d, normal_header="", normal=False):
                 d_copy[amount]["sort_key"] = -1
                 continue
 
-            if amount == '1001 -':
+            if amount == '$1,001 -':
                 d_copy[amount]["sort_key"] = 1001
                 continue
 
-            if "Over" in amount or '+' in amount:
+            if '+' in amount: 
+                d_copy[amount]["sort_key"] = int(
+                        amount.split("$")[1].replace(",", "").split(" ")[0]) + 1
+                continue
+
+
+            if "Over" in amount:
                 d_copy[amount]["sort_key"] = int(
                         amount.split("$")[1].replace(",", "")) + 1
                 continue
 
             higher_val = amount.split("$")
             higher_val = higher_val[len(higher_val)-1].replace(",", "")
-            
+
             d_copy[amount]["sort_key"] = int(higher_val)
 
         return d_copy
