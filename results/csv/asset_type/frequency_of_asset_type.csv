@@ -1,9 +1,9 @@
 asset_type	house	senate	input
-Stock Option		209	209
-Non-Public Stock		97	97
-Corporate Bond		240	240
-Commodities/Futures Contract		21	21
-Other Securities		364	364
 Stock		6580	6580
-Cryptocurrency		3	3
+Stock Option		209	209
+Other Securities		364	364
+Commodities/Futures Contract		21	21
+Corporate Bond		240	240
 Municipal Security		396	396
+Non-Public Stock		97	97
+Cryptocurrency		3	3

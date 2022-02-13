@@ -36,7 +36,7 @@ def make_csv_breakdown(path_csv, filename, d,  key_header):
             values.remove(key_header)
 
             for k, d2 in zip(d.keys(), d.values()):
-                row = [""]*len(values)
+                row = [0]*len(values)
                 row.insert(0, k)
 
                 # Then for each date, we
