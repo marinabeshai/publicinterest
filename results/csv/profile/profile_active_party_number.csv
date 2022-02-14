@@ -1,5 +1,5 @@
 party	house	senate	input
-Republican	(2160.83, 4689)	(11449.02, 5839)	(20643.14, 10528)
-Democratic	(3647.83, 8390)	(5428.57, 2660)	(22551.02, 11050)
-Independent		(3850.0, 77)	(3850.0, 77)
-Libertarian	(300.0, 3)		(300.0, 3)
+Republican	4691	5839	10530
+Democratic	8390	2660	11050
+Libertarian	3		3
+Independent		77	77

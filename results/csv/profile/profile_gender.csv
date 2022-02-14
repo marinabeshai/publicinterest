@@ -1,4 +1,3 @@
-gender	house	senate	input	total
-female	(20.1, 40)	(33.33, 12)	(22.91, 52)
-male	(18.59, 116)	(39.84, 51)	(22.81, 167)
-unknown	(12.5, 1)		(12.5, 1)
+gender	house	senate	input
+female	40	12	52
+male	117	51	168

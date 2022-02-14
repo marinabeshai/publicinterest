@@ -45,7 +45,7 @@ import utils.ptr_utils as ptr_utils
 def get_data(senate=False, house=False, combined=False):
     assert senate or house or combined 
     try: 
-        url = '../curr/?-01282022.csv'
+        url = '../curr/?-02042022.csv'
         if senate:
             path = url.replace("?", constants.SENATE)
             csvreader = pd.read_csv(path)

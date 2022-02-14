@@ -1,8 +1,6 @@
 ticker,transaction_date,number_of_transactions
---,2015/12/14,4
 AAPL,2020/08/27,3
 DWDP,2017/09/01,3
-nan,2016/08/12,3
 AMZN,2020/06/26,2
 XOM,2020/04/14,2
 CVS,2020/04/14,2
