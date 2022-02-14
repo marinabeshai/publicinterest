@@ -7,6 +7,19 @@ import utils.constants as constants
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def add_to_date(date, number_of_weeks):
+    date = datetime.strptime(date, constants.DATE_FORMAT)
+    date += timedelta(days = number_of_weeks*7)
+    
+    if date.isoweekday() == 6:
+        date = date + timedelta(days = 2)
+    elif date.isoweekday() == 7:
+        date = date + timedelta(days = 1)
+        
+    return datetime.strptime(str(date.date()), "%Y-%m-%d").strftime(constants.DATE_FORMAT)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Bought it for $20, Sold it for $40.
 def share_diff(ticker, tdate_sale, tdate_purch):
     sale_price = get_stock_price(ticker, tdate_sale)
