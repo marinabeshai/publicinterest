@@ -7,6 +7,16 @@ import utils.constants as constants
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Bought it for $20, Sold it for $40.
+def share_diff(ticker, tdate_sale, tdate_purch):
+    sale_price = get_stock_price(ticker, tdate_sale)
+    purch_price = get_stock_price(ticker, tdate_purch)
+    if purch_price and sale_price:
+        return round(sale_price - purch_price, 2)
+    return None 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_unix_timestamp(date):
     date = datetime.strptime(date, constants.DATE_FORMAT) - timedelta(days = 1)
     dt = datetime( date.year, date.month, date.day, 23, 59, 59)
@@ -127,7 +137,7 @@ def get_stock_price(ticker, date):
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
 def get_instances(pm):
-        # { (name, ticker) : { tdate_sale : [(diff, tdate_purch), (diff, tdate_purch), ....] } , .... }
+     # { (name, ticker) : { tdate_sale : [(diff, tdate_purch), (diff, tdate_purch), ....] } , .... }
     instances = {}
 
     for (name, ticker, tdate_sale) in pm.keys():
