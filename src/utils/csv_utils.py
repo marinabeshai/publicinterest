@@ -120,7 +120,7 @@ def make_csv(path_csv, filename, d, headers):
         if type(d) == dict: 
             for k, v in d.items():
 
-                if type(v) is int or type(v) is str: 
+                if type(v) is int or type(v) is str or type(v) is float: 
                     l = [v]
 
                 elif type(v) is dict:
