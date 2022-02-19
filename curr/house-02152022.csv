@@ -3076,6 +3076,20 @@ disclosure_year,disclosure_date,transaction_date,owner,ticker,asset_description,
 2020,07/15/2020,2020-07-01,self,RUN,Sunrun Inc.,sale_partial,"$1,001 -",Hon. Alan S. Lowenthal,CA47,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016959.pdf,False
 2020,07/15/2020,2020-07-01,self,RUN,Sunrun Inc.,sale_partial,"$1,001 -",Hon. Alan S. Lowenthal,CA47,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016959.pdf,False
 2020,07/15/2020,2020-07-07,self,VSLR,"Vivint Solar, Inc.",sale_partial,"$1,001 -",Hon. Alan S. Lowenthal,CA47,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016959.pdf,False
+2022,02/13/2022,2022-01-25,self,PSDTX,Putnam Ultra Short Duration Income A,sale_full,"$50,001 - $100,000",Hon. Richard W. Allen,GA12,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020448.pdf,False
+2022,02/13/2022,2022-01-25,self,SBUX,Starbucks Corporation,sale_full,"$15,001 - $50,000",Hon. Richard W. Allen,GA12,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020448.pdf,False
+2022,02/13/2022,2022-01-25,self,DIS,Walt Disney Company,sale_full,"$1,001 - $15,000",Hon. Richard W. Allen,GA12,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020448.pdf,False
+2022,02/13/2022,2022-01-28,,AAPL,Apple Inc,purchase,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-28,,FLGB,Franklin FTSE United Kingdom ETF,purchase,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-14,,HON,Honeywell International Inc,sale_full,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-28,,SPHB,Invesco S&P 500 High Beta ETF,sale_full,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-28,,IEUR,iShares Core MSCI Europe ETF,purchase,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-28,,EFG,iShares MSCI EAFE Growth ETF,sale_full,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-14,,LMT,Lockheed Martin Corporation,sale_full,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-28,,FB,Meta Platforms Inc - Class A,purchase,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-14,,SPY,SPDR S&P 500,purchase,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-05,,SPY,SPDR S&P 500,sale_partial,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
+2022,02/13/2022,2022-01-28,,XLE,SPDR Select Sector Fund - Energy Select Sector,purchase,"$1,001 - $15,000",Hon. Robert J. Wittman,VA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020446.pdf,False
 2021,03/09/2021,2021-02-18,self,AB,"AllianceBerstein Holding LP. Purchased 15,000 shares.",purchase,"$500,001 - $1,000,000",Hon. Nancy Pelosi,CA12,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2021/20018355.pdf,False
 2021,03/09/2021,2021-02-23,self,AB,"AllianceBerstein Holding LP. Purchased 25,000 shares.",purchase,"$500,001 - $1,000,000",Hon. Nancy Pelosi,CA12,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2021/20018355.pdf,False
 2021,03/09/2021,2021-02-10,,--,Citigroup Inc Var Rt Perp Mat dtd 2/18/2021,purchase,"$1,001 - $15,000",Hon. Dean Phillips,MN03,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2021/20018352.pdf,False
@@ -9622,6 +9636,93 @@ disclosure_year,disclosure_date,transaction_date,owner,ticker,asset_description,
 2020,07/17/2020,2020-06-30,,SITE,"SiteOne Landscape Supply, Inc.",sale_partial,"$1,001 - $15,000",Hon. Gilbert Cisneros,CA39,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016915.pdf,True
 2020,07/17/2020,2020-06-11,,SPLK,Splunk Inc.,sale_partial,"$1,001 - $15,000",Hon. Gilbert Cisneros,CA39,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016915.pdf,True
 2020,07/17/2020,2020-06-16,,AMTD,TD Ameritrade Holding Corporation,sale_partial,"$1,001 - $15,000",Hon. Gilbert Cisneros,CA39,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016915.pdf,True
+2022,02/11/2022,2021-03-25,joint,ADBE,Adobe Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-10-19,joint,AMZN,Amazon.com Inc,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2022-01-14,self,BIIB,Biogen Inc,sale_full,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2022-01-12,self,--,"Brown Robin partners I, LLC (Fund 2)",purchase,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2022-01-12,self,--,"Brown Robin partners I, LLC (Fund 2 LTH)",purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-03-26,joint,CMG,Chipolte Mexican Grill Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-03-08,joint,CME,CME Group Inc - Class A,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-11-05,joint,CME,CME Group Inc - Class A,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-03-25,joint,EL,Estee Lauder Companies Inc,sale_partial,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-10-22,self,--,"Guerilla RF, Inc",purchase,"$50,001 - $100,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-03-16,joint,INFO,IHS Markit Ltd Common Shares,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-03-25,joint,INFO,IHS Markit Ltd Common Shares,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-05-19,joint,INFO,IHS Markit Ltd Common Shares,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-12-31,joint,INFO,IHS Markit Ltd Common Shares,sale_full,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-02-02,joint,INFO,IHS Markit Ltd Common Shares,sale_partial,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-02-11,joint,INFO,IHS Markit Ltd Common Shares,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-02-24,joint,ILMN,Illumina Inc,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-12-01,joint,ILMN,Illumina Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-08-25,joint,ILMN,Illumina Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-10-26,joint,ILMN,Illumina Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-08-24,joint,INTU,Intuit Inc,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-11-15,joint,INTU,Intuit Inc,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-12-01,joint,ISRG,Intuitive Surgical Inc,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-05-04,joint,ISRG,Intuitive Surgical Inc,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-05-04,joint,MTCH,Match Group Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-05-19,joint,MTCH,Match Group Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-06-18,joint,MTCH,Match Group Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-03-09,joint,MTCH,Match Group Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-02-24,joint,MTCH,Match Group Inc,purchase,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-08-09,joint,MTCH,Match Group Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-10-19,joint,MTCH,Match Group Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-05-14,joint,FB,Meta Platforms Inc - Class A,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-12-31,joint,MSFT,Microsoft Corporation,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-12-31,joint,NFLX,Netflix Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2022-01-22,joint,NFLX,Netflix Inc,purchase,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-06-22,joint,NFLX,Netflix Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-06-22,joint,NVDA,NVIDIA Corporation,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-06-18,joint,NVDA,NVIDIA Corporation,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-03-25,joint,NVDA,NVIDIA Corporation,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-10-19,joint,NVDA,NVIDIA Corporation,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-09-01,joint,NVDA,NVIDIA Corporation,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-11-05,joint,NVDA,NVIDIA Corporation,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-11-12,joint,NVDA,NVIDIA Corporation,sale_partial,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-11-18,joint,NVDA,NVIDIA Corporation,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-11-12,joint,PYPL,PayPal Holdings Inc,purchase,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-01-22,joint,PYPL,PayPal Holdings Inc,sale_partial,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-12-31,joint,PYPL,PayPal Holdings Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-12-31,joint,SNAP,Snap Inc - Class A,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-02-24,joint,SNAP,Snap Inc - Class A,sale_partial,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-03-02,joint,SNAP,Snap Inc - Class A,sale_partial,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-03-25,joint,SNAP,Snap Inc - Class A,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-05-14,joint,SNAP,Snap Inc - Class A,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-11-15,joint,SNAP,Snap Inc - Class A,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-11-24,joint,SNAP,Snap Inc - Class A,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2022-01-14,self,LUV,Southwest Airlines Company,sale_full,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-06-15,self,TBBC,Triad Business Bank,purchase,"$50,001 - $100,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-10-19,joint,V,Visa Inc,purchase,"$1,001 - $15,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2021-02-02,joint,V,Visa Inc,purchase,"$15,001 - $50,000",Hon. Kathy Manning,NC06,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020423.pdf,False
+2022,02/11/2022,2022-01-18,,AEE,Ameren Corporation,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,BNS,Bank Nova Scotia Halifax pfg 3 ordinary shares,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-02-04,,BNS,Bank Nova Scotia Halifax pfg 3 ordinary shares,purchase,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2021-11-04,,BUI,"BlackRock Utility, Infrastructure & Power Opportunities Trust - 500 Shares",purchase,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2021-11-08,,BUI,"BlackRock Utility, Infrastructure & Power Opportunities Trust",purchase,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-19,,CARR,Carrier Global Corporation,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,CMCAS,Comcast Corporation Class A,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2021-11-16,,COST,Costco Wholesale Corporation - 25 shares,sale_partial,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-31,,D,Dominion Energy,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,DTM,DT Midstream Inc,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-19,,DTE,DTE Energy Company,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,EXI,Edison International,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,ET,Energy Transfer LP Common Units,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,EPD,Enterprise Products Partners LP,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-02-09,,QQQ,Invesco QQQ Trust Series 1,purchase,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2021-08-16,self,QQQ,Invesco QQQ Trust Series 1,purchase,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,JNJ,Johnson & Johnson,sale_full,"$15,001 - $50,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,KYN,Kayne Anderson Energy Infrastructure Fund Inc,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2021-11-08,,KR,Kroger Company - 200 shares,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2021-09-08,,MSFT,Microsoft Corporation - 30 shares,purchase,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2021-08-19,,MSFT,Microsoft Corporation - 25 shares,purchase,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,MDLZ,Mondelez International Inc,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-19,,NEE,NextEra Energy Inc,sale_full,"$15,001 - $50,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,OTIS,Otis Worldwide Corporation,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-19,,PG,Procter & Gamble Company,sale_full,"$15,001 - $50,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,XLE,SPDR Select Sector Fund - Energy Select Sector,sale_full,"$15,001 - $50,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2021-11-16,,TSM,Taiwan Semiconductor Manufacturing Company Ltd,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,TDC,Teradata Corporation,sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
+2022,02/11/2022,2022-01-18,,WES,"Western Midstream partners, LP Common Units representing limited partner interests",sale_full,"$1,001 - $15,000",Hon. Pete Sessions,TX17,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020443.pdf,False
 2022,01/12/2022,2021-12-30,self,AAPL,Apple Inc - Contribution of 3K shares held personally to the Paul F Pelosi Endowed Fund Georgetown University,sale_partial,"$500,001 - $1,000,000",Hon. Nancy Pelosi,CA12,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020208.pdf,False
 2022,01/12/2022,2021-12-30,self,AAPL,Apple Inc - Contribution of 3K shares held personally to Trinity College,sale_partial,"$500,001 - $1,000,000",Hon. Nancy Pelosi,CA12,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020208.pdf,False
 2020,04/14/2020,2020-03-30,joint,--,Arizona Indl Dev auth Rev BDS Lincoln 5.00% Due 05/01/26,purchase,"$500,001 - $1,000,000",Hon. Suzan K. DelBene,WA01,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016353.pdf,False
