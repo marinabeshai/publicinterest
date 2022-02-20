@@ -415,6 +415,8 @@ def congress_gov_get(name, d={}, party_only=False, state_only=False, tries=0):
         if state_only:
             return state 
         
+        if party_only:
+            return party 
         return d 
     
     except HTTPError as e: 
