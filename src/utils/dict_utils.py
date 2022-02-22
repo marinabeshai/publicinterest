@@ -17,6 +17,8 @@ def flatten_len_inner_set(d):
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def normalize(d, normalized, percent=False, raw=False):
+    assert percent or raw 
+    
     for k,v in d.items():
         if normalized[k] == []:
                 d[k] = 0 
