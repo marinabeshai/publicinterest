@@ -1,0 +1,51 @@
+state	house	senate	input
+Oklahoma	0.18	0.33	0.23
+Montana	0.2	0.25	0.25
+Kentucky	0.44	1.0	0.55
+Rhode Island	0.33	1.0	0.6
+West Virginia	0.33	0.67	0.5
+California	0.16	0.25	0.17
+Maryland	0.15	0.67	0.27
+Connecticut	0.29	0.33	0.33
+North Dakota		0.25	0.17
+North Carolina	0.31	0.67	0.34
+South Carolina	0.17		0.14
+Arkansas	0.14	0.33	0.22
+Wisconsin	0.07	0.33	0.12
+Missouri	0.25	0.33	0.27
+Indiana	0.33		0.29
+New York	0.17		0.16
+Colorado	0.27	0.5	0.36
+Minnesota	0.12	0.33	0.15
+Georgia	0.15	0.33	0.18
+Illinois	0.15	0.33	0.17
+Massachusetts	0.31	0.2	0.3
+Alabama	0.17	0.4	0.24
+Louisiana	0.07	0.5	0.18
+Mississippi	0.17	0.67	0.33
+Michigan	0.16	0.33	0.18
+Arizona	0.11		0.1
+Florida	0.26	0.33	0.27
+New Hampshire		0.33	0.12
+Texas	0.17	0.67	0.2
+Wyoming		1.0	0.75
+Washington	0.19	1.0	0.28
+New Jersey	0.23	0.25	0.23
+Maine	0.25	0.67	0.43
+Idaho	0.33	0.5	0.4
+Nevada	0.1	0.2	0.15
+South Dakota		0.67	0.33
+Hawaii	0.17		0.11
+Utah	0.22		0.15
+Delaware		1.0	0.5
+New Mexico		0.25	0.09
+Virginia	0.3	0.67	0.35
+Pennsylvania	0.11	1.0	0.16
+Alaska		0.33	0.25
+Vermont	1.0		0.33
+Iowa	0.17		0.13
+District of Columbia	1.0		1.0
+Tennessee	0.43	0.5	0.47
+Kansas		1.0	0.25
+Ohio	0.19	0.5	0.21
+Oregon	0.29	0.5	0.33

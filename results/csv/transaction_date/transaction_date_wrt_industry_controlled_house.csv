@@ -1,0 +1,181 @@
+industry,transaction_date,number_of_transactions
+Application Software,2020/03/26,6
+Brokers & Exchanges,2021/03/01,4
+Aerospace & Defense,2020/04/03,4
+Fund,2020/03/10,4
+Semiconductors,2021/11/18,3
+Credit Services,2021/11/08,3
+Online Media,2021/06/18,3
+Oil & Gas - Midstream,2021/05/26,3
+Autos,2021/03/22,3
+Entertainment,2021/03/10,3
+Retail - Defensive,2021/01/28,3
+Communication Services,2021/01/11,3
+Drug Manufacturers,2020/11/13,3
+Business Services,2020/11/12,3
+Real Estate Services,2020/11/12,3
+Industrial Products,2020/10/28,3
+Biotechnology,2020/10/22,3
+Utilities - Regulated,2020/07/02,3
+Medical Instruments & Equipment,2020/05/19,3
+Computer Hardware,2020/04/27,3
+Drug Manufacturers—General,2020/04/14,3
+REITs,2020/04/09,3
+Medical Devices,2020/04/03,3
+Retail - Apparel & Specialty,2020/03/27,3
+Banks,2020/03/27,3
+Health Care Plans,2020/03/23,3
+Airlines,2020/03/18,3
+Insurance,2020/03/10,3
+Medical Diagnostics & Research,2020/03/02,3
+Asset Management,2020/01/15,3
+Packaged Foods,2020/01/09,3
+Internet Content & Information,2021/12/28,2
+Farm & Construction Machinery,2021/08/10,2
+Oil & Gas - Integrated,2021/06/10,2
+Cryptocurrency,2021/05/11,2
+Tobacco Products,2021/05/03,2
+Beverages - Non-Alcoholic,2021/04/19,2
+Oil & Gas - Services,2021/03/01,2
+Consulting & Outsourcing,2021/02/22,2
+Metals & Mining,2021/02/16,2
+Software—Application,2021/02/16,2
+Manufacturing - Apparel & Furniture,2021/02/12,2
+Consumer Packaged Goods,2021/01/28,2
+Building Products & Equipment,2021/01/28,2
+Insurance - Property & Casualty,2021/01/20,2
+Restaurants,2021/01/15,2
+Transportation & Logistics,2021/01/15,2
+Personal Services,2020/12/22,2
+Banks—Diversified,2020/12/07,2
+Oil & Gas - E&P,2020/11/20,2
+Drug Manufacturers—Specialty & Generic,2020/11/17,2
+Oil & Gas - Refining & Marketing,2020/10/16,2
+Engineering & Construction,2020/10/16,2
+Software—Infrastructure,2020/09/03,2
+Health Information Services,2020/09/02,2
+Employment Services,2020/04/27,2
+Specialty Industrial Machinery,2020/04/03,2
+Packaging & Containers,2020/04/02,2
+Travel & Leisure,2020/03/27,2
+Telecom Services,2020/03/18,2
+Communication Equipment,2020/03/18,2
+Beverages - Alcoholic,2020/03/18,2
+Specialty Chemicals,2020/03/18,2
+Banks—Regional,2020/03/18,2
+Apparel Manufacturing,2020/03/18,2
+Insurance - Life,2020/03/13,2
+Chemicals,2020/02/24,2
+Diagnostics & Research,2020/02/14,2
+Insurance—Life,2019/03/20,2
+Conglomerates,2021/12/28,1
+Capital Markets,2021/12/22,1
+Specialty Retail,2021/12/09,1
+Software,2021/11/30,1
+Auto Parts,2021/11/24,1
+"Furnishings, Fixtures & Appliances",2021/11/19,1
+Insurance—Specialty,2021/11/19,1
+Paper & Paper Products,2021/11/16,1
+Electronic Gaming & Multimedia,2021/10/26,1
+Utilities—Regulated Electric,2021/10/08,1
+Healthcare Plans,2021/09/27,1
+Oil & Gas - Drilling,2021/09/09,1
+Confectioners,2021/09/02,1
+Apparel Retail,2021/08/20,1
+Consumer Electronics,2021/08/13,1
+Internet Retail,2021/08/13,1
+Specialty Business Services,2021/08/02,1
+REIT—Diversified,2021/07/26,1
+Information Technology Services,2021/06/21,1
+Security & Protection Services,2021/06/17,1
+Forest Products,2021/06/15,1
+Insurance—Diversified,2021/06/10,1
+Semiconductor Equipment & Materials,2021/06/09,1
+Oil & Gas Midstream,2021/05/27,1
+Drug Manufacturers—Speciality and Generic,2021/05/20,1
+Financial Data & Stock Exchanges,2021/05/17,1
+Agricultural Inputs,2021/05/11,1
+Insurance Brokers,2021/04/27,1
+Advertising & Marketing Services,2021/04/09,1
+Utilities - Independent Power Producers,2021/04/09,1
+Insurance - Specialty,2021/04/09,1
+Diversified Financial Services,2021/04/09,1
+Utilities—Renewable,2021/04/08,1
+Insurance—Property & Casualty,2021/04/01,1
+Auto Manufacturers,2021/03/31,1
+Railroads,2021/03/29,1
+Discount Stores,2021/03/17,1
+Marine Shipping,2021/03/16,1
+Major Pharmaceutical Preparations,2021/03/05,1
+Resorts & Casinos,2021/03/05,1
+Oil & Gas E&P,2021/03/04,1
+Auto & Truck Dealerships,2021/02/19,1
+Drug Manufacturers - Specialty & Generic,2021/02/18,1
+Footwear & Accessories,2021/02/17,1
+Medical Instruments & Supplies,2021/02/17,1
+Farm & Heavy Construction Machinery,2021/02/17,1
+Household & Personal Products,2021/02/17,1
+Oil & Gas Integrated,2021/02/17,1
+Consulting Services,2021/02/17,1
+Agriculture,2021/02/16,1
+Steel,2021/02/16,1
+Beverages—Non-Alcoholic,2021/02/08,1
+Other Industrial Metals & Mining,2021/02/05,1
+Banks--Diversified,2021/02/03,1
+Truck Manufacturing,2021/01/25,1
+Publishing,2021/01/22,1
+Gambling,2021/01/19,1
+Scientific & Technical Instruments,2021/01/15,1
+Hardware,2021/01/15,1
+Health Care Providers,2021/01/14,1
+Travel Services,2021/01/14,1
+Trust,2021/01/13,1
+Home Improvement Retail,2021/01/13,1
+Shell Companies,2021/01/12,1
+Gold,2021/01/11,1
+REIT—Hotel & Motel,2021/01/08,1
+Mortgage Finance,2021/01/06,1
+Oil & Gas Equipment & Services,2021/01/04,1
+Energy,2020/12/21,1
+Software - Application,2020/12/10,1
+Farm Products,2020/11/20,1
+Electrical Equipment & Parts,2020/11/18,1
+Integrated Freight & Logistics,2020/11/13,1
+Financial Services,2020/11/13,1
+Textile Manufacturing,2020/11/13,1
+Solar,2020/11/05,1
+Industrial Distribution,2020/10/13,1
+Education,2020/10/13,1
+Medical Distribution,2020/08/07,1
+Homebuilding & Construction,2020/07/29,1
+Grocery Stores,2020/07/23,1
+Waste Management,2020/07/23,1
+Utilities—Regulated Gas,2020/07/23,1
+Congolmerates,2020/07/15,1
+Diversified Services,2020/06/23,1
+Utilities—Diversified,2020/05/27,1
+REIT—Healthcare Facilities,2020/05/11,1
+Residential Construction,2020/05/07,1
+Telecommunication Services,2020/04/28,1
+Luxury Goods,2020/04/28,1
+Utilities—Regulated Water,2020/04/27,1
+Telecommunications,2020/04/07,1
+Utilities - Regulated Water,2020/03/19,1
+Lodging,2020/03/18,1
+Financial Conglomerates,2020/03/18,1
+Staffing & Employment Services,2020/03/18,1
+Beverages,2020/03/18,1
+Real Estate,2020/03/18,1
+Real Estate—Development,2020/03/18,1
+Insurance—Reinsurance,2020/03/18,1
+Tobacco,2020/03/18,1
+Real Estate—Diversified,2020/03/18,1
+Oil & Gas Refining & Marketing,2020/03/18,1
+Food stores,2020/03/18,1
+Leisure,2020/03/03,1
+Building Materials,2020/02/24,1
+IT Services,2020/02/11,1
+Advertising Agencies,2020/01/10,1
+REIT—Retail,2019/06/24,1
+Infrastructure Operations,2019/05/17,1
+Tools & Accessories,2019/03/19,1

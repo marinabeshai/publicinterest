@@ -1,0 +1,28 @@
+sector,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021
+Banks - Regional,0,0,0,0,0,0,0,0,1,0
+Basic Materials,2,4,20,16,48,73,64,88,234,206
+Communication Services,0,0,23,9,11,38,52,83,245,214
+Communications,0,0,0,0,0,0,0,0,2,2
+Consumer Cyclical,0,0,73,101,95,207,222,252,963,677
+Consumer Defensive,0,0,34,35,43,92,80,148,519,260
+Consumer Discretionary,0,0,0,0,0,1,0,0,0,0
+Consumer Goods,0,0,0,2,1,1,0,0,0,0
+Consumer Staples,0,0,0,0,0,0,0,0,1,0
+Cryptocurrency,0,0,0,0,0,0,0,0,0,23
+Energy,0,0,28,84,74,69,118,162,605,428
+Financial,0,0,5,1,0,0,0,0,0,1
+Financial Services,0,1,66,68,86,126,124,214,1004,663
+Fund,0,1,42,43,28,20,25,67,531,301
+Healthcare,0,0,53,83,136,157,125,190,840,488
+Induistrial,0,0,0,0,0,0,0,0,2,0
+Industrial Goods,0,0,3,0,0,0,0,0,0,0
+Industrials,0,0,70,71,70,91,127,225,864,557
+Information Technology,0,0,0,0,0,0,0,2,8,0
+Medical,0,0,0,0,0,0,0,0,1,0
+Oil & Gas Storage & Trpor,0,0,0,1,0,0,0,0,0,0
+Real Estate,0,0,9,5,11,16,3,63,205,134
+Retail/Wholesale,0,0,0,0,0,0,0,0,2,0
+Services,0,0,1,19,16,21,0,1,12,2
+Technology,0,0,112,89,149,147,157,277,1490,1107
+Trust,0,0,1,1,0,0,0,6,6,10
+Utilities,0,0,12,12,11,22,8,22,205,98

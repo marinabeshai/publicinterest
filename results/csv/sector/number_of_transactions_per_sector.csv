@@ -1,0 +1,28 @@
+sector	house	senate	input
+Retail/Wholesale	2		2
+Consumer Staples	1		1
+Industrial Goods		3	3
+Healthcare	1337	735	2072
+Industrials	1377	698	2075
+Communication Services	425	250	675
+Medical	1		1
+Energy	946	622	1568
+Consumer Cyclical	1489	1101	2590
+Consumer Discretionary		1	1
+Consumer Goods		4	4
+Financial Services	1583	769	2352
+Cryptocurrency	22	1	23
+Financial		7	7
+Oil & Gas Storage & Trpor		1	1
+Induistrial	2		2
+Technology	2344	1184	3528
+Trust	9	15	24
+Information Technology	10		10
+Consumer Defensive	735	476	1211
+Utilities	314	76	390
+Basic Materials	372	383	755
+Banks - Regional	1		1
+Real Estate	364	82	446
+Services	14	58	72
+Fund	743	315	1058
+Communications	2	2	4
