@@ -1,11 +1,21 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-from utils.constants import DATE_FORMAT, Unknown, MORE_THAN_MILLION, TDATE, DDATE, age_groups
+from utils.constants import AMOUNT, AMOUNT_CONSISTENCY, DATE_FORMAT, Unknown, MORE_THAN_MILLION, TDATE, DDATE, age_groups
 from datetime import datetime, timedelta
 import pandas as pd 
 from scipy.stats.mstats import gmean
 import random 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+def consistency_amount(t):
+    amount = t[AMOUNT]
+    if amount == '$50,000,000 +':
+        amount = '$50,000,000.00'
+    if amount == '$1,000,000 +':
+        amount = random.choice(MORE_THAN_MILLION)
+        
+    elif amount in AMOUNT_CONSISTENCY:
+        amount = AMOUNT_CONSISTENCY[amount]
+    return amount 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def is_this_date_after(tdate_sale, tdate_purch):
     return datetime.strptime(tdate_sale, DATE_FORMAT).date() > datetime.strptime(tdate_purch, DATE_FORMAT).date()

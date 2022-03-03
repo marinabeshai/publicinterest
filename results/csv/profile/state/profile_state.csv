@@ -1,51 +1,51 @@
 state	house	senate	input
-New Jersey	5	1	6
 Kansas		3	3
-Iowa	2		2
-Ohio	5	1	6
-Connecticut	2	1	3
-Oklahoma	2	1	3
-Georgia	4	2	6
-Montana	1	1	2
-Massachusetts	5	1	6
-Virginia	7	2	9
-North Dakota		1	1
-Oregon	2	1	3
-Missouri	3	1	4
-South Carolina	2		2
-New York	9		9
-Alaska		1	1
-Pennsylvania	4	2	6
-Wisconsin	1	1	2
-Louisiana	1	2	3
-Hawaii	1		1
-Arkansas	1	1	2
-Minnesota	2	1	3
-Kentucky	4	2	6
-Michigan	5	1	6
-Wyoming		3	3
-West Virginia	2	2	4
-Alabama	2	2	4
-Utah	2		2
-Maine	1	2	3
-Vermont	1		1
-Arizona	2		2
-Illinois	5	1	6
-Mississippi	1	2	3
-Tennessee	6	2	8
-Indiana	6		6
 California	15	1	16
-New Mexico		1	1
-District of Columbia	1		1
-Rhode Island	1	2	3
+Louisiana	1	2	3
 Delaware		2	2
-New Hampshire		1	1
-Nevada	1	1	2
-South Dakota		2	2
-Texas	11	2	13
+Massachusetts	5	1	6
+Missouri	3	1	4
+Montana	1	1	2
 Colorado	3	2	5
+Arizona	2		2
+Wisconsin	1	1	2
+Oklahoma	2	1	3
+South Dakota		2	2
+New Hampshire		1	1
+Utah	2		2
 Maryland	2	2	4
-North Carolina	8	2	10
+South Carolina	2		2
+Illinois	5	1	6
+Minnesota	2	1	3
+Connecticut	2	1	3
+Oregon	2	1	3
+Arkansas	1	1	2
 Idaho	1	1	2
-Florida	15	1	16
+Rhode Island	1	2	3
+Virginia	7	2	9
+Pennsylvania	4	2	6
 Washington	3	2	5
+Ohio	5	1	6
+Hawaii	1		1
+Alaska		1	1
+Wyoming		3	3
+Kentucky	4	2	6
+Vermont	1		1
+New York	9		9
+New Mexico		1	1
+North Carolina	8	2	10
+Maine	1	2	3
+North Dakota		1	1
+Alabama	2	2	4
+New Jersey	5	1	6
+Nevada	1	1	2
+Iowa	2		2
+Tennessee	6	2	8
+West Virginia	2	2	4
+Georgia	4	2	6
+Florida	15	1	16
+Michigan	5	1	6
+Texas	11	2	13
+District of Columbia	1		1
+Mississippi	1	2	3
+Indiana	6		6

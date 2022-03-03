@@ -1,28 +1,28 @@
 sector	house	senate	input
-Fund	743	315	1058
-Communication Services	425	250	675
-Real Estate	364	82	446
-Basic Materials	372	383	755
-Consumer Defensive	735	476	1211
-Retail/Wholesale	2		2
-Communications	2	2	4
-Services	14	58	72
-Cryptocurrency	22	1	23
-Consumer Staples	1		1
-Financial Services	1583	769	2352
 Healthcare	1337	735	2072
-Consumer Discretionary		1	1
-Consumer Cyclical	1489	1101	2590
-Induistrial	2		2
-Medical	1		1
-Oil & Gas Storage & Trpor		1	1
 Banks - Regional	1		1
-Industrials	1377	698	2075
-Financial		7	7
-Information Technology	10		10
-Energy	946	622	1568
-Technology	2344	1184	3528
 Industrial Goods		3	3
-Consumer Goods		4	4
-Trust	9	15	24
+Financial Services	1583	769	2352
+Communications	2	2	4
+Communication Services	425	250	675
+Basic Materials	372	383	755
+Fund	743	315	1058
+Retail/Wholesale	2		2
+Industrials	1377	698	2075
+Cryptocurrency	22	1	23
+Consumer Cyclical	1489	1101	2590
+Real Estate	364	82	446
+Information Technology	10		10
+Services	14	58	72
+Financial		7	7
+Consumer Staples	1		1
 Utilities	314	76	390
+Technology	2344	1184	3528
+Consumer Goods		4	4
+Energy	946	622	1568
+Medical	1		1
+Induistrial	2		2
+Consumer Discretionary		1	1
+Consumer Defensive	735	476	1211
+Trust	9	15	24
+Oil & Gas Storage & Trpor		1	1
