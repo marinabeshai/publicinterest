@@ -1,4 +1,5 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from ctypes import resize
 from re import X
 import utils.constants as constants 
 from helpers.official import Official
@@ -268,10 +269,13 @@ def go_shopping(l, s):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def page(probable_result_title, text=False):
+def page(probable_result_title, i_have_a_link, text=False):
     try: 
+        if i_have_a_link:
+            return requests.get('https://en.wikipedia.org/wiki/'+i_have_a_link).text 
+            
         htmled_tltle = probable_result_title.replace(" ", "%20")
-
+            
         if text:
             return requests.get(constants.WIKIPEDIA_SEARCH_URL.format(person=htmled_tltle)).text
         
@@ -288,11 +292,14 @@ def page(probable_result_title, text=False):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_wiki_page(name, text=False):
+def get_wiki_page(name, i_have_a_link, text=False):
     try: 
+        if i_have_a_link: 
+            return page(None, i_have_a_link, text)
+            
         results = wikipedia.search(name)
         at = 0
-        
+
         s = page(results[at], text) 
         
         if "may refer to" in s: 
@@ -313,7 +320,7 @@ def get_wiki_page(name, text=False):
 # @TODO
 # https://stackoverflow.com/questions/7638402/how-can-i-get-the-infobox-from-a-wikipedia-article-by-the-mediawiki-api
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def wiki_search(name):
+def wiki_search(name, i_have_a_link):
 
     try:
         official_name = name 
@@ -321,7 +328,7 @@ def wiki_search(name):
         if name in constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS:
             name = constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS[name]
 
-        s = get_wiki_page(name)
+        s = get_wiki_page(name, i_have_a_link)
                 
         d = go_shopping(["birth_place ", "alma_mater ", "birth_date ", "education "], s)
         d = congress_gov_get(official_name, d)
@@ -337,7 +344,7 @@ def wiki_search(name):
         party = d.get("party", None)
         senate = d.get("senate", None)
         house = d.get("house", None)
-        
+
         asgts = get_committee_assignments(official_name)
     
         return Official(official_name, state, birth_date, birth_place, party, education, senate, house, asgts)
@@ -424,7 +431,7 @@ def congress_gov_get(name, d={}, party_only=False, state_only=False, tries=0):
             print(e)
             time.sleep(randint(30,40))
             
-            return congress_gov_get(name, d, party_only=party_only)
+            return congress_gov_get(name, d, party_only=party_only, state_only=state_only, tries=tries)
         
         
     except Exception:

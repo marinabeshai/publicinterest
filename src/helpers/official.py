@@ -255,7 +255,7 @@ class Official:
             if not z:
                 return False 
 
-            return "J.D." in z or "JD" in z or "LLM" in z or "LLB" in z  or "BCL" in z
+            return "J.D." in z or "JD" in z or "LLM" in z or "LLB" in z  or "BCL" in z or "MPP" in z 
         except Exception:
             raise Unknown
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------

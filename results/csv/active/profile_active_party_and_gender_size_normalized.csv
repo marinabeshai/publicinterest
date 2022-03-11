@@ -1,7 +1,7 @@
 party, gender	house	senate	input
-Democratic, male	34.56	187.53	31.05
-Libertarian, male	11137.76		11137.76
-Democratic, female	75.85	435.05	66.88
+Democratic, female	75.87	435.05	66.85
+Democratic, male	34.58	187.53	31.1
 Republican, male	51.05	225.9	38.97
-Republican, female	203.79	1065.26	195.59
 Independent, male		11339.04	5669.52
+Republican, female	203.79	1065.26	195.35
+Libertarian, male	11137.76		11137.76

@@ -9,7 +9,7 @@ import utils.constants as constants
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def add_to_date(date, number_of_weeks):
     date = datetime.strptime(date, constants.DATE_FORMAT)
-    date += timedelta(days = number_of_weeks*7)
+    date += timedelta(days = (number_of_weeks*7))
     
     if date.isoweekday() == 6:
         date = date + timedelta(days = 2)
@@ -25,7 +25,7 @@ def share_diff(ticker, tdate_sale, tdate_purch):
     sale_price = get_stock_price(ticker, tdate_sale)
     purch_price = get_stock_price(ticker, tdate_purch)
     if purch_price and sale_price:
-        return round(sale_price - purch_price, 2)
+        return round((sale_price - purch_price)/purch_price, 4)
     return None 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -37,8 +37,10 @@ def get_unix_timestamp(date):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_stock_price(ticker, date):
+def get_stock_price(ticker, date, tries=0):
     try: 
+        original_date  = datetime.strptime(date, constants.DATE_FORMAT)
+ 
         if ticker in constants.SOME_WRONG_TICKERS:
             ticker = constants.SOME_WRONG_TICKERS[ticker]
             
@@ -84,13 +86,19 @@ def get_stock_price(ticker, date):
         find = '<th class="Fw(400) Py(6px)"><span>Volume</span></th></tr></thead><tbody><tr class="BdT Bdc($seperatorColor) Ta(end) Fz(s) Whs(nw)"><td class="Py(10px) Ta(start) Pend(10px)"><span>'
         
         if find in response.text:
-            res =     response.text[ response.text.find(find) + len(find) : ] 
+            res = response.text[ response.text.find(find) + len(find) : ] 
+        elif tries != 3:
+            original_date += timedelta(days = 1)
+            return get_stock_price(ticker, datetime.strptime(str(original_date.date()), "%Y-%m-%d").strftime(constants.DATE_FORMAT), tries=tries+1)
         else:
             return None 
         
         find = 'Close price adjusted for splits.'
         if find in res:
             res = res[ : res.find(find)]
+        elif tries != 3:
+            original_date += timedelta(days = 1)
+            return get_stock_price(ticker, datetime.strptime(str(original_date.date()), "%Y-%m-%d").strftime(constants.DATE_FORMAT), tries=tries+1)
         else:
             return None 
         
@@ -143,7 +151,9 @@ def get_stock_price(ticker, date):
     
     except Exception as e:
         # print(e)
-        # print(ticker, date)
+        if tries != 3:
+            original_date += timedelta(days = 1)
+            return get_stock_price(ticker, datetime.strptime(str(original_date.date()), "%Y-%m-%d").strftime(constants.DATE_FORMAT), tries=tries+1)
         return None
     
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

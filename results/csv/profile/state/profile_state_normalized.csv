@@ -1,51 +1,51 @@
 state	house	senate	input
-Kansas		1.0	0.25
-California	0.16	0.25	0.17
-Louisiana	0.07	0.5	0.18
-Delaware		1.0	0.5
-Massachusetts	0.31	0.2	0.3
-Missouri	0.25	0.33	0.27
+Maryland	0.15	0.67	0.27
+Florida	0.26	0.33	0.27
+Indiana	0.33		0.29
+Rhode Island	0.33	1.0	0.6
+District of Columbia	1.0		1.0
+Georgia	0.15	0.33	0.18
+New York	0.17		0.16
 Montana	0.2	0.25	0.25
 Colorado	0.27	0.5	0.36
-Arizona	0.11		0.1
-Wisconsin	0.07	0.33	0.12
-Oklahoma	0.18	0.33	0.23
-South Dakota		0.67	0.33
-New Hampshire		0.33	0.12
-Utah	0.22		0.15
-Maryland	0.15	0.67	0.27
-South Carolina	0.17		0.14
 Illinois	0.15	0.33	0.17
-Minnesota	0.12	0.33	0.15
-Connecticut	0.29	0.33	0.33
-Oregon	0.29	0.5	0.33
-Arkansas	0.14	0.33	0.22
-Idaho	0.33	0.5	0.4
-Rhode Island	0.33	1.0	0.6
-Virginia	0.3	0.67	0.35
-Pennsylvania	0.11	1.0	0.16
-Washington	0.19	1.0	0.28
-Ohio	0.19	0.5	0.21
-Hawaii	0.17		0.11
-Alaska		0.33	0.25
-Wyoming		1.0	0.75
-Kentucky	0.44	1.0	0.55
-Vermont	1.0		0.33
-New York	0.17		0.16
-New Mexico		0.25	0.09
-North Carolina	0.31	0.67	0.34
-Maine	0.25	0.67	0.43
-North Dakota		0.25	0.17
-Alabama	0.17	0.4	0.24
-New Jersey	0.23	0.25	0.23
-Iowa	0.17		0.13
+Louisiana	0.07	0.5	0.18
 Nevada	0.1	0.2	0.15
+Delaware		1.0	0.5
+South Dakota		0.67	0.33
 Tennessee	0.43	0.5	0.47
+Missouri	0.25	0.33	0.27
 West Virginia	0.33	0.67	0.5
-Georgia	0.15	0.33	0.18
-Florida	0.26	0.33	0.27
-Michigan	0.16	0.33	0.18
-Texas	0.17	0.67	0.2
-District of Columbia	1.0		1.0
+Massachusetts	0.31	0.2	0.3
+Connecticut	0.29	0.33	0.33
+Arkansas	0.14	0.33	0.22
+Iowa	0.17		0.13
+Wisconsin	0.07	0.33	0.12
+Wyoming		1.0	0.75
+Hawaii	0.17		0.11
+Washington	0.19	1.0	0.28
 Mississippi	0.17	0.67	0.33
-Indiana	0.33		0.29
+Kentucky	0.44	1.0	0.55
+New Jersey	0.23	0.25	0.23
+Ohio	0.19	0.5	0.21
+South Carolina	0.17		0.14
+North Carolina	0.31	0.67	0.34
+Alaska		0.33	0.25
+New Mexico		0.25	0.09
+Vermont	1.0		0.33
+New Hampshire		0.33	0.12
+Maine	0.25	0.67	0.43
+California	0.16	0.25	0.17
+Virginia	0.3	0.67	0.35
+Utah	0.22		0.15
+Arizona	0.11		0.1
+Kansas		1.0	0.25
+North Dakota		0.25	0.17
+Pennsylvania	0.11	1.0	0.16
+Idaho	0.33	0.5	0.4
+Texas	0.17	0.67	0.2
+Michigan	0.16	0.33	0.18
+Minnesota	0.12	0.33	0.15
+Oregon	0.29	0.5	0.33
+Alabama	0.17	0.4	0.24
+Oklahoma	0.18	0.33	0.23

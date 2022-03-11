@@ -12,13 +12,13 @@ def consistency_amount(t):
         amount = '$50,000,000.00'
     if amount == '$1,000,000 +':
         amount = random.choice(MORE_THAN_MILLION)
-        
-    elif amount in AMOUNT_CONSISTENCY:
+    if amount in AMOUNT_CONSISTENCY:
         amount = AMOUNT_CONSISTENCY[amount]
+        
     return amount 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def is_this_date_after(tdate_sale, tdate_purch):
-    return datetime.strptime(tdate_sale, DATE_FORMAT).date() > datetime.strptime(tdate_purch, DATE_FORMAT).date()
+    return datetime.strptime(tdate_sale, DATE_FORMAT).date() >= datetime.strptime(tdate_purch, DATE_FORMAT).date()
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
