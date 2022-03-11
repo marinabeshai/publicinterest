@@ -269,7 +269,7 @@ def go_shopping(l, s):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def page(probable_result_title, i_have_a_link, text=False):
+def page(probable_result_title, i_have_a_link=None, text=False):
     try: 
         if i_have_a_link:
             return requests.get('https://en.wikipedia.org/wiki/'+i_have_a_link).text 
@@ -292,7 +292,7 @@ def page(probable_result_title, i_have_a_link, text=False):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_wiki_page(name, i_have_a_link, text=False):
+def get_wiki_page(name, i_have_a_link=None, text=False):
     try: 
         if i_have_a_link: 
             return page(None, i_have_a_link, text)
@@ -320,7 +320,7 @@ def get_wiki_page(name, i_have_a_link, text=False):
 # @TODO
 # https://stackoverflow.com/questions/7638402/how-can-i-get-the-infobox-from-a-wikipedia-article-by-the-mediawiki-api
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def wiki_search(name, i_have_a_link):
+def wiki_search(name, i_have_a_link=None):
 
     try:
         official_name = name 
@@ -328,7 +328,8 @@ def wiki_search(name, i_have_a_link):
         if name in constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS:
             name = constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS[name]
 
-        s = get_wiki_page(name, i_have_a_link)
+        if i_have_a_link:
+            s = get_wiki_page(name, i_have_a_link)
                 
         d = go_shopping(["birth_place ", "alma_mater ", "birth_date ", "education "], s)
         d = congress_gov_get(official_name, d)
