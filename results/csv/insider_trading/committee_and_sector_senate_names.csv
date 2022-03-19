@@ -1,19 +1,19 @@
-name,count
-"Moran, Jerry",8
-"Hagerty IV, William F.",2
-"Tuberville, Thomas H.",15
-"Hickenlooper, John W.",2
-"Whitehouse, Sheldon",81
-"King Jr., Angus S.",8
-"Wyden, Ronald L.",5
-"Cassidy, William",26
-"Hoeven, John",21
-"Reed, John F.",2
-"Perdue Jr., David A.",311
-"Collins, Susan M.",18
-"Cantwell, Maria E.",5
-"Capito, Shelley M.",2
-"Peters, Gary C.",1
-"Carper, Thomas R.",4
-"Tillis, Thomas R.",30
-"Booker, Cory A.",3
+name,count,color
+"Moran, Jerry (R-KS)",8,#FF0000
+"Hagerty IV, William F. (R-TN)",2,#FF0000
+"Tuberville, Thomas H. (R-AL)",15,#FF0000
+"Hickenlooper, John W. (D-CO)",1,#0000FF
+"Whitehouse, Sheldon (D-RI)",81,#0000FF
+"King Jr., Angus S. (I-ME)",7,#800080
+"Wyden, Ronald L. (D-OR)",5,#0000FF
+"Cassidy, William (R-LA)",16,#FF0000
+"Hoeven, John (R-ND)",9,#FF0000
+"Reed, John F. (D-RI)",2,#0000FF
+"Perdue Jr., David A. (R-GA)",212,#FF0000
+"Collins, Susan M. (R-ME)",18,#FF0000
+"Cantwell, Maria E. (D-WA)",5,#0000FF
+"Capito, Shelley M. (R-WV)",1,#FF0000
+"Peters, Gary C. (D-MI)",1,#0000FF
+"Carper, Thomas R. (D-DE)",4,#0000FF
+"Tillis, Thomas R. (R-NC)",30,#FF0000
+"Booker, Cory A. (D-NJ)",3,#0000FF

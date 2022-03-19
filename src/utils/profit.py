@@ -25,8 +25,8 @@ def share_diff(ticker, tdate_sale, tdate_purch):
     sale_price = get_stock_price(ticker, tdate_sale)
     purch_price = get_stock_price(ticker, tdate_purch)
     if purch_price and sale_price:
-        return round((sale_price - purch_price)/purch_price, 4)
-    return None 
+        return  round(sale_price,2) , round(purch_price,2), round((sale_price - purch_price)/purch_price, 4)
+    return None, None, None 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

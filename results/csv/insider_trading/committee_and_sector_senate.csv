@@ -1,19 +1,19 @@
-,Armed Services Committee (2015-2016),Committee on Armed Services (2017-2018),Committee on Energy and Natural Resources (2017-2018),Committee on Energy and Natural Resources (2019-2020),Committee on Energy and Natural Resources (2021-2022),Energy (2021-2022),Energy and Natural Resources (2015-2016),Energy and Natural Resources Committee (2015-2016),Energy and Water Development (2021-2022),Financial Services and General Government (2021-2022),"Subcommittee on Communications, Technology, and the Internet (2013-2014)","Subcommittee on Communications, Technology, and the Internet (2015-2016)",Subcommittee on Energy (2015-2016),Subcommittee on Energy and Water Development (2013-2014),Subcommittee on Energy and Water Development (2015-2016),"Subcommittee on Energy, Natural Resources, and Infrastructure (2013-2014)","Subcommittee on Energy, Natural Resources, and Infrastructure (2015-2016)","Subcommittee on Multilateral International Development, Multilateral Institutions, and International Economic, Energy, and Environmental Policy (2015-2016)","Subcommittee on Privacy, Technology and the Law (2013-2014)","Subcommittee on Privacy, Technology and the Law (2015-2016)","Subcommittee on Privacy, Technology and the Law (2021-2022)",Subcommittee on Rural Development and Energy (2015-2016),Subcommittee on Rural Development and Energy (2021-2022)
-"Moran, Jerry",0,0,0,0,0,0,0,0,0,"{'BRK.B', 'BK', 'USB', 'BAC'}",0,0,0,0,0,0,0,0,0,0,0,0,0
-"Hagerty IV, William F.",0,0,0,0,0,0,0,0,"{'NS', 'BKEP'}",0,0,0,0,0,0,0,0,0,0,0,0,0,0
-"Tuberville, Thomas H.",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,{'OXY'}
-"Hickenlooper, John W.",0,0,0,0,{'CVX'},{'CVX'},0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-"Whitehouse, Sheldon",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"{'GOOGL', 'QLIK', 'KEYS', 'GPRO', 'ORCL', 'CY', 'LNKD', 'SSYS', 'XLNX', 'IBM', 'MCHP', 'SYMC', 'AAPL', 'PANW'}","{'LRCX', 'ACN', 'GOOGL', 'QCOM', 'FB', 'IBM', 'LLTC', 'FEYE', 'CERN', 'TWTR', 'GPRO', 'ORCL', 'NVDA', 'VMW', 'AAPL', 'CSCO', 'FTV', 'CY', 'XER.BE', 'QLIK', 'MSFT', 'SSYS'}",{'MCHP'},0,0
-"King Jr., Angus S.",0,0,"{'SLB', 'COP'}","{'XOM', 'SLB', 'COP'}",0,0,{'KMI'},0,0,0,0,0,{'KMI'},0,0,0,0,0,0,0,0,0,0
-"Wyden, Ronald L.",0,0,0,"{'XOM', 'BRY', 'RDS-B'}",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-"Cassidy, William",0,0,"{'XOM', 'SLB'}","{'XOM', 'PSX'}",0,0,0,"{'SLB', 'NBL', 'XOM', 'OXY', 'COP', 'CVX', 'RDS-B'}",0,0,0,0,"{'SLB', 'NBL', 'XOM', 'OXY', 'COP', 'CVX', 'RDS-B'}",0,0,0,0,0,0,0,0,0,0
-"Hoeven, John",0,0,0,"{'MPC', 'XOM', 'SLB', 'CVX'}",0,0,0,"{'VLO', 'NOG'}",0,0,0,0,"{'VLO', 'NOG'}",0,"{'VLO', 'NOG'}",0,0,0,0,0,0,"{'VLO', 'NOG'}",0
-"Reed, John F.",0,{'WFM'},0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-"Perdue Jr., David A.",0,"{'WOOF', 'WFM'}",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"{'MMP', 'ENB', 'ETE', 'EPD', 'PSX', 'PAA', 'MPLX', 'XOM', 'BPL', 'ETP', 'WMB', 'SLB', 'HAL', 'VLP', 'WPZ', 'AM', 'AR', 'KMI', 'DPM', 'WPX', 'TRGP', 'DVN', 'GEL'}",0,"{'GLW', 'QCOM', 'KN', 'ORCL', 'SE', 'MSFT', 'ENTG', 'AAPL', 'FEYE'}",0,"{'MMP', 'ENB', 'ETE', 'EPD', 'PSX', 'PAA', 'MPLX', 'XOM', 'BPL', 'ETP', 'WMB', 'SLB', 'HAL', 'VLP', 'WPZ', 'AM', 'AR', 'KMI', 'DPM', 'WPX', 'TRGP', 'DVN', 'GEL'}",0
-"Collins, Susan M.",0,0,0,0,0,0,0,0,0,0,0,0,0,"{'ENLC', 'BTE', 'SLB', 'PSX', 'CVX', 'COP', 'OXY', 'PGH', 'XOM', 'HFC'}","{'HAL', 'COP'}",0,0,0,0,0,0,0,0
-"Cantwell, Maria E.",0,0,0,0,0,0,0,0,0,0,{'RNWK'},{'RNWK'},0,0,0,0,0,0,0,0,0,0,0
-"Capito, Shelley M.",0,0,0,0,0,0,0,{'COP'},0,0,0,0,{'COP'},0,0,0,0,0,0,0,0,0,0
-"Peters, Gary C.",0,0,0,0,0,0,0,0,0,0,0,{'QCOM'},0,0,0,0,0,0,0,0,0,0,0
-"Carper, Thomas R.",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"{'EC', 'OKE', 'RIG'}",{'VLO'},0,0,0,0,0,0
-"Tillis, Thomas R.","{'ABCO', 'MFRM', 'CTCT', 'PLKI'}",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"{'SPSC', 'TYPE', 'LOCK', 'NSR', 'DIOD', 'POWI', 'EPAY', 'TNGO', 'JCOM', 'OMCL', 'PLT', 'SQI', 'SWI', 'AMSG', 'CGNX', 'QLIK', 'NICE', 'CVLT', 'SMTC', 'CTRL'}",0,"{'SGY', 'CRZO', 'FET', 'DRQ', 'HLX'}",0
-"Booker, Cory A.",0,0,0,0,0,0,0,0,0,0,"{'FB', 'AAPL', 'IBM'}",0,0,0,0,0,0,0,0,0,0,0,0
+,Armed Services Committee (2015-2016),Committee on Armed Services (2017-2018),Committee on Energy and Natural Resources (2017-2018),Committee on Energy and Natural Resources (2019-2020),Committee on Energy and Natural Resources (2021-2022),Energy and Natural Resources (2015-2016),Energy and Natural Resources Committee (2015-2016),Energy and Water Development (2021-2022),Financial Services and General Government (2021-2022),"Subcommittee on Communications, Technology, and the Internet (2013-2014)","Subcommittee on Communications, Technology, and the Internet (2015-2016)",Subcommittee on Energy and Water Development (2013-2014),Subcommittee on Energy and Water Development (2015-2016),"Subcommittee on Energy, Natural Resources, and Infrastructure (2013-2014)","Subcommittee on Energy, Natural Resources, and Infrastructure (2015-2016)","Subcommittee on Privacy, Technology and the Law (2013-2014)","Subcommittee on Privacy, Technology and the Law (2015-2016)","Subcommittee on Privacy, Technology and the Law (2021-2022)",Subcommittee on Rural Development and Energy (2015-2016),Subcommittee on Rural Development and Energy (2021-2022)
+"Moran, Jerry",0,0,0,0,0,0,0,0,"{'BAC', 'BK', 'USB', 'BRK.B'}",0,0,0,0,0,0,0,0,0,0,0
+"Hagerty IV, William F.",0,0,0,0,0,0,0,"{'NS', 'BKEP'}",0,0,0,0,0,0,0,0,0,0,0,0
+"Tuberville, Thomas H.",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,{'OXY'}
+"Hickenlooper, John W.",0,0,0,0,{'CVX'},0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Whitehouse, Sheldon",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"{'PANW', 'LNKD', 'AAPL', 'MCHP', 'IBM', 'GOOGL', 'SSYS', 'SYMC', 'KEYS', 'GPRO', 'XLNX', 'ORCL', 'CY', 'QLIK'}","{'FEYE', 'CERN', 'CSCO', 'QLIK', 'TWTR', 'SSYS', 'XER.BE', 'FTV', 'ACN', 'AAPL', 'FB', 'MSFT', 'NVDA', 'LLTC', 'LRCX', 'QCOM', 'CY', 'VMW', 'IBM', 'GOOGL', 'GPRO', 'ORCL'}",{'MCHP'},0,0
+"King Jr., Angus S.",0,0,"{'SLB', 'COP'}","{'XOM', 'SLB', 'COP'}",0,{'KMI'},0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Wyden, Ronald L.",0,0,0,"{'XOM', 'RDS-B', 'BRY'}",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Cassidy, William",0,0,"{'XOM', 'SLB'}","{'XOM', 'PSX'}",0,0,"{'NBL', 'SLB', 'COP', 'XOM', 'RDS-B', 'CVX', 'OXY'}",0,0,0,0,0,0,0,0,0,0,0,0,0
+"Hoeven, John",0,0,0,"{'XOM', 'SLB', 'CVX', 'MPC'}",0,0,0,0,0,0,0,0,0,0,0,0,0,0,"{'VLO', 'NOG'}",0
+"Reed, John F.",0,{'WFM'},0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Perdue Jr., David A.",0,"{'WOOF', 'WFM'}",0,0,0,0,0,0,0,0,0,0,0,0,0,0,"{'FEYE', 'AAPL', 'SE', 'KN', 'MSFT', 'ORCL', 'ENTG', 'QCOM', 'GLW'}",0,"{'ETE', 'SLB', 'AR', 'WPX', 'XOM', 'WMB', 'GEL', 'DPM', 'PAA', 'KMI', 'MPLX', 'MMP', 'BPL', 'HAL', 'AM', 'WPZ', 'ETP', 'EPD', 'TRGP', 'DVN', 'PSX', 'ENB', 'VLP'}",0
+"Collins, Susan M.",0,0,0,0,0,0,0,0,0,0,0,"{'HFC', 'SLB', 'BTE', 'PGH', 'OXY', 'PSX', 'XOM', 'ENLC', 'CVX', 'COP'}","{'HAL', 'COP'}",0,0,0,0,0,0,0
+"Cantwell, Maria E.",0,0,0,0,0,0,0,0,0,{'RNWK'},{'RNWK'},0,0,0,0,0,0,0,0,0
+"Capito, Shelley M.",0,0,0,0,0,0,{'COP'},0,0,0,0,0,0,0,0,0,0,0,0,0
+"Peters, Gary C.",0,0,0,0,0,0,0,0,0,0,{'QCOM'},0,0,0,0,0,0,0,0,0
+"Carper, Thomas R.",0,0,0,0,0,0,0,0,0,0,0,0,0,"{'EC', 'RIG', 'OKE'}",{'VLO'},0,0,0,0,0
+"Tillis, Thomas R.","{'MFRM', 'ABCO', 'PLKI', 'CTCT'}",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"{'SQI', 'SPSC', 'QLIK', 'CTRL', 'TNGO', 'NSR', 'NICE', 'SMTC', 'PLT', 'AMSG', 'POWI', 'EPAY', 'JCOM', 'CVLT', 'SWI', 'CGNX', 'DIOD', 'TYPE', 'OMCL', 'LOCK'}",0,"{'FET', 'SGY', 'DRQ', 'CRZO', 'HLX'}",0
+"Booker, Cory A.",0,0,0,0,0,0,0,0,0,"{'FB', 'AAPL', 'IBM'}",0,0,0,0,0,0,0,0,0,0

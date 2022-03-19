@@ -1,6 +1,7 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from tkinter import E
 from zmq import REP
-from utils.constants import DATE_FORMAT, FEMALE_NAMES, MALE_NAMES, Unknown, DEGREES, MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS, REPRESENTATIVE, SENATOR
+from utils.constants import DATE_FORMAT, FEMALE_NAMES, MALE_NAMES, Unknown, DEGREES, MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS, REPRESENTATIVE, SENATOR, us_state_to_abbrev
 import gender_guesser.detector as gender
 from datetime import date, datetime
 from utils.ptr_utils import isvalid
@@ -33,16 +34,32 @@ class Official:
         return {"self.get_paperworkname()" : self.name,
                 "self.get_congress()" : self.get_congress(), 
                 "self.get_years_served()" : self.get_years_served(), 
-                # "self.get_birthdate()" : self.get_birthdate(), 
-                # "self.get_state()" : self.state,
-                # "self.get_birth_place()" : self.get_birthplace(), 
-                # "self.get_party()" : self.party, 
-                # "self.get_education()" : self.get_education(), 
-                # "self.get_num_of_years()" : self.get_seniority(),
-                # "self.get_num_of_degrees()": self.get_num_of_degrees(),
-                # "self.has_jd": self.has_JD(), 
-                # "self.asgts" :  self.asgts
+                "self.get_birthdate()" : self.get_birthdate(), 
+                "self.get_state()" : self.state,
+                "self.get_birth_place()" : self.get_birthplace(), 
+                "self.get_party()" : self.party, 
+                "self.get_education()" : self.get_education(), 
+                "self.get_seniority()" : self.get_seniority(),
+                "self.get_num_of_degrees()": self.get_num_of_degrees(),
+                "self.has_jd": self.has_JD(), 
+                "self.asgts" :  self.asgts
                 }
+    # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    def get_color(self):
+        if self.party == 'Republican':
+            return '#FF0000'
+        if self.party == 'Democratic':
+            return '#0000FF'
+        else:
+            return '#800080'
+    # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    def get_label(self):
+        return self.name + " (" +  self.party[0] + "-" +  us_state_to_abbrev[self.state] + ")"
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -68,15 +85,20 @@ class Official:
     # Returns birthdate of Official in DATE_FORMAT.
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     def get_birthdate(self):
-        assert self._birth_date
-        return datetime.strptime(self._birth_date, '%Y/%m/%d').strftime(DATE_FORMAT)
+        try: 
+            assert self._birth_date
+            return datetime.strptime(self._birth_date, '%Y/%m/%d').strftime(DATE_FORMAT)
+        except: 
+            print(self.name)
+            raise Unknown
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # Returns birthplace of Official.
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     def get_birthplace(self):
-        assert self._birth_place
+        # /Jason_Smith_(politician)
+        # assert self._birth_place
         return self._birth_place.split("|")[0].split("<")[0]
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -99,6 +121,9 @@ class Official:
                 if ")" in word:
                     nl.append(s.strip())
                     s = ""
+            if not nl:
+                for x in self._education.split("\n"): 
+                    nl.append(x.strip())
 
             return nl 
         except Exception:
@@ -108,7 +133,12 @@ class Official:
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     def get_years_served(self):
         try: 
-            l = [self._senate, self._house]
+            l = []
+            if self._senate:
+                l.append(self._senate)
+            if self._house:
+                l.append(self._house)
+
             ranges = []
             
             for phrase in l:
@@ -121,14 +151,17 @@ class Official:
                     ranges.append(phrase) 
 
             res = []
-            for r in ranges:
-                l = r.split("-")
-                x = l[0]
-                y = l[1]
-                
-                if y == 'Present': y = date.today().year
-                
-                res.append(list(range(int(x), int(y) + 1)))
+            if len(ranges) == 1 and "-" not in ranges[0]:
+                res.append(list(range(int(ranges[0]), int(ranges[0]) + 1)))
+            else: 
+                for r in ranges:
+                    l = r.split("-")
+                    x = l[0]
+                    y = l[1]
+                    
+                    if y == 'Present': y = date.today().year
+                    
+                    res.append(list(range(int(x), int(y) + 1)))
             
             return sorted(list(set(item for sublist in res for item in sublist)))
                                        
@@ -143,7 +176,12 @@ class Official:
         try: 
             assert self._senate or self._house
 
-            l = [self._senate, self._house]
+            l = []
+            if self._senate:
+                l.append(self._senate)
+            if self._house:
+                l.append(self._house)
+
             ranges = []
             res = []
             
@@ -156,21 +194,28 @@ class Official:
                 else:
                     ranges.append(phrase) 
                     
-            for r in ranges: 
-                l = r.split("-")
-                x = l[0]
-                y = l[1]
-                
-                if y == 'Present': y = date.today().year + 1 
+            if len(ranges) == 1 and "-" not in ranges[0]:
+                begin_congress = 93 + ((int(ranges[0]) - 1973) // 2)
+                end_congress = 93 + ((int(ranges[0]) - 1973) // 2)
+                res.append(list(range(begin_congress, end_congress + 1)))
+                return sorted(list(set(item for sublist in res for item in sublist)))
 
-                begin_congress = 93 + ((int(x) - 1973) // 2)
-                end_congress = 93 + ((int(y) - 1973) // 2)
-                
-                # Biggest corner case known to man. 
-                if self.name == 'Loeffler, Kelly' or self.name == 'Cochran, Thad':
-                    end_congress += 1 
+            else: 
+                for r in ranges: 
+                    l = r.split("-")
+                    x = l[0]
+                    y = l[1]
                     
-                res.append(list(range(begin_congress, end_congress)))
+                    if y == 'Present': y = date.today().year + 1 
+
+                    begin_congress = 93 + ((int(x) - 1973) // 2)
+                    end_congress = 93 + ((int(y) - 1973) // 2)
+                    
+                    # Biggest corner case known to man. 
+                    if self.name == 'Loeffler, Kelly' or self.name == 'Cochran, Thad':
+                        end_congress += 1 
+                        
+                    res.append(list(range(begin_congress, end_congress)))
 
             return sorted(list(set(item for sublist in res for item in sublist)))
         
@@ -224,9 +269,19 @@ class Official:
         try: 
             assert self._senate or self._house
             
-            l = [self._senate, self._house]
+            l = []
+            if self._senate:
+                l.append(self._senate)
+            if self._house:
+                l.append(self._house)
+                
             years = 0 
             
+            if len(l) == 1 and "-" in l and l[0].split("-")[0] == l[0].split("-")[1]:
+                return 1 
+            if len(l) == 1 and "-" not in l[0]:
+                return 1 
+
             for range in l:
                 if not range: 
                     continue
@@ -235,11 +290,13 @@ class Official:
                     for i in lprime: l.append(i) 
                     
                     continue
+                
                 x, y = range.split("-")
                 if y == "Present":
                     y = date.today().year
                     
                 years += int(y) - int(x)    
+
                 
             return years if years > 0 else 1 
         except Exception:

@@ -76,6 +76,9 @@ def get_data(senate=False, house=False, combined=False):
             csvreader.at[i, constants.TDATE] = ptr_utils.format_date(t[constants.TDATE])
             csvreader.at[i, constants.DDATE] = ptr_utils.format_date(t[constants.DDATE])
             
+            if t[constants.OWNER] == 'Child' or t[constants.OWNER] == 'dependent':
+                csvreader.at[i, constants.OWNER] = 'Dependent'
+            
             if t[constants.TYPE] == 'purchase' or t[constants.TYPE] == 'exchange':
                 csvreader.at[i, constants.TYPE] = t[constants.TYPE].capitalize()
             elif t[constants.TYPE] == 'sale_full':

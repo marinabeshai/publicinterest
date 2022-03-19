@@ -18,17 +18,17 @@ def flatten_len_inner_set(d):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def normalize(d, normalized, percent=False, raw=False):
     assert percent or raw 
-    
+    new_d = [] 
     for k,v in d.items():
         if normalized[k] == []:
-                d[k] = 0 
+                new_d[k] = 0 
         elif normalized[k] != 0:
             if percent: 
-                d[k] = round(v/normalized[k], 2)
+                new_d[k] = round(v/normalized[k], 2)
             if raw:
-                d[k] = d[k]        
+                new_d[k] = d[k]        
                 
-    return d
+    return new_d
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -195,6 +195,19 @@ def increment_set_in_inner_dictionary(d, key, inner_key, inner_value):
         raise Unknown
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+def increment_list_in_inner_dictionary(d, key, inner_key, inner_value):
+    try: 
+
+        if key in d:
+            d[key] = increment_list_in_dictionary(d[key], inner_key, inner_value)
+               
+        else:
+            d[key] = {inner_key : [inner_value]}
+    
+        return d 
+
+    except Exception:
+        raise Unknown
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # d = {"Jack" : {"Leonard" : 224 , "Aloe" : "33" , "Maynard" : "131"},  "David" : {"Moa" : '232'}}
 # d = increment_dictionary_in_dictionary(d, "Jack", "Leonard")
@@ -208,15 +221,17 @@ def increment_set_in_inner_dictionary(d, key, inner_key, inner_value):
 # d = increment_dictionary_in_dictionary(d, "Poo", "D")
 # d = {'Jack': {'Leonard': 224, 'Aloe': '33', 'Maynard': '131'}, 'David': {'Moa': '232'}, 'Poo': {'D': 1}}    
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def increment_dictionary_in_dictionary(d, key, inner_key):
+def increment_dictionary_in_dictionary(d, key, inner_key, not_math=False):
     try: 
         if key in d:
             key_d = d.get(key, 0)
-
-            key_d = increment_dictionary(key_d, inner_key)
+            key_d = increment_dictionary(key_d, inner_key, not_math=not_math)
             d.update({key: key_d})
         else:
-            d.update({key: {inner_key: 1}})
+            if not_math:
+                d.update({key: {inner_key: 1}})
+            else:
+                d.update({key: {inner_key: not_math}})
         return d
 
     except Exception:
@@ -340,7 +355,7 @@ def sort_dictionary_by_sort_key(d):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def sort_dictionary_by_values(d, reverse=True):
     try:  
-        return dict(sorted(d.items(), key=lambda item: int(item[1]), reverse=reverse))
+        return dict(sorted(d.items(), key=lambda item: float(item[1]), reverse=reverse))
 
     except Exception:
         raise Unknown

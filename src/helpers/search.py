@@ -1,6 +1,7 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 from ctypes import resize
 from re import X
+from tkinter import W
 import utils.constants as constants 
 from helpers.official import Official
 from helpers.congress import Congress
@@ -189,25 +190,19 @@ def parse(d, word, count, s, break_point):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def go_shopping(l, s):
     try:
+        # print(s)
         d = {}
-        
+        tried = []
+                                
         while l:
             w = l.pop()                
             i = s.find(w)
             
-
-            # Corner Case
-            if "state " == w:
-                if s.find("enator from") > 0:
-                    leftover = s[s.find("enator from") - 1:]
-                    d[w.strip()] = leftover[leftover.find(
-                        "from")+5:leftover.find("}}")]
-                    continue
-                if s.find("state ") == -1 and s.find("state1") > 0:
-                    l.append("state1")
-                    continue
-
+            
             if i == -1:
+                if w.strip() not in tried: 
+                    l.append(w.strip())
+                    tried.append(w.strip())
                 continue
 
             else:
@@ -223,7 +218,7 @@ def go_shopping(l, s):
 
                     
                 # Corner case
-                elif w == "birth_date ":
+                elif w == "birth_date " or w == "birth_date":
                     where_to_stop = s.find("}", where_to_stop)
 
 
@@ -237,8 +232,13 @@ def go_shopping(l, s):
                 res = s[i+len(w): where_to_stop]           
 
                 # Corner Case
-                if w == "birth_date ":
-                    res = res[res.find("|") + 1:].replace("|", "/")
+                if w == "birth_date " or w == "birth_date":
+                    res = res[res.find("|") + 1:].replace("|", "/").replace(" ", "")
+                    if res == 'Mar5,1963':
+                        res = '1963/03/05'
+                    
+                    if "/mf" in res:
+                        res = res[ : res.find('/mf')]
                     
                     if not res[0].isdigit():
                         while not res[0].isdigit():
@@ -269,10 +269,8 @@ def go_shopping(l, s):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def page(probable_result_title, i_have_a_link=None, text=False):
+def page(probable_result_title, text=False):
     try: 
-        if i_have_a_link:
-            return requests.get('https://en.wikipedia.org/wiki/'+i_have_a_link).text 
             
         htmled_tltle = probable_result_title.replace(" ", "%20")
             
@@ -294,19 +292,19 @@ def page(probable_result_title, i_have_a_link=None, text=False):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_wiki_page(name, i_have_a_link=None, text=False):
     try: 
-        if i_have_a_link: 
-            return page(None, i_have_a_link, text)
+        if i_have_a_link and "%" not in i_have_a_link: 
+            name = i_have_a_link.replace("_", " ")
             
         results = wikipedia.search(name)
         at = 0
 
         s = page(results[at], text) 
-        
+                
         if "may refer to" in s: 
             at += 1
             s = page(results[at], text)  
 
-        while "United States Senator" not in s and "United States representative" not in s and "U.S. representative" not in s and  "United States senator" not in s and "U.S. Representative" not in s and "U.S. House of Representatives" not in s and "United States House of Representatives" not in s:
+        while "politician" not in s and "Ballotpedia" not in s and "United States Senator" not in s and "United States representative" not in s and "U.S. representative" not in s and  "United States senator" not in s and "U.S. Representative" not in s and "U.S. House of Representatives" not in s and "United States House of Representatives" not in s:
             at += 1
             s = page(results[at], text)  
         
@@ -328,10 +326,15 @@ def wiki_search(name, i_have_a_link=None):
         if name in constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS:
             name = constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS[name]
 
-        if i_have_a_link:
+        if name == "Pierluisi, Pedro":
+            d = {'education' : 'Tulane University (BA)\nGeorge Washington University (JD)', 
+             'birth_date' : '1959/04/26',
+             'birth_place' : 'San Juan, Puerto Rico'}
+            
+        else: 
             s = get_wiki_page(name, i_have_a_link)
-                
-        d = go_shopping(["birth_place ", "alma_mater ", "birth_date ", "education "], s)
+            d = go_shopping(["birth_place ", "alma_mater ", "birth_date ", "education "], s)
+
         d = congress_gov_get(official_name, d)
 
         birth_place = d.get("birth_place", None)
@@ -346,8 +349,8 @@ def wiki_search(name, i_have_a_link=None):
         senate = d.get("senate", None)
         house = d.get("house", None)
 
-        asgts = get_committee_assignments(official_name)
-    
+        asgts = get_committee_assignments(official_name, state)
+            
         return Official(official_name, state, birth_date, birth_place, party, education, senate, house, asgts)
         
     except Exception:
@@ -599,14 +602,14 @@ def get_wiki_link(name):
         name = constants.CANONICAL_NAME_TO_WIKIPEIDA_PROBLEMATIC_CONVERSATIONS[name]
 
     res = get_wiki_page(name, text=True)
-    curlid=  get_link_from_text(res, find='pageid"').replace(":", "").replace(",", "")
+    curlid =  get_link_from_text(res, find='pageid"').replace(":", "").replace(",", "")
     html = "https://en.wikipedia.org/?curid=" + curlid
 
     return get_redirection_link(html, get_wiki_link=True)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def get_committee_assignments(name):
+def get_committee_assignments(name, state, special_name=None):
     if name == 'Greene, Marjorie T.':
         return ['House Committee on Budget (2021-2022)', 'Committee on Education and the Workforce (2021-2022)']
     
@@ -615,12 +618,14 @@ def get_committee_assignments(name):
         'Subcommittee on Employment and Workplace Safety (2020-2021)', 'Primary Health and Retirement Security (2020-2021)', 'Joint Economic Committee (2020-2021)', 'Committee on Veterans Affairs (2020-2021)',
         'Committee on Agriculture, Nutrition, & Forestry (2020-2021)', 'Conservation, Forestry, and Natural Resources (2020-2021)', 'Livestock, Marketing, and Agriculture Security (2020-2021)']
 
-    if name not in constants.CANONICAL_TO_BALLOTPEDIA_PROBLEMATIC_CONVERSIONS:
+    if name not in constants.CANONICAL_TO_BALLOTPEDIA_PROBLEMATIC_CONVERSIONS and not special_name:
         name = name.replace(",", "").split(" ")
         name = name[1] + "_" + name[0]
-    else:
+    elif not special_name:
         name = constants.CANONICAL_TO_BALLOTPEDIA_PROBLEMATIC_CONVERSIONS[name]
-
+    else: 
+        name = special_name
+        
     headers = { 
         "User-Agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582"
@@ -632,12 +637,12 @@ def get_committee_assignments(name):
     find = 'id="Committee_assignments">Committee assignments</span>'
     res = res[res.find(find) + len(find) : ]
     
-    finds = ['Key votes</a></span></h2>', 'id="Elections">Elections</span>', 'id="Elections">Elections</span></h2>', 'New York State Assembly</span></h3>', '"Key_votes">Key votes</span></h2>', '>Pennsylvania House</span></h3>', 'State Senate</span></h3>', 'session</span></h4>', 'legislation</span>', 'New York Assembly</span></h3>', 'North Carolina Senate</span></h3>', 'State House</span></h3>', 'State senate</span></h3>', 'Iowa House of Representatives</span></h3>', 'Maryland Senate</span></h3>', 'Issues</span></a>', 'Georgia Senate</span></a>']
+    finds = ['Key votes</a></span></h2>', 'id="Elections">Elections</span>', 'id="Elections">Elections</span></h2>', 'New York State Assembly</span></h3>', '"Key_votes">Key votes</span></h2>', '>Pennsylvania House</span></h3>', 'State Senate</span></h3>', 'session</span></h4>', 'legislation</span>', 'New York Assembly</span></h3>', 'North Carolina Senate</span></h3>', 'State House</span></h3>', 'State senate</span></h3>', 'Iowa House of Representatives</span></h3>', 'Maryland Senate</span></h3>', 'Issues</span></a>', 'Georgia Senate</span></a>', 'Campaign themes</a></span>']
     for find in finds: 
         if find in res: 
             res = res[ : res.find(find) + len(find) ]
 
-    
+    # print(res)    
     year = None 
     l = []
     
@@ -738,6 +743,9 @@ def get_committee_assignments(name):
                     if ">" in ans:
                         ans = ans[ans.find(">") + 1 : ]
                     l.append(ans.strip() + " (" + year + ")" )
-                    
+        
+    if 'Staff (Trending)' in l and state: 
+        name += "_(" + state.replace(" ", "_") + ")"
+        return   get_committee_assignments(name, state, special_name=name)
     return l 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

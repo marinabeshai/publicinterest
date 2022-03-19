@@ -1,51 +1,51 @@
 state	house	senate	input
-Kentucky	134	23	157
-South Dakota		11	11
-Iowa	188		188
 Kansas	37	633	670
-Louisiana	9	168	177
-Florida	1148	169	1317
-New Mexico		2	2
-Alaska		27	27
-Washington	159	166	325
-North Dakota		214	214
-Oregon	398	261	659
-Texas	992	12	1004
-Ohio	92	9	101
-Michigan	316	143	459
-Massachusetts	313		313
-North Carolina	322	99	421
-Hawaii	9		9
-Arkansas	9	2	11
-Missouri	42	8	50
 Indiana	121		121
-Tennessee	704	87	791
-Minnesota	515	24	539
-Maine	5	472	477
-Oklahoma	361	229	590
-Delaware		989	989
-Utah	282		282
-Montana	497	1	498
-Virginia	771	52	823
 West Virginia	190	392	582
-Maryland	14	22	36
-New York	181		181
-Georgia	214	2876	3090
-Illinois	338	22	360
-Alabama	48	279	327
-Vermont	49		49
-South Carolina	29		29
-Mississippi	4	8	12
-Rhode Island	170	915	1085
-Wisconsin	38	2	40
-District of Columbia	4		4
-Connecticut	196		196
-California	2163		2163
-Pennsylvania	92	199	291
-Nevada	620	6	626
-New Jersey	1191	13	1204
-Arizona	6		6
+Virginia	771	52	823
 Wyoming		8	8
-Colorado	156	29	185
-New Hampshire		3	3
+Pennsylvania	92	199	291
+California	2163		2163
+Rhode Island	170	915	1085
+New York	181		181
+Arizona	6		6
+Mississippi	4	8	12
+Georgia	214	2876	3090
+New Mexico		2	2
+Texas	992	12	1004
+Illinois	338	22	360
+Minnesota	515	24	539
+Louisiana	9	168	177
+District of Columbia	4		4
+Iowa	188		188
+Missouri	42	8	50
+Washington	159	166	325
+Kentucky	134	23	157
 Idaho	27	1	28
+Oklahoma	361	229	590
+Vermont	49		49
+Maine	5	472	477
+South Dakota		11	11
+Alabama	48	279	327
+North Carolina	322	99	421
+Ohio	92	9	101
+North Dakota		214	214
+Connecticut	196		196
+Alaska		27	27
+Colorado	156	29	185
+Utah	282		282
+Nevada	620	6	626
+Montana	497	1	498
+Oregon	398	261	659
+New Jersey	1191	13	1204
+Michigan	316	143	459
+South Carolina	29		29
+Massachusetts	313		313
+Delaware		989	989
+Tennessee	704	87	791
+Wisconsin	38	2	40
+New Hampshire		3	3
+Florida	1148	169	1317
+Hawaii	9		9
+Maryland	14	22	36
+Arkansas	9	2	11
