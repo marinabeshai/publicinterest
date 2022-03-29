@@ -21,9 +21,11 @@ def add_to_date(date, number_of_weeks):
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Bought it for $20, Sold it for $40.
-def share_diff(ticker, tdate_sale, tdate_purch):
+def share_diff(ticker, tdate_sale, purch_price=None, tdate_purch=None):
     sale_price = get_stock_price(ticker, tdate_sale)
-    purch_price = get_stock_price(ticker, tdate_purch)
+    if tdate_purch:
+        purch_price = get_stock_price(ticker, tdate_purch)
+
     if purch_price and sale_price:
         return  round(sale_price,2) , round(purch_price,2), round((sale_price - purch_price)/purch_price, 4)
     return None, None, None 

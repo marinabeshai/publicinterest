@@ -1,0 +1,320 @@
+committee,input
+"Committee on Health, Education, Labor, and Pensions",0.27
+Subcommittee on Children and Families,0.24
+Subcommittee on Primary Health and Retirement Security,0.39
+Committee on Indian Affairs,0.41
+Senate Committee on Appropriations,0.31
+"Agriculture, Rural Development, Food, and Drug Administration, and Related Agencies Committee",0.33
+"Commerce, Justice, Science, and Related Agencies",0.38
+Defense,0.3
+Financial Services and General Government Subcommittee,0.14
+"Labor, Health, and Human Services, Education, and Related Agencies Committee",0.33
+"State, Foreign Operations, and Related Programs Committee",0.22
+"Committee on Banking, Housing, and Urban Affairs",0.26
+"Housing, Transportation, and Community Development Committee",0.25
+Financial Institutions and Consumer Protection Committee,0.33
+"Securities, Insurance, and Investment Subcommittee",0.2
+Senate Veterans' Affairs Committee,0.33
+"Committee on Commerce, Science, and Transportation",0.27
+Committee on Appropriations,0.1
+Committee on Environment and Public Works,0.3
+Committee on Veterans' Affairs,0.15
+Indian Affairs Committee,0.47
+Appropriations Committee,0.28
+Subcommittee on Department of Defense,0.36
+"Subcommittee on Departments of Labor, Health, and Human Services, and Education, and Related Agencies",0.36
+Subcommittee on Financial Services and General Government,0.2
+Subcommittee on Legislative Branch,0.29
+"Subcommittee on State, Foreign Operations, and Related Programs",0.11
+"Banking, Housing, and Urban Affairs Committee",0.3
+Subcommittee on Economic Policy,0.2
+"Subcommittee on Housing, Transportation, and Community Development",0.33
+"Subcommittee on Securities, Insurance, and Investment",0.21
+"Commerce, Science, and Transportation Committee",0.3
+"Subcommittee on Aviation Operations, Safety, and Security",0.26
+"Subcommittee on Communications, Technology, and the Internet",0.26
+"Subcommittee on Consumer Protection, Product Safety, and Insurance",0.23
+"Subcommittee on Space, Science, and Competitiveness",0.43
+"Subcommittee on Surface Transportation, and Merchant Marine Infrastructure, Safety, and Security",0.24
+Veterans' Affairs Committee,0.27
+"Subcommittee on Transportation, Housing and Urban Development, and Related Agencies",0.18
+Subcommittee on Department of Homeland Security,0.33
+"Subcommittee on Agriculture, Rural Development, Food, and Drug Administration, and Related Agencies",0.27
+"Subcommittee on National Security, and International Trade, and Finance",0.2
+Subcommittee on Financial Institutions and Consumer Protection,0.27
+Homeland Security and Governmental Affairs Committee,0.47
+Small Business and Entrepreneurship Committee,0.47
+Special Committee on Aging,0.47
+Committee on Foreign Relations,0.1
+"Subcommittee on Western Hemisphere, Transnational Crime, Civilian Security, Democracy, Human Rights, and Global Women's Issues",0.2
+"Subcommittee on Near East, South Asia, Central Asia, and Counterterrorism",0.25
+"Subcommittee on State Department, and USAID Management, International Operations, and Bilateral International Development",0.18
+"Subcommittee on East Asia, The Pacific, and International Cybersecurity Policy",0.12
+Energy and Water Development Subcommittee,0.2
+"Interior, Environment, and Related Agencies Committee",0.43
+"Military Construction, Veterans Affairs, and Related Agencies Committee",0.36
+Committee on Rules and Administration,0.17
+"National Security, and International Trade, and Finance Committee",0.2
+Subcommittee on Employment and Workplace Safety,0.24
+"Committee on Agriculture, Nutrition, and Forestry",0.25
+"Commodities, Risk Management, and Trade",0.4
+Subcommittee on Rural Development and Energy,0.4
+"Subcommittee on Conservation, Climate, Forestry, and Natural Resources",0.67
+Senate Committee on Armed Services,0.3
+Emerging Threats and Capabilities,0.33
+Personnel Committee,0.67
+Strategic Forces,0.21
+Committee on Small Business and Entrepreneurship,0.21
+"Aviation Safety, Operations, and Innovation Committee",0.5
+"Communications, Media, and Broadband Committee",0.33
+Space and Science,0.5
+"Tourism, Trade, and Export Promotion Committee",0.4
+Committee on Energy and Natural Resources,0.51
+Energy,0.83
+"Public Lands, Forests, and Mining",0.75
+Water and Power,1.0
+Committee on the Judiciary,0.27
+Subcommittee on the Constitution,0.23
+Subcommittee on Crime and Terrorism,0.25
+"Subcommittee on Federal Courts, Oversight, Agency Action, and Federal Rights",0.6
+"Subcommittee on Privacy, Technology, and the Law",0.38
+Senate Committee on Budget,0.2
+"Clean Air, Climate, and Nuclear Safety",0.5
+"Fisheries, Water, and Wildlife",0.5
+Transportation and Infrastructure Committee,0.24
+Committee on Finance,0.27
+Commission on Security and Cooperation in Europe Committee,0.11
+Senate Caucus on International Narcotics Control Committee,0.33
+Committee on Aging,0.27
+Committee on the Budget,0.25
+Budget Committee,0.19
+Environment and Public Works Committee,0.31
+Subcommittee on Clean Air and Nuclear Safety,0.35
+Subcommittee on Transportation and Infrastructure,0.3
+"Subcommittee on Fisheries, Water, and Wildlife",0.36
+"Health, Education, Labor, and Pensions Committee",0.19
+Judiciary Committee,0.28
+"Subcommittee on Oversight, Federal Rights, and Agency Action",0.2
+Subcommittee on Water and Wildlife,0.33
+Subcommittee on Oversight,0.22
+Subcommittee on Primary Health and Aging,0.2
+Bankruptcy and the Courts subcommittee,0.5
+Aging,0.2
+Joint Committee on Printing,0.13
+Committee on Intelligence,0.3
+Airland,0.33
+SeaPower,0.38
+Committee on Armed Services,0.17
+Senate Select Committee on Intelligence,0.5
+Armed Services Committee,0.27
+Subcommittee on Personnel,0.27
+Subcommittee on SeaPower,0.22
+Subcommittee on Strategic Forces,0.39
+Energy and Natural Resources Committee,0.46
+Subcommittee on Energy,0.39
+Subcommittee on National Parks,0.43
+Subcommittee on Water and Power,0.27
+Rules and Administration Committee,0.11
+Select Committee on Intelligence,0.41
+Joint Committee on Taxation,0.46
+"Subcommittee on Public Lands, Forests, and Mining",0.44
+Finance Committee,0.28
+Subcommittee on Taxation and IRS Oversight,0.25
+"Subcommittee on International Trade, Customs, and Global Competitiveness",0.25
+Committee on Budget,0.11
+"Subcommittee on Energy, Natural Resources, and Infrastructure",0.29
+Subcommittee on Public Lands and Forests,0.5
+Subcommittee on Health Care,0.25
+Joint Economic Committee,0.3
+"Subcommittee on Department of the Interior, Environment, and Related Agencies",0.27
+"Subcommittee on Military Construction, Veterans Affairs, and Related Agencies",0.41
+Energy and Commerce Committee,0.48
+Subcommittee on Energy and Power,0.26
+Subcommittee on Environment and the Economy,0.4
+Subcommittee on Health,0.23
+"Subcommittee on Commerce, Manufacturing, and Trade",0.4
+"Subcommittee on Food, and Nutrition, Specialty Crops, Organics, and Research",0.6
+Homeland Security,0.25
+"Transportation, Housing and Urban Development, and Related Agencies Committee",0.27
+Committee on Homeland Security and Governmental Affairs,0.27
+"Agriculture, Nutrition, and Forestry Committee",0.21
+"Subcommittee on Commodities, Risk Management, and Trade",0.33
+"Subcommittee on Nutrition, Specialty Crops, and Agricultural Research",0.33
+Subcommittee on Energy and Water Development,0.15
+Subcommittee on Homeland Security,0.1
+"Subcommittee on Interior, Environment, and Related Agencies",0.19
+"Subcommittee on Jobs, Rural Economic Growth, and Energy Innovation",0.17
+"Subcommittee on Commodities, Markets, Trade, and Risk Management",0.25
+Legislative Branch,0.33
+"Subcommittee on Commerce, Justice, Science, and Related Agencies",0.22
+Subcommittee on Defense,0.07
+"Subcommittee on Labor, Health, and Human Services, Education, and Related Agencies",0.17
+Subcommittee on Emerging Threats and Capabilities,0.18
+"Subcommittee on Conservation, Forestry, and Natural Resources",0.09
+Foreign Relations Committee,0.06
+"Subcommittee on Multilateral International Development, Multilateral Institutions, and International Economic, Energy, and Environmental Policy",0.17
+"Subcommittee on Antitrust, Competition Policy, and Consumer Rights",0.33
+Subcommittee on Immigration and The National Interest,0.33
+"Subcommittee on Oceans, Atmosphere, Fisheries, and Coast Guard",0.36
+Subcommittee on Healthcare,0.25
+"Surface Transportation, Maritime, Freight, and Ports Committee",0.2
+Joint Committee on the Library,0.21
+Subcommittee on the Legislative Branch,0.33
+Financial Services Committee,0.39
+Subcommittee on Housing and Insurance,0.33
+Committee on Transportation and Infrastructure Committee,0.14
+Subcommittee on Highways and Transit,0.26
+"Subcommittee on Railroads, Pipelines, and Hazardous Materials",0.5
+Subcommittee on Water Resources and Environment,0.16
+Subcommittee on Economic Development,1.0
+Subcommittee on Federal Spending Oversight and Emergency Management,0.67
+Subcommittee on Regulatory Affairs and Federal Management,0.5
+Subcommittee on Capital Markets and Government Sponsored Enterprises,0.42
+Subcommittee on Monetary Policy and Trade,0.5
+Subcommittee on Domestic Monetary Policy and Technology,0.17
+Small Business Committee,0.3
+Subcommittee on Healthcare and Technology,0.5
+"Subcommittee on Economic Growth, Tax, and Capital Access",0.14
+Subcommittee on Government Operations and Border Management,0.5
+Permanent Subcommittee on Investigations,0.3
+"Subcommittee on Superfund, Waste Management, and Regulatory Oversight",0.29
+Subcommittee on Green Jobs and the New Economy,0.67
+"Subcommittee on Emergency Management, Intergovernmental Relations, and the District of Columbia",0.25
+"Subcommittee on the Efficiency, and Effectiveness of Federal Programs, and the Federal Workforce",0.25
+Subcommittee on Financial and Contracting Oversight,0.33
+"Subcommittee on Federal Financial Management, Government Information, Federal Services, and International Security",0.33
+Ad Hoc Subcommittee on Contracting Oversight,1.0
+"Subcommittee on Competition Policy, Antitrust, and Consumer Rights",0.67
+"Subcommittee on Immigration, Citizenship, and Border Safety",0.25
+Subcommittee on Intellectual Property,0.33
+Economic Policy Committee,0.2
+"Subcommittee on Livestock, Marketing, and Agriculture Security",0.25
+Subcommittee on Africa and Global Health Policy,0.08
+"Subcommittee on Livestock, Dairy, Poultry, Local Food Systems, and Food Safety, and Security",0.5
+"Subcommittee on Superfund, Toxics, and Environmental Health",0.17
+Committee on Financial Services,0.31
+"Subcommittee on Investor Protection, Entrepreneurship, and Capital Markets",0.6
+"Subcommittee on National Security, International Development, and Monetary Policy",1.0
+Committee on Homeland Security,0.21
+Subcommittee on Diversity and Inclusion,0.5
+"Committee on Science, Space, and Technology",0.63
+Environment Committee,0.33
+Research and Technology,1.0
+Space and Aeronautics Committee,1.0
+Committee on Ways and Means,0.04
+Committee on Natural Resources,0.09
+Natural Resources Committee,0.16
+Subcommittee on Energy and Mineral Resources,0.19
+Subcommittee on Federal Lands,0.2
+"Science, Space, and Technology Committee",0.58
+Subcommittee on Space,0.8
+Committee on Energy and Commerce,0.32
+Committee on Agriculture,0.21
+"Subcommittee on Conservation, Energy, and Forestry",0.2
+"Subcommittee on Horticulture, Research, Biotechnology, and Foreign Agriculture",0.5
+"Subcommittee on Livestock, Rural Development, and Credit",0.25
+Committee on Small Business,0.12
+Subcommittee on Finance and Tax,1.0
+Subcommittee on Contracting and Technology,1.0
+Agriculture Committee,0.24
+"Subcommittee on Department Operations, Oversight, Nutrition, and Forestry",1.0
+Subcommittee on General Farm Commodities and Risk Management,0.27
+Subcommittee on Horticulture and Organic Agriculture,1.0
+Subcommittee on Communications and Technology,0.41
+Subcommittee on Oversight and Investigations,0.32
+Homeland Security Subcommittee,0.42
+Subcommittee on Counterterrorism and Intelligence,0.6
+"Subcommittee on Cybersecurity, Infrastructure Protection, and Security Technologies",0.5
+"Subcommittee on Oversight, Investigations, and Management",0.33
+Subcommittee on Aviation,0.31
+Committee on Foreign Affairs,0.13
+"Europe, Energy, the Environment, and Cyber Committee",0.33
+"Oversight, Management, and Accountability",1.0
+Intelligence and Counterterrorism,0.2
+House Committee on Armed Services,0.19
+"Cyber, Innovative Technologies, and Information Systems Committee",0.11
+Foreign Affairs Committee,0.31
+Subcommittee on Asia and the Pacific,0.27
+"Subcommittee on Europe, Eurasia, and Emerging Threats",0.33
+"Subcommittee on Terrorism, Nonproliferation, and Trade",0.22
+Subcommittee on Space and Aeronautics,0.33
+Subcommittee on Research and Science Education,0.6
+Subcommittee on Transportation Security,0.75
+Subcommittee on Investigations and Oversight,0.67
+Committee on Ethics,0.19
+"Africa, Global Health, and Global Human Rights",0.2
+"Subcommittee on Housing, Community Development, and Insurance",0.5
+House Committee on Appropriations,0.03
+"Subcommittee on Nutrition, Oversight, and Department Operations",0.5
+"Subcommittee on Commodity Exchanges, Energy, and Credit",0.4
+"Subcommittee on Biotechnology, Horticulture, and Research",0.25
+House Committee on Budget,0.12
+Senate Health Committee,1.0
+Consumer Protection Committee,1.0
+Senate Transportation Committee,1.0
+Senate Aging Committee,1.0
+Investigations and Government Operations Committee,1.0
+Internet and Technology Committee,1.0
+Subcommittee on Consumer Protection and Financial Institutions,1.0
+Committee on Rules,0.31
+Rules and Organization of the House Committee,1.0
+Subcommittee on Financial Institutions and Consumer Credit,0.12
+"Counterterrorism, Counterintelligence, and Counterproliferation Committee",0.5
+Defense Intelligence and Warfighter Support,0.5
+Committee on Oversight and Government Reform,0.08
+National Security Committee,0.5
+Oversight and Government Reform Committee,0.06
+House Committee on Oversight and Government Reform,0.33
+"Subcommittee on Rural Development, Research, Biotechnology, and Foreign Agriculture",1.0
+"Subcommittee on National Security, Homeland Defense, and Foreign Operations",0.2
+"Subcommittee on TARP, Financial Services, and Bailouts of Public, and Private Programs",0.25
+Civil Rights and Civil Liberties,0.25
+Rules Committee,0.2
+Subcommittee on Rules and Organization of the House,0.67
+House Committee on Rules,0.33
+Committee on Judiciary,0.26
+"Constitution, Civil Rights, and Civil Liberties Committee",0.67
+"Courts, Intellectual Property, and the Internet",0.5
+"Crime, Terrorism, and Homeland Security",0.33
+"Water, Oceans, and Wildlife",0.17
+Oversight and Investigations Committee,0.25
+Subcommittee on the Constitution and Civil Justice,0.5
+"Subcommittee on Courts, Intellectual Property, and the Internet",0.23
+"Subcommittee on Courts, Commercial, and Administrative Law",1.0
+"Subcommittee on Crime, Terrorism, and Homeland Security",0.33
+Tactical Air and Land Forces,0.5
+Intelligence and Special Operations Committee,0.33
+"Committee on Education, and the Workforce",0.04
+Higher Education and Workforce Investment Subcommittee,0.33
+Committee on House Administration,0.43
+Immigration and Citizenship Committee,0.5
+House Administration Committee,1.0
+Subcommittee on Immigration and Border Security,0.33
+House Committee on House Administration,1.0
+House Committee on the Judiciary,1.0
+"House Committee on Science, Space, and Technology",1.0
+Congress Joint Committee on the Library,1.0
+Subcommittee on Immigration Policy and Enforcement,1.0
+"Subcommittee on Intellectual Property, Competition, and the Internet",0.2
+Subcommittee on Energy and Environment,0.5
+House Committee on Natural Resources,1.0
+"Subcommittee on Fisheries, Wildlife, Oceans, and Insular Affairs",0.67
+Subcommittee on the Environment and Economy,1.0
+Expedited Procedures,1.0
+Legislative and Budget Process,1.0
+Subcommittee on Readiness,0.27
+"Subcommittee on Department Operations, Oversight, and Nutrition",0.5
+General Farm Commodities and Risk Management,1.0
+Subcommittee on Military Personnel,0.33
+Ethics Committees,0.09
+Select Committee on the Events Surrounding the 2012 Terrorist Attack in Benghazi,0.25
+"Subcommittee on Health, Employment, Labor, and Pensions",0.06
+Subcommittee on Higher Education and Workforce Training,0.07
+"Subcommittee on Early Childhood, Elementary, and Secondary Education",0.06
+"Middle East, North Africa, and Global Counterterrorism",0.11
+"Cybersecurity, Infrastructure Protection, and Security Technologies Subcommittee",1.0
+"Subcommittee on Agriculture, Energy, and Trade",0.2
+Middle East and South Asia Subcommittee,1.0
+House Committee on Veterans' Affairs,0.06
+Subcommittee on Economic Opportunity,0.5
+House Budget Committee,0.5

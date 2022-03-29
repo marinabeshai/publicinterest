@@ -1,0 +1,42 @@
+industry,transaction_date,number_of_transactions
+Banks,2021/12/21,2
+Insurance,2021/12/21,2
+Credit Services,2021/10/22,2
+Semiconductors,2021/08/02,2
+Oil & Gas - E&P,2021/02/16,2
+Oil & Gas - Integrated,2020/04/06,2
+Computer Hardware,2016/04/26,2
+Oil & Gas - Midstream,2021/12/29,1
+Capital Markets,2021/12/22,1
+Asset Management,2021/12/21,1
+Oil & Gas Midstream,2021/07/01,1
+Insurance - Property & Casualty,2021/06/24,1
+Insurance—Life,2021/06/15,1
+Insurance—Diversified,2021/06/10,1
+Software—Infrastructure,2021/04/27,1
+Software—Application,2021/03/05,1
+Brokers & Exchanges,2020/12/16,1
+Oil & Gas - Services,2020/08/18,1
+Oil & Gas Integrated,2020/06/04,1
+Banks—Regional,2020/05/13,1
+Oil & Gas E&P,2020/05/07,1
+Insurance - Life,2020/04/02,1
+Oil & Gas Equipment & Services,2020/03/18,1
+Oil & Gas Refining & Marketing,2020/03/18,1
+Oil & Gas - Refining & Marketing,2020/03/09,1
+Insurance—Property & Casualty,2020/01/28,1
+Financial Conglomerates,2019/02/04,1
+Retail,2017/08/17,1
+Diversified Services,2017/03/14,1
+Application Software,2016/12/16,1
+Online Media,2016/11/28,1
+Oil and Gas,2016/11/09,1
+Information Technology Services,2016/05/04,1
+Communication Equipment,2016/03/31,1
+Electronics,2016/01/05,1
+Computer Software & Services,2015/08/28,1
+Leisure,2015/02/13,1
+Telecommunications,2015/02/13,1
+Media,2015/02/13,1
+Internet,2014/07/29,1
+Oil & Gas - Drilling,2014/02/27,1

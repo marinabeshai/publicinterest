@@ -1,0 +1,28 @@
+[],Democratic,Independent,Libertarian,Republican
+Healthcare,1197,7,0,867
+Communication Services,348,2,0,324
+Financial Services,1308,3,0,1040
+Technology,2069,4,0,1454
+Energy,209,7,0,1351
+Consumer Cyclical,1284,3,3,1299
+Consumer Defensive,638,3,0,569
+Real Estate,325,0,0,120
+Trust,8,0,0,15
+Basic Materials,315,2,0,437
+Fund,569,0,0,488
+Communications,2,0,0,1
+Industrials,1058,2,0,1014
+Utilities,207,1,0,181
+Services,7,0,0,64
+Cryptocurrency,0,0,0,22
+Financial,0,0,0,6
+Oil & Gas Storage & Trpor,0,0,0,False
+Consumer Goods,1,0,0,2
+Consumer Discretionary,False,0,0,0
+Industrial Goods,2,0,0,0
+Induistrial,1,0,0,0
+Medical,False,0,0,0
+Information Technology,1,0,0,8
+Consumer Staples,0,0,0,False
+Retail/Wholesale,0,0,0,1
+Banks - Regional,0,0,0,False

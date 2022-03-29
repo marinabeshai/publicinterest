@@ -18,7 +18,7 @@ def flatten_len_inner_set(d):
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def normalize(d, normalized, percent=False, raw=False):
     assert percent or raw 
-    new_d = [] 
+    new_d = {}
     for k,v in d.items():
         if normalized[k] == []:
                 new_d[k] = 0 
@@ -228,7 +228,7 @@ def increment_dictionary_in_dictionary(d, key, inner_key, not_math=False):
             key_d = increment_dictionary(key_d, inner_key, not_math=not_math)
             d.update({key: key_d})
         else:
-            if not_math:
+            if not not_math:
                 d.update({key: {inner_key: 1}})
             else:
                 d.update({key: {inner_key: not_math}})

@@ -425,7 +425,6 @@ def congress_gov_get(name, d={}, party_only=False, state_only=False, tries=0):
 
         if state_only:
             return state 
-        
         if party_only:
             return party 
         return d 
@@ -702,7 +701,7 @@ def get_committee_assignments(name, state, special_name=None):
             if "</a" in local_res:
                 local_res = local_res [ : local_res.find("</a")]
 
-            ans = local_res.replace("&#39;", "'").replace("&amp;", "&").replace("<li>", "").replace("The Subcommittee", "Subcommittee").replace("(Chairman)", "").replace("(Chairwoman)", "").replace("United States", "").replace("House of Representatives", "House").replace(", Chairman", "").replace(", Chairwoman", "").replace("House of Representatives", "").replace("- Chair", "")
+            ans = local_res.replace(" On ", " on ").replace("&#39;", "'").replace("&amp;", "&").replace("<li>", "").replace("The Subcommittee", "Subcommittee").replace("(Chairman)", "").replace("(Chairwoman)", "").replace("United States", "").replace("House of Representatives", "House").replace(", Chairman", "").replace(", Chairwoman", "").replace("- Chair", "").replace("Members", "").replace("&", ", and").replace("And ", "and ").replace(" and ", ', and ').replace(",,", ",").replace(" ,", ",").replace(" - Ranking Minority Member", "").replace("Seapower", "SeaPower")
             if '</i>' not in ans:
                 if ">" in ans:
                     ans = ans[ans.find(">") + 1 : ]
@@ -738,7 +737,7 @@ def get_committee_assignments(name, state, special_name=None):
                 local_res = local_res [ : local_res.find("</a")]
             
             if year: 
-                ans = local_res.replace("&#39;", "'").replace("&amp;", "&").replace("<li>", "").replace("The Subcommittee", "Subcommittee").replace("(Chairman)", "").replace("(Chairwoman)", "").replace("United States", "").replace("House of Representatives", "House").replace(", Chairman", "").replace(", Chairwoman", "").replace("House of Representatives", "").replace("- Chair", "")
+                ans = local_res.replace(" On ", " on ").replace("&#39;", "'").replace("&amp;", "&").replace("<li>", "").replace("The Subcommittee", "Subcommittee").replace("(Chairman)", "").replace("(Chairwoman)", "").replace("United States", "").replace("House of Representatives", "House").replace(", Chairman", "").replace(", Chairwoman", "").replace("- Chair", "").replace("Members", "").replace("&", ", and").replace("And ", "and ").replace(" and ", ', and ').replace(",,", ",").replace(" ,", ",").replace(" - Ranking Minority Member", "").replace("Seapower", "SeaPower")
                 if '</i>' not in ans:
                     if ">" in ans:
                         ans = ans[ans.find(">") + 1 : ]

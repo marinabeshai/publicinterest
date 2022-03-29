@@ -1,0 +1,5 @@
+type,transaction_date,number_of_transactions
+Sale (Full),2021/02/16,36
+Purchase,2020/04/02,18
+Sale (Partial),2020/11/13,9
+Exchange,2021/07/01,1

@@ -167,8 +167,8 @@ def difference_between_dates(t):
         transaction_date = t[TDATE]
         disclosure_date = t[DDATE]
         
-        ddate = datetime.strptime(disclosure_date, "%Y/%m/%d")
-        tdate = datetime.strptime(transaction_date, "%Y/%m/%d")
+        ddate = datetime.strptime(disclosure_date, DATE_FORMAT)
+        tdate = datetime.strptime(transaction_date, DATE_FORMAT)
         return (ddate - tdate).days
     except Exception:
         raise Unknown

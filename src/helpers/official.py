@@ -1,7 +1,7 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 from tkinter import E
 from zmq import REP
-from utils.constants import DATE_FORMAT, FEMALE_NAMES, MALE_NAMES, Unknown, DEGREES, MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS, REPRESENTATIVE, SENATOR, us_state_to_abbrev
+from utils.constants import DATE_FORMAT, FEMALE_NAMES, FIXES_2, FIXES_COMMITTEE, MALE_NAMES, Unknown, DEGREES, MULTIPLE_INPUTS_PROBLEMATIC_CONVERSIONS, REPRESENTATIVE, SENATOR, us_state_to_abbrev, ADDED_COMMITTEE
 import gender_guesser.detector as gender
 from datetime import date, datetime
 from utils.ptr_utils import isvalid
@@ -27,7 +27,7 @@ class Official:
         self._education = education
         self._senate = senate
         self._house = house
-        self.asgts = asgts 
+        self._asgts = asgts 
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     def check(self):
@@ -42,10 +42,47 @@ class Official:
                 "self.get_seniority()" : self.get_seniority(),
                 "self.get_num_of_degrees()": self.get_num_of_degrees(),
                 "self.has_jd": self.has_JD(), 
-                "self.asgts" :  self.asgts
+                "self.asgts" :  self.get_asgts()
                 }
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    def get_asgts(self):
+        l = self._asgts
+        nl = [] 
+        
+        for i in l:
+            y = i[ i.find(" (") : ]
+            temp = i [ : i.find("(")].replace("  ", " ").strip()
 
+            if "," in temp and ", and" and temp.count(",") == 1:
+                temp = temp.replace(", and", " and").replace("  ", " ")
+
+            if temp in ADDED_COMMITTEE:
+                temp = (temp.replace("  ", " ").strip() + " Committee").strip()
+
+            elif temp in FIXES_COMMITTEE:
+                temp = (FIXES_COMMITTEE[temp].replace("  ", " ").strip()).strip()
+
+            elif "on" not in temp and "Committee" not in temp:
+                check = temp.replace("  ", " ").split(" ")
+                if check[len(check)-1] == ' Committee':
+                    s = "Committee on " + temp.replace(" Committee", "")
+                    temp = (s.replace("  ", " ").strip()).strip()
+                
+            elif 'Committee' not in temp and 'Subcommittee' not in temp:
+                temp = (temp.replace("  ", " ").strip() + " Committee").strip()
+            
+            else:
+                temp = temp.replace("  ", " ").strip()
+                
+            if temp in FIXES_2:
+                temp = FIXES_2[temp].replace("  ", " ").strip()
+            
+            nl.append((temp + y).strip())
+            
+        return nl                                         
+    # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     def get_color(self):
@@ -53,8 +90,10 @@ class Official:
             return '#FF0000'
         if self.party == 'Democratic':
             return '#0000FF'
-        else:
+        if self.party == 'Libertarian':
             return '#800080'
+        else:
+            return '#FED105'
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------

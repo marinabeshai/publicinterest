@@ -1,208 +1,208 @@
 industry	house	senate	input
-Specialty Telecommunications		2	2
-Electronics		7	7
-Marine Shipping	3		3
-REIT—Diversified	2		2
-Food Distribution		1	1
-Defense		6	6
-Beverages—Brewers		2	2
-Building Materials	22	26	48
-Cryptocurrency	22	1	23
-Metals & Mining	67	54	121
-Lodging	14		14
-Software - Application	4		4
-Autos	183	121	304
-Oil & Gas - Integrated	131	99	230
-Insurance—Life	23	1	24
-Consulting & Outsourcing	61	43	104
-Oil & Gas - Midstream	457	274	731
-Forest Products	8	7	15
-Farm Products	1		1
-Fund	743	315	1058
-Engineering & Construction	54	14	68
-Software—Application	89	9	98
-Diversified Financial Services	1		1
-Semiconductors	483	287	770
-Medical Diagnostics & Research	198	70	268
-Real Estate—Diversified	2		2
-Textile Manufacturing	1		1
-Communication Equipment	76	95	171
-Building Products & Equipment	21	1	22
-Entertainment	201	424	625
-Travel & Leisure	134	98	232
-Health Care Providers	54	6	60
-REIT—Hotel & Motel	2		2
-Semiconductor Equipment & Materials	5		5
-Auto Parts	5	1	6
-Confectioners	1		1
-Insurance	143	31	174
-Hardware	3		3
-Oil & Gas Midstream	46	11	57
-Travel Services	44	7	51
-Discount Stores	1		1
-Consumer Packaged Goods	231	189	420
-Apparel Retail	1		1
-Auto & Truck Dealerships	7	2	9
-Telecommunication Services	2		2
-Electronic Components		2	2
-Utilities—Regulated Gas	8		8
-Financial Data & Stock Exchanges	8		8
-Oil & Gas Equipment & Services	12		12
-Real Estate—Development	2		2
-Banks--Diversified	1		1
-Energy	4	8	12
-Diagnostics & Research	21		21
-Consumer Electronics	9		9
-Application Software	849	360	1209
-Conglomerates	12	1	13
-Credit Services	218	94	312
-Telecommunications	2	2	4
-Brokers & Exchanges	231	59	290
-Beverages	1		1
-Congolmerates	2		2
-Railroads	4		4
-Oil and Gas		3	3
-Software	14		14
-Steel	6	11	17
-Household & Personal Products	14	6	20
-Integrated Freight & Logistics	3		3
-Broadcasting		4	4
-Telecom Services	35	6	41
-Software—Infrastructure	68	7	75
-Beverages - Non-Alcoholic	71	53	124
-Utilities—Renewable	11	1	12
-Residential Construction	3		3
-Drug Manufacturers—Speciality and Generic	1		1
-IT Services	2		2
-Internet Content & Information	47	10	57
-Automotive		1	1
-Oil & Gas Refining & Marketing	2	1	3
-REIT—Retail	2		2
-Insurance - Life	43	43	86
-Beverages—Non-Alcoholic	11	3	14
-Truck Manufacturing	6	6	12
-Oil & Gas Integrated	19	12	31
-Apparel Manufacturing	8	4	12
-Computer Software & Services		10	10
-Packaging & Containers	78	56	134
-Other Precious Metals & Mining		1	1
-Consulting Services	8		8
-Specialty Business Services	3		3
-Aerospace & Defense	182	156	338
-Auto Manufacturers	18	2	20
-Staffing & Employment Services	1		1
-Retail		23	23
-Home Improvement Retail	6		6
-Drug Manufacturers	275	248	523
-Insurance Brokers	4		4
-Oil & Gas - Services	80	42	122
-Financial Conglomerates	3		3
-Solar	2		2
-Medical Devices	189	60	249
-Utilities		3	3
-Homebuilding & Construction	34	5	39
-Industrial Products	340	146	486
-Infrastructure Operations	5	8	13
-Airlines	98	30	128
-Utilities—Regulated Water	2		2
-Leisure	33	5	38
-Internet Retail	18	2	20
-Advertising & Marketing Services	10	1	11
-Furnishings, Fixtures & Appliances	4		4
-Beverages - Alcoholic	52	34	86
-Insurance - Specialty	22	4	26
-Asset Management	199	130	329
-Health Care Equipment & Supplies		2	2
-Biotechnology	215	170	385
-Tobacco Products	49	11	60
-Utilities - Independent Power Producers	18	1	19
-Grocery Stores	13		13
-Employment Services	11	1	12
-Banking		1	1
-Business Services	188	98	286
-Real Estate Services	70	4	74
-Utilities—Diversified	5		5
 Food stores	2		2
-Computer Hardware	429	272	701
-Beverages – Alcoholic		2	2
-Insurance - Property & Casualty	98	28	126
-Electronic Gaming & Multimedia	24	1	25
-Insurance—Reinsurance	2		2
-Security & Protection Services	4	7	11
-Advertising Agencies	10		10
-Energy & Utilities		1	1
-Media		13	13
-REITs	277	78	355
-Online Media	303	124	427
-Restaurants	127	69	196
-Specialty Industrial Machinery	78	10	88
-Medical Distribution	12	15	27
-Trust	9	15	24
-Consumer NonDurables		1	1
-Manufacturing - Apparel & Furniture	76	104	180
-Electrical Equipment & Parts	19	7	26
-Mortgage Finance	2		2
-Real Estate	1	5	6
-Financial Services	1		1
-Electric Utilities		1	1
-Information Technology Services	10	3	13
-Health Services		6	6
-Utilities - Regulated Water	1		1
-Scientific & Technical Instruments	8	2	10
-Aerospace/Defense		3	3
-Shell Companies	37	2	39
-Other Industrial Metals & Mining	2	2	4
-Retail - Apparel & Specialty	425	251	676
-Specialty Chemicals	47	3	50
-Gambling	30	1	31
-Drug Manufacturers—General	41	8	49
-Waste Management	27	14	41
-REIT—Healthcare Facilities	6		6
-Transportation & Logistics	139	108	247
-Luxury Goods	16	2	18
-Drug Manufacturers—Specialty & Generic	47	1	48
-Personal Services	28	16	44
-Oil & Gas E&P	5	1	6
-Footwear & Accessories	7		7
-Drug Manufacturers - Specialty & Generic	2		2
-Resorts & Casinos	2		2
-Banks—Regional	58	9	67
-Insurance—Property & Casualty	10	1	11
-Utilities—Regulated Electric	3		3
-Oil & Gas - E&P	89	148	237
-Tools & Accessories	4		4
-Health Care Plans	109	69	178
-Education	11	1	12
+Publishing	10	1	11
 Healthcare Plans	5		5
+Beverages—Brewers		2	2
+Major Pharmaceutical Preparations	5		5
+Utilities - Regulated	266	69	335
+Entertainment	201	424	625
+Diversified Services	12	11	23
+REIT—Retail	2		2
+Medical Diagnostics & Research	198	70	268
+Medical Devices	189	60	249
+Software—Infrastructure	68	7	75
+Gold	1		1
+Application Software	849	360	1209
+Consulting & Outsourcing	61	43	104
+Software—Application	89	9	98
+Beverages - Non-Alcoholic	71	53	124
+Consumer Electronics	9		9
+Insurance—Reinsurance	2		2
+Communication Equipment	76	95	171
+Oil & Gas Refining & Marketing	2	1	3
+Health Care Equipment & Supplies		2	2
+Industrial Products	340	146	486
+Retail - Defensive	226	154	380
+REIT—Hotel & Motel	2		2
+Capital Markets	2		2
+Fund	743	315	1058
+Employment Services	11	1	12
+Agricultural Inputs	4	4	8
+Lodging	14		14
+Utilities—Regulated Electric	3		3
+Utilities		3	3
+REIT—Healthcare Facilities	6		6
+REIT—Diversified	2		2
+Advertising Agencies	10		10
+Food Distribution		1	1
+Luxury Goods	16	2	18
+Forest Products	8	7	15
+Oil & Gas - Midstream	457	274	731
+Biotechnology	215	170	385
+Auto Parts	5	1	6
+Drug Manufacturers—Speciality and Generic	1		1
+Financial Data & Stock Exchanges	8		8
+Software - Application	4		4
+Financial Conglomerates	3		3
+Banking		1	1
+Education	11	1	12
+Automotive		1	1
+Cryptocurrency	22	1	23
+Beverages – Alcoholic		2	2
+Health Information Services	34	1	35
+Footwear & Accessories	7		7
+Trust	9	15	24
+Diversified Financial Services	1		1
+Drug Manufacturers	275	248	523
+Apparel Retail	1		1
+Engineering & Construction	54	14	68
+Staffing & Employment Services	1		1
+Farm Products	1		1
+Banks—Diversified	19		19
+Insurance—Specialty	1	5	6
+Banks—Regional	58	9	67
+Utilities—Regulated Gas	8		8
+Transportation & Logistics	139	108	247
+Real Estate—Diversified	2		2
+Electronics		7	7
+Agriculture	18	39	57
+Financial Services	1		1
+Utilities—Diversified	5		5
+Leisure	33	5	38
+Packaged Foods	48	20	68
+Internet Content & Information	47	10	57
+Farm & Construction Machinery	49	29	78
+Telecom Services	35	6	41
+Real Estate	1	5	6
+Discount Stores	1		1
+Specialty Chemicals	47	3	50
+Autos	183	121	304
+Security & Protection Services	4	7	11
+Utilities—Regulated Water	2		2
+Semiconductor Equipment & Materials	5		5
+Beverages - Alcoholic	52	34	86
+Grocery Stores	13		13
+Homebuilding & Construction	34	5	39
+Asset Management	199	130	329
+Utilities--Regulated Electric		1	1
+Infrastructure Operations	5	8	13
+Tobacco	6	2	8
+Textile Manufacturing	1		1
+Chemicals	190	227	417
+Semiconductors	483	287	770
+Insurance—Life	23	1	24
+Building Materials	22	26	48
+Gambling	30	1	31
+Conglomerates	12	1	13
+Consulting Services	8		8
+Oil and Gas		3	3
+Specialty Telecommunications		2	2
+Other Industrial Metals & Mining	2	2	4
+Oil & Gas - E&P	89	148	237
+Building Products & Equipment	21	1	22
+Marine Shipping	3		3
+IT Services	2		2
+Utilities—Renewable	11	1	12
+Personal Services	28	16	44
+Insurance - Life	43	43	86
+Aerospace/Defense		3	3
+Computer Hardware	429	272	701
+Consumer Packaged Goods	231	189	420
+Metals & Mining	67	54	121
+Utilities - Independent Power Producers	18	1	19
+Oil & Gas Equipment & Services	12		12
+REITs	277	78	355
+Beverages—Non-Alcoholic	11	3	14
+Media		13	13
+Coal		1	1
+Travel & Leisure	134	98	232
+Shell Companies	37	2	39
+Software	14		14
+Health Care Providers	54	6	60
+Manufacturing - Apparel & Furniture	76	104	180
+Scientific & Technical Instruments	8	2	10
+Oil & Gas - Drilling	4	4	8
+Retail - Apparel & Specialty	425	251	676
+Tools & Accessories	4		4
+Oil & Gas - Services	80	42	122
+Insurance Brokers	4		4
+Travel Services	44	7	51
+Oil & Gas - Integrated	131	99	230
+Airlines	98	30	128
+Industrial Distribution	33	13	46
+Specialty Retail	14	8	22
+Energy	4	8	12
+Hardware	3		3
+Electric Utilities		1	1
+Insurance—Property & Casualty	10	1	11
+Residential Construction	3		3
+Business Services	188	98	286
+Aerospace & Defense	182	156	338
+Truck Manufacturing	6	6	12
+Specialty Business Services	3		3
+Health Services		6	6
+Medical Instruments & Supplies	15	1	16
+Medical Instruments & Equipment	115	78	193
+Furnishings, Fixtures & Appliances	4		4
+Home Improvement Retail	6		6
+Telecommunication Services	2		2
+Telecommunications	2	2	4
+Internet Retail	18	2	20
+Online Media	303	124	427
+Communication Services	261	162	423
+Drug Manufacturers—Specialty & Generic	47	1	48
+Auto Manufacturers	18	2	20
+Waste Management	27	14	41
+Computer Software & Services		10	10
+Banks	450	338	788
+Real Estate Services	70	4	74
+Consumer NonDurables		1	1
+Drug Manufacturers—General	41	8	49
+Tobacco Products	49	11	60
+Utilities - Regulated Water	1		1
+Defense		6	6
+Insurance	143	31	174
+Steel	6	11	17
+Solar	2		2
+Oil & Gas E&P	5	1	6
+Broadcasting		4	4
+Information Technology Services	10	3	13
+Insurance - Specialty	22	4	26
+Mortgage Finance	2		2
+Internet		4	4
+Confectioners	1		1
+Banks--Diversified	1		1
+Apparel Manufacturing	8	4	12
+Energy & Utilities		1	1
+Electrical Equipment & Parts	19	7	26
+Resorts & Casinos	2		2
+Household & Personal Products	14	6	20
+Other Precious Metals & Mining		1	1
+Congolmerates	2		2
+Oil, Gas, & Consumable Fuels		1	1
+Beverages	1		1
+Retail		23	23
+Packaging & Containers	78	56	134
+Railroads	4		4
+Oil & Gas Midstream	46	11	57
+Auto & Truck Dealerships	7	2	9
+Oil & Gas - Refining & Marketing	101	26	127
+Drug Manufacturers - Specialty & Generic	2		2
+Insurance - Property & Casualty	98	28	126
+Real Estate—Development	2		2
+Brokers & Exchanges	231	59	290
+Restaurants	127	69	196
+Health Care Plans	109	69	178
+Advertising & Marketing Services	10	1	11
+Medical Distribution	12	15	27
+Credit Services	218	94	312
+Electronic Gaming & Multimedia	24	1	25
+Farm & Heavy Construction Machinery	22		22
+Paper & Paper Products	5		5
+Oil & Gas Integrated	19	12	31
+Electronic Components		2	2
 Insurance—Diversified	8	23	31
 Banks - Regional		2	2
-Paper & Paper Products	5		5
-Packaged Foods	48	20	68
-Health Information Services	34	1	35
-Major Pharmaceutical Preparations	5		5
-Utilities--Regulated Electric		1	1
-Farm & Heavy Construction Machinery	22		22
-Gold	1		1
-Tobacco	6	2	8
-Medical Instruments & Equipment	115	78	193
-Chemicals	190	227	417
-Utilities - Regulated	266	69	335
-Insurance—Specialty	1	5	6
-Banks	450	338	788
-Oil & Gas - Drilling	4	4	8
-Capital Markets	2		2
-Farm & Construction Machinery	49	29	78
-Coal		1	1
-Banks—Diversified	19		19
-Retail - Defensive	226	154	380
-Oil & Gas - Refining & Marketing	101	26	127
-Internet		4	4
-Diversified Services	12	11	23
-Specialty Retail	14	8	22
-Oil, Gas, & Consumable Fuels		1	1
-Industrial Distribution	33	13	46
-Medical Instruments & Supplies	15	1	16
-Agriculture	18	39	57
-Publishing	10	1	11
-Agricultural Inputs	4	4	8
-Communication Services	261	162	423
+Diagnostics & Research	21		21
+Specialty Industrial Machinery	78	10	88
+Integrated Freight & Logistics	3		3

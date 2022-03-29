@@ -64,13 +64,10 @@ def get_data(senate=False, house=False, combined=False):
             csvreader = pd.concat([csvreader_senate, csvreader_house], ignore_index=True)
 
 
-        indexes_to_drop = []
-
         for i, t in csvreader.iterrows():
             if int(ptr_utils.get_year(ptr_utils.format_date(t[constants.TDATE]))) > 2021:
-                indexes_to_drop.append(i)
+                csvreader.drop(i, inplace=True)
                 
-        csvreader.drop(csvreader.index[indexes_to_drop], inplace=True)
         
         for i,t in csvreader.iterrows():
             csvreader.at[i, constants.TDATE] = ptr_utils.format_date(t[constants.TDATE])
